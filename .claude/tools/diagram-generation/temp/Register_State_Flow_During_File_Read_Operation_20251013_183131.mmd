@@ -1,0 +1,32 @@
+flowchart TD
+    Start["👤 User Command:<br/>'Read .claude/state.json'"] --> Decode
+
+    Decode["🔍 DECODE PHASE<br/>━━━━━━━━━━━━━━━<br/>IR ← 'Read .claude/state.json'<br/>USER_INTENT ← 'Load system state'"]
+
+    Decode --> Execute
+
+    Execute["⚙️ EXECUTE PHASE<br/>━━━━━━━━━━━━━━━<br/>MAR ← '/mnt/d/~HAL8000/.claude/state.json'<br/>TEMP_REGISTER ← file_handle"]
+
+    Execute --> ReadOp
+
+    ReadOp["📖 READ OPERATION<br/>━━━━━━━━━━━━━━━<br/>MDR ← [file contents: 842 tokens]<br/>ACCUMULATOR ← parsed_json_data<br/>RAM_USAGE ← RAM_USAGE + 842"]
+
+    ReadOp --> UpdateManifest
+
+    UpdateManifest["📋 UPDATE MANIFEST<br/>━━━━━━━━━━━━━━━<br/>CONTEXT_MANIFEST ← append {<br/>&nbsp;&nbsp;path: '.claude/state.json',<br/>&nbsp;&nbsp;tokens: 842,<br/>&nbsp;&nbsp;timestamp: current_time<br/>}"]
+
+    UpdateManifest --> Recalc
+
+    Recalc["📊 RECALCULATE ZONE<br/>━━━━━━━━━━━━━━━<br/>RAM_ZONE ← calculate_zone(RAM_USAGE / 200000)<br/>// If 60000/200000 = 30% → 'SAFE (30%)'"]
+
+    Recalc --> Complete
+
+    Complete["✅ COMPLETE<br/>━━━━━━━━━━━━━━━<br/>OPERATION_RESULT ← 'File read successfully'<br/>TEMP_REGISTER ← null (cleared)<br/>IR ← null (ready for next instruction)"]
+
+    style Start fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Decode fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Execute fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style ReadOp fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style UpdateManifest fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Recalc fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Complete fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px

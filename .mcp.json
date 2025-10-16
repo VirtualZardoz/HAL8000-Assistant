@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "omnisearch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-omnisearch"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}",
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/mnt/d/~HAL8000"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      .level-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333; text-anchor: middle; }
+      .level-desc { font-family: Arial, sans-serif; font-size: 11px; fill: #666; text-anchor: middle; }
+      .level-box { stroke: #333; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" style="font-size: 20px; font-weight: bold; text-anchor: middle; fill: #2c3e50;">7 Levels of Command Complexity</text>
+
+  <!-- Level 7 - System (Top - smallest) -->
+  <polygon points="350,80 450,80 480,140 320,140" class="level-box" fill="#FFEBEE"/>
+  <text x="400" y="105" class="level-text">Level 7: System</text>
+  <text x="400" y="125" class="level-desc">Production-critical</text>
+
+  <!-- Level 6 - Workflow Composition -->
+  <polygon points="310,145 490,145 530,215 270,215" class="level-box" fill="#E1BEE7"/>
+  <text x="400" y="170" class="level-text">Level 6: Workflow Composition</text>
+  <text x="400" y="190" class="level-desc">Command composition</text>
+
+  <!-- Level 5 - Supervisor -->
+  <polygon points="260,220 540,220 590,300 210,300" class="level-box" fill="#F8BBD0"/>
+  <text x="400" y="250" class="level-text">Level 5: Supervisor</text>
+  <text x="400" y="270" class="level-desc">Multi-agent coordination</text>
+
+  <!-- Level 4 - Delegate -->
+  <polygon points="200,305 600,305 660,395 140,395" class="level-box" fill="#FFCCBC"/>
+  <text x="400" y="340" class="level-text">Level 4: Delegate</text>
+  <text x="400" y="360" class="level-desc">Sub-agent invocation</text>
+
+  <!-- Level 3 - Control Flow -->
+  <polygon points="130,400 670,400 740,500 60,500" class="level-box" fill="#FFE0B2"/>
+  <text x="400" y="440" class="level-text">Level 3: Control Flow</text>
+  <text x="400" y="460" class="level-desc">Conditionals & loops</text>
+
+  <!-- Level 2 - Workflow -->
+  <polygon points="50,505 750,505 780,560 20,560" class="level-box" fill="#FFF9C4"/>
+  <text x="400" y="527" class="level-text">Level 2: Workflow</text>
+  <text x="400" y="545" class="level-desc">Multi-step with parameters</text>
+
+  <!-- Level 1 - Basic (Bottom - largest) -->
+  <polygon points="10,565 790,565 800,595 0,595" class="level-box" fill="#E8F5E9"/>
+  <text x="400" y="582" class="level-text">Level 1: Basic - Simple single-step operations</text>
+
+  <!-- Complexity Arrow -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+  </defs>
+  <line x1="750" y1="570" x2="750" y2="100" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="765" y="335" style="font-size: 16px; font-weight: bold; fill: #e74c3c; writing-mode: tb;">Increasing Complexity</text>
+</svg>

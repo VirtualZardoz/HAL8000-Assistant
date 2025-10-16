@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 750">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="800" y="30" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Fetch-Decode-Execute Cycle</text>
+
+  <!-- Row 1: Start → Fetch → Decode → Execute → Idle -->
+
+  <!-- Start -->
+  <ellipse cx="90" cy="100" rx="70" ry="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="90" y="105" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1a1a1a" text-anchor="middle">CPU Ready</text>
+
+  <line x1="160" y1="100" x2="220" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Fetch -->
+  <rect x="220" y="60" width="220" height="100" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="330" y="85" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1a1a1a" text-anchor="middle">FETCH</text>
+  <text x="330" y="103" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Read instruction from PC</text>
+  <text x="330" y="120" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Load command/user input</text>
+  <text x="330" y="137" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">IR ← instruction</text>
+
+  <line x1="440" y1="110" x2="500" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Decode -->
+  <rect x="500" y="60" width="220" height="100" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="610" y="85" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1a1a1a" text-anchor="middle">DECODE</text>
+  <text x="610" y="103" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Parse instruction syntax</text>
+  <text x="610" y="120" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Identify operation type</text>
+  <text x="610" y="137" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">USER_INTENT ← goal</text>
+
+  <line x1="720" y1="110" x2="780" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Execute -->
+  <rect x="780" y="60" width="220" height="100" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="5"/>
+  <text x="890" y="85" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1a1a1a" text-anchor="middle">EXECUTE</text>
+  <text x="890" y="103" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Perform operation</text>
+  <text x="890" y="120" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Update registers/RAM</text>
+  <text x="890" y="137" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">OPERATION_RESULT ← status</text>
+
+  <!-- Idle (right side) -->
+  <ellipse cx="1200" cy="100" rx="70" ry="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="1200" y="97" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">CPU Idle</text>
+  <text x="1200" y="112" font-family="system-ui, sans-serif" font-size="12" fill="#1a1a1a" text-anchor="middle">Await input</text>
+
+  <line x1="1130" y1="100" x2="1000" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="1000" y1="100" x2="1000" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow down from Execute to Error Check -->
+  <line x1="890" y1="160" x2="890" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 2: Error Check → Error Handle / → Post-Execute -->
+
+  <!-- Error Check Diamond -->
+  <polygon points="890,210 960,260 890,310 820,260" fill="#fff9c4" stroke="#f57f17" stroke-width="2"/>
+  <text x="890" y="255" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Error</text>
+  <text x="890" y="272" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">occurred?</text>
+
+  <!-- Yes → Error Handle -->
+  <line x1="960" y1="260" x2="1050" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="995" y="252" font-family="system-ui, sans-serif" font-size="12" fill="#666">Yes</text>
+
+  <rect x="1050" y="220" width="190" height="80" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
+  <text x="1145" y="245" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">ERROR_FLAG ← true</text>
+  <text x="1145" y="263" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">ERROR_CODE ← details</text>
+  <text x="1145" y="281" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Report to user</text>
+
+  <!-- Error Handle → down and left to join Post-Execute path -->
+  <line x1="1145" y1="300" x2="1145" y2="350" stroke="#333" stroke-width="2"/>
+  <line x1="1145" y1="350" x2="610" y2="350" stroke="#333" stroke-width="2"/>
+  <line x1="610" y1="350" x2="610" y2="400" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- No → Down to Post-Execute -->
+  <line x1="890" y1="310" x2="890" y2="340" stroke="#333" stroke-width="2"/>
+  <line x1="890" y1="340" x2="610" y2="340" stroke="#333" stroke-width="2"/>
+  <text x="860" y="332" font-family="system-ui, sans-serif" font-size="12" fill="#666">No</text>
+
+  <!-- Row 3: Post-Execute → Control Flow → Update/Increment PC → More? -->
+
+  <!-- Post-Execute -->
+  <rect x="500" y="400" width="220" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="610" y="425" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1a1a1a" text-anchor="middle">POST-EXECUTE</text>
+  <text x="610" y="443" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Calculate RAM_USAGE</text>
+  <text x="610" y="460" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Update RAM_ZONE</text>
+  <text x="610" y="477" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">Clear temp registers</text>
+
+  <line x1="610" y1="500" x2="610" y2="550" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Control Flow Diamond -->
+  <polygon points="610,550 680,600 610,650 540,600" fill="#fff9c4" stroke="#f57f17" stroke-width="2"/>
+  <text x="610" y="595" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Control flow</text>
+  <text x="610" y="612" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle">change?</text>
+
+  <!-- Yes → Update PC (left) -->
+  <line x1="540" y1="600" x2="450" y2="600" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="485" y="592" font-family="system-ui, sans-serif" font-size="12" fill="#666">Yes</text>
+
+  <rect x="280" y="565" width="170" height="70" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <text x="365" y="593" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">PC ← new location</text>
+  <text x="365" y="611" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">(jump/call)</text>
+
+  <!-- No → Increment PC (right) -->
+  <line x1="680" y1="600" x2="770" y2="600" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="715" y="592" font-family="system-ui, sans-serif" font-size="12" fill="#666">No</text>
+
+  <rect x="770" y="565" width="170" height="70" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <text x="855" y="593" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">PC ← next</text>
+  <text x="855" y="611" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">or null (interactive)</text>
+
+  <!-- Both paths converge down to More? diamond -->
+  <line x1="365" y1="635" x2="365" y2="680" stroke="#333" stroke-width="2"/>
+  <line x1="855" y1="635" x2="855" y2="680" stroke="#333" stroke-width="2"/>
+  <line x1="365" y1="680" x2="610" y2="680" stroke="#333" stroke-width="2"/>
+  <line x1="855" y1="680" x2="610" y2="680" stroke="#333" stroke-width="2"/>
+  <line x1="610" y1="680" x2="610" y2="700" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- More Instructions Diamond -->
+  <polygon points="610,700 660,725 610,750 560,725" fill="#fff9c4" stroke="#f57f17" stroke-width="2"/>
+  <text x="610" y="732" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="middle">More?</text>
+
+  <!-- Yes → Loop back to Fetch (left side) -->
+  <line x1="560" y1="725" x2="120" y2="725" stroke="#333" stroke-width="2"/>
+  <line x1="120" y1="725" x2="120" y2="110" stroke="#333" stroke-width="2"/>
+  <line x1="120" y1="110" x2="220" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="140" y="720" font-family="system-ui, sans-serif" font-size="12" fill="#666">Yes: repeat cycle</text>
+
+  <!-- No → Right to Idle (top right) -->
+  <line x1="660" y1="725" x2="1320" y2="725" stroke="#333" stroke-width="2"/>
+  <line x1="1320" y1="725" x2="1320" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="1320" y1="100" x2="1270" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1200" y="720" font-family="system-ui, sans-serif" font-size="12" fill="#666">No: await input</text>
+</svg>

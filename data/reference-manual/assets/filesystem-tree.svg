@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820">
+  <!-- Title -->
+  <text x="575" y="35" font-size="26" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    HAL8000 File System Structure
+  </text>
+  <text x="575" y="60" font-size="13" text-anchor="middle" fill="#666" font-style="italic">
+    3-level depth hierarchy (Unix philosophy: simplicity and modularity)
+  </text>
+
+  <!-- Style definitions -->
+  <defs>
+    <style>
+      .core-badge { fill: #ff9800; }
+      .core-file { fill: #fff8e1; stroke: #ff9800; stroke-width: 2.5; }
+      .system-dir { fill: #e8f5e9; stroke: #4caf50; stroke-width: 2.5; }
+      .data-dir { fill: #fce4ec; stroke: #e91e63; stroke-width: 2.5; }
+      .regular-file { fill: #fafafa; stroke: #9e9e9e; stroke-width: 1.5; }
+      .tree-line { stroke: #757575; stroke-width: 2; fill: none; }
+      .node-text { font-size: 13px; fill: #212121; font-weight: 500; }
+      .label-text { font-size: 10px; fill: #616161; }
+    </style>
+  </defs>
+
+  <!-- Root -->
+  <g id="root">
+    <rect x="425" y="90" width="300" height="45" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+    <text x="575" y="118" class="node-text" text-anchor="middle" font-size="15" font-weight="bold">/mnt/d/~HAL8000/</text>
+  </g>
+
+  <!-- Level 1 -->
+  <line x1="575" y1="135" x2="575" y2="170" class="tree-line"/>
+  <line x1="240" y1="170" x2="910" y2="170" class="tree-line"/>
+
+  <!-- CLAUDE.md -->
+  <line x1="240" y1="170" x2="240" y2="190" class="tree-line"/>
+  <rect x="150" y="190" width="180" height="50" rx="6" class="core-file"/>
+  <rect x="155" y="195" width="45" height="20" rx="4" class="core-badge"/>
+  <text x="177" y="209" font-size="9" font-weight="bold" fill="white" text-anchor="middle">CORE</text>
+  <text x="240" y="215" class="node-text" text-anchor="middle">CLAUDE.md</text>
+  <text x="240" y="230" class="label-text" text-anchor="middle" font-style="italic">(BIOS-ROM)</text>
+
+  <!-- .claude/ -->
+  <line x1="575" y1="170" x2="575" y2="190" class="tree-line"/>
+  <rect x="485" y="190" width="180" height="50" rx="6" class="system-dir"/>
+  <text x="575" y="218" class="node-text" text-anchor="middle" font-weight="bold">.claude/</text>
+  <text x="575" y="233" class="label-text" text-anchor="middle">(System Coordination)</text>
+
+  <!-- data/ -->
+  <line x1="910" y1="170" x2="910" y2="190" class="tree-line"/>
+  <rect x="820" y="190" width="180" height="50" rx="6" class="data-dir"/>
+  <text x="910" y="218" class="node-text" text-anchor="middle" font-weight="bold">data/</text>
+  <text x="910" y="233" class="label-text" text-anchor="middle">(Data Storage)</text>
+
+  <!-- Level 2 from .claude/ -->
+  <line x1="575" y1="240" x2="575" y2="280" class="tree-line"/>
+  <line x1="195" y1="280" x2="575" y2="280" class="tree-line"/>
+
+  <!-- state.json -->
+  <line x1="195" y1="280" x2="195" y2="300" class="tree-line"/>
+  <rect x="125" y="300" width="140" height="40" rx="5" class="core-file"/>
+  <rect x="130" y="305" width="40" height="18" rx="3" class="core-badge"/>
+  <text x="150" y="318" font-size="8" font-weight="bold" fill="white" text-anchor="middle">CORE</text>
+  <text x="195" y="325" class="node-text" text-anchor="middle">state.json</text>
+
+  <!-- system.log -->
+  <line x1="310" y1="280" x2="310" y2="300" class="tree-line"/>
+  <rect x="240" y="300" width="140" height="40" rx="5" class="regular-file"/>
+  <text x="310" y="325" class="node-text" text-anchor="middle">system.log</text>
+
+  <!-- indexes/ -->
+  <line x1="435" y1="280" x2="435" y2="300" class="tree-line"/>
+  <rect x="375" y="300" width="120" height="40" rx="5" class="system-dir"/>
+  <text x="435" y="325" class="node-text" text-anchor="middle">indexes/</text>
+
+  <!-- sessions/ -->
+  <line x1="575" y1="280" x2="575" y2="300" class="tree-line"/>
+  <rect x="515" y="300" width="120" height="40" rx="5" class="system-dir"/>
+  <text x="575" y="325" class="node-text" text-anchor="middle">sessions/</text>
+
+  <!-- Level 2 continued (second row) -->
+  <line x1="575" y1="340" x2="575" y2="380" class="tree-line"/>
+  <line x1="245" y1="380" x2="905" y2="380" class="tree-line"/>
+
+  <!-- commands/ -->
+  <line x1="245" y1="380" x2="245" y2="400" class="tree-line"/>
+  <rect x="175" y="400" width="140" height="40" rx="5" class="system-dir"/>
+  <text x="245" y="425" class="node-text" text-anchor="middle">commands/</text>
+
+  <!-- agents/ -->
+  <line x1="415" y1="380" x2="415" y2="400" class="tree-line"/>
+  <rect x="355" y="400" width="120" height="40" rx="5" class="system-dir"/>
+  <text x="415" y="425" class="node-text" text-anchor="middle">agents/</text>
+
+  <!-- libraries/ -->
+  <line x1="575" y1="380" x2="575" y2="400" class="tree-line"/>
+  <rect x="505" y="400" width="140" height="40" rx="5" class="system-dir"/>
+  <text x="575" y="425" class="node-text" text-anchor="middle">libraries/</text>
+
+  <!-- tools/ -->
+  <line x1="735" y1="380" x2="735" y2="400" class="tree-line"/>
+  <rect x="675" y="400" width="120" height="40" rx="5" class="system-dir"/>
+  <text x="735" y="425" class="node-text" text-anchor="middle">tools/</text>
+
+  <!-- Level 3 from libraries/ -->
+  <line x1="575" y1="440" x2="575" y2="480" class="tree-line"/>
+  <line x1="405" y1="480" x2="745" y2="480" class="tree-line"/>
+
+  <!-- index.json -->
+  <line x1="405" y1="480" x2="405" y2="500" class="tree-line"/>
+  <rect x="335" y="500" width="140" height="35" rx="5" class="regular-file"/>
+  <text x="405" y="522" class="node-text" text-anchor="middle" font-size="12">index.json</text>
+
+  <!-- internal/ -->
+  <line x1="575" y1="480" x2="575" y2="500" class="tree-line"/>
+  <rect x="515" y="500" width="120" height="35" rx="5" class="system-dir"/>
+  <text x="575" y="522" class="node-text" text-anchor="middle" font-size="12">internal/</text>
+
+  <!-- external/ -->
+  <line x1="745" y1="480" x2="745" y2="500" class="tree-line"/>
+  <rect x="675" y="500" width="140" height="35" rx="5" class="system-dir"/>
+  <text x="745" y="522" class="node-text" text-anchor="middle" font-size="12">external/</text>
+  <text x="745" y="550" font-size="9" fill="#ff6f00" text-anchor="middle" font-style="italic">*exempt from depth limit</text>
+
+  <!-- Level 2 from data/ -->
+  <line x1="910" y1="240" x2="910" y2="280" class="tree-line"/>
+  <line x1="790" y1="280" x2="1030" y2="280" class="tree-line"/>
+
+  <!-- research/ -->
+  <line x1="790" y1="280" x2="790" y2="300" class="tree-line"/>
+  <rect x="720" y="300" width="140" height="40" rx="5" class="data-dir"/>
+  <text x="790" y="325" class="node-text" text-anchor="middle">research/</text>
+
+  <!-- architecture/ -->
+  <line x1="910" y1="280" x2="910" y2="300" class="tree-line"/>
+  <rect x="830" y="300" width="160" height="40" rx="5" class="data-dir"/>
+  <text x="910" y="325" class="node-text" text-anchor="middle">architecture/</text>
+
+  <!-- projects/ -->
+  <line x1="1030" y1="280" x2="1030" y2="300" class="tree-line"/>
+  <rect x="970" y="300" width="120" height="40" rx="5" class="data-dir"/>
+  <text x="1030" y="325" class="node-text" text-anchor="middle">projects/</text>
+
+  <!-- Depth indicators on left -->
+  <g id="depth-labels">
+    <text x="80" y="118" font-size="12" font-weight="bold" fill="#999">L0</text>
+    <text x="80" y="218" font-size="12" font-weight="bold" fill="#999">L1</text>
+    <text x="80" y="325" font-size="12" font-weight="bold" fill="#999">L2</text>
+    <text x="80" y="522" font-size="12" font-weight="bold" fill="#999">L3</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="175" y="610" width="800" height="130" fill="#f5f5f5" rx="8" stroke="#bdbdbd" stroke-width="2"/>
+    <text x="575" y="640" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Legend</text>
+
+    <!-- Visual examples -->
+    <rect x="220" y="660" width="90" height="30" rx="5" class="core-file"/>
+    <rect x="225" y="665" width="35" height="16" rx="3" class="core-badge"/>
+    <text x="242" y="677" font-size="8" font-weight="bold" fill="white" text-anchor="middle">CORE</text>
+    <text x="320" y="678" font-size="11" fill="#1a1a1a">Core File (critical)</text>
+
+    <rect x="470" y="660" width="80" height="30" rx="5" class="system-dir"/>
+    <text x="560" y="678" font-size="11" fill="#1a1a1a">Directory</text>
+
+    <rect x="700" y="660" width="80" height="30" rx="5" class="regular-file"/>
+    <text x="790" y="678" font-size="11" fill="#1a1a1a">Regular File</text>
+
+    <!-- Text info with more space -->
+    <text x="220" y="710" font-size="11" fill="#1a1a1a">
+      <tspan font-weight="bold">Depth Limit:</tspan> Max 3 levels (L0 → L1 → L2 → L3)
+    </text>
+    <text x="220" y="728" font-size="11" fill="#1a1a1a">
+      <tspan font-weight="bold">Exception:</tspan> external/ maintains original structure (no limit)
+    </text>
+  </g>
+</svg>

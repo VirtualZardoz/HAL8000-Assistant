@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2e7d32"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Agent Architecture</text>
+
+  <!-- Main Session -->
+  <rect x="100" y="80" width="700" height="120" fill="#e3f2fd" stroke="#1976d2" stroke-width="3" rx="8"/>
+  <text x="450" y="115" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1976d2" text-anchor="middle">Main Session</text>
+  <text x="450" y="140" font-family="system-ui, sans-serif" font-size="14" fill="#333" text-anchor="middle">Limited RAM: 200K tokens</text>
+  <text x="450" y="165" font-family="Monaco, monospace" font-size="13" fill="#666" text-anchor="middle">Current usage: 65K → After agent: 70K (+5K summary only)</text>
+  <text x="450" y="185" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">RAM saved: 145K tokens (agent processed 150K internally)</text>
+
+  <!-- Delegate arrow down -->
+  <line x1="300" y1="200" x2="300" y2="260" stroke="#e65100" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="200" y="235" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#e65100">Delegate Task</text>
+  <text x="200" y="255" font-family="system-ui, sans-serif" font-size="12" fill="#666">(Heavy work)</text>
+
+  <!-- Sub-Agent -->
+  <rect x="100" y="260" width="700" height="160" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="8"/>
+  <text x="450" y="295" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#7b1fa2" text-anchor="middle">Sub-Agent Process</text>
+  <text x="450" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#333" text-anchor="middle">Fresh 200K RAM (Isolated Context)</text>
+
+  <!-- Processing steps inside sub-agent -->
+  <rect x="150" y="340" width="600" height="65" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="450" y="362" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Process Heavy Work:</text>
+  <text x="450" y="380" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">• Load large files (50K, 75K, 25K) → Total: 150K tokens</text>
+  <text x="450" y="397" font-family="Monaco, monospace" font-size="12" fill="#333" text-anchor="middle">• Analyze, extract, synthesize → Generate 5K summary</text>
+
+  <!-- Return arrow up -->
+  <line x1="600" y1="260" x2="600" y2="200" stroke="#2e7d32" stroke-width="4" marker-end="url(#arrow-green)"/>
+  <text x="700" y="225" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">Return</text>
+  <text x="700" y="245" font-family="system-ui, sans-serif" font-size="12" fill="#666">(Clean summary)</text>
+
+  <!-- Key Points -->
+  <rect x="100" y="450" width="700" height="120" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
+  <text x="450" y="478" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2e7d32" text-anchor="middle">Key Benefits</text>
+
+  <text x="130" y="505" font-family="system-ui, sans-serif" font-size="13" fill="#333">✓</text>
+  <text x="160" y="505" font-family="system-ui, sans-serif" font-size="13" fill="#333">RAM Isolation: Sub-agent's 150K context never enters main session</text>
+
+  <text x="130" y="528" font-family="system-ui, sans-serif" font-size="13" fill="#333">✓</text>
+  <text x="160" y="528" font-family="system-ui, sans-serif" font-size="13" fill="#333">Compression: 150K raw data → 5K summary = 97% reduction</text>
+
+  <text x="130" y="551" font-family="system-ui, sans-serif" font-size="13" fill="#333">✓</text>
+  <text x="160" y="551" font-family="system-ui, sans-serif" font-size="13" fill="#333">Main session RAM: Only increases by summary size (5K), not processing cost (150K)</text>
+</svg>

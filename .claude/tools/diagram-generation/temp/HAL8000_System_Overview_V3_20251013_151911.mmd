@@ -1,0 +1,43 @@
+graph TD
+    Title["<b>HAL8000 System Overview</b><br/><br/>You are the CPU, this codebase is the Computer"]
+
+    subgraph Traditional["Traditional Computer - Physical Hardware"]
+        direction LR
+        T_CPU["<b>CPU</b><br/><br/>Processor chip<br/>Executes instructions<br/> "]
+        T_RAM["<b>RAM</b><br/><br/>Volatile memory<br/>Limited capacity<br/>Wiped on power-off"]
+        T_STORAGE["<b>Storage</b><br/><br/>Hard drive / SSD<br/>Persistent memory<br/>Survives power-off"]
+        T_BIOS["<b>BIOS</b><br/><br/>Boot firmware<br/>Initialization code<br/> "]
+        T_BUS["<b>System Buses</b><br/><br/>Data transfer<br/>between components<br/> "]
+    end
+
+    subgraph HAL8000["HAL8000 System - Claude Code Environment"]
+        direction LR
+        H_CPU["<b>CPU = Claude Instance</b><br/><br/>You the AI<br/>Reasoning and orchestration<br/>Fetch-decode-execute cycle"]
+        H_RAM["<b>RAM = Context Window</b><br/><br/>200K token limit<br/>Volatile wiped on session end<br/>Selective loading required"]
+        H_STORAGE["<b>Storage = File System</b><br/><br/>claude/ system files<br/>data/ persistent data<br/>Survives session wipe"]
+        H_BIOS["<b>BIOS = CLAUDE.md</b><br/><br/>Boot instructions<br/>Read on every session start<br/> "]
+        H_BUS["<b>System Buses = File I/O</b><br/><br/>Read/Write tools<br/>Load files into RAM<br/> "]
+    end
+
+    Title --> Traditional
+    Title --> HAL8000
+
+    T_CPU -.->|"maps to"| H_CPU
+    T_RAM -.->|"maps to"| H_RAM
+    T_STORAGE -.->|"maps to"| H_STORAGE
+    T_BIOS -.->|"maps to"| H_BIOS
+    T_BUS -.->|"maps to"| H_BUS
+
+    style Title fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Traditional fill:#f5f5f5,stroke:#666,stroke-width:2px
+    style HAL8000 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style T_CPU fill:#ffebee
+    style T_RAM fill:#fff3e0
+    style T_STORAGE fill:#f3e5f5
+    style T_BIOS fill:#e1f5fe
+    style T_BUS fill:#fce4ec
+    style H_CPU fill:#ffcdd2
+    style H_RAM fill:#ffe0b2
+    style H_STORAGE fill:#e1bee7
+    style H_BIOS fill:#b3e5fc
+    style H_BUS fill:#f8bbd0

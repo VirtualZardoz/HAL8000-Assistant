@@ -1,0 +1,67 @@
+{
+  "version": "2.0-hierarchical",
+  "directory": ".claude/tools/",
+  "last_updated": "2025-10-05T19:30:00Z",
+  "files": {
+    ".claude/tools/docker-cli.md": {
+      "type": "tool",
+      "category": "external-infrastructure",
+      "topics": ["docker", "containers", "isolation", "dependencies"],
+      "summary": "Docker CLI provides containerized execution environments for tools with heavy dependencies using isolated containers.",
+      "size_estimate_tokens": 1819
+    },
+    ".claude/tools/gemini-cli.md": {
+      "type": "tool",
+      "category": "external-agent",
+      "topics": ["gemini", "external-agent", "1M-context", "heavy-computation"],
+      "summary": "Google Gemini CLI is an external agent with massive 1M token context window for extremely heavy computational tasks.",
+      "size_estimate_tokens": 1538
+    },
+    ".claude/tools/mcp/requirements.md": {
+      "type": "tool",
+      "category": "mcp-configuration",
+      "topics": ["MCP", "server-requirements", "extended-IO", "configuration"],
+      "summary": "Lists MCP servers required and recommended for HAL8000 operation with dynamic control for RAM optimization.",
+      "size_estimate_tokens": 1531
+    },
+    ".claude/tools/mcp/control.py": {
+      "type": "tool",
+      "category": "mcp-management",
+      "topics": ["MCP", "server-control", "python", "dynamic-configuration"],
+      "summary": "Python script for dynamic MCP server control to enable/disable servers per session.",
+      "size_estimate_tokens": 800
+    },
+    ".claude/tools/mcp/registry.json": {
+      "type": "tool",
+      "category": "mcp-configuration",
+      "topics": ["MCP", "registry", "server-definitions", "configuration"],
+      "summary": "Registry file containing MCP server definitions and configurations.",
+      "size_estimate_tokens": 400
+    },
+    ".claude/tools/mcp/run-context7.sh": {
+      "type": "tool",
+      "category": "mcp-launcher",
+      "topics": ["MCP", "context7", "bash-script", "server-launcher"],
+      "summary": "Bash script to launch context7 MCP server.",
+      "size_estimate_tokens": 150
+    },
+    ".claude/tools/mcp/run-omnisearch.sh": {
+      "type": "tool",
+      "category": "mcp-launcher",
+      "topics": ["MCP", "omnisearch", "bash-script", "server-launcher"],
+      "summary": "Bash script to launch omnisearch MCP server.",
+      "size_estimate_tokens": 150
+    }
+  },
+  "statistics": {
+    "total_files": 7,
+    "total_tokens_estimate": 6388,
+    "categories": {
+      "external-infrastructure": 1,
+      "external-agent": 1,
+      "mcp-configuration": 2,
+      "mcp-management": 1,
+      "mcp-launcher": 2
+    }
+  }
+}

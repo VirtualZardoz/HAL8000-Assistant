@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 0 1000 800" width="1000" height="800">
+  <!-- Title -->
+  <text x="450" y="50" font-size="24" font-weight="bold" text-anchor="middle" fill="#1976d2">
+    How the Three Philosophies Interact
+  </text>
+
+  <!-- Three overlapping circles (Venn diagram) - adjusted for better spacing -->
+
+  <!-- Von Neumann circle (top) -->
+  <circle cx="450" cy="270" r="180" fill="#ffe0b2" fill-opacity="0.6" stroke="#f57c00" stroke-width="3"/>
+  <text x="450" y="140" font-size="18" font-weight="bold" text-anchor="middle" fill="#f57c00">
+    Von Neumann
+  </text>
+  <text x="450" y="165" font-size="14" text-anchor="middle" fill="#333">
+    (Structure)
+  </text>
+
+  <!-- Unix circle (bottom left) -->
+  <circle cx="330" cy="470" r="180" fill="#b3e5fc" fill-opacity="0.6" stroke="#0288d1" stroke-width="3"/>
+  <text x="280" y="580" font-size="18" font-weight="bold" text-anchor="middle" fill="#0288d1">
+    Unix
+  </text>
+  <text x="280" y="605" font-size="14" text-anchor="middle" fill="#333">
+    (Organization)
+  </text>
+
+  <!-- Assembly circle (bottom right) -->
+  <circle cx="570" cy="470" r="180" fill="#e1bee7" fill-opacity="0.6" stroke="#7b1fa2" stroke-width="3"/>
+  <text x="620" y="580" font-size="18" font-weight="bold" text-anchor="middle" fill="#7b1fa2">
+    Assembly
+  </text>
+  <text x="620" y="605" font-size="14" text-anchor="middle" fill="#333">
+    (Discipline)
+  </text>
+
+  <!-- Center overlap: HAL8000 System -->
+  <rect x="380" y="350" width="140" height="50" fill="#c5e1a5" stroke="#558b2f" stroke-width="3" rx="5"/>
+  <text x="450" y="370" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">
+    HAL8000
+  </text>
+  <text x="450" y="390" font-size="14" text-anchor="middle" fill="#333">
+    System
+  </text>
+
+  <!-- Von Neumann + Unix overlap (top left) -->
+  <text x="350" y="310" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">
+    Stored commands
+  </text>
+  <text x="350" y="328" font-size="12" text-anchor="middle" fill="#555">
+    in files
+  </text>
+
+  <!-- Unix + Assembly overlap (bottom) -->
+  <text x="450" y="530" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">
+    Explicit
+  </text>
+  <text x="450" y="548" font-size="12" text-anchor="middle" fill="#555">
+    control flow
+  </text>
+
+  <!-- Assembly + Von Neumann overlap (top right) -->
+  <text x="550" y="310" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">
+    Register-based
+  </text>
+  <text x="550" y="328" font-size="12" text-anchor="middle" fill="#555">
+    state
+  </text>
+
+  <!-- Individual circle annotations -->
+
+  <!-- Von Neumann only (top) -->
+  <text x="450" y="205" font-size="12" text-anchor="middle" fill="#555">
+    • Fetch-decode-execute
+  </text>
+  <text x="450" y="223" font-size="12" text-anchor="middle" fill="#555">
+    • Self-modifying code
+  </text>
+
+  <!-- Unix only (left) -->
+  <text x="230" y="450" font-size="12" text-anchor="start" fill="#555">
+    • Do one thing well
+  </text>
+  <text x="230" y="468" font-size="12" text-anchor="start" fill="#555">
+    • Composability
+  </text>
+
+  <!-- Assembly only (right) -->
+  <text x="600" y="450" font-size="12" text-anchor="start" fill="#555">
+    • Direct mapping
+  </text>
+  <text x="600" y="468" font-size="12" text-anchor="start" fill="#555">
+    • Low-level visibility
+  </text>
+
+  <!-- Bottom explanation -->
+  <rect x="100" y="670" width="700" height="120" fill="#f5f5f5" stroke="#999" stroke-width="2" rx="5"/>
+  <text x="450" y="700" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">
+    The Synthesis
+  </text>
+  <text x="450" y="725" font-size="13" text-anchor="middle" fill="#555">
+    Von Neumann provides the structural model (CPU, RAM, Storage, Buses)
+  </text>
+  <text x="450" y="745" font-size="13" text-anchor="middle" fill="#555">
+    Unix provides the organizational principles (modularity, simplicity, composition)
+  </text>
+  <text x="450" y="765" font-size="13" text-anchor="middle" fill="#555">
+    Assembly provides the operational discipline (explicit control, direct access, inspectable state)
+  </text>
+</svg>

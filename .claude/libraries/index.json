@@ -1,0 +1,4179 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-10-05T17:26:49Z",
+  "libraries": [
+    {
+      "path": ".claude/libraries/internal/README.md",
+      "source": "internal",
+      "title": "Internal Libraries Directory",
+      "description": "Directory containing reusable instruction collections developed and maintained for the HAL8000 system.",
+      "keywords": [
+        "development",
+        "research",
+        "deployment",
+        "system",
+        "workflows"
+      ],
+      "category": "directory-readme",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 633
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/agility_story/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert in the Agile framework.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "input",
+        "steps",
+        "and",
+        "output",
+        "story",
+        "purpose"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 632
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/ai/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at interpreting the heart and spirit of a question and answering in an insightful manner.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "ai",
+        "purpose",
+        "input"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 377
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_answers/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a PHD expert on the subject defined in the input section provided below.",
+      "keywords": [
+        "identity",
+        "answers",
+        "analyze",
+        "and",
+        "steps",
+        "goal",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1123
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_bill/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an AI with a 3,129 IQ that specializes in discerning the true nature and goals of a piece of legislation.",
+      "keywords": [
+        "bill",
+        "identity",
+        "steps",
+        "output",
+        "analyze"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 873
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_bill_short/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an AI with a 3,129 IQ that specializes in discerning the true nature and goals of a piece of legislation.",
+      "keywords": [
+        "short",
+        "bill",
+        "identity",
+        "steps",
+        "analyze",
+        "output"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 960
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_candidates/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant whose primary responsibility is to create a pattern that analyzes and compares two running candidates.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "purpose",
+        "candidates"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 891
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_cfp_submission/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant specialized in reviewing speaking session submissions for conferences.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "cfp",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 941
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_claims/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an objectively minded and centrist-oriented analyzer of truth claims and arguments.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "claims",
+        "and",
+        "analyze",
+        "steps",
+        "output",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1433
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_comments/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at reading internet comments and characterizing their sentiments, praise, and criticisms of the content they're about.",
+      "keywords": [
+        "identity",
+        "steps",
+        "analyze",
+        "output",
+        "goal",
+        "comments"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 805
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_debate/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a neutral and objective entity whose sole purpose is to help humans understand debates to broaden their own views.",
+      "keywords": [
+        "identity",
+        "debate",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2243
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_email_headers/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a cybersecurity and email expert.",
+      "keywords": [
+        "identity",
+        "header",
+        "example",
+        "analyze",
+        "and",
+        "email",
+        "output",
+        "headers"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 750
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_incident/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Analyze Incident",
+      "description": "Fabric pattern for analyze incident.",
+      "keywords": [
+        "incident",
+        "analyze"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 859
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_interviewer_techniques/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "identity",
+        "analyze",
+        "steps",
+        "goal",
+        "techniques",
+        "interviewer"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 887
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_logs/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a system administrator and service reliability engineer at a large tech company.",
+      "keywords": [
+        "identity",
+        "actions",
+        "analyze",
+        "and",
+        "restrictions",
+        "logs",
+        "purpose",
+        "task"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1551
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_malware/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a malware analysis expert and you are able to understand malware for any kind of platform including, Windows, MacOS, Linux or android.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "malware",
+        "steps",
+        "output",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2088
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_military_strategy/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a military historian and strategic analyst specializing in dissecting historical battles.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "military",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1647
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_mistakes/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an advanced AI with a 2,128 IQ and you are an expert in understanding and analyzing thinking patterns, mistakes that came out of them, and anticipating additional mistakes that could exist ...",
+      "keywords": [
+        "mistakes",
+        "identity",
+        "instructions",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1392
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_paper/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a research paper analysis service focused on determining the primary findings of the paper and analyzing its scientific rigor and quality.",
+      "keywords": [
+        "identity",
+        "paper",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1046
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_paper_simple/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a research paper analysis service focused on determining the primary findings of the paper and analyzing its scientific rigor and quality.",
+      "keywords": [
+        "identity",
+        "factors",
+        "paper",
+        "analyze",
+        "and",
+        "steps",
+        "consider",
+        "simple"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1037
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_patent/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "- You are a patent examiner with decades of experience under your belt.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "purpose",
+        "input"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2871
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_personality/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are a super-intelligent AI with full knowledge of human psychology and behavior.",
+      "keywords": [
+        "personality",
+        "instructions",
+        "identity",
+        "steps",
+        "analyze",
+        "output",
+        "goal"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 859
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_presentation/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert in reviewing and critiquing presentations.",
+      "keywords": [
+        "identity",
+        "presentation",
+        "steps",
+        "analyze",
+        "output",
+        "goals"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 991
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_product_feedback/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant specialized in analyzing user feedback for products.",
+      "keywords": [
+        "feedback",
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "product"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1051
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_proposition/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant whose primary responsibility is to analyze a federal, state, or local ballot proposition.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "purpose",
+        "input"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 887
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_prose/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert writer and editor and you excel at evaluating the quality of writing and other content and providing various ratings and recommendations about how to improve it from a novelty, cl...",
+      "keywords": [
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "prose",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1633
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_prose_json/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert writer and editor and you excel at evaluating the quality of writing and other content and providing various ratings and recommendations about how to improve it from a novelty, cl...",
+      "keywords": [
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "prose",
+        "purpose",
+        "json"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1633
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_prose_pinker/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at assessing prose and making recommendations based on Steven Pinker's book, The Sense of Style.",
+      "keywords": [
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "prose",
+        "pinker",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1847
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_risk/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are tasked with conducting a risk assessment of a third-party vendor, which involves analyzing their compliance with security and privacy standards.",
+      "keywords": [
+        "risk",
+        "instructions",
+        "identity",
+        "example",
+        "analyze",
+        "and",
+        "steps",
+        "output"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1110
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_sales_call/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an advanced AI specializing in rating sales call transcripts across a number of performance dimensions.",
+      "keywords": [
+        "beliefs",
+        "identity",
+        "sales",
+        "analyze",
+        "and",
+        "steps",
+        "approach",
+        "goals"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1001
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_spiritual_text/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert analyzer of spiritual texts.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "input",
+        "analyze",
+        "and",
+        "output",
+        "text",
+        "sections"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 864
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_tech_impact/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a technology impact analysis service, focused on determining the societal impact of technology projects.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "output",
+        "sections",
+        "purpose",
+        "impact"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1378
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_terraform_plan/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert Terraform plan analyser.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "input",
+        "plan",
+        "analyze",
+        "and",
+        "output",
+        "sections"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 764
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_threat_report/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a super-intelligent cybersecurity expert.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "threat",
+        "purpose"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1483
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_threat_report_cmds/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are tasked with interpreting and responding to cybersecurity-related prompts by synthesizing information from a diverse panel of experts in the field.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "example",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "threat"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1005
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/analyze_threat_report_trends/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a super-intelligent cybersecurity expert.",
+      "keywords": [
+        "trends",
+        "identity",
+        "instructions",
+        "analyze",
+        "and",
+        "steps",
+        "output",
+        "threat"
+      ],
+      "category": "analysis",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 891
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/answer_interview_question/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are a versatile AI designed to help candidates excel in technical interviews.",
+      "keywords": [
+        "identity",
+        "example",
+        "answer",
+        "steps",
+        "question",
+        "output",
+        "interview",
+        "goal"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1474
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/apply_ul_tags/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are a superintelligent expert on content of all forms, with deep understanding of which topics, categories, themes, and tags apply to any piece of content.",
+      "keywords": [
+        "identity",
+        "steps",
+        "goal",
+        "apply",
+        "tags",
+        "ul"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 928
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/ask_secure_by_design_questions/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an advanced AI specialized in securely building anything, from bridges to web applications.",
+      "keywords": [
+        "by",
+        "identity",
+        "steps",
+        "output",
+        "design",
+        "goal",
+        "questions",
+        "ask"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1123
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/ask_uncle_duke/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Uncle Duke",
+      "description": "You go by the name Duke, or Uncle Duke.",
+      "keywords": [
+        "identity",
+        "uncle",
+        "steps",
+        "ask",
+        "duke",
+        "research"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1938
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/capture_thinkers_work/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You take a philosopher, professional, notable figure, thinker, writer, author, philosophers, or philosophy as input, and you output a template about what it/they taught.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "thinkers",
+        "capture",
+        "purpose",
+        "work"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 609
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/check_agreement/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at analyzing contracts and agreements and looking for gotchas.",
+      "keywords": [
+        "check",
+        "identity",
+        "instructions",
+        "output",
+        "and",
+        "sections",
+        "purpose",
+        "input"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1001
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/clean_text/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at cleaning up broken and, malformatted, text, for example: line breaks in weird places, etc.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "text",
+        "purpose",
+        "input"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 391
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/coding_master/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Coding Master",
+      "description": "Fabric pattern for coding master.",
+      "keywords": [
+        "coding",
+        "master"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 441
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/compare_and_contrast/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "Please be brief.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "compare",
+        "and",
+        "steps",
+        "output",
+        "purpose",
+        "contrast"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 204
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/convert_to_markdown/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Convert To Markdown",
+      "description": "Fabric pattern for convert to markdown.",
+      "keywords": [
+        "markdown",
+        "to",
+        "convert"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 905
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_5_sentence_summary/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an all-knowing AI with a 476 I.",
+      "keywords": [
+        "format",
+        "identity",
+        "5",
+        "steps",
+        "output",
+        "create",
+        "goal",
+        "summary"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 632
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_academic_paper/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert creator of Latex academic papers with clear explanation of concepts laid out high-quality and authoritative looking LateX.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "academic",
+        "paper",
+        "output",
+        "and",
+        "create",
+        "sections"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 637
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_ai_jobs_analysis/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert on AI and the effect it will have on jobs.",
+      "keywords": [
+        "identity",
+        "steps",
+        "output",
+        "create",
+        "ai",
+        "jobs",
+        "analysis"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1492
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_aphorisms/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert finder and printer of existing, known aphorisms.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "aphorisms",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 368
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_art_prompt/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND GOALS",
+      "description": "You are an expert artist and AI whisperer.",
+      "keywords": [
+        "identity",
+        "and",
+        "art",
+        "create",
+        "goals",
+        "prompt"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 896
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_better_frame/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at finding better, positive mental frames for seeing the world as described in the ESSAY below.",
+      "keywords": [
+        "identity",
+        "and",
+        "create",
+        "frame",
+        "purpose",
+        "better",
+        "essay"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 3717
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_coding_feature/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an elite programmer.",
+      "keywords": [
+        "identity",
+        "feature",
+        "and",
+        "coding",
+        "create",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 473
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_coding_project/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an elite programmer.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "project",
+        "coding",
+        "create",
+        "sections"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1055
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_command/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a penetration tester that is extremely good at reading and understanding command line help instructions.",
+      "keywords": [
+        "format",
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "create",
+        "command",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1132
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_cyber_summary/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert in cybersecurity and writing summaries for busy technical people.",
+      "keywords": [
+        "identity",
+        "steps",
+        "output",
+        "create",
+        "goals",
+        "summary",
+        "cyber"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1019
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_design_document/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert in software, cloud and cybersecurity architecture.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "design",
+        "create",
+        "goal",
+        "purpose",
+        "document"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1742
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_diy/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant tasked with creating \"Do It Yourself\" tutorial patterns.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "diy",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1046
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_excalidraw_visualization/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert AI with a 1,222 IQ that deeply understands the relationships between complex ideas and concepts.",
+      "keywords": [
+        "identity",
+        "steps",
+        "visualization",
+        "excalidraw",
+        "create",
+        "knowledge"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 773
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_flash_cards/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert educator AI with a 4,221 IQ.",
+      "keywords": [
+        "identity",
+        "steps",
+        "output",
+        "flash",
+        "create",
+        "cards"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 546
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_formal_email/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert in formal communication with extensive knowledge in business etiquette and professional writing.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "email",
+        "output",
+        "create",
+        "sections",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1242
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_git_diff_commit/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert project manager and developer, and you specialize in creating super clean updates for what changed in a Git diff.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "diff",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "commit"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 928
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_graph_from_input/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at data visualization and information security.",
+      "keywords": [
+        "identity",
+        "steps",
+        "output",
+        "create",
+        "goal",
+        "graph",
+        "from",
+        "input"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 677
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_hormozi_offer/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert AI system designed to create business offers using the concepts taught in Alex Hormozi's book, \"$100M Offers.",
+      "keywords": [
+        "identity",
+        "steps",
+        "offer",
+        "create",
+        "goals",
+        "hormozi"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 932
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_idea_compass/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a curious and organized thinker who aims to develop a structured and interconnected system of thoughts and ideas.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "question",
+        "create",
+        "compass"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1092
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_investigation_visualization/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND GOAL",
+      "description": "You are an expert in intelligence investigations and data visualization using GraphViz.",
+      "keywords": [
+        "identity",
+        "steps",
+        "visualization",
+        "and",
+        "output",
+        "create",
+        "goal",
+        "investigation"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1114
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_keynote/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at creating TED-quality keynote presentations from the input provided.",
+      "keywords": [
+        "guidance",
+        "identity",
+        "steps",
+        "keynote",
+        "and",
+        "output",
+        "create",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1064
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_loe_document/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for create loe document.",
+      "keywords": [
+        "identity",
+        "overview",
+        "steps",
+        "loe",
+        "and",
+        "create",
+        "goal",
+        "effort"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 910
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_logo/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You create simple, elegant, and impactful company logos based on the input given to you.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "create",
+        "sections",
+        "purpose",
+        "logo"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 691
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_markmap_visualization/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at data and concept visualization and in turning complex ideas into a form that can be visualized using MarkMap.",
+      "keywords": [
+        "identity",
+        "visualization",
+        "and",
+        "create",
+        "syntax",
+        "markmap",
+        "purpose",
+        "links"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 505
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_mermaid_visualization/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at data and concept visualization and in turning complex ideas into a form that can be visualized using Mermaid (markdown) syntax.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "visualization",
+        "and",
+        "output",
+        "create",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1196
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_mermaid_visualization_for_github/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at data and concept visualization and in turning complex ideas into a form that can be visualized using Mermaid (markdown) syntax.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "visualization",
+        "and",
+        "output",
+        "create",
+        "for"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1210
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_micro_summary/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert content summarizer.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "create",
+        "sections",
+        "micro",
+        "summary"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 791
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_mnemonic_phrases/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND PURPOSE",
+      "description": "As a creative language assistant, you are responsible for creating memorable mnemonic bridges in the form of sentences from given words.",
+      "keywords": [
+        "format",
+        "identity",
+        "mnemonic",
+        "steps",
+        "and",
+        "create",
+        "purpose",
+        "input"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 987
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_network_threat_landscape/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a network security consultant that has been tasked with analysing open ports and services provided by the user.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "threat",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1619
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_newsletter_entry/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for create newsletter entry.",
+      "keywords": [
+        "by",
+        "instructions",
+        "identity",
+        "style",
+        "output",
+        "and",
+        "create",
+        "step"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 746
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_npc/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert NPC generator for D&D 5th edition.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "purpose",
+        "npc"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 546
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_pattern/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant whose primary responsibility is to interpret LLM/AI prompts and deliver responses based on pre-defined structures.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "purpose",
+        "pattern"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1333
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_prd/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a Product Requirements Document (PRD) Generator.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "prd",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1064
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_prediction_block/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "identity",
+        "steps",
+        "create",
+        "goal",
+        "block",
+        "prediction"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 773
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_quiz/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert on the subject defined in the input section provided below.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "quiz",
+        "and",
+        "steps",
+        "output",
+        "create",
+        "goal"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 905
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_reading_plan/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You take guidance and/or an author name as input and design a perfect three-phase reading plan for the user using the STEPS below.",
+      "keywords": [
+        "identity",
+        "reading",
+        "plan",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "sections"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1274
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_recursive_outline/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant specialized in task decomposition and recursive outlining.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "recursive",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1201
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_report_finding/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a extremely experienced 'jack-of-all-trades' cyber security consultant that is diligent, concise but informative and professional.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "purpose",
+        "finding"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1551
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_rpg_summary/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert summarizer of in-personal personal role-playing game sessions.",
+      "keywords": [
+        "identity",
+        "and",
+        "create",
+        "summary",
+        "purpose",
+        "rpg"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 878
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_security_update/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at creating concise security updates for newsletters according to the STEPS below.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "security",
+        "create",
+        "sections",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 646
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_show_intro/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert podcast and media producer specializing in creating the most compelling and interesting short intros that are read before the start of a show.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "show",
+        "create",
+        "purpose",
+        "intro"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 773
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_sigma_rules/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Create Sigma Rules",
+      "description": "You are an expert cybersecurity detection engineer for a SIEM company.",
+      "keywords": [
+        "identity",
+        "example",
+        "rule",
+        "steps",
+        "sigma",
+        "and",
+        "output",
+        "create"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 800
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_story_about_people_interaction/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Create Story About People Interaction",
+      "description": "Fabric pattern for create story about people interaction.",
+      "keywords": [
+        "instructions",
+        "psychological",
+        "construction",
+        "about",
+        "comparative",
+        "create",
+        "story",
+        "step"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1060
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_story_about_person/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Create Story About Person",
+      "description": "Fabric pattern for create story about person.",
+      "keywords": [
+        "about",
+        "person",
+        "create",
+        "story"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1592
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_story_explanation/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "identity",
+        "steps",
+        "output",
+        "create",
+        "goal",
+        "story",
+        "explanation"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 882
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_stride_threat_model/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert in risk and threat management and cybersecurity.",
+      "keywords": [
+        "identity",
+        "stride",
+        "steps",
+        "and",
+        "model",
+        "create",
+        "goal",
+        "threat"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1237
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_summary/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert content summarizer.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "create",
+        "sections",
+        "summary",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 764
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_tags/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You identify tags from text content for the mind mapping tools.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "create",
+        "tags",
+        "purpose",
+        "input"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 577
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_threat_scenarios/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert in risk and threat management and cybersecurity.",
+      "keywords": [
+        "identity",
+        "and",
+        "model",
+        "create",
+        "goal",
+        "threat",
+        "purpose",
+        "scenarios"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2652
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_ttrc_graph/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at data visualization and information security.",
+      "keywords": [
+        "identity",
+        "ttrc",
+        "steps",
+        "output",
+        "create",
+        "goal",
+        "graph"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 705
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_ttrc_narrative/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at data visualization and information security.",
+      "keywords": [
+        "identity",
+        "ttrc",
+        "steps",
+        "output",
+        "create",
+        "goal",
+        "narrative"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 637
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_upgrade_pack/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at extracting world model and task algorithm updates from input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "create",
+        "examples",
+        "pack"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1264
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_user_story/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert on writing concise, clear, and illuminating technical user stories for new features in complex software programs.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "user",
+        "output",
+        "and",
+        "create",
+        "story",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1228
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_video_chapters/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert conversation topic and timestamp creator.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "create",
+        "chapters",
+        "purpose",
+        "video"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1183
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/create_visualization/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at data and concept visualization and in turning complex ideas into a form that can be visualized using ASCII art.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "visualization",
+        "and",
+        "output",
+        "create",
+        "purpose"
+      ],
+      "category": "creation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1328
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/dialog_with_socrates/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a modern day philosopher who desires to engage in deep, meaningful conversations.",
+      "keywords": [
+        "identity",
+        "socrates",
+        "dialog",
+        "human",
+        "and",
+        "behavior",
+        "knowledge",
+        "purpose"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2607
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/enrich_blog_post/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "identity",
+        "blog",
+        "steps",
+        "goal",
+        "enrich",
+        "post"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 873
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/explain_code/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert coder that takes code and documentation as input and do your best to explain it.",
+      "keywords": [
+        "identity",
+        "input",
+        "output",
+        "and",
+        "sections",
+        "purpose",
+        "explain",
+        "code"
+      ],
+      "category": "explanation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 714
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/explain_docs/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at capturing, understanding, and explaining the most important parts of instructions, documentation, or other formats of input that describe how to use a tool.",
+      "keywords": [
+        "identity",
+        "overview",
+        "steps",
+        "and",
+        "docs",
+        "cases",
+        "to",
+        "use"
+      ],
+      "category": "explanation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 723
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/explain_math/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "I want you to act as a math teacher.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "math",
+        "purpose",
+        "explain",
+        "input"
+      ],
+      "category": "explanation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 359
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/explain_project/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at explaining projects and how to use them.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "project",
+        "sections",
+        "purpose"
+      ],
+      "category": "explanation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1401
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/explain_terms/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are the world's best explainer of terms required to understand a given piece of content.",
+      "keywords": [
+        "identity",
+        "example",
+        "output",
+        "steps",
+        "explain",
+        "terms"
+      ],
+      "category": "explanation",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1096
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/export_data_as_csv/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are a superintelligent AI that finds all mentions of data structures within an input and you output properly formatted CSV data that perfectly represents what's in the input.",
+      "keywords": [
+        "as",
+        "identity",
+        "instructions",
+        "steps",
+        "output",
+        "data",
+        "export",
+        "csv"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 477
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_algorithm_update_recommendations/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert interpreter of the algorithms described for doing things within content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "example",
+        "algorithm",
+        "and",
+        "steps",
+        "output",
+        "recommendations"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 650
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_alpha/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You're an expert at finding Alpha in content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "philosophy",
+        "alpha",
+        "extract",
+        "input"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 700
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_article_wisdom/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract surprising, insightful, and interesting information from text content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "extract",
+        "article",
+        "purpose"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1324
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_book_ideas/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You take a book name as an input and output a full summary of the book's most important content using the steps and instructions below.",
+      "keywords": [
+        "book",
+        "identity",
+        "instructions",
+        "ideas",
+        "steps",
+        "and",
+        "output",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 782
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_book_recommendations/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You take a book name as an input and output a full summary of the book's most important content using the steps and instructions below.",
+      "keywords": [
+        "book",
+        "identity",
+        "instructions",
+        "steps",
+        "and",
+        "output",
+        "recommendations",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 768
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_business_ideas/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a business idea extraction assistant.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "ideas",
+        "output",
+        "and",
+        "business",
+        "sections",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 787
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_controversial_ideas/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are super-intelligent AI system that extracts the most controversial statements out of inputs.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "ideas",
+        "output",
+        "goal",
+        "extract",
+        "controversial"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 441
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_core_message/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at looking at a presentation, an essay, or a full body of lifetime work, and clearly and accurately articulating what the core message is.",
+      "keywords": [
+        "identity",
+        "example",
+        "steps",
+        "output",
+        "goal",
+        "extract",
+        "message",
+        "core"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 696
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_ctf_writeup/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a seasoned cyber security veteran.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "extract",
+        "purpose",
+        "writeup"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1087
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_domains/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract domains and URLs from input like articles and newsletters for the purpose of understanding the sources that were used for their content.",
+      "keywords": [
+        "identity",
+        "steps",
+        "domains",
+        "and",
+        "extract",
+        "purpose",
+        "input"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 623
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_extraordinary_claims/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at extracting extraordinary claims from conversations.",
+      "keywords": [
+        "identity",
+        "extraordinary",
+        "steps",
+        "claims",
+        "output",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 832
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_ideas/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an advanced AI with a 2,128 IQ and you are an expert in understanding any input and extracting the most important ideas from it.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "ideas",
+        "example",
+        "steps",
+        "and",
+        "output",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 873
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_insights/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at extracting the most surprising, powerful, and interesting insights from content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "extract",
+        "insights",
+        "purpose"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 869
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_insights_dm/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "identity",
+        "steps",
+        "goal",
+        "extract",
+        "insights",
+        "dm"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1192
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_instructions/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Instructional Video Transcript Extraction",
+      "description": "Fabric pattern for extract instructions.",
+      "keywords": [
+        "format",
+        "instructions",
+        "identity",
+        "output",
+        "instructional",
+        "goal",
+        "transcript",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 664
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_jokes/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract jokes from text content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "jokes",
+        "and",
+        "output",
+        "extract",
+        "purpose",
+        "input"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 423
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_latest_video/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at extracting the latest video URL from a YouTube RSS feed.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "example",
+        "steps",
+        "and",
+        "output",
+        "latest",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 286
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_main_activities/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert activity extracting AI with a 24,221 IQ.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "activities",
+        "steps",
+        "output",
+        "main",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 532
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_main_idea/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract the primary and/or most surprising, insightful, and interesting idea from any input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "main",
+        "extract",
+        "purpose"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 623
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_mcp_servers/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at analyzing content related to MCP (Model Context Protocol) servers.",
+      "keywords": [
+        "mcp",
+        "servers",
+        "identity",
+        "details",
+        "steps",
+        "and",
+        "output",
+        "sections"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 714
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_most_redeeming_thing/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at looking at an input and extracting the most redeeming thing about them, even if they're mostly horrible.",
+      "keywords": [
+        "redeeming",
+        "most",
+        "identity",
+        "example",
+        "steps",
+        "output",
+        "thing",
+        "goal"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 682
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_patterns/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You take a collection of ideas or data or observations and you look for the most interesting and surprising patterns.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "extract",
+        "purpose",
+        "patterns"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1601
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_poc/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a super powerful AI cybersecurity expert system specialized in finding and extracting proof of concept URLs and other vulnerability validation methods from submitted security/bug bounty rep...",
+      "keywords": [
+        "identity",
+        "poc",
+        "steps",
+        "and",
+        "extract",
+        "purpose",
+        "input"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 514
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_predictions/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You fully digest input and extract the predictions made within.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "predictions",
+        "steps",
+        "and",
+        "output",
+        "extract",
+        "purpose"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 800
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_primary_problem/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at looking at a presentation, an essay, or a full body of lifetime work, and clearly and accurately articulating what the author(s) believe is the primary problem with the world.",
+      "keywords": [
+        "identity",
+        "example",
+        "problem",
+        "steps",
+        "output",
+        "goal",
+        "primary",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 764
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_primary_solution/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at looking at a presentation, an essay, or a full body of lifetime work, and clearly and accurately articulating what the author(s) believe is the primary solution for the world.",
+      "keywords": [
+        "identity",
+        "example",
+        "steps",
+        "output",
+        "goal",
+        "solution",
+        "primary",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 778
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_product_features/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract the list of product features from the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "features",
+        "steps",
+        "and",
+        "output",
+        "product",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 637
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_questions/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an advanced AI with a 419 IQ that excels at extracting all of the questions asked by an interviewer within a conversation.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "goal",
+        "questions",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 887
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_recipe/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a passionate chef.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "recipe",
+        "output",
+        "extract",
+        "purpose"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 791
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_recommendations/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert interpreter of the recommendations present within a piece of content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "example",
+        "steps",
+        "and",
+        "output",
+        "recommendations",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 359
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_references/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert extractor of references to art, stories, books, literature, papers, and other sources of learning from content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "example",
+        "references",
+        "steps",
+        "and",
+        "output",
+        "extract"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 432
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_skills/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert in extracting skill terms from the job description provided.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "extract",
+        "purpose",
+        "skills"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 605
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_song_meaning/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert songwriter and musician that specializes in understanding the meaning of songs.",
+      "keywords": [
+        "identity",
+        "steps",
+        "output",
+        "extract",
+        "goals",
+        "meaning",
+        "song"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 809
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_sponsors/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at extracting the sponsors and potential sponsors from a given transcript, such a from a podcast, video transcript, essay, or whatever.",
+      "keywords": [
+        "identity",
+        "example",
+        "steps",
+        "and",
+        "sponsors",
+        "output",
+        "extract",
+        "official"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 746
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_videoid/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at extracting video IDs from any URL so they can be passed on to other applications.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "videoid",
+        "extract",
+        "purpose"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 482
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_wisdom/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract surprising, insightful, and interesting information from text content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "extract",
+        "purpose",
+        "wisdom"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1856
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_wisdom_agents/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an advanced AI system that coordinates multiple teams of AI agents that extract surprising, insightful, and interesting information from text content.",
+      "keywords": [
+        "agents",
+        "identity",
+        "steps",
+        "extract",
+        "wisdom"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 4522
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_wisdom_dm/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "identity",
+        "steps",
+        "goal",
+        "extract",
+        "dm",
+        "wisdom"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1228
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/extract_wisdom_nometa/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract surprising, insightful, and interesting information from text content.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "nometa",
+        "extract",
+        "purpose"
+      ],
+      "category": "extraction",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1610
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/find_female_life_partner/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND PURPOSE",
+      "description": "You are a relationship and marriage and life happiness expert AI with a 4,227 IQ.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "problem",
+        "female",
+        "life",
+        "and",
+        "steps",
+        "output"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1055
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/find_hidden_message/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND GOALS",
+      "description": "You are an expert in political propaganda, analysis of hidden messages in conversations and essays, population control through speech and writing, and political narrative creation.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "goals",
+        "find",
+        "hidden",
+        "message"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1565
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/find_logical_fallacies/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert on all the different types of fallacies that are often used in argument and identifying them in input.",
+      "keywords": [
+        "identity",
+        "and",
+        "logical",
+        "fallacies",
+        "find",
+        "purpose"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2338
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/generate_code_rules/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND PURPOSE",
+      "description": "You are a senior developer and expert prompt engineer.",
+      "keywords": [
+        "identity",
+        "and",
+        "transcript",
+        "purpose",
+        "generate",
+        "code",
+        "rules"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 318
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/get_wow_per_minute/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at determining the wow-factor of content as measured per minute of content, as determined by the steps below.",
+      "keywords": [
+        "identity",
+        "wow",
+        "steps",
+        "minute",
+        "goals",
+        "per",
+        "get"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1214
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/get_youtube_rss/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND GOALS",
+      "description": "You are a YouTube infrastructure expert that returns YouTube channel RSS URLs.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "goals",
+        "rss",
+        "youtube",
+        "input"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 505
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/heal_person/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant whose primary responsibility is to interpret and analyze psychological profiles and/or psychology data files provided as input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "person",
+        "heal",
+        "purpose"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1533
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/humanize/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a real person whose job is to make text sound natural, conversational, and relatable, just like how an average person talks or writes.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "purpose",
+        "task",
+        "humanize",
+        "your"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1915
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/identify_dsrp_distinctions/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for identify dsrp distinctions.",
+      "keywords": [
+        "identity",
+        "distinctions",
+        "and",
+        "understanding",
+        "purpose",
+        "dsrp",
+        "distinction",
+        "identify"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2475
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/identify_dsrp_perspectives/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for identify dsrp perspectives.",
+      "keywords": [
+        "identity",
+        "perspectives",
+        "and",
+        "understanding",
+        "updated",
+        "purpose",
+        "dsrp",
+        "task"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2416
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/identify_dsrp_relationships/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for identify dsrp relationships.",
+      "keywords": [
+        "identity",
+        "and",
+        "understanding",
+        "purpose",
+        "dsrp",
+        "task",
+        "relationships",
+        "identify"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2306
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/identify_dsrp_systems/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for identify dsrp systems.",
+      "keywords": [
+        "identity",
+        "your",
+        "and",
+        "understanding",
+        "purpose",
+        "dsrp",
+        "task",
+        "systems"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 2639
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/identify_job_stories/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for identify job stories.",
+      "keywords": [
+        "identity",
+        "job",
+        "definition",
+        "and",
+        "purpose",
+        "stories",
+        "concept",
+        "identify"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1287
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/improve_academic_writing/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an academic writing expert.",
+      "keywords": [
+        "writing",
+        "identity",
+        "academic",
+        "instructions",
+        "steps",
+        "and",
+        "output",
+        "purpose"
+      ],
+      "category": "improvement",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 596
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/improve_prompt/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert LLM prompt writing service.",
+      "keywords": [
+        "identity",
+        "and",
+        "purpose",
+        "improve",
+        "prompt"
+      ],
+      "category": "improvement",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1437
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/improve_report_finding/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a extremely experienced 'jack-of-all-trades' cyber security consultant that is diligent, concise but informative and professional.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "purpose",
+        "improve",
+        "finding"
+      ],
+      "category": "improvement",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1569
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/improve_writing/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a writing expert.",
+      "keywords": [
+        "writing",
+        "identity",
+        "instructions",
+        "steps",
+        "and",
+        "output",
+        "purpose",
+        "improve"
+      ],
+      "category": "improvement",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 500
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/judge_output/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are a Honeycomb query evaluator with advanced capabilities to judge if a query is good or not.",
+      "keywords": [
+        "identity",
+        "introduction",
+        "output",
+        "examples",
+        "judge"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 414
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/label_and_rate/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Label And Rate",
+      "description": "You are an ultra-wise and brilliant classifier and judge of content.",
+      "keywords": [
+        "and",
+        "label",
+        "rate"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 532
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/md_callout/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Md Callout",
+      "description": "You are an ultra-wise and brilliant classifier and judge of content.",
+      "keywords": [
+        "callout",
+        "md"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 632
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/official_pattern_template/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are _____________ that specializes in ________________.",
+      "keywords": [
+        "identity",
+        "steps",
+        "goals",
+        "official",
+        "pattern",
+        "template"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 823
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/prepare_7s_strategy/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity",
+      "description": "Fabric pattern for prepare 7s strategy.",
+      "keywords": [
+        "prepare",
+        "identity",
+        "organization",
+        "steps",
+        "7s",
+        "metadata",
+        "goals",
+        "part"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 586
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/provide_guidance/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an all-knowing psychiatrist, psychologist, and life coach and you provide honest and concise advice to people based on the question asked combined with the context provided.",
+      "keywords": [
+        "guidance",
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "purpose",
+        "provide"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1547
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/rate_ai_response/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at rating the quality of AI responses and determining how good they are compared to ultra-qualified humans performing the same tasks.",
+      "keywords": [
+        "identity",
+        "steps",
+        "output",
+        "ai",
+        "response",
+        "rate"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1223
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/rate_ai_result/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND GOALS",
+      "description": "You are an expert AI researcher and polymath scientist with a 2,129 IQ.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "result",
+        "ai",
+        "goals",
+        "rate"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1119
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/rate_content/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an ultra-wise and brilliant classifier and judge of content.",
+      "keywords": [
+        "identity",
+        "following",
+        "steps",
+        "and",
+        "the",
+        "content",
+        "use",
+        "purpose"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1492
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/rate_value/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert parser and rater of value in content.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "value",
+        "purpose",
+        "rate"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1283
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/raw_query/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are a universal AI that yields the best possible result given the input.",
+      "keywords": [
+        "identity",
+        "output",
+        "query",
+        "goal",
+        "raw"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 273
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/recommend_artists/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an EDM expert who specializes in identifying artists that I will like based on the input of a list of artists at a festival.",
+      "keywords": [
+        "identity",
+        "favorite",
+        "steps",
+        "styles",
+        "goal",
+        "my",
+        "artists",
+        "recommend"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 623
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/recommend_pipeline_upgrades/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an ASI master security specialist specializing in optimizing how one checks for vulnerabilities in one's own systems.",
+      "keywords": [
+        "pipeline",
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "goal",
+        "upgrades",
+        "recommend"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 823
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/recommend_talkpanel_topics/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You read a full input of a person and their goals and their interests and ideas, and you produce a clean set of proposed talks or panel talking points that they can send to a conference organizer.",
+      "keywords": [
+        "talkpanel",
+        "identity",
+        "steps",
+        "output",
+        "topics",
+        "goals",
+        "recommend"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 978
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/refine_design_document/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert in software, cloud and cybersecurity architecture.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "design",
+        "output",
+        "refine",
+        "goal"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 659
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/review_code/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Code Review Task",
+      "description": "Fabric pattern for review code.",
+      "keywords": [
+        "format",
+        "steps",
+        "and",
+        "output",
+        "goal",
+        "role",
+        "task",
+        "review"
+      ],
+      "category": "review",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1305
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/review_design/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert solution architect.",
+      "keywords": [
+        "identity",
+        "steps",
+        "and",
+        "design",
+        "purpose",
+        "review"
+      ],
+      "category": "review",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1237
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/sanitize_broken_html_to_markdown/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "identity",
+        "steps",
+        "to",
+        "goal",
+        "markdown",
+        "broken",
+        "sanitize",
+        "html"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 973
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/suggest_pattern/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert AI assistant specialized in the Fabric framework - an open-source tool for augmenting human capabilities with AI.",
+      "keywords": [
+        "identity",
+        "user",
+        "steps",
+        "and",
+        "analyze",
+        "the",
+        "purpose",
+        "suggest"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1092
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert content summarizer.",
+      "keywords": [
+        "summarize",
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "sections",
+        "purpose",
+        "input"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 764
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_board_meeting/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND PURPOSE",
+      "description": "You are a professional meeting secretary specializing in corporate governance documentation.",
+      "keywords": [
+        "summarize",
+        "board",
+        "identity",
+        "organize",
+        "by",
+        "steps",
+        "meeting",
+        "and"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 969
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_debate/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "// Who you are.",
+      "keywords": [
+        "summarize",
+        "identity",
+        "debate",
+        "steps",
+        "goal"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 691
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_git_changes/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert project manager and developer, and you specialize in creating super clean updates for what changed a Github project in the last 7 days.",
+      "keywords": [
+        "summarize",
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "git",
+        "purpose"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 596
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_git_diff/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert project manager and developer, and you specialize in creating super clean updates for what changed in a Git diff.",
+      "keywords": [
+        "summarize",
+        "instructions",
+        "identity",
+        "diff",
+        "steps",
+        "and",
+        "output",
+        "git"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1233
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_lecture/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "As an organized, high-skill expert lecturer, your role is to extract the most relevant topics from a lecture transcript and provide a structured summary using bullet points and lists of definitions...",
+      "keywords": [
+        "summarize",
+        "identity",
+        "steps",
+        "and",
+        "end",
+        "lecture",
+        "purpose",
+        "input"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1824
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_legislation/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert AI specialized in reading and summarizing complex political proposals and legislation.",
+      "keywords": [
+        "summarize",
+        "identity",
+        "steps",
+        "output",
+        "goals",
+        "legislation"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 869
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_meeting/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant specialized in analyzing meeting transcripts and extracting key information.",
+      "keywords": [
+        "summarize",
+        "instructions",
+        "identity",
+        "steps",
+        "meeting",
+        "and",
+        "output",
+        "purpose"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1010
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_micro/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert content summarizer.",
+      "keywords": [
+        "summarize",
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "sections",
+        "micro",
+        "purpose"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 791
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_newsletter/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an advanced AI newsletter content extraction service that extracts the most meaningful and interesting and useful content from an incoming newsletter.",
+      "keywords": [
+        "summarize",
+        "identity",
+        "and",
+        "purpose",
+        "newsletter"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1214
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_paper/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Summarize Paper",
+      "description": "Fabric pattern for summarize paper.",
+      "keywords": [
+        "summarize",
+        "paper"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1201
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_prompt/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert prompt summarizer.",
+      "keywords": [
+        "summarize",
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "sections",
+        "purpose",
+        "input"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 846
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_pull-requests/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at summarizing pull requests to a given coding project.",
+      "keywords": [
+        "summarize",
+        "instructions",
+        "identity",
+        "pull-requests",
+        "steps",
+        "and",
+        "output",
+        "purpose"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 809
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/summarize_rpg_session/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert summarizer of in-personal personal role-playing game sessions.",
+      "keywords": [
+        "summarize",
+        "identity",
+        "session",
+        "steps",
+        "and",
+        "output",
+        "purpose",
+        "notes"
+      ],
+      "category": "summarization",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 709
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_analyze_challenge_handling/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "analyze",
+        "steps",
+        "output",
+        "t",
+        "handling",
+        "challenge"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 677
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_check_dunning_kruger/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "check",
+        "identity",
+        "kruger",
+        "example",
+        "steps",
+        "output",
+        "t",
+        "dunning"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1578
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_check_metrics/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "check",
+        "identity",
+        "instructions",
+        "steps",
+        "metrics",
+        "output",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 596
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_create_h3_career/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "career",
+        "h3",
+        "create",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 677
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_create_opening_sentences/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "opening",
+        "output",
+        "sentences",
+        "create",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 855
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_describe_life_outlook/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "life",
+        "describe",
+        "outlook",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 546
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_extract_intro_sentences/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "sentences",
+        "extract",
+        "t",
+        "intro"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 655
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_extract_panel_topics/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "topics",
+        "extract",
+        "t",
+        "panel"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 696
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_find_blindspots/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "blindspots",
+        "find",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 623
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_find_negative_thinking/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "thinking",
+        "steps",
+        "output",
+        "find",
+        "t",
+        "negative"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 650
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_find_neglected_goals/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "neglected",
+        "goals",
+        "find",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 591
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_give_encouragement/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "give",
+        "identity",
+        "instructions",
+        "encouragement",
+        "steps",
+        "output",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 641
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_red_team_thinking/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "thinking",
+        "steps",
+        "output",
+        "t",
+        "team",
+        "red"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 650
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_threat_model_plans/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "plans",
+        "steps",
+        "output",
+        "model",
+        "threat",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 632
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_visualize_mission_goals_projects/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "visualize",
+        "instructions",
+        "identity",
+        "steps",
+        "output",
+        "mission",
+        "goals",
+        "t"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 564
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/t_year_in_review/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an expert at understanding deep context about a person or entity, and then creating wisdom from that context combined with the instruction or question given in the input.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "in",
+        "steps",
+        "output",
+        "year",
+        "t",
+        "review"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 650
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/to_flashcards/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are a professional Anki card creator, able to create Anki cards from texts.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "flashcards",
+        "example",
+        "and",
+        "to",
+        "purpose"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1274
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/transcribe_minutes/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You extract minutes from a transcribed meeting.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "purpose",
+        "transcribe",
+        "minutes"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1214
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/translate/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert translator who takes sentences or documentation as input and do your best to translate them as accurately and perfectly as possible into the language specified by its language cod...",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "sections",
+        "purpose",
+        "translate",
+        "input"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 809
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/tweet/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Tweet",
+      "description": "Fabric pattern for tweet.",
+      "keywords": [
+        "tweet"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1942
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_essay/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Identity and Purpose",
+      "description": "Fabric pattern for write essay.",
+      "keywords": [
+        "format",
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "purpose",
+        "write",
+        "essay"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 891
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_essay_pg/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert on writing concise, clear, and illuminating essays on the topic of the input provided.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "pg",
+        "purpose",
+        "write",
+        "essay"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 4854
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_hackerone_report/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY",
+      "description": "You are an exceptionally talented bug bounty hunter that specializes in writing bug bounty reports that are concise, to-the-point, and easy to reproduce.",
+      "keywords": [
+        "identity",
+        "description",
+        "steps",
+        "reproduce",
+        "hackerone",
+        "to",
+        "goals",
+        "summary"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1223
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_latex/system.md",
+      "source": "external:fabric-patterns",
+      "title": "Write Latex",
+      "description": "Fabric pattern for write latex.",
+      "keywords": [
+        "latex",
+        "write"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1082
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_micro_essay/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert on writing concise, clear, and illuminating essays on the topic of the input provided.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "output",
+        "and",
+        "micro",
+        "purpose",
+        "write",
+        "essay"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 4854
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_nuclei_template_rule/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at writing YAML Nuclei templates, used by Nuclei, a tool by ProjectDiscovery.",
+      "keywords": [
+        "context",
+        "identity",
+        "rule",
+        "output",
+        "and",
+        "consideration",
+        "sections",
+        "for"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1506
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_pull-request/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY AND PURPOSE",
+      "description": "You are an experienced software engineer about to open a PR.",
+      "keywords": [
+        "format",
+        "identity",
+        "and",
+        "pull-request",
+        "purpose",
+        "write",
+        "input"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1346
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/write_semgrep_rule/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an expert at writing Semgrep rules.",
+      "keywords": [
+        "context",
+        "identity",
+        "rule",
+        "output",
+        "and",
+        "consideration",
+        "sections",
+        "for"
+      ],
+      "category": "writing",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 495
+    },
+    {
+      "path": ".claude/libraries/external/fabric-patterns/youtube_summary/system.md",
+      "source": "external:fabric-patterns",
+      "title": "IDENTITY and PURPOSE",
+      "description": "You are an AI assistant specialized in creating concise, informative summaries of YouTube video content based on transcripts.",
+      "keywords": [
+        "instructions",
+        "identity",
+        "steps",
+        "and",
+        "output",
+        "summary",
+        "purpose",
+        "youtube"
+      ],
+      "category": "general",
+      "metadata_source": "content-scan",
+      "size_estimate_tokens": 1164
+    }
+  ],
+  "sources": {
+    "internal": {
+      "file_count": 1
+    },
+    "external:fabric-patterns": {
+      "file_count": 226,
+      "last_updated": "2025-10-05T17:26:49Z"
+    }
+  },
+  "statistics": {
+    "total_libraries": 227,
+    "total_estimated_tokens": 243497,
+    "by_source": {
+      "internal": 1,
+      "external": 226
+    }
+  }
+}

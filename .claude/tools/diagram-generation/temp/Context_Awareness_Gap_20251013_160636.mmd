@@ -1,0 +1,28 @@
+graph TD
+    Title["<b>The Context Awareness Gap</b><br/>Why users and AI talk past each other"]
+
+    Title --> Layer1
+
+    Layer1["<b>Layer 1: User's Mental Model</b><br/><br/>Complete project knowledge<br/>All files, all context, all history<br/>Assumes AI has full access<br/> "]
+
+    Layer2["<b>Layer 2: File System</b><br/><br/>Total available data<br/>Exceeds RAM capacity<br/>Must be selectively loaded<br/> "]
+
+    Layer3["<b>Layer 3: AI RAM Context Window</b><br/><br/>Limited subset currently loaded<br/>200K token limit<br/>Only what has been explicitly read<br/> "]
+
+    Gap1["User assumes Layer 1<br/>references Layer 2"]
+    Gap2["AI only has Layer 3"]
+
+    Layer1 --> Layer2
+    Layer2 --> Layer3
+
+    Layer1 -.->|"User thinks<br/>AI has this"| Gap1
+    Layer3 -.->|"AI actually<br/>has this"| Gap2
+
+    Gap1 -.->|"MISMATCH"| Gap2
+
+    style Title fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Layer1 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Layer2 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style Layer3 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Gap1 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,stroke-dasharray: 5 5
+    style Gap2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px,stroke-dasharray: 5 5

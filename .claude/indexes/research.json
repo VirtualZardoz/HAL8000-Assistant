@@ -1,0 +1,45 @@
+{
+  "version": "2.0-hierarchical",
+  "directory": "data/research/",
+  "last_updated": "2025-10-05T19:30:00Z",
+  "files": {
+    "data/research/01-von-neumann-architecture.md": {
+      "type": "research",
+      "category": "computer-architecture",
+      "topics": ["von-neumann", "CPU", "stored-program", "fetch-decode-execute"],
+      "summary": "The von Neumann architecture is the fundamental design principle that underlies most modern computers, introducing the revolutionary concept of the stored-program computer.",
+      "size_estimate_tokens": 1088
+    },
+    "data/research/02-unix-philosophy.md": {
+      "type": "research",
+      "category": "software-design",
+      "topics": ["unix", "modularity", "simplicity", "composition", "worse-is-better"],
+      "summary": "The Unix philosophy is a set of minimalist, modular design principles that emphasize simplicity, composability, and doing one thing well.",
+      "size_estimate_tokens": 1607
+    },
+    "data/research/03-assembly-language-principles.md": {
+      "type": "research",
+      "category": "low-level-programming",
+      "topics": ["assembly", "machine-code", "registers", "mnemonics", "von-neumann"],
+      "summary": "Assembly language provides a human-readable representation of machine code instructions, serving as the direct interface between programmers and the von Neumann architecture.",
+      "size_estimate_tokens": 2493
+    },
+    "data/research/04-claude-code-runtime-constraints.md": {
+      "type": "research",
+      "category": "runtime-constraints",
+      "topics": ["claude-code", "context-window", "RAM-limitations", "session-persistence"],
+      "summary": "Documents Claude Code execution environment constraints and limitations including context management, token usage, and session persistence.",
+      "size_estimate_tokens": 1873
+    }
+  },
+  "statistics": {
+    "total_files": 4,
+    "total_tokens_estimate": 7061,
+    "categories": {
+      "computer-architecture": 1,
+      "software-design": 1,
+      "low-level-programming": 1,
+      "runtime-constraints": 1
+    }
+  }
+}

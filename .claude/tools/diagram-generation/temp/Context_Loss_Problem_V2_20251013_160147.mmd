@@ -1,0 +1,36 @@
+graph TB
+    Title["<b>Context Loss Problem and Solution</b>"]
+
+    subgraph Without["<b>WITHOUT HAL8000</b> - Context Loss Every Session"]
+        W1["<b>Session 1</b><br/><br/>Context loaded<br/>Working on project<br/>Files in RAM"]
+        W2["<b>Session Ends</b><br/><br/>RAM wiped<br/>All context lost<br/> "]
+        W3["<b>Session 2</b><br/><br/>Start from scratch<br/>Re-explain everything<br/>Re-load all files"]
+    end
+
+    subgraph With["<b>WITH HAL8000</b> - State Preserved Across Sessions"]
+        H1["<b>Session 1</b><br/><br/>Context loaded<br/>Working on project<br/>Files in RAM"]
+        H2["<b>/HAL-session-end</b><br/><br/>Save state to filesystem<br/>state.json updated<br/>Session file created"]
+        H3["<b>Session Ends</b><br/><br/>RAM wiped<br/>State persisted to disk<br/> "]
+        H4["<b>Session 2 Boots</b><br/><br/>Load state.json<br/>Resume session file<br/>Context restored"]
+    end
+
+    Title --> Without
+    Title --> With
+
+    W1 --> W2
+    W2 --> W3
+
+    H1 --> H2
+    H2 --> H3
+    H3 --> H4
+
+    style Title fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Without fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style With fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style W1 fill:#fff3e0
+    style W2 fill:#ffcdd2
+    style W3 fill:#ffcdd2
+    style H1 fill:#fff3e0
+    style H2 fill:#c8e6c9
+    style H3 fill:#fff3e0
+    style H4 fill:#a5d6a7

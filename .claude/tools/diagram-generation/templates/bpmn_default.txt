@@ -1,0 +1,30 @@
+flowchart TD
+    Start([Start Event<br/>Process Triggered]) --> Input[Input Received]
+
+    Input --> Decision{Decision Point}
+
+    Decision -->|Approve| TaskA[Process<br/>Standard Flow]
+    Decision -->|Reject| TaskB[Handle<br/>Exception]
+
+    TaskA --> Gateway{Gateway}
+    TaskB --> Gateway
+
+    Gateway --> Review[Review Results]
+
+    Review --> Approved{Approved?}
+    Approved -->|Yes| Success([Success<br/>Process Complete])
+    Approved -->|No| Rework[Rework Required]
+
+    Rework --> Review
+
+    Success --> End([End Event])
+
+    classDef startEnd fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
+    classDef task fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    classDef decision fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef gateway fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+
+    class Start,End startEnd
+    class TaskA,TaskB,Review,Rework task
+    class Decision,Approved decision
+    class Gateway gateway

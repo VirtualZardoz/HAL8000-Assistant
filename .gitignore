@@ -1,0 +1,109 @@
+# HAL8000 .gitignore
+# Protect sensitive data and temporary files from version control
+
+# =============================================================================
+# SECURITY - API Keys and Secrets
+# =============================================================================
+.env
+*.key
+*.pem
+*secret*
+*credential*
+
+# =============================================================================
+# Session State (Optional - Exclude Active Sessions)
+# =============================================================================
+# Uncomment to exclude active session files (contain work-in-progress)
+# .claude/sessions/*
+
+# Always exclude state.json if it contains sensitive context
+# .claude/state.json
+
+# Local settings with personal paths
+.claude/settings.local.json
+
+# =============================================================================
+# System Logs
+# =============================================================================
+# Logs can be large and contain runtime data not needed in version control
+.claude/system.log
+
+# =============================================================================
+# Temporary and Cache Files
+# =============================================================================
+*.tmp
+*.temp
+*.cache
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.dylib
+
+# =============================================================================
+# IDE and Editor Files
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# Build Artifacts and Dependencies
+# =============================================================================
+node_modules/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# =============================================================================
+# Docker and Container Files
+# =============================================================================
+# Uncomment if you don't want to version Docker artifacts
+# *.dockerfile
+# docker-compose.yml
+
+# =============================================================================
+# Generated Diagrams (Optional)
+# =============================================================================
+# Uncomment if diagrams are generated dynamically and don't need versioning
+# data/diagrams/
+
+# =============================================================================
+# Personal Notes and Drafts
+# =============================================================================
+# Exclude work-in-progress and backup files
+*draft*
+# *notes*
+# *TODO*
+
+# Exclude refactored/work-in-progress directories
+data/reference-manual/refactored/
+data/reference-manual/critiques/
+data/reference-manual/prompts/
+
+# =============================================================================
+# MCP Server Configuration
+# =============================================================================
+# MCP server runtime files (optional)
+*.mcp.log
+
+# =============================================================================
+# Windows and WSL Specific
+# =============================================================================
+desktop.ini
+$RECYCLE.BIN/
+
+# =============================================================================
+# Backup Files
+# =============================================================================
+*.backup
+*.bak
+*.old

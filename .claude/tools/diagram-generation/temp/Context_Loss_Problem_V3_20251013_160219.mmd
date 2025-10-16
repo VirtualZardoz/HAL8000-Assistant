@@ -1,0 +1,38 @@
+graph TD
+    Title["<b>Context Loss Problem and Solution</b><br/>Comparing session continuity without and with HAL8000"]
+
+    Title --> Col1
+    Title --> Col2
+
+    Col1["<b>WITHOUT HAL8000</b>"]
+    Col2["<b>WITH HAL8000</b>"]
+
+    Col1 --> W1
+    Col2 --> H1
+
+    W1["<b>Session 1</b><br/><br/>Context loaded<br/>Working on project<br/>Files in RAM<br/> "]
+    W2["<b>❌ Session Ends</b><br/><br/>RAM wiped<br/>All context LOST<br/>No persistence<br/> "]
+    W3["<b>Session 2</b><br/><br/>Start from scratch<br/>Re-explain everything<br/>Re-load all files<br/>Repeat manual work"]
+
+    H1["<b>Session 1</b><br/><br/>Context loaded<br/>Working on project<br/>Files in RAM<br/> "]
+    H2["<b>✓ /HAL-session-end</b><br/><br/>Save state to filesystem<br/>state.json updated<br/>Session file created<br/>Context captured"]
+    H3["<b>Session Ends</b><br/><br/>RAM wiped<br/>State PERSISTED to disk<br/>Ready for resume<br/> "]
+    H4["<b>✓ Session 2 Boots</b><br/><br/>Load state.json<br/>Resume session file<br/>Context RESTORED<br/>Continue seamlessly"]
+
+    W1 --> W2
+    W2 --> W3
+
+    H1 --> H2
+    H2 --> H3
+    H3 --> H4
+
+    style Title fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,font-size:16px
+    style Col1 fill:#ffebee,stroke:#c62828,stroke-width:3px,font-size:14px
+    style Col2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px,font-size:14px
+    style W1 fill:#fff3e0
+    style W2 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style W3 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style H1 fill:#fff3e0
+    style H2 fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    style H3 fill:#fff3e0
+    style H4 fill:#a5d6a7,stroke:#2e7d32,stroke-width:2px

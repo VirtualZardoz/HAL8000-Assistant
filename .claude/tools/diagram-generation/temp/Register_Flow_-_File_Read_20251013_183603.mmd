@@ -1,0 +1,22 @@
+flowchart LR
+    Start["User Command:<br/>'Read .claude/state.json'"] --> Decode
+
+    Decode["DECODE<br/>IR ← 'Read...'<br/>USER_INTENT ← 'Load state'"] --> Execute
+
+    Execute["EXECUTE<br/>MAR ← path<br/>TEMP_REGISTER ← handle"] --> ReadOp
+
+    ReadOp["READ<br/>MDR ← contents<br/>ACCUMULATOR ← data<br/>RAM_USAGE += 842"] --> Update
+
+    Update["UPDATE<br/>CONTEXT_MANIFEST<br/>← append file"] --> Recalc
+
+    Recalc["RECALC<br/>RAM_ZONE ←<br/>calculate_zone"] --> Complete
+
+    Complete["COMPLETE<br/>OPERATION_RESULT ← success<br/>Clear temp registers"]
+
+    style Start fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Decode fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Execute fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style ReadOp fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style Update fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Recalc fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Complete fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px

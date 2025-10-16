@@ -1,0 +1,76 @@
+flowchart TD
+    Start([HAL Brainstorming<br/>Session Start]) --> Define
+
+    subgraph Stage1 ["🎯 DEFINE Stage (10%)"]
+        Define[Core Idea<br/>Success Criteria<br/>Constraints<br/>Hypothesis]
+        Define --> DefineMore{Drill Deeper?}
+        DefineMore -->|Yes| DefineRecursive[Recursive Deep Dive<br/>'DEFINE more']
+        DefineRecursive --> DefineMore
+        DefineMore -->|No| DefineComplete[define.md<br/>Generated]
+    end
+
+    DefineComplete --> Explore
+
+    subgraph Stage2 ["🔍 EXPLORE Stage (25-45%)"]
+        Explore[Assumptions<br/>Alternatives<br/>Resources<br/>Obstacles<br/>Scenarios]
+        Explore --> ExploreMore{Drill Deeper?}
+        ExploreMore -->|Yes| ExploreRecursive[Recursive Deep Dive<br/>'EXPLORE more']
+        ExploreRecursive --> ExploreMore
+        ExploreMore -->|No| ExploreComplete[explore.md<br/>Generated]
+    end
+
+    ExploreComplete --> Validate
+
+    subgraph Stage3 ["✅ VALIDATE Stage (45-65%)"]
+        Validate[Test Assumptions<br/>Market Evidence<br/>Competitive Analysis<br/>Risk Assessment]
+        Validate --> ValidateMore{Drill Deeper?}
+        ValidateMore -->|Yes| ValidateRecursive[Recursive Deep Dive<br/>'VALIDATE more']
+        ValidateRecursive --> ValidateMore
+        ValidateMore -->|No| ValidateDecision{Go/No-Go?}
+        ValidateDecision -->|No-Go| End1([Session End<br/>validate.md])
+        ValidateDecision -->|Go| ValidateComplete[validate.md<br/>Generated]
+    end
+
+    ValidateComplete --> Structure
+
+    subgraph Stage4 ["🏗️ STRUCTURE Stage (65-85%)"]
+        Structure[Components<br/>Relationships<br/>Metrics<br/>Milestones<br/>Feedback]
+        Structure --> StructureMore{Drill Deeper?}
+        StructureMore -->|Yes| StructureRecursive[Recursive Deep Dive<br/>'STRUCTURE more']
+        StructureRecursive --> StructureMore
+        StructureMore -->|No| StructureComplete[structure.md<br/>Generated]
+    end
+
+    StructureComplete --> Plan
+
+    subgraph Stage5 ["📋 PLAN Stage (85-95%)"]
+        Plan[Task Breakdown<br/>Timeline<br/>Resources<br/>Critical Path<br/>Risk Mitigation]
+        Plan --> PlanMore{Drill Deeper?}
+        PlanMore -->|Yes| PlanRecursive[Recursive Deep Dive<br/>'PLAN more']
+        PlanRecursive --> PlanMore
+        PlanMore -->|No| PlanComplete[plan.md<br/>Generated]
+    end
+
+    PlanComplete --> Finalize
+
+    subgraph Stage6 ["🎯 FINALIZE Stage (95-100%)"]
+        Finalize[Executive Summary<br/>Key Insights<br/>Recommendations<br/>Integration Plan]
+        Finalize --> FinalizeMore{Drill Deeper?}
+        FinalizeMore -->|Yes| FinalizeRecursive[Recursive Deep Dive<br/>'FINALIZE more']
+        FinalizeRecursive --> FinalizeMore
+        FinalizeMore -->|No| FinalizeComplete[final.md<br/>Complete Package]
+    end
+
+    FinalizeComplete --> Success([Session Complete<br/>🎉 Ready for Implementation])
+
+    classDef stageBox fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef processBox fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef decisionBox fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef endBox fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef recursiveBox fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+
+    class Stage1,Stage2,Stage3,Stage4,Stage5,Stage6 stageBox
+    class Define,Explore,Validate,Structure,Plan,Finalize processBox
+    class DefineMore,ExploreMore,ValidateMore,StructureMore,PlanMore,FinalizeMore,ValidateDecision decisionBox
+    class Start,Success,End1 endBox
+    class DefineRecursive,ExploreRecursive,ValidateRecursive,StructureRecursive,PlanRecursive,FinalizeRecursive recursiveBox

@@ -1,0 +1,44 @@
+graph TD
+    Title["<b>The Context Awareness Gap</b><br/>Why users and AI miscommunicate"]
+
+    Title --> Layers
+
+    Layers["The Three Knowledge Layers"]
+
+    Layers --> Layer1
+    Layers --> Layer2
+    Layers --> Layer3
+
+    Layer1["<b>Layer 1: User's Mental Model</b><br/><br/>Complete project knowledge<br/>All files, all context, all history<br/>User assumes AI can access everything"]
+
+    Layer2["<b>Layer 2: File System</b><br/><br/>All available data on disk<br/>Exceeds RAM capacity<br/>Must be selectively loaded"]
+
+    Layer3["<b>Layer 3: AI RAM</b><br/><br/>Limited subset currently loaded<br/>200K token limit<br/>Only explicitly read files"]
+
+    Problem["<b>THE PROBLEM</b>"]
+
+    UserAction["<b>User Action:</b><br/>References file or concept<br/>from Layer 1 or 2"]
+
+    AIState["<b>AI State:</b><br/>Only has Layer 3<br/>Cannot access Layer 1 or 2"]
+
+    Result["<b>Result:</b><br/>❌ Communication breakdown<br/>AI appears confused<br/>User must manually load context"]
+
+    Layer1 --> Problem
+    Layer2 --> Problem
+    Layer3 --> Problem
+
+    Problem --> UserAction
+    Problem --> AIState
+
+    UserAction --> Result
+    AIState --> Result
+
+    style Title fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Layers fill:#f5f5f5,stroke:#666,stroke-width:2px
+    style Layer1 fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Layer2 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style Layer3 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Problem fill:#fff59d,stroke:#f57f17,stroke-width:3px
+    style UserAction fill:#ffe0b2,stroke:#f57c00,stroke-width:2px
+    style AIState fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style Result fill:#ef9a9a,stroke:#c62828,stroke-width:3px

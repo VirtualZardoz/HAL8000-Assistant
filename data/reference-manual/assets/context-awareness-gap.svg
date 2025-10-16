@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" width="800" height="700">
+  <!-- Title -->
+  <text x="400" y="40" font-size="24" font-weight="bold" text-anchor="middle" fill="#1976d2">
+    The Context Awareness Gap
+  </text>
+  <text x="400" y="65" font-size="16" text-anchor="middle" fill="#666">
+    Why users and AI miscommunicate
+  </text>
+
+  <!-- Layer 1: User's Mental Model -->
+  <rect x="100" y="100" width="600" height="100" fill="#fff3e0" stroke="#f57c00" stroke-width="3" rx="5"/>
+  <text x="120" y="130" font-size="18" font-weight="bold" fill="#333">
+    Layer 1: User's Mental Model
+  </text>
+  <text x="120" y="155" font-size="14" fill="#555">
+    • Complete project knowledge
+  </text>
+  <text x="120" y="175" font-size="14" fill="#555">
+    • All files, all context, all history
+  </text>
+  <text x="120" y="195" font-size="14" fill="#f57c00" font-weight="bold">
+    → User assumes AI can access everything
+  </text>
+
+  <!-- Arrow down -->
+  <path d="M 400 200 L 400 230" stroke="#999" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Layer 2: File System -->
+  <rect x="100" y="230" width="600" height="100" fill="#e1f5fe" stroke="#0288d1" stroke-width="3" rx="5"/>
+  <text x="120" y="260" font-size="18" font-weight="bold" fill="#333">
+    Layer 2: File System
+  </text>
+  <text x="120" y="285" font-size="14" fill="#555">
+    • All available data on disk
+  </text>
+  <text x="120" y="305" font-size="14" fill="#555">
+    • Exceeds RAM capacity (200K tokens)
+  </text>
+  <text x="120" y="325" font-size="14" fill="#0288d1" font-weight="bold">
+    → Must be selectively loaded
+  </text>
+
+  <!-- Arrow down -->
+  <path d="M 400 330 L 400 360" stroke="#999" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Layer 3: AI RAM -->
+  <rect x="100" y="360" width="600" height="100" fill="#ffcdd2" stroke="#c62828" stroke-width="3" rx="5"/>
+  <text x="120" y="390" font-size="18" font-weight="bold" fill="#333">
+    Layer 3: AI RAM (Context Window)
+  </text>
+  <text x="120" y="415" font-size="14" fill="#555">
+    • Limited subset currently loaded
+  </text>
+  <text x="120" y="435" font-size="14" fill="#555">
+    • 200K token limit
+  </text>
+  <text x="120" y="455" font-size="14" fill="#c62828" font-weight="bold">
+    → Only explicitly read files
+  </text>
+
+  <!-- The Problem Box -->
+  <rect x="50" y="500" width="700" height="160" fill="#fff59d" stroke="#f57f17" stroke-width="4" rx="8"/>
+  <text x="400" y="530" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">
+    THE MISMATCH
+  </text>
+
+  <!-- Two columns for the problem -->
+  <!-- Left: User Action -->
+  <rect x="70" y="550" width="320" height="90" fill="#ffe0b2" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="230" y="575" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">
+    User Action:
+  </text>
+  <text x="230" y="600" font-size="14" text-anchor="middle" fill="#555">
+    References file or concept
+  </text>
+  <text x="230" y="620" font-size="14" text-anchor="middle" fill="#f57c00" font-weight="bold">
+    from Layer 1 or 2
+  </text>
+
+  <!-- Right: AI State -->
+  <rect x="410" y="550" width="320" height="90" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
+  <text x="570" y="575" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">
+    AI State:
+  </text>
+  <text x="570" y="600" font-size="14" text-anchor="middle" fill="#555">
+    Only has Layer 3
+  </text>
+  <text x="570" y="620" font-size="14" text-anchor="middle" fill="#c62828" font-weight="bold">
+    Cannot access Layer 1 or 2
+  </text>
+
+  <!-- Result annotation -->
+  <text x="400" y="680" font-size="16" font-weight="bold" text-anchor="middle" fill="#d32f2f">
+    ❌ Result: Communication breakdown, AI appears confused
+  </text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#999"/>
+    </marker>
+  </defs>
+</svg>

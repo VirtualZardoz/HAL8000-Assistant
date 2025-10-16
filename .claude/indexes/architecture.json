@@ -1,0 +1,69 @@
+{
+  "version": "2.0-hierarchical",
+  "directory": "data/architecture/",
+  "last_updated": "2025-10-05T19:30:00Z",
+  "files": {
+    "data/architecture/hal8000-agent-architecture.md": {
+      "type": "architecture-spec",
+      "category": "agent-system",
+      "topics": ["agents", "co-processors", "RAM-isolation", "task-delegation"],
+      "summary": "Agents are co-processors with independent CPU and isolated RAM that extend the system's effective memory capacity through task delegation.",
+      "size_estimate_tokens": 3185
+    },
+    "data/architecture/hal8000-bus-architecture.md": {
+      "type": "architecture-spec",
+      "category": "bus-system",
+      "topics": ["buses", "data-flow", "tool-execution", "communication-pathways"],
+      "summary": "Buses are communication pathways that transfer information between CPU, RAM, and Memory, mapping to tool execution patterns.",
+      "size_estimate_tokens": 1638
+    },
+    "data/architecture/hal8000-io-system.md": {
+      "type": "architecture-spec",
+      "category": "io-system",
+      "topics": ["input-output", "file-access", "tools", "discovery"],
+      "summary": "The I/O System defines how the HAL8000 CPU interfaces with external systems, file system, and user without loading everything into RAM.",
+      "size_estimate_tokens": 3154
+    },
+    "data/architecture/hal8000-library-architecture.md": {
+      "type": "architecture-spec",
+      "category": "library-system",
+      "topics": ["libraries", "reusable-instructions", "indexing", "package-management"],
+      "summary": "The Library System provides reusable instruction collections indexed for discovery and loaded on-demand to manage RAM efficiently.",
+      "size_estimate_tokens": 3433
+    },
+    "data/architecture/hal8000-register-architecture.md": {
+      "type": "architecture-spec",
+      "category": "register-system",
+      "topics": ["registers", "CPU-state", "working-memory", "runtime-state"],
+      "summary": "Defines the register architecture - the set of immediate-access state variables that the CPU maintains during execution.",
+      "size_estimate_tokens": 3054
+    },
+    "data/architecture/hal8000-system-design.md": {
+      "type": "architecture-spec",
+      "category": "system-overview",
+      "topics": ["system-design", "architecture-overview", "components", "production"],
+      "summary": "Complete HAL8000 system architecture design with all core components operational including CPU, memory, registers, buses, I/O, agents, and libraries.",
+      "size_estimate_tokens": 2517
+    },
+    "data/architecture/hal8000-v1-gap-analysis.md": {
+      "type": "architecture-spec",
+      "category": "system-analysis",
+      "topics": ["gap-analysis", "v1.0.0", "production-ready", "validation"],
+      "summary": "HAL8000 has achieved all core architectural goals from the original vision and is designated as v1.0.0 production-ready.",
+      "size_estimate_tokens": 2163
+    }
+  },
+  "statistics": {
+    "total_files": 7,
+    "total_tokens_estimate": 19144,
+    "categories": {
+      "agent-system": 1,
+      "bus-system": 1,
+      "io-system": 1,
+      "library-system": 1,
+      "register-system": 1,
+      "system-overview": 1,
+      "system-analysis": 1
+    }
+  }
+}

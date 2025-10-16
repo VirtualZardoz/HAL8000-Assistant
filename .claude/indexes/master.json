@@ -1,0 +1,53 @@
+{
+  "version": "2.0-hierarchical",
+  "last_updated": "2025-10-05T19:30:00Z",
+  "directories": {
+    ".claude/commands/": {
+      "index_file": ".claude/indexes/commands.json",
+      "file_count": 8,
+      "total_tokens_estimate": 8467,
+      "primary_topics": ["validation", "context-management", "system-maintenance", "session-management", "RAM-optimization"],
+      "last_indexed": "2025-10-05T19:30:00Z"
+    },
+    ".claude/sessions/": {
+      "index_file": ".claude/indexes/sessions.json",
+      "file_count": 12,
+      "total_tokens_estimate": 12922,
+      "primary_topics": ["architecture-implementation", "infrastructure", "MCP", "libraries", "context-awareness"],
+      "last_indexed": "2025-10-05T19:30:00Z"
+    },
+    "data/research/": {
+      "index_file": ".claude/indexes/research.json",
+      "file_count": 4,
+      "total_tokens_estimate": 7061,
+      "primary_topics": ["von-neumann", "unix-philosophy", "assembly", "claude-code-constraints"],
+      "last_indexed": "2025-10-05T19:30:00Z"
+    },
+    "data/architecture/": {
+      "index_file": ".claude/indexes/architecture.json",
+      "file_count": 7,
+      "total_tokens_estimate": 19144,
+      "primary_topics": ["registers", "buses", "agents", "libraries", "io-system"],
+      "last_indexed": "2025-10-05T19:30:00Z"
+    },
+    ".claude/agents/": {
+      "index_file": ".claude/indexes/agents.json",
+      "file_count": 4,
+      "total_tokens_estimate": 4989,
+      "primary_topics": ["context-discovery", "web-research", "validation", "system-health"],
+      "last_indexed": "2025-10-05T19:30:00Z"
+    },
+    ".claude/tools/": {
+      "index_file": ".claude/indexes/tools.json",
+      "file_count": 7,
+      "total_tokens_estimate": 6388,
+      "primary_topics": ["MCP", "docker", "gemini", "external-tools", "server-control"],
+      "last_indexed": "2025-10-05T19:30:00Z"
+    }
+  },
+  "statistics": {
+    "total_directories": 6,
+    "total_files": 42,
+    "total_estimated_tokens": 58971
+  }
+}

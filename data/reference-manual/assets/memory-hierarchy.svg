@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 0 900 850">
+  <!-- Title -->
+  <text x="400" y="40" font-size="28" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    Memory Hierarchy
+  </text>
+  <text x="400" y="70" font-size="16" text-anchor="middle" fill="#666" font-style="italic">
+    Persistent Storage ↔ Volatile RAM
+  </text>
+
+  <!-- Top Layer: Claude Context Window (RAM) -->
+  <g id="ram-layer">
+    <rect x="100" y="120" width="600" height="180" fill="#f3e5f5" rx="12" stroke="#7b1fa2" stroke-width="4"/>
+
+    <!-- RAM Header -->
+    <text x="400" y="160" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+      Claude Context Window (RAM)
+    </text>
+    <text x="400" y="188" font-size="14" text-anchor="middle" fill="#424242">
+      Volatile | Limited Capacity: 200,000 tokens
+    </text>
+
+    <!-- RAM Contents visualization -->
+    <rect x="130" y="210" width="540" height="60" fill="#e1bee7" rx="6" stroke="#7b1fa2" stroke-width="2"/>
+    <text x="400" y="235" font-size="12" text-anchor="middle" fill="#1a1a1a" font-weight="bold">
+      Currently Loaded Files
+    </text>
+    <text x="180" y="255" font-size="10" text-anchor="start" fill="#424242">
+      CLAUDE.md
+    </text>
+    <text x="280" y="255" font-size="10" text-anchor="start" fill="#424242">
+      state.json
+    </text>
+    <text x="370" y="255" font-size="10" text-anchor="start" fill="#424242">
+      session.md
+    </text>
+    <text x="480" y="255" font-size="10" text-anchor="start" fill="#424242">
+      [other files...]
+    </text>
+
+    <!-- Capacity indicator -->
+    <text x="680" y="280" font-size="11" text-anchor="end" fill="#7b1fa2" font-weight="bold">
+      ⚠ RAM fills up
+    </text>
+  </g>
+
+  <!-- Middle Layer: Selective Loading Process -->
+  <g id="loading-layer">
+    <!-- Background for middle section -->
+    <rect x="100" y="340" width="600" height="100" fill="#fff3e0" rx="8" stroke="#f57c00" stroke-width="2" stroke-dasharray="5,5"/>
+
+    <text x="400" y="375" font-size="18" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+      Selective Loading Process
+    </text>
+    <text x="400" y="400" font-size="12" text-anchor="middle" fill="#424242">
+      CPU reads files from storage into RAM on-demand
+    </text>
+
+    <!-- Arrows showing bidirectional flow -->
+    <!-- Up arrow (Load) -->
+    <path d="M 320 520 L 320 440" stroke="#2196f3" stroke-width="4" fill="none" marker-end="url(#arrow-blue-up)"/>
+    <text x="250" y="480" font-size="12" fill="#2196f3" font-weight="bold">Read</text>
+    <text x="240" y="495" font-size="10" fill="#2196f3">(Load into RAM)</text>
+
+    <!-- Down arrow (Write) -->
+    <path d="M 480 440 L 480 520" stroke="#4caf50" stroke-width="4" fill="none" marker-end="url(#arrow-green-down)"/>
+    <text x="510" y="480" font-size="12" fill="#4caf50" font-weight="bold">Write</text>
+    <text x="500" y="495" font-size="10" fill="#4caf50">(Persist to disk)</text>
+  </g>
+
+  <!-- Bottom Layer: File System (Persistent Storage) -->
+  <g id="storage-layer">
+    <rect x="100" y="540" width="600" height="260" fill="#e8f5e9" rx="12" stroke="#388e3c" stroke-width="4"/>
+
+    <!-- Storage Header -->
+    <text x="400" y="580" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+      File System (Persistent Storage)
+    </text>
+    <text x="400" y="608" font-size="14" text-anchor="middle" fill="#424242">
+      Persistent | Unlimited Capacity: /mnt/d/~HAL8000/
+    </text>
+
+    <!-- File System Contents -->
+    <g id="fs-contents">
+      <!-- Left Column: .claude/ -->
+      <rect x="130" y="630" width="260" height="140" fill="#c8e6c9" rx="6" stroke="#388e3c" stroke-width="2"/>
+      <text x="260" y="655" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+        .claude/
+      </text>
+      <text x="150" y="680" font-size="11" text-anchor="start" fill="#424242">
+        • state.json
+      </text>
+      <text x="150" y="698" font-size="11" text-anchor="start" fill="#424242">
+        • commands/
+      </text>
+      <text x="150" y="716" font-size="11" text-anchor="start" fill="#424242">
+        • sessions/
+      </text>
+      <text x="150" y="734" font-size="11" text-anchor="start" fill="#424242">
+        • agents/
+      </text>
+      <text x="150" y="752" font-size="11" text-anchor="start" fill="#424242">
+        • libraries/
+      </text>
+
+      <!-- Right Column: data/ and other files -->
+      <rect x="410" y="630" width="260" height="140" fill="#c8e6c9" rx="6" stroke="#388e3c" stroke-width="2"/>
+      <text x="540" y="655" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+        data/ &amp; Root Files
+      </text>
+      <text x="430" y="680" font-size="11" text-anchor="start" fill="#424242">
+        • CLAUDE.md (BIOS)
+      </text>
+      <text x="430" y="698" font-size="11" text-anchor="start" fill="#424242">
+        • data/research/
+      </text>
+      <text x="430" y="716" font-size="11" text-anchor="start" fill="#424242">
+        • data/architecture/
+      </text>
+      <text x="430" y="734" font-size="11" text-anchor="start" fill="#424242">
+        • data/projects/
+      </text>
+      <text x="430" y="752" font-size="11" text-anchor="start" fill="#424242">
+        • [much more...]
+      </text>
+    </g>
+  </g>
+
+  <!-- Key Constraint Annotation -->
+  <g id="constraint">
+    <rect x="50" y="310" width="40" height="30" fill="#ff5252" opacity="0.8" rx="4"/>
+    <text x="70" y="330" font-size="20" font-weight="bold" text-anchor="middle" fill="white">⚠</text>
+    <text x="100" y="328" font-size="12" font-weight="bold" text-anchor="start" fill="#d32f2f">
+      CONSTRAINT: File System &gt;&gt; RAM Capacity
+    </text>
+  </g>
+
+  <!-- Side Labels -->
+  <g id="labels">
+    <!-- RAM label -->
+    <text x="30" y="210" font-size="11" font-weight="bold" fill="#7b1fa2" writing-mode="tb" transform="rotate(-90 30 210)">
+      VOLATILE
+    </text>
+
+    <!-- Storage label -->
+    <text x="30" y="670" font-size="11" font-weight="bold" fill="#388e3c" writing-mode="tb" transform="rotate(-90 30 670)">
+      PERSISTENT
+    </text>
+  </g>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-blue-up" markerWidth="12" markerHeight="12" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 12 3.5, 0 7" fill="#2196f3"/>
+    </marker>
+    <marker id="arrow-green-down" markerWidth="12" markerHeight="12" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 12 3.5, 0 7" fill="#4caf50"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom Note -->
+  <text x="400" y="830" font-size="11" text-anchor="middle" fill="#666" font-style="italic">
+    Selective loading is an architectural requirement: total memory exceeds RAM capacity
+  </text>
+</svg>

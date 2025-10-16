@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 2400">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="1200" y="70" font-size="40" font-weight="bold" text-anchor="middle" fill="#1e293b">Selective Loading Decision Tree</text>
+
+  <!-- START: File load requested -->
+  <ellipse cx="1200" cy="180" rx="180" ry="60" fill="#3b82f6" stroke="#1e40af" stroke-width="4"/>
+  <text x="1200" y="193" font-size="22" font-weight="bold" text-anchor="middle" fill="white">File Load Requested</text>
+
+  <line x1="1200" y1="240" x2="1200" y2="320" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Decision 1: Check CONTEXT_MANIFEST -->
+  <path d="M 1200 320 L 1420 420 L 1200 520 L 980 420 Z" fill="#fef3c7" stroke="#f59e0b" stroke-width="4"/>
+  <text x="1200" y="410" font-size="21" font-weight="bold" text-anchor="middle" fill="#92400e">Already in</text>
+  <text x="1200" y="445" font-size="21" font-weight="bold" text-anchor="middle" fill="#92400e">CONTEXT_MANIFEST?</text>
+
+  <!-- YES path (already loaded) -->
+  <line x1="1420" y1="420" x2="1700" y2="420" stroke="#10b981" stroke-width="4" marker-end="url(#arrow-green)"/>
+  <text x="1560" y="405" font-size="20" font-weight="bold" fill="#10b981">YES</text>
+
+  <rect x="1700" y="350" width="300" height="140" fill="#d1fae5" stroke="#10b981" stroke-width="4" rx="10"/>
+  <text x="1850" y="405" font-size="22" font-weight="bold" text-anchor="middle" fill="#065f46">Reuse Existing</text>
+  <text x="1850" y="440" font-size="18" text-anchor="middle" fill="#065f46">No additional</text>
+  <text x="1850" y="470" font-size="18" text-anchor="middle" fill="#065f46">RAM cost</text>
+
+  <!-- NO path (not loaded) -->
+  <line x1="1200" y1="520" x2="1200" y2="620" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1235" y="570" font-size="20" font-weight="bold" fill="#475569">NO</text>
+
+  <!-- Step 2: Estimate token cost -->
+  <rect x="950" y="620" width="500" height="120" fill="#e0e7ff" stroke="#3b82f6" stroke-width="4" rx="10"/>
+  <text x="1200" y="675" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e40af">Estimate Token Cost</text>
+  <text x="1200" y="713" font-size="19" text-anchor="middle" fill="#1e40af">(file size, complexity)</text>
+
+  <line x1="1200" y1="740" x2="1200" y2="850" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Calculate projected RAM_ZONE -->
+  <rect x="900" y="850" width="600" height="120" fill="#e0e7ff" stroke="#3b82f6" stroke-width="4" rx="10"/>
+  <text x="1200" y="905" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e40af">Calculate Projected RAM_ZONE</text>
+  <text x="1200" y="943" font-size="19" text-anchor="middle" fill="#1e40af">Current + Estimated Cost</text>
+
+  <line x1="1200" y1="970" x2="1200" y2="1090" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Decision 2: Zone determination -->
+  <path d="M 1200 1090 L 1460 1210 L 1200 1330 L 940 1210 Z" fill="#fef3c7" stroke="#f59e0b" stroke-width="4"/>
+  <text x="1200" y="1195" font-size="24" font-weight="bold" text-anchor="middle" fill="#92400e">Projected</text>
+  <text x="1200" y="1230" font-size="24" font-weight="bold" text-anchor="middle" fill="#92400e">RAM_ZONE?</text>
+
+  <!-- SAFE path (left) -->
+  <line x1="1020" y1="1150" x2="275" y2="1150" stroke="#10b981" stroke-width="4"/>
+  <line x1="275" y1="1150" x2="275" y2="1180" stroke="#10b981" stroke-width="4" marker-end="url(#arrow-green)"/>
+  <text x="650" y="1130" font-size="20" font-weight="bold" fill="#10b981">SAFE (&lt;80%)</text>
+
+  <rect x="100" y="1180" width="350" height="200" fill="#d1fae5" stroke="#10b981" stroke-width="4" rx="10"/>
+  <text x="275" y="1245" font-size="24" font-weight="bold" text-anchor="middle" fill="#065f46">PROCEED</text>
+  <text x="275" y="1290" font-size="18" text-anchor="middle" fill="#065f46">Load file</text>
+  <text x="275" y="1325" font-size="18" text-anchor="middle" fill="#065f46">Update manifest</text>
+  <text x="275" y="1360" font-size="18" text-anchor="middle" fill="#065f46">Continue work</text>
+
+  <!-- CAUTION path (center-left) -->
+  <line x1="1050" y1="1280" x2="700" y2="1580" stroke="#f59e0b" stroke-width="4" marker-end="url(#arrow-yellow)"/>
+  <text x="860" y="1420" font-size="20" font-weight="bold" fill="#f59e0b">CAUTION (80-90%)</text>
+
+  <rect x="480" y="1580" width="440" height="240" fill="#fef3c7" stroke="#f59e0b" stroke-width="4" rx="10"/>
+  <text x="700" y="1640" font-size="24" font-weight="bold" text-anchor="middle" fill="#92400e">WARN USER</text>
+  <text x="700" y="1685" font-size="18" text-anchor="middle" fill="#92400e">Report RAM impact</text>
+  <text x="700" y="1720" font-size="18" text-anchor="middle" fill="#92400e">Suggest alternatives</text>
+  <text x="700" y="1755" font-size="18" text-anchor="middle" fill="#92400e">Offer checkpoint</text>
+  <text x="700" y="1790" font-size="18" text-anchor="middle" fill="#92400e">Wait for user confirmation</text>
+
+  <!-- DANGER path (center-right) -->
+  <line x1="1350" y1="1280" x2="1550" y2="1580" stroke="#ef4444" stroke-width="4" marker-end="url(#arrow-red)"/>
+  <text x="1465" y="1420" font-size="20" font-weight="bold" fill="#ef4444">DANGER (≥90%)</text>
+
+  <rect x="1380" y="1580" width="440" height="240" fill="#fee2e2" stroke="#ef4444" stroke-width="4" rx="10"/>
+  <text x="1600" y="1640" font-size="24" font-weight="bold" text-anchor="middle" fill="#991b1b">REFUSE</text>
+  <text x="1600" y="1685" font-size="18" text-anchor="middle" fill="#991b1b">Reject load</text>
+  <text x="1600" y="1720" font-size="18" text-anchor="middle" fill="#991b1b">Explain capacity</text>
+  <text x="1600" y="1755" font-size="18" text-anchor="middle" fill="#991b1b">Suggest checkpoint</text>
+  <text x="1600" y="1790" font-size="18" text-anchor="middle" fill="#991b1b">Require user confirmation</text>
+
+  <!-- Alternative Actions (right side) - connected with proper arrows -->
+  <text x="2130" y="1350" font-size="32" font-weight="bold" text-anchor="middle" fill="#1e293b">Alternatives</text>
+
+  <!-- Alternative 1: Delegate -->
+  <rect x="1950" y="1420" width="360" height="130" fill="#ede9fe" stroke="#7c3aed" stroke-width="4" rx="10"/>
+  <text x="2130" y="1475" font-size="21" font-weight="bold" text-anchor="middle" fill="#5b21b6">Delegate to Sub-Agent</text>
+  <text x="2130" y="1510" font-size="17" text-anchor="middle" fill="#5b21b6">Isolated 200K context</text>
+  <text x="2130" y="1540" font-size="17" text-anchor="middle" fill="#5b21b6">Returns summary only</text>
+
+  <!-- Arrow from WARN USER to Delegate - route around boxes -->
+  <path d="M 920 1650 L 1100 1650 L 1100 1485 L 1950 1485" stroke="#7c3aed" stroke-width="3" stroke-dasharray="8,4" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Alternative 2: Summarize -->
+  <rect x="1950" y="1580" width="360" height="130" fill="#dbeafe" stroke="#2563eb" stroke-width="4" rx="10"/>
+  <text x="2130" y="1635" font-size="21" font-weight="bold" text-anchor="middle" fill="#1e40af">Summarize Instead</text>
+  <text x="2130" y="1670" font-size="17" text-anchor="middle" fill="#1e40af">Load partial content</text>
+  <text x="2130" y="1700" font-size="17" text-anchor="middle" fill="#1e40af">Extract key info only</text>
+
+  <!-- Arrow from WARN USER to Summarize - route around boxes -->
+  <path d="M 920 1700 L 1150 1700 L 1150 1645 L 1950 1645" stroke="#2563eb" stroke-width="3" stroke-dasharray="8,4" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Alternative 3: Defer -->
+  <rect x="1950" y="1740" width="360" height="130" fill="#f3f4f6" stroke="#6b7280" stroke-width="4" rx="10"/>
+  <text x="2130" y="1795" font-size="21" font-weight="bold" text-anchor="middle" fill="#374151">Defer to Future Session</text>
+  <text x="2130" y="1830" font-size="17" text-anchor="middle" fill="#374151">Checkpoint now</text>
+  <text x="2130" y="1860" font-size="17" text-anchor="middle" fill="#374151">Load in fresh session</text>
+
+  <!-- Arrow from REFUSE area to Defer -->
+  <line x1="1820" y1="1700" x2="1950" y2="1805" stroke="#6b7280" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrow-gray)"/>
+
+  <!-- Bottom outcomes -->
+  <text x="1200" y="1980" font-size="32" font-weight="bold" text-anchor="middle" fill="#1e293b">Final Outcomes</text>
+
+  <!-- Outcome 1: Load completed -->
+  <rect x="50" y="2050" width="500" height="180" fill="#d1fae5" stroke="#10b981" stroke-width="4" rx="10"/>
+  <text x="300" y="2120" font-size="25" font-weight="bold" text-anchor="middle" fill="#065f46">✓ File Loaded Successfully</text>
+  <text x="300" y="2165" font-size="19" text-anchor="middle" fill="#065f46">CONTEXT_MANIFEST updated</text>
+  <text x="300" y="2205" font-size="19" text-anchor="middle" fill="#065f46">RAM_ZONE recalculated</text>
+
+  <!-- Arrow from SAFE to outcome -->
+  <line x1="275" y1="1380" x2="275" y2="2050" stroke="#10b981" stroke-width="4" marker-end="url(#arrow-green)"/>
+
+  <!-- Outcome 2: Alternative action -->
+  <rect x="620" y="2050" width="500" height="180" fill="#fef3c7" stroke="#f59e0b" stroke-width="4" rx="10"/>
+  <text x="870" y="2120" font-size="25" font-weight="bold" text-anchor="middle" fill="#92400e">⚠ Alternative Taken</text>
+  <text x="870" y="2165" font-size="19" text-anchor="middle" fill="#92400e">Sub-agent, summary, or defer</text>
+  <text x="870" y="2205" font-size="19" text-anchor="middle" fill="#92400e">RAM preserved</text>
+
+  <!-- Outcome 3: Load refused -->
+  <rect x="1190" y="2050" width="500" height="180" fill="#fee2e2" stroke="#ef4444" stroke-width="4" rx="10"/>
+  <text x="1440" y="2120" font-size="25" font-weight="bold" text-anchor="middle" fill="#991b1b">✗ Load Refused</text>
+  <text x="1440" y="2165" font-size="19" text-anchor="middle" fill="#991b1b">Checkpoint required first</text>
+  <text x="1440" y="2205" font-size="19" text-anchor="middle" fill="#991b1b">User must confirm override</text>
+
+  <!-- Arrow from DANGER to outcome (clean path down and over) -->
+  <line x1="1600" y1="1820" x2="1600" y2="1940" stroke="#ef4444" stroke-width="4"/>
+  <line x1="1600" y1="1940" x2="1440" y2="1940" stroke="#ef4444" stroke-width="4"/>
+  <line x1="1440" y1="1940" x2="1440" y2="2050" stroke="#ef4444" stroke-width="4" marker-end="url(#arrow-red)"/>
+
+  <!-- Protocol note at bottom -->
+  <rect x="350" y="2280" width="1500" height="90" fill="#f8fafc" stroke="#cbd5e1" stroke-width="4" rx="10"/>
+  <text x="1100" y="2325" font-size="20" text-anchor="middle" fill="#475569">• Load ONLY what's needed for current task  • Never load speculatively ("just in case")</text>
+  <text x="1100" y="2355" font-size="20" text-anchor="middle" fill="#475569">• Track all loads in CONTEXT_MANIFEST register  • Persist results immediately after computation</text>
+</svg>

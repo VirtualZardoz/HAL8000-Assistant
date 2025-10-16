@@ -1,0 +1,58 @@
+flowchart TD
+    Start([CPU Ready]) --> Fetch
+
+    Fetch["FETCH<br/>Read instruction from PC location<br/>Load command from file/user input<br/>IR ← instruction"]
+
+    Fetch --> Decode
+
+    Decode["DECODE<br/>Parse instruction syntax<br/>Identify operation type<br/>Extract parameters<br/>USER_INTENT ← inferred goal"]
+
+    Decode --> Execute
+
+    Execute["EXECUTE<br/>Perform operation<br/>Update registers MAR, MDR, etc<br/>Modify RAM/files<br/>OPERATION_RESULT ← status"]
+
+    Execute --> ErrorCheck{Error<br/>occurred?}
+
+    ErrorCheck -->|Yes| ErrorHandle["Set ERROR_FLAG<br/>Set ERROR_CODE<br/>Report to user"]
+    ErrorCheck -->|No| PostExec
+
+    ErrorHandle --> PostExec
+
+    PostExec["POST-EXECUTE<br/>Calculate RAM_USAGE<br/>Update RAM_ZONE<br/>Clear temp registers<br/>Update state"]
+
+    PostExec --> ControlFlow{Control flow<br/>change?}
+
+    ControlFlow -->|Yes: jump/call| UpdatePC["Update PC to<br/>new location"]
+    ControlFlow -->|No| IncrementPC["PC ← next instruction<br/>or null in interactive mode"]
+
+    UpdatePC --> RAMCheck
+    IncrementPC --> RAMCheck
+
+    RAMCheck{RAM_ZONE<br/>== DANGER?}
+
+    RAMCheck -->|Yes| Checkpoint["Warn user<br/>Suggest checkpoint"]
+    RAMCheck -->|No| NextInstruction
+
+    Checkpoint --> NextInstruction
+
+    NextInstruction{More<br/>instructions?}
+
+    NextInstruction -->|Yes| Fetch
+    NextInstruction -->|No| Idle([CPU Idle<br/>Await input])
+
+    Idle --> Fetch
+
+    style Start fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style Fetch fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Decode fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style Execute fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style PostExec fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style ErrorCheck fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style ControlFlow fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style RAMCheck fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style NextInstruction fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    style Idle fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style ErrorHandle fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style UpdatePC fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    style IncrementPC fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    style Checkpoint fill:#fff3e0,stroke:#ef6c00,stroke-width:2px

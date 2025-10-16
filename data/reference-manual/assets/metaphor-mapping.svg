@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 0 1100 800">
+  <!-- Title -->
+  <text x="500" y="40" font-size="28" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    System Metaphor: Traditional Computer → HAL8000
+  </text>
+
+  <!-- Subtitle -->
+  <text x="500" y="75" font-size="16" text-anchor="middle" fill="#7f8c8d" font-style="italic">
+    Direct architectural mapping of computer components to Claude Code environment
+  </text>
+
+  <!-- Left Column Header -->
+  <text x="240" y="130" font-size="20" font-weight="bold" text-anchor="middle" fill="#2980b9">
+    Traditional Computer
+  </text>
+  <text x="240" y="155" font-size="14" text-anchor="middle" fill="#7f8c8d">
+    (Physical Hardware)
+  </text>
+
+  <!-- Right Column Header -->
+  <text x="760" y="130" font-size="20" font-weight="bold" text-anchor="middle" fill="#27ae60">
+    HAL8000 System
+  </text>
+  <text x="760" y="155" font-size="14" text-anchor="middle" fill="#7f8c8d">
+    (Claude Environment)
+  </text>
+
+  <!-- Vertical separator line -->
+  <line x1="500" y1="110" x2="500" y2="750" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Component 1: CPU / Claude Instance -->
+  <g>
+    <!-- Left: CPU -->
+    <rect x="80" y="200" width="320" height="80" fill="#3498db" opacity="0.15" rx="8"/>
+    <text x="240" y="235" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      CPU (Processor Chip)
+    </text>
+    <text x="240" y="260" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      Control Unit + ALU + Registers
+    </text>
+
+    <!-- Right: Claude -->
+    <rect x="600" y="200" width="320" height="80" fill="#2ecc71" opacity="0.15" rx="8"/>
+    <text x="760" y="235" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Claude Instance
+    </text>
+    <text x="760" y="260" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      Orchestration + Reasoning + Working Memory
+    </text>
+
+    <!-- Arrow -->
+    <line x1="400" y1="240" x2="600" y2="240" stroke="#e67e22" stroke-width="3" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Component 2: RAM / Context Window -->
+  <g>
+    <!-- Left: RAM -->
+    <rect x="80" y="310" width="320" height="80" fill="#3498db" opacity="0.15" rx="8"/>
+    <text x="240" y="345" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      RAM (Memory Modules)
+    </text>
+    <text x="240" y="370" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      Volatile, Limited Capacity
+    </text>
+
+    <!-- Right: Context Window -->
+    <rect x="600" y="310" width="320" height="80" fill="#2ecc71" opacity="0.15" rx="8"/>
+    <text x="760" y="345" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Context Window
+    </text>
+    <text x="760" y="370" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      200,000 tokens (Volatile)
+    </text>
+
+    <!-- Arrow -->
+    <line x1="400" y1="350" x2="600" y2="350" stroke="#e67e22" stroke-width="3" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Component 3: Storage / Filesystem -->
+  <g>
+    <!-- Left: Storage -->
+    <rect x="80" y="420" width="320" height="80" fill="#3498db" opacity="0.15" rx="8"/>
+    <text x="240" y="455" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Storage (Hard Drive)
+    </text>
+    <text x="240" y="480" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      Persistent, Large Capacity
+    </text>
+
+    <!-- Right: Filesystem -->
+    <rect x="600" y="420" width="320" height="80" fill="#2ecc71" opacity="0.15" rx="8"/>
+    <text x="760" y="455" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Filesystem
+    </text>
+    <text x="760" y="480" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      /mnt/d/~HAL8000/ (Persistent)
+    </text>
+
+    <!-- Arrow -->
+    <line x1="400" y1="460" x2="600" y2="460" stroke="#e67e22" stroke-width="3" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Component 4: BIOS / CLAUDE.md -->
+  <g>
+    <!-- Left: BIOS -->
+    <rect x="80" y="530" width="320" height="80" fill="#3498db" opacity="0.15" rx="8"/>
+    <text x="240" y="565" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      BIOS (Firmware Chip)
+    </text>
+    <text x="240" y="590" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      Boot Instructions, Always Loaded
+    </text>
+
+    <!-- Right: CLAUDE.md -->
+    <rect x="600" y="530" width="320" height="80" fill="#2ecc71" opacity="0.15" rx="8"/>
+    <text x="760" y="565" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      CLAUDE.md
+    </text>
+    <text x="760" y="590" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      System Initialization, Auto-Loaded
+    </text>
+
+    <!-- Arrow -->
+    <line x1="400" y1="570" x2="600" y2="570" stroke="#e67e22" stroke-width="3" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Component 5: Motherboard / Repository -->
+  <g>
+    <!-- Left: Motherboard -->
+    <rect x="80" y="640" width="320" height="80" fill="#3498db" opacity="0.15" rx="8"/>
+    <text x="240" y="675" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Motherboard (Chassis)
+    </text>
+    <text x="240" y="700" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      Physical Computer System
+    </text>
+
+    <!-- Right: Repository -->
+    <rect x="600" y="640" width="320" height="80" fill="#2ecc71" opacity="0.15" rx="8"/>
+    <text x="760" y="675" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Codebase Repository
+    </text>
+    <text x="760" y="700" font-size="13" text-anchor="middle" fill="#7f8c8d">
+      The Complete Computer System
+    </text>
+
+    <!-- Arrow -->
+    <line x1="400" y1="680" x2="600" y2="680" stroke="#e67e22" stroke-width="3" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e67e22"/>
+    </marker>
+  </defs>
+</svg>

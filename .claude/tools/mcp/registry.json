@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "description": "HAL8000 MCP Server Registry - Available servers for selective loading",
+  "servers": {
+    "omnisearch": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-omnisearch"],
+      "env_vars": ["BRAVE_API_KEY", "FIRECRAWL_API_KEY"],
+      "description": "Multi-provider web search and content extraction (Brave, Tavily, Kagi, Exa, Firecrawl)",
+      "required": true,
+      "used_by": ["research-synthesizer", "claude-code-validator"],
+      "tools": ["mcp__omnisearch__web_search", "mcp__omnisearch__firecrawl_process"]
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/mnt/d/~HAL8000"],
+      "env_vars": [],
+      "description": "Enhanced file system operations with batch reads and advanced search",
+      "required": false,
+      "used_by": ["hal-context-finder", "system-maintenance"],
+      "fallback": "Read, Grep, Glob (100% functionality, slightly slower)",
+      "tools": ["mcp__filesystem__search_files", "mcp__filesystem__list_directory", "mcp__filesystem__get_file_info", "mcp__filesystem__read_file", "mcp__filesystem__write_file", "mcp__filesystem__edit_file"]
+    },
+    "replicate": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "replicate-mcp@latest"],
+      "env_vars": ["REPLICATE_API_TOKEN"],
+      "description": "AI/ML model access via Replicate API (image generation, model inference, etc.)",
+      "required": false,
+      "used_by": [],
+      "use_cases": ["AI model generation", "Image creation", "ML inference tasks"]
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "/mnt/d/~HAL8000/.claude/tools/mcp-manager/run-context7.sh",
+      "args": [],
+      "env_vars": ["CONTEXT7_API_KEY"],
+      "description": "Upstash Context7 vector database for semantic context management and embeddings",
+      "required": false,
+      "used_by": [],
+      "use_cases": ["Vector embeddings", "Semantic search", "Context storage and retrieval"]
+    }
+  },
+  "notes": {
+    "required_servers": "Servers marked 'required: true' should remain enabled for core functionality",
+    "environment": "All API keys stored in single .env file in HAL8000 root directory",
+    "token_cost": "Each enabled MCP server costs approximately 500-1000 tokens on session boot",
+    "selective_loading": "Enable only servers needed for current session to optimize RAM usage"
+  }
+}

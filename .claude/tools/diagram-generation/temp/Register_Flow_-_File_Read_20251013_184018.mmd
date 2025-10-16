@@ -1,0 +1,18 @@
+flowchart TD
+    Start["User Command:<br/>'Read .claude/state.json'"] --> Decode
+    Decode["DECODE PHASE<br/>IR ← 'Read .claude/state.json'<br/>USER_INTENT ← 'Load system state'"] --> Execute
+    Execute["EXECUTE PHASE<br/>MAR ← '/mnt/d/~HAL8000/.claude/state.json'<br/>TEMP_REGISTER ← file_handle"] --> ReadOp
+    ReadOp["READ OPERATION<br/>MDR ← [file contents: 842 tokens]<br/>ACCUMULATOR ← parsed_json_data<br/>RAM_USAGE ← RAM_USAGE + 842"]
+
+    ReadOp --> Update
+    Update["UPDATE MANIFEST<br/>CONTEXT_MANIFEST ← append {<br/>path: '.claude/state.json',<br/>tokens: 842, timestamp: now }"] --> Recalc
+    Recalc["RECALCULATE ZONE<br/>RAM_ZONE ← calculate_zone()<br/>Example: 60000/200000 = 30%<br/>Result: 'SAFE (30%)'"] --> Complete
+    Complete["COMPLETE<br/>OPERATION_RESULT ← 'File read successfully'<br/>TEMP_REGISTER ← null<br/>IR ← null (ready for next)"]
+
+    style Start fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Decode fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Execute fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style ReadOp fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style Update fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Recalc fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Complete fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px

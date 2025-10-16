@@ -1,0 +1,29 @@
+flowchart TD
+    subgraph User ["👤 User"]
+        A[Submit Request]
+        F[Review Result]
+    end
+
+    subgraph HAL ["🤖 HAL 7000"]
+        B[Process Request]
+        E[Deliver Response]
+    end
+
+    subgraph System ["⚙️ System"]
+        C[Execute Task]
+        D[Generate Output]
+    end
+
+    A -->|Request| B
+    B -->|Command| C
+    C -->|Data| D
+    D -->|Result| E
+    E -->|Response| F
+
+    classDef userBox fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef halBox fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef systemBox fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+
+    class A,F userBox
+    class B,E halBox
+    class C,D systemBox

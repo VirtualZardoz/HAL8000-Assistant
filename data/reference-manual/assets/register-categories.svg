@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <!-- Title -->
+  <text x="600" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#1a1a1a" text-anchor="middle">
+    HAL8000 REGISTER ARCHITECTURE
+  </text>
+  <text x="600" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#666" text-anchor="middle">
+    21 Registers in 5 Categories
+  </text>
+
+  <!-- Row 1: Control, Memory, State -->
+
+  <!-- Control Registers (5) -->
+  <g id="control-category">
+    <rect x="80" y="120" width="300" height="280" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="8"/>
+    <rect x="80" y="120" width="300" height="50" fill="#1976d2" rx="8"/>
+    <path d="M 80 170 L 380 170" stroke="#1976d2" stroke-width="2"/>
+    <text x="230" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+      CONTROL (5)
+    </text>
+    <text x="100" y="200" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">CPU_STATUS</text>
+    <text x="100" y="230" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">PC</text>
+    <text x="100" y="260" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">SP</text>
+    <text x="100" y="290" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">BP</text>
+    <text x="100" y="320" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">IR</text>
+    <text x="230" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555" text-anchor="middle" font-style="italic">
+      Execution flow &amp; state
+    </text>
+  </g>
+
+  <!-- Memory Registers (4) -->
+  <g id="memory-category">
+    <rect x="450" y="120" width="300" height="280" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8"/>
+    <rect x="450" y="120" width="300" height="50" fill="#7b1fa2" rx="8"/>
+    <path d="M 450 170 L 750 170" stroke="#7b1fa2" stroke-width="2"/>
+    <text x="600" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+      MEMORY (4)
+    </text>
+    <text x="470" y="200" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">MAR</text>
+    <text x="470" y="230" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">MDR</text>
+    <text x="470" y="260" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">CONTEXT_MANIFEST</text>
+    <text x="470" y="290" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">LOADED_COMMANDS</text>
+    <text x="600" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555" text-anchor="middle" font-style="italic">
+      RAM tracking &amp; resources
+    </text>
+  </g>
+
+  <!-- State Registers (4) -->
+  <g id="state-category">
+    <rect x="820" y="120" width="300" height="280" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
+    <rect x="820" y="120" width="300" height="50" fill="#e65100" rx="8"/>
+    <path d="M 820 170 L 1120 170" stroke="#e65100" stroke-width="2"/>
+    <text x="970" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+      STATE (4)
+    </text>
+    <text x="840" y="200" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">LAST_SESSION</text>
+    <text x="840" y="230" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">NEXT_ACTION</text>
+    <text x="840" y="260" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">SYSTEM_PHASE</text>
+    <text x="840" y="290" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">USER_INTENT</text>
+    <text x="970" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555" text-anchor="middle" font-style="italic">
+      Session continuity
+    </text>
+  </g>
+
+  <!-- Row 2: Status, Data -->
+
+  <!-- Status Registers (5) -->
+  <g id="status-category">
+    <rect x="220" y="440" width="300" height="220" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
+    <rect x="220" y="440" width="300" height="50" fill="#2e7d32" rx="8"/>
+    <path d="M 220 490 L 520 490" stroke="#2e7d32" stroke-width="2"/>
+    <text x="370" y="472" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+      STATUS (5)
+    </text>
+    <text x="240" y="520" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">RAM_USAGE</text>
+    <text x="240" y="550" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">RAM_ZONE</text>
+    <text x="240" y="580" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">ERROR_FLAG</text>
+    <text x="240" y="610" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">ERROR_CODE</text>
+    <text x="240" y="640" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">OPERATION_RESULT</text>
+  </g>
+
+  <!-- Data Registers (3) - Excluding INDEX_REGISTER to maintain 21 total -->
+  <g id="data-category">
+    <rect x="680" y="440" width="300" height="220" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="8"/>
+    <rect x="680" y="440" width="300" height="50" fill="#c2185b" rx="8"/>
+    <path d="M 680 490 L 980 490" stroke="#c2185b" stroke-width="2"/>
+    <text x="830" y="472" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+      DATA (3)
+    </text>
+    <text x="700" y="530" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">ACCUMULATOR</text>
+    <text x="700" y="570" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">DATA_REGISTER</text>
+    <text x="700" y="610" font-family="Monaco, Courier, monospace" font-size="15" fill="#1a1a1a">TEMP_REGISTER</text>
+    <text x="830" y="640" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555" text-anchor="middle" font-style="italic">
+      Working data &amp; scratch space
+    </text>
+  </g>
+</svg>

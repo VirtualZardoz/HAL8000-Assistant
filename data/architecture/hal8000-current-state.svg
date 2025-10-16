@@ -1,0 +1,269 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2e7d32" />
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1565c0" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="30" font-family="monospace" font-size="24" font-weight="bold" text-anchor="middle" fill="#1b5e20">
+    HAL8000 System Architecture - COMPLETE ✓
+  </text>
+
+  <!-- The Computer (Outer boundary) -->
+  <rect x="50" y="60" width="1100" height="810" rx="10" fill="#f5f5f5" stroke="#333" stroke-width="3"/>
+  <text x="600" y="85" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">
+    THE COMPUTER (Codebase: /mnt/d/~HAL8000/)
+  </text>
+
+  <!-- CPU Section -->
+  <g id="cpu">
+    <rect x="80" y="120" width="340" height="320" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+    <text x="250" y="145" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">
+      CPU (Claude Instance)
+    </text>
+
+    <!-- Control Unit -->
+    <rect x="100" y="160" width="140" height="100" rx="3" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="170" y="185" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle" fill="#0d47a1">Control Unit</text>
+    <text x="170" y="205" font-family="monospace" font-size="11" text-anchor="middle" fill="#1565c0">Orchestration</text>
+    <text x="170" y="222" font-family="monospace" font-size="11" text-anchor="middle" fill="#1565c0">Decision Making</text>
+    <text x="170" y="239" font-family="monospace" font-size="11" text-anchor="middle" fill="#1565c0">Fetch-Decode-Execute</text>
+
+    <!-- ALU -->
+    <rect x="260" y="160" width="140" height="100" rx="3" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="330" y="185" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle" fill="#0d47a1">ALU</text>
+    <text x="330" y="205" font-family="monospace" font-size="11" text-anchor="middle" fill="#1565c0">Reasoning</text>
+    <text x="330" y="222" font-family="monospace" font-size="11" text-anchor="middle" fill="#1565c0">Computation</text>
+    <text x="330" y="239" font-family="monospace" font-size="11" text-anchor="middle" fill="#1565c0">Logic Operations</text>
+
+    <!-- Registers -->
+    <rect x="100" y="280" width="300" height="80" rx="3" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="250" y="302" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle" fill="#0d47a1">Registers</text>
+    <text x="250" y="320" font-family="monospace" font-size="11" text-anchor="middle" fill="#0d47a1">21 registers defined ✓</text>
+    <text x="250" y="337" font-family="monospace" font-size="10" text-anchor="middle" fill="#1565c0">Control, Memory, State, Status, Data</text>
+    <text x="250" y="352" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle" fill="#2e7d32">OPERATIONAL ✓</text>
+
+    <!-- CPU Status -->
+    <rect x="100" y="375" width="300" height="50" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="250" y="395" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#2e7d32">Status: OPERATIONAL ✓</text>
+    <text x="250" y="412" font-family="monospace" font-size="10" text-anchor="middle" fill="#2e7d32">Session Continuity: VERIFIED</text>
+  </g>
+
+  <!-- RAM Section -->
+  <g id="ram">
+    <rect x="80" y="460" width="340" height="160" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+    <text x="250" y="485" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="#e65100">
+      RAM (Context Window)
+    </text>
+
+    <rect x="100" y="495" width="300" height="110" rx="3" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
+    <text x="250" y="515" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#bf360c">Volatile Memory</text>
+    <text x="250" y="535" font-family="monospace" font-size="10" text-anchor="middle" fill="#e65100">Capacity: 200K tokens | Usage: ~55K (27%)</text>
+    <text x="250" y="553" font-family="monospace" font-size="10" text-anchor="middle" fill="#2e7d32">Status: SAFE Zone ✓</text>
+    <text x="250" y="569" font-family="monospace" font-size="9" text-anchor="middle" fill="#bf360c">• BIOS (CLAUDE.md) + Operating Principles</text>
+    <text x="250" y="583" font-family="monospace" font-size="9" text-anchor="middle" fill="#bf360c">• state.json + fs-index.json</text>
+    <text x="250" y="597" font-family="monospace" font-size="9" text-anchor="middle" fill="#bf360c">• Active session file</text>
+  </g>
+
+  <!-- BIOS Section -->
+  <g id="bios">
+    <rect x="80" y="640" width="340" height="100" rx="5" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
+    <text x="250" y="665" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="#c2185b">
+      BIOS (CLAUDE.md)
+    </text>
+    <rect x="100" y="675" width="300" height="50" rx="3" fill="#f8bbd0" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="250" y="693" font-family="monospace" font-size="11" text-anchor="middle" fill="#880e4f">Boot Instructions</text>
+    <text x="250" y="708" font-family="monospace" font-size="10" text-anchor="middle" fill="#c2185b">System Architecture</text>
+    <text x="250" y="721" font-family="monospace" font-size="10" text-anchor="middle" fill="#c2185b">Initialization Sequence</text>
+  </g>
+
+  <!-- Memory (File System) -->
+  <g id="memory">
+    <rect x="450" y="120" width="680" height="720" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="790" y="145" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="#2e7d32">
+      MEMORY (File System)
+    </text>
+
+    <!-- .claude/ directory -->
+    <g id="claude-dir">
+      <rect x="470" y="160" width="300" height="390" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="620" y="180" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#1b5e20">
+        .claude/ (System)
+      </text>
+
+      <!-- state.json -->
+      <rect x="490" y="195" width="250" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="615" y="213" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1b5e20">state.json</text>
+      <text x="615" y="228" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">Current state pointer</text>
+      <text x="615" y="240" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">Loaded on boot ✓</text>
+
+      <!-- sessions/ -->
+      <rect x="490" y="255" width="250" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="615" y="273" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1b5e20">sessions/</text>
+      <text x="615" y="288" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">Session handoff files</text>
+      <text x="615" y="300" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">On-demand loading</text>
+
+      <!-- fs-index.json -->
+      <rect x="490" y="315" width="250" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="615" y="333" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1b5e20">fs-index.json</text>
+      <text x="615" y="348" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">File system index for discovery ✓</text>
+      <text x="615" y="360" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">Metadata cache</text>
+
+      <!-- commands/ -->
+      <rect x="490" y="375" width="250" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="615" y="393" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1b5e20">commands/</text>
+      <text x="615" y="408" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">3 commands: session-end, register-dump, index-update ✓</text>
+      <text x="615" y="420" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">Executable instructions</text>
+
+      <!-- agents/ & tools/ -->
+      <rect x="490" y="435" width="118" height="40" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="549" y="453" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#1b5e20">agents/</text>
+      <text x="549" y="467" font-family="monospace" font-size="8" text-anchor="middle" fill="#2e7d32">Specialists</text>
+
+      <rect x="622" y="435" width="118" height="40" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="681" y="453" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#1b5e20">tools/</text>
+      <text x="681" y="467" font-family="monospace" font-size="8" text-anchor="middle" fill="#2e7d32">I/O interfaces</text>
+    </g>
+
+    <!-- data/ directory -->
+    <g id="data-dir">
+      <rect x="470" y="570" width="300" height="180" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="620" y="590" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#1b5e20">
+        data/ (Storage)
+      </text>
+
+      <!-- research/ -->
+      <rect x="490" y="605" width="250" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="615" y="623" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1b5e20">research/</text>
+      <text x="615" y="638" font-family="monospace" font-size="8" text-anchor="middle" fill="#2e7d32">von-neumann, unix, assembly, runtime-constraints</text>
+      <text x="615" y="650" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">4 research docs ✓</text>
+
+      <!-- architecture/ -->
+      <rect x="490" y="665" width="250" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="615" y="683" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1b5e20">architecture/</text>
+      <text x="615" y="698" font-family="monospace" font-size="8" text-anchor="middle" fill="#2e7d32">system-design, registers, buses, I/O, SVG</text>
+      <text x="615" y="710" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">5 files ✓</text>
+    </g>
+
+    <!-- system.log -->
+    <g id="system-log">
+      <rect x="470" y="770" width="300" height="70" rx="3" fill="#ffecb3" stroke="#f57f17" stroke-width="1.5"/>
+      <text x="620" y="790" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#f57f17">
+        system.log
+      </text>
+      <text x="620" y="810" font-family="monospace" font-size="10" text-anchor="middle" fill="#e65100">Append-Only Audit | NOT Loaded on Boot</text>
+      <text x="620" y="827" font-family="monospace" font-size="9" text-anchor="middle" fill="#f57f17">(I/O access only)</text>
+    </g>
+
+    <!-- Completed Components -->
+    <g id="completed-components">
+      <rect x="800" y="160" width="310" height="280" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="955" y="185" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#1b5e20">
+        COMPLETED ✓
+      </text>
+
+      <!-- Registers -->
+      <rect x="820" y="200" width="270" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="955" y="218" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#1b5e20">Registers</text>
+      <text x="955" y="233" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">21 registers: Control, Memory, State, Status, Data</text>
+      <text x="955" y="245" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">register-architecture.md</text>
+
+      <!-- Buses -->
+      <rect x="820" y="260" width="270" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="955" y="278" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#1b5e20">Buses</text>
+      <text x="955" y="293" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">Data, Address, Control buses defined</text>
+      <text x="955" y="305" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">bus-architecture.md</text>
+
+      <!-- I/O System -->
+      <rect x="820" y="320" width="270" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="955" y="338" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#1b5e20">I/O System + FS Index</text>
+      <text x="955" y="353" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">3-layer discovery: Structural, Content, Metadata</text>
+      <text x="955" y="365" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">io-system.md, fs-index.json</text>
+
+      <!-- Operating Principles -->
+      <rect x="820" y="380" width="270" height="50" rx="2" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+      <text x="955" y="398" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#1b5e20">Operating Principles</text>
+      <text x="955" y="413" font-family="monospace" font-size="9" text-anchor="middle" fill="#2e7d32">Unix, von Neumann, sub-agents, resource mgmt</text>
+      <text x="955" y="425" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">Integrated in BIOS (CLAUDE.md)</text>
+    </g>
+
+    <!-- Architecture Status -->
+    <g id="architecture-status">
+      <rect x="800" y="455" width="310" height="135" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="955" y="480" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#1b5e20">
+        ARCHITECTURE COMPLETE ✓
+      </text>
+
+      <text x="955" y="510" font-family="monospace" font-size="11" text-anchor="middle" fill="#2e7d32">All core components operational</text>
+      <text x="955" y="528" font-family="monospace" font-size="10" text-anchor="middle" fill="#558b2f">System ready for real-world usage</text>
+
+      <rect x="820" y="545" width="270" height="35" rx="2" fill="#f1f8e9" stroke="#689f38" stroke-width="1"/>
+      <text x="955" y="560" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle" fill="#33691e">Skipped (Unix principle)</text>
+      <text x="955" y="573" font-family="monospace" font-size="8" text-anchor="middle" fill="#558b2f">Instruction Set, Interrupts, Clock/Timer</text>
+    </g>
+  </g>
+
+  <!-- Data Buses (Connections) -->
+  <g id="buses" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+    <!-- CPU to RAM -->
+    <path d="M 250 440 L 250 460" stroke="#e65100" stroke-width="3"/>
+    <text x="265" y="455" font-family="monospace" font-size="9" fill="#e65100">Load/Store</text>
+
+    <!-- CPU to Memory -->
+    <path d="M 420 280 L 470 280" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowhead-green)"/>
+    <text x="435" y="275" font-family="monospace" font-size="9" fill="#2e7d32">Fetch</text>
+
+    <!-- Memory to CPU -->
+    <path d="M 470 300 L 420 300" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowhead-green)"/>
+    <text x="435" y="318" font-family="monospace" font-size="9" fill="#2e7d32">Data</text>
+
+    <!-- BIOS to RAM (Boot) -->
+    <path d="M 250 640 L 250 620" stroke="#c2185b" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="4,4"/>
+    <text x="265" y="632" font-family="monospace" font-size="9" fill="#c2185b">Boot Load</text>
+
+    <!-- state.json to RAM -->
+    <path d="M 490 220 L 420 220 L 420 500" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowhead-green)" stroke-dasharray="4,4"/>
+    <text x="430" y="350" font-family="monospace" font-size="9" fill="#2e7d32" transform="rotate(-90 430 350)">Init</text>
+  </g>
+
+  <!-- Boot Sequence Indicator -->
+  <g id="boot-sequence">
+    <rect x="80" y="760" width="340" height="95" rx="5" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+    <text x="250" y="780" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#0277bd">
+      BOOT SEQUENCE
+    </text>
+    <text x="90" y="800" font-family="monospace" font-size="10" fill="#01579b">1. Load BIOS (CLAUDE.md)</text>
+    <text x="90" y="815" font-family="monospace" font-size="10" fill="#01579b">2. Read state.json → RAM</text>
+    <text x="90" y="830" font-family="monospace" font-size="10" fill="#01579b">3. Load active session → RAM</text>
+    <text x="90" y="845" font-family="monospace" font-size="10" fill="#0277bd" font-weight="bold">4. OPERATIONAL ✓</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="800" y="750" width="310" height="90" rx="3" fill="#fafafa" stroke="#999" stroke-width="1"/>
+    <text x="955" y="770" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">
+      LEGEND
+    </text>
+    <rect x="820" y="780" width="15" height="15" fill="#e3f2fd" stroke="#1565c0"/>
+    <text x="845" y="791" font-family="monospace" font-size="10" fill="#333">Operational Component</text>
+
+    <rect x="820" y="802" width="15" height="15" fill="#fff9c4" stroke="#f57f17" stroke-dasharray="2,2"/>
+    <text x="845" y="813" font-family="monospace" font-size="10" fill="#333">Pending Definition</text>
+
+    <line x1="820" y1="825" x2="835" y2="825" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="845" y="829" font-family="monospace" font-size="10" fill="#333">Data Flow</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="895" font-family="monospace" font-size="11" text-anchor="middle" fill="#2e7d32" font-weight="bold">
+    HAL8000 ARCHITECTURE COMPLETE ✓ | Modified von Neumann | RAM: 58K/200K (29% SAFE) | Ready for Real-World Usage
+  </text>
+</svg>

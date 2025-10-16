@@ -1,0 +1,27 @@
+graph LR
+    subgraph row1[" "]
+        Start["User Command:<br/>'Read .claude/state.json'"]
+        Decode["DECODE PHASE<br/>IR ← 'Read .claude/state.json'<br/>USER_INTENT ← 'Load system state'"]
+        Execute["EXECUTE PHASE<br/>MAR ← path<br/>TEMP_REGISTER ← file_handle"]
+        ReadOp["READ OPERATION<br/>MDR ← file contents: 842 tokens<br/>ACCUMULATOR ← parsed_json_data<br/>RAM_USAGE += 842"]
+
+        Start --> Decode --> Execute --> ReadOp
+    end
+
+    subgraph row2[" "]
+        Update["UPDATE MANIFEST<br/>CONTEXT_MANIFEST ← append<br/>path, tokens, timestamp"]
+        Recalc["RECALCULATE ZONE<br/>RAM_ZONE ← calculate_zone<br/>60000/200000 = 30% = SAFE"]
+        Complete["COMPLETE<br/>OPERATION_RESULT ← success<br/>Clear temp registers<br/>IR ← null"]
+
+        Update --> Recalc --> Complete
+    end
+
+    ReadOp -.-> Update
+
+    style Start fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    style Decode fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Execute fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style ReadOp fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style Update fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Recalc fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style Complete fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px

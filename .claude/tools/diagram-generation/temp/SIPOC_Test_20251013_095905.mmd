@@ -1,0 +1,49 @@
+flowchart LR
+    subgraph S ["📋 SUPPLIER"]
+        S1[Data Provider<br/>External Source]
+        S2[User<br/>Requestor]
+    end
+
+    subgraph I ["📥 INPUT"]
+        I1[Raw Data<br/>Information]
+        I2[Requirements<br/>Specifications]
+    end
+
+    subgraph P ["⚙️ PROCESS"]
+        P1[Collect Data]
+        P2[Process Information]
+        P3[Generate Results]
+    end
+
+    subgraph O ["📤 OUTPUT"]
+        O1[Final Report<br/>Analysis]
+        O2[Recommendations<br/>Action Items]
+    end
+
+    subgraph C ["👥 CUSTOMER"]
+        C1[End User<br/>Decision Maker]
+        C2[Stakeholders<br/>Team Members]
+    end
+
+    S1 --> I1
+    S2 --> I2
+    I1 --> P1
+    I2 --> P1
+    P1 --> P2
+    P2 --> P3
+    P3 --> O1
+    P3 --> O2
+    O1 --> C1
+    O2 --> C2
+
+    classDef supplierBox fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
+    classDef inputBox fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef processBox fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef outputBox fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef customerBox fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+
+    class S1,S2 supplierBox
+    class I1,I2 inputBox
+    class P1,P2,P3 processBox
+    class O1,O2 outputBox
+    class C1,C2 customerBox

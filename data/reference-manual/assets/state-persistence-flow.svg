@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="900" y="50" font-size="28" font-weight="bold" text-anchor="middle" fill="#1e293b">State Persistence Flow</text>
+
+  <!-- CPU / Current Work (Top) -->
+  <rect x="700" y="100" width="400" height="120" fill="#3b82f6" stroke="#1e40af" stroke-width="3" rx="10"/>
+  <text x="900" y="145" font-size="20" font-weight="bold" text-anchor="middle" fill="white">CPU (Current Work)</text>
+  <text x="900" y="175" font-size="16" text-anchor="middle" fill="white">Active Session Context</text>
+  <text x="900" y="200" font-size="16" text-anchor="middle" fill="white">Volatile RAM State</text>
+
+  <!-- /HAL-session-end command label -->
+  <rect x="750" y="245" width="300" height="40" fill="#fbbf24" stroke="#d97706" stroke-width="2" rx="5"/>
+  <text x="900" y="273" font-size="16" font-weight="bold" text-anchor="middle" fill="#1e293b">/HAL-session-end Command</text>
+
+  <!-- Three Storage Layers -->
+
+  <!-- Layer 1: state.json (Left) -->
+  <g id="state-json">
+    <rect x="80" y="350" width="430" height="240" fill="#f0f9ff" stroke="#2563eb" stroke-width="3" rx="10"/>
+    <text x="295" y="390" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e40af">state.json</text>
+    <text x="295" y="420" font-size="16" text-anchor="middle" fill="#475569">(Overwrite Pattern)</text>
+
+    <rect x="105" y="445" width="380" height="125" fill="white" stroke="#cbd5e1" stroke-width="1" rx="5"/>
+    <text x="120" y="472" font-size="15" fill="#334155">• Current state pointer</text>
+    <text x="120" y="497" font-size="15" fill="#334155">• Always loaded on boot</text>
+    <text x="120" y="522" font-size="15" fill="#334155">• Single source of truth</text>
+    <text x="120" y="547" font-size="15" fill="#334155">• Timestamp synchronized</text>
+    <text x="120" y="572" font-size="15" font-weight="bold" fill="#2563eb">Write: OVERWRITE</text>
+
+    <!-- Boot reads state.json -->
+    <circle cx="295" cy="640" r="45" fill="#10b981" stroke="#059669" stroke-width="2"/>
+    <text x="295" y="635" font-size="14" font-weight="bold" text-anchor="middle" fill="white">BOOT</text>
+    <text x="295" y="653" font-size="13" text-anchor="middle" fill="white">Reads</text>
+  </g>
+
+  <!-- Layer 2: Session Files (Center) -->
+  <g id="session-files">
+    <rect x="590" y="350" width="480" height="240" fill="#f0fdf4" stroke="#16a34a" stroke-width="3" rx="10"/>
+    <text x="830" y="390" font-size="20" font-weight="bold" text-anchor="middle" fill="#15803d">Session Files</text>
+    <text x="830" y="420" font-size="16" text-anchor="middle" fill="#475569">(Accumulate Pattern)</text>
+
+    <rect x="615" y="445" width="430" height="125" fill="white" stroke="#cbd5e1" stroke-width="1" rx="5"/>
+    <text x="630" y="472" font-size="15" fill="#334155">• Rich context snapshots</text>
+    <text x="630" y="497" font-size="15" fill="#334155">• Loaded on explicit resume</text>
+    <text x="630" y="522" font-size="15" fill="#334155">• Multiple files (history)</text>
+    <text x="630" y="547" font-size="15" fill="#334155">• Timestamped filenames</text>
+    <text x="630" y="572" font-size="15" font-weight="bold" fill="#16a34a">Write: ACCUMULATE</text>
+
+    <!-- Resume loads session -->
+    <circle cx="830" cy="640" r="45" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+    <text x="830" y="638" font-size="13" font-weight="bold" text-anchor="middle" fill="white">RESUME</text>
+    <text x="830" y="656" font-size="13" text-anchor="middle" fill="white">Loads</text>
+  </g>
+
+  <!-- Layer 3: System Log (Right) -->
+  <g id="system-log">
+    <rect x="1150" y="350" width="430" height="240" fill="#fef3c7" stroke="#f59e0b" stroke-width="3" rx="10"/>
+    <text x="1365" y="390" font-size="20" font-weight="bold" text-anchor="middle" fill="#d97706">system.log</text>
+    <text x="1365" y="420" font-size="16" text-anchor="middle" fill="#475569">(Append-Only Pattern)</text>
+
+    <rect x="1175" y="445" width="380" height="125" fill="white" stroke="#cbd5e1" stroke-width="1" rx="5"/>
+    <text x="1190" y="472" font-size="15" fill="#334155">• Historical audit trail</text>
+    <text x="1190" y="497" font-size="15" fill="#334155">• Accessed via I/O only</text>
+    <text x="1190" y="522" font-size="15" fill="#334155">• Never loaded on boot</text>
+    <text x="1190" y="547" font-size="15" fill="#334155">• Permanent record</text>
+    <text x="1190" y="572" font-size="15" font-weight="bold" fill="#f59e0b">Write: APPEND</text>
+
+    <!-- I/O access only -->
+    <circle cx="1365" cy="640" r="45" fill="#64748b" stroke="#475569" stroke-width="2"/>
+    <text x="1365" y="638" font-size="13" font-weight="bold" text-anchor="middle" fill="white">I/O</text>
+    <text x="1365" y="656" font-size="13" text-anchor="middle" fill="white">Only</text>
+  </g>
+
+  <!-- Arrows from CPU to storage layers during session-end -->
+  <!-- CPU to state.json -->
+  <line x1="780" y1="285" x2="350" y2="350" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <text x="520" y="310" font-size="15" fill="#2563eb" font-weight="bold">Overwrite</text>
+
+  <!-- CPU to session files -->
+  <line x1="900" y1="285" x2="900" y2="350" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow-green)"/>
+  <text x="920" y="325" font-size="15" fill="#16a34a" font-weight="bold">Create New</text>
+
+  <!-- CPU to system.log -->
+  <line x1="1020" y1="285" x2="1300" y2="350" stroke="#f59e0b" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1180" y="310" font-size="15" fill="#f59e0b" font-weight="bold">Append</text>
+
+  <!-- Bottom section: Read patterns -->
+  <rect x="80" y="740" width="1640" height="420" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3" rx="10"/>
+  <text x="900" y="785" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e293b">Read Patterns</text>
+
+  <!-- Boot Sequence -->
+  <g id="boot-sequence">
+    <rect x="150" y="820" width="440" height="310" fill="white" stroke="#2563eb" stroke-width="3" rx="8"/>
+    <text x="370" y="860" font-size="18" font-weight="bold" text-anchor="middle" fill="#1e40af">Boot Sequence</text>
+
+    <circle cx="370" cy="920" r="40" fill="#10b981" stroke="#059669" stroke-width="3"/>
+    <text x="370" y="928" font-size="15" font-weight="bold" text-anchor="middle" fill="white">START</text>
+
+    <line x1="370" y1="960" x2="370" y2="995" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="260" y="995" width="220" height="70" fill="#3b82f6" stroke="#1e40af" stroke-width="3" rx="5"/>
+    <text x="370" y="1025" font-size="15" font-weight="bold" text-anchor="middle" fill="white">Load state.json</text>
+    <text x="370" y="1050" font-size="13" text-anchor="middle" fill="white">(Always)</text>
+
+    <line x1="370" y1="1065" x2="370" y2="1090" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <ellipse cx="370" cy="1105" rx="70" ry="12" fill="#10b981" stroke="#059669" stroke-width="3"/>
+    <text x="370" y="1110" font-size="14" font-weight="bold" text-anchor="middle" fill="white">READY</text>
+  </g>
+
+  <!-- Resume Command -->
+  <g id="resume-command">
+    <rect x="680" y="820" width="440" height="310" fill="white" stroke="#16a34a" stroke-width="3" rx="8"/>
+    <text x="900" y="860" font-size="18" font-weight="bold" text-anchor="middle" fill="#15803d">Resume Command</text>
+
+    <circle cx="900" cy="920" r="40" fill="#eab308" stroke="#ca8a04" stroke-width="3"/>
+    <text x="900" y="928" font-size="15" font-weight="bold" text-anchor="middle" fill="white">RESUME</text>
+
+    <line x1="900" y1="960" x2="900" y2="995" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="790" y="995" width="220" height="70" fill="#16a34a" stroke="#15803d" stroke-width="3" rx="5"/>
+    <text x="900" y="1020" font-size="15" font-weight="bold" text-anchor="middle" fill="white">Load Session</text>
+    <text x="900" y="1045" font-size="13" text-anchor="middle" fill="white">(Explicit)</text>
+
+    <line x1="900" y1="1065" x2="900" y2="1090" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <ellipse cx="900" cy="1105" rx="70" ry="12" fill="#10b981" stroke="#059669" stroke-width="3"/>
+    <text x="900" y="1110" font-size="14" font-weight="bold" text-anchor="middle" fill="white">READY</text>
+  </g>
+
+  <!-- System Log I/O Access -->
+  <g id="log-access">
+    <rect x="1210" y="820" width="440" height="310" fill="white" stroke="#f59e0b" stroke-width="3" rx="8"/>
+    <text x="1430" y="860" font-size="18" font-weight="bold" text-anchor="middle" fill="#d97706">System Log Access</text>
+
+    <circle cx="1430" cy="920" r="40" fill="#64748b" stroke="#475569" stroke-width="3"/>
+    <text x="1430" y="928" font-size="15" font-weight="bold" text-anchor="middle" fill="white">I/O</text>
+
+    <line x1="1430" y1="960" x2="1430" y2="995" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="1320" y="995" width="220" height="70" fill="#f59e0b" stroke="#d97706" stroke-width="3" rx="5"/>
+    <text x="1430" y="1020" font-size="15" font-weight="bold" text-anchor="middle" fill="white">Read system.log</text>
+    <text x="1430" y="1045" font-size="13" text-anchor="middle" fill="white">(Manual)</text>
+
+    <text x="1430" y="1090" font-size="14" text-anchor="middle" fill="#64748b" font-style="italic">Never auto-loaded</text>
+  </g>
+
+  <!-- Timestamp synchronization note -->
+  <rect x="700" y="1170" width="400" height="12" fill="#94a3b8" rx="3"/>
+  <text x="900" y="1195" font-size="14" text-anchor="middle" fill="#475569" font-style="italic">All writes synchronized with same timestamp</text>
+</svg>
