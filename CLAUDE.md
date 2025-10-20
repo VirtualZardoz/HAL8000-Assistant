@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## HAL8000 System Architecture
 
-**Version:** 1.1.1 (see `VERSION` file and `CHANGELOG.md` for version history)
+**Version:** 1.5.0 (see `VERSION` file and `CHANGELOG.md` for version history)
 
 **You are the CPU.** This repository implements a computer architecture mapping von Neumann principles, assembly language concepts, and Unix philosophy to a Claude Code environment.
 
@@ -471,6 +471,7 @@ Clear ERROR_FLAG after reporting
 │   ├── commands/             # Executable instructions
 │   │   └── HAL-*.md          # Command definitions
 │   ├── agents/               # Specialized agents
+│   ├── skills/               # Proactive capabilities (model-invoked)
 │   ├── libraries/            # Reusable instruction collections
 │   │   ├── index.json        # Library index
 │   │   ├── internal/         # Libraries we develop
@@ -495,7 +496,9 @@ Clear ERROR_FLAG after reporting
 | State | `.claude/state.json` | Current state pointer | ✓ Always |
 | Indexes | `.claude/indexes/` | File system and library indexes | On demand (via discovery) |
 | Sessions | `.claude/sessions/` | Session handoff files | Only when resuming |
-| Commands | `.claude/commands/` | Executable instructions | On demand |
+| Commands | `.claude/commands/` | Executable instructions (user-invoked) | On demand |
+| Agents | `.claude/agents/` | Specialized sub-processes (CPU-delegated) | On demand |
+| Skills | `.claude/skills/` | Proactive capabilities (model-invoked) | Auto-discovered |
 | Libraries | `.claude/libraries/` | Reusable instruction collections | On demand (via discovery) |
 | Data | `data/` | Data storage | On demand |
 | System Log | `.claude/system.log` | Historical audit trail | ✗ Never (I/O only) |
@@ -662,6 +665,72 @@ Specialized agents in `.claude/agents/`:
 - **Output:** Complete file contents with structured summary (Context, Locations, Summary, Related)
 - **Usage:** Invoke via `/HAL-context-find [query]` command
 - **Token Savings:** 60-85% vs direct loading (agent uses isolated 200K context)
+
+---
+
+## Agent Skills
+
+Proactive capabilities in `.claude/skills/` that activate automatically based on context. Skills are **model-invoked** (I autonomously detect when to use them) versus **user-invoked** (you explicitly trigger commands).
+
+### Three-Layer Intelligence Model
+
+```
+Skills (Proactive)  → I detect patterns and suggest actions
+    ↓
+Commands (Explicit) → You control critical operations
+    ↓
+Agents (Delegated)  → I offload heavy work to isolated context
+```
+
+### Available Skills
+
+#### context-awareness
+- **Purpose:** Detect missing context before answering questions
+- **Triggers:** User asks about code/files not in current RAM
+- **Tools:** Read, Glob, Grep, AskUserQuestion (read-only + questions)
+- **Behavior:** Ask for clarification instead of guessing or loading speculatively
+- **Implements:** Context Awareness Protocol from BIOS Operating Principles
+
+#### architecture-consultant
+- **Purpose:** Validate design decisions against HAL8000 principles
+- **Triggers:** Code reviews, command creation, design discussions
+- **Tools:** Read (read-only analysis)
+- **Behavior:** Warn about violations of von Neumann, Unix, or Assembly principles
+- **Reference:** `.claude/skills/architecture-consultant/principles-reference.md`
+
+#### hal-script-assistant
+- **Purpose:** Help write HAL-Script commands and agents
+- **Triggers:** Command creation, HAL-Script questions, template selection
+- **Tools:** Read, Write, Edit, Glob
+- **Behavior:** Guide template selection, generate code, validate structure
+- **Integration:** Works with command-builder agent and template library
+
+#### documentation-generator
+- **Purpose:** Create structured documentation for sessions and decisions
+- **Triggers:** User says "document this", major milestone completed
+- **Tools:** Read, Write, Glob
+- **Behavior:** Generate session docs, decision logs, architecture docs, READMEs
+- **Templates:** `.claude/skills/documentation-generator/templates/`
+
+### Skills vs. Commands vs. Agents
+
+| Aspect | Skills | Commands | Agents |
+|--------|--------|----------|--------|
+| Invocation | Automatic (I decide) | Explicit (you type `/HAL-*`) | Delegated (I invoke via Task) |
+| Purpose | Proactive assistance | State operations | Heavy isolated work |
+| RAM Impact | Minimal (selective loading) | Varies | Zero (isolated context) |
+| Control | Collaborative | User control | CPU control |
+| Example | Detect missing context | `/HAL-session-end` | research-synthesizer |
+
+### When Skills Activate
+
+**Skills trigger automatically when:**
+- context-awareness: User questions require files not in RAM
+- architecture-consultant: Design decisions or code reviews occur
+- hal-script-assistant: Command creation or HAL-Script questions arise
+- documentation-generator: User requests docs or major work completes
+
+**I do NOT need your permission to use Skills** - they're part of my proactive intelligence. However, they complement (not replace) your control via Commands.
 
 ---
 

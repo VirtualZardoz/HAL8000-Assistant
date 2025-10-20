@@ -5,6 +5,84 @@ All notable changes to the HAL8000 system will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2025-10-20
+
+### Added
+- **Agent Skills Layer** - Proactive intelligence capabilities
+  - **Location:** `.claude/skills/`
+  - **Invocation:** Model-invoked (automatic, context-based activation)
+  - **Architecture:** Three-layer intelligence model (Skills → Commands → Agents)
+  - **Total Skills:** 4 production-ready Skills
+
+  **Skills Implemented:**
+
+  1. **context-awareness** - Detect missing context before answering
+     - Triggers: User questions about code/files not in current RAM
+     - Behavior: Ask for clarification instead of guessing or loading speculatively
+     - Tools: Read, Glob, Grep, AskUserQuestion (read-only + questions)
+     - Implements: Context Awareness Protocol from BIOS
+
+  2. **architecture-consultant** - Validate design decisions
+     - Triggers: Code reviews, design discussions, command creation
+     - Behavior: Warn about violations of von Neumann, Unix, or Assembly principles
+     - Tools: Read (read-only analysis)
+     - Supporting file: `principles-reference.md` (quick reference guide)
+
+  3. **hal-script-assistant** - Help write HAL-Script commands/agents
+     - Triggers: Command creation, HAL-Script questions, template selection
+     - Behavior: Guide template selection, generate code, validate structure
+     - Tools: Read, Write, Edit, Glob
+     - Integration: Works with command-builder agent and template library
+     - Supporting file: `template-selector.md` (decision tree)
+
+  4. **documentation-generator** - Create structured documentation
+     - Triggers: User says "document this" or major milestone completed
+     - Behavior: Generate session docs, decision logs, architecture docs, READMEs
+     - Tools: Read, Write, Glob
+     - Templates: 5 professional templates (session-doc, decision-log, architecture-doc, feature-doc, readme)
+
+  **Supporting Files:**
+  - Total files: 11 (4 SKILL.md + 7 supporting files)
+  - Architecture consultant: `principles-reference.md`
+  - HAL-Script assistant: `template-selector.md`
+  - Documentation generator: 5 template files
+
+### Enhanced
+- **BIOS (CLAUDE.md)** - Agent Skills documentation
+  - Updated Memory Architecture diagram with `.claude/skills/` directory
+  - Updated Memory Components table with Skills entry
+  - New "Agent Skills" section with complete documentation:
+    - Three-layer intelligence model explanation
+    - Skills catalog with triggers and behaviors
+    - Skills vs. Commands vs. Agents comparison table
+    - Activation conditions and invocation model
+
+- **System State (state.json)** - Skills metadata tracking
+  - New `agent_skills` section
+  - Documents all 4 Skills with metadata
+  - Tracks supporting files and integration points
+  - Records design decision rationale (Skills 2 & 3 excluded for bandwidth efficiency)
+
+### Design Decisions
+- **Skills Scope** - Implemented Skills 1, 4, 5, 6 only
+  - **Excluded:** Skills 2 (ram-guardian) and 3 (session-continuity)
+  - **Rationale:** Skills 2/3 would evaluate constantly (high bandwidth). User already monitors RAM/sessions manually.
+  - **Decision Date:** 2025-10-20
+
+### Benefits
+- **Proactive intelligence** - CPU detects patterns and suggests actions automatically
+- **Collaborative control** - Skills complement (not replace) user control via Commands
+- **Bandwidth-efficient** - Only context-triggered Skills, no constant evaluation
+- **Consistent architecture** - Skills follow HAL8000 principles (Unix, von Neumann, Assembly)
+- **Professional documentation** - Templated docs ensure consistent quality
+
+### Technical Details
+- **Skills:** 0 → 4
+- **Three-layer model:** Skills (proactive) → Commands (explicit) → Agents (delegated)
+- **File count:** 11 new files in `.claude/skills/`
+- **BIOS sections added:** 3 (Memory Architecture, Memory Components, Agent Skills)
+- **State tracking:** Complete metadata in state.json
+
 ## [1.4.0] - 2025-10-16
 
 ### Added

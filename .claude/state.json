@@ -1,23 +1,28 @@
 {
-  "timestamp": "2025-10-16T10:08:06Z",
+  "timestamp": "2025-10-16T12:12:27Z",
   "architecture_type": "Modified von Neumann (Harvard-like organization with von Neumann capabilities)",
-  "active_session": ".claude/sessions/2025-10-16-1008-v1-4-0-docling-integration.md",
-  "context": "v1.4.0 Release Complete: Integrated docling CLI for universal document conversion (PDF, DOCX, PPTX, images with OCR, audio transcription). Enhanced HAL-knowledge-ingest v1.1 with automatic document format detection and conversion. Zero RAM impact (external PowerShell process). All release artifacts complete: tool docs (625 lines), command enhancement, version bump, changelog, reference manual, state.json. System ready for document ingestion from 15+ formats.",
-  "next_action": "Test docling integration with real documents via /HAL-knowledge-ingest. Optional: Update BIOS with docling documentation. Optional: Run /HAL-index-update for tool indexes.",
+  "active_session": ".claude/sessions/2025-10-16-1212-github-deployment-complete.md",
+  "context": "GitHub Deployment Complete: Successfully pushed HAL8000 v1.4.0 to https://github.com/VirtualZardoz/HAL8000. Created data/operations/ for deployment procedures. Repository contains 523 files, 75,266 lines. All sensitive data protected (.env, settings.local.json excluded). Root directory clean per Unix philosophy. Git configured (VirtualZardoz/shahram@sabeti.com), 2 commits pushed.",
+  "next_action": "Optional: Add GitHub repository topics for discoverability. Optional: Create LICENSE file. System ready for normal development work.",
   "phase": "production",
   "loaded_commands": [],
   "variables": {
-    "current_project": "v1-4-0-release",
+    "current_project": "github-deployment",
     "phase": "production",
     "agents_available": 6,
     "commands_available": 11,
     "tools_available": 3,
-    "total_content_files": 35,
+    "total_content_files": 38,
     "indexed_directories": 6,
-    "counts_validated": "2025-10-16T10:08:06Z",
-    "version": "1.4.0",
+    "counts_validated": "2025-10-16T12:12:27Z",
+    "version": "1.5.0",
     "manual_version": "1.1.0",
-    "depth_limit": 3
+    "depth_limit": 3,
+    "repository": "https://github.com/VirtualZardoz/HAL8000",
+    "git_user": "VirtualZardoz",
+    "git_email": "shahram@sabeti.com",
+    "commits": ["b660706", "4533588"],
+    "deployment_complete": true
   },
   "diagram_tool": {
     "status": "production-ready",
@@ -189,6 +194,105 @@
       "material_design": true,
       "responsive_sizing": true
     }
+  },
+  "github_deployment": {
+    "status": "complete",
+    "repository": "https://github.com/VirtualZardoz/HAL8000",
+    "commits": [
+      {
+        "hash": "b660706",
+        "message": "Initial commit: HAL8000 v1.4.0",
+        "files": 523,
+        "lines": 75266
+      },
+      {
+        "hash": "4533588",
+        "message": "Remove deployment docs from root (already in data/operations/)",
+        "files": 3,
+        "lines": -698
+      }
+    ],
+    "git_config": {
+      "user": "VirtualZardoz",
+      "email": "shahram@sabeti.com"
+    },
+    "security": {
+      "env_protected": true,
+      "settings_local_protected": true,
+      "template_safe": true
+    },
+    "operations_docs": {
+      "location": "data/operations/",
+      "files": [
+        "GITHUB_SETUP.md",
+        "SECURITY_REVIEW.md",
+        "PUSH_TO_GITHUB.md"
+      ]
+    },
+    "deployment_date": "2025-10-16T12:12:27Z"
+  },
+  "agent_skills": {
+    "status": "production-ready",
+    "integration_date": "2025-10-20",
+    "location": ".claude/skills/",
+    "invocation": "model-invoked (automatic, context-based)",
+    "total_skills": 4,
+    "skills": {
+      "context-awareness": {
+        "purpose": "Detect missing context before answering",
+        "triggers": "User questions about code/files not in RAM",
+        "tools": ["Read", "Glob", "Grep", "AskUserQuestion"],
+        "behavior": "Ask for clarification instead of guessing",
+        "implements": "Context Awareness Protocol (BIOS)"
+      },
+      "architecture-consultant": {
+        "purpose": "Validate design against HAL8000 principles",
+        "triggers": "Code reviews, design discussions, command creation",
+        "tools": ["Read"],
+        "behavior": "Warn about principle violations",
+        "reference": "principles-reference.md"
+      },
+      "hal-script-assistant": {
+        "purpose": "Help write HAL-Script commands and agents",
+        "triggers": "Command creation, HAL-Script questions",
+        "tools": ["Read", "Write", "Edit", "Glob"],
+        "behavior": "Guide template selection, generate code",
+        "integration": "command-builder agent + template library"
+      },
+      "documentation-generator": {
+        "purpose": "Create structured documentation",
+        "triggers": "User requests docs or major milestone",
+        "tools": ["Read", "Write", "Glob"],
+        "behavior": "Generate session docs, decision logs, architecture docs",
+        "templates": 5,
+        "template_types": ["session-doc", "decision-log", "architecture-doc", "feature-doc", "readme"]
+      }
+    },
+    "three_layer_model": {
+      "layer_1": "Skills (Proactive - model decides)",
+      "layer_2": "Commands (Explicit - user invokes)",
+      "layer_3": "Agents (Delegated - CPU offloads)"
+    },
+    "rationale": {
+      "skills_included": "1 (context-awareness), 4 (architecture-consultant), 5 (hal-script-assistant), 6 (documentation-generator)",
+      "skills_excluded": "2 (ram-guardian), 3 (session-continuity)",
+      "exclusion_reason": "Skills 2 and 3 would evaluate constantly (high bandwidth). User already monitors RAM/sessions.",
+      "decision_date": "2025-10-20",
+      "decision_log": "data/architecture/decisions/2025-10-20-skills-scope-decision.md (to be created)"
+    },
+    "supporting_files": {
+      "architecture-consultant": ["principles-reference.md"],
+      "hal-script-assistant": ["template-selector.md"],
+      "documentation-generator": [
+        "templates/session-doc-template.md",
+        "templates/decision-log-template.md",
+        "templates/architecture-doc-template.md",
+        "templates/feature-doc-template.md",
+        "templates/readme-template.md"
+      ]
+    },
+    "bios_documented": true,
+    "bios_sections": ["Memory Architecture", "Memory Components table", "Agent Skills section"]
   },
   "bug_fixes": {
     "session_end_timestamp_sync": {
