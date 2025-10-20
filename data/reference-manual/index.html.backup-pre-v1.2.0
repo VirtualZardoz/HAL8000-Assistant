@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAL8000 Reference Manual v1.2.0</title>
+    <title>HAL8000 Reference Manual v1.1.0</title>
     <style>
         /* Base Styles */
         * {
@@ -261,7 +261,7 @@
         <!-- Navigation Sidebar -->
         <nav>
             <h1>HAL8000</h1>
-            <div class="version">Reference Manual v1.2.0</div>
+            <div class="version">Reference Manual v1.1.0</div>
 
             <div class="part-title">Frontmatter</div>
             <ul>
@@ -301,18 +301,17 @@
             <ul>
                 <li><a href="#command-reference">15. Command Reference</a></li>
                 <li><a href="#agent-reference">16. Agent Reference</a></li>
-                <li><a href="#skills-reference">17. Skills Reference</a></li>
-                <li><a href="#file-system">18. File System Structure</a></li>
-                <li><a href="#mcp-integration">19. MCP Integration</a></li>
-                <li><a href="#external-tools">20. External Tools</a></li>
+                <li><a href="#file-system">17. File System Structure</a></li>
+                <li><a href="#mcp-integration">18. MCP Integration</a></li>
+                <li><a href="#external-tools">19. External Tools</a></li>
             </ul>
 
             <div class="part-title">Part V: Development</div>
             <ul>
-                <li><a href="#creating-commands">21. Creating Commands</a></li>
-                <li><a href="#building-agents">22. Building Agents</a></li>
-                <li><a href="#library-system">23. Library System</a></li>
-                <li><a href="#contributing">24. Contributing Patterns</a></li>
+                <li><a href="#creating-commands">20. Creating Commands</a></li>
+                <li><a href="#building-agents">21. Building Agents</a></li>
+                <li><a href="#library-system">22. Library System</a></li>
+                <li><a href="#contributing">23. Contributing Patterns</a></li>
             </ul>
 
             <div class="part-title">Appendices</div>
@@ -10391,487 +10390,8 @@ Step 4: Main session
   </div>
 
 </section>
-            <!-- Section 17: Skills Reference -->
-            <section id="skills-reference" data-status="complete" data-priority="2"
-         data-sources=".claude/skills/*/SKILL.md,CLAUDE.md:Agent Skills"
-         data-estimated-tokens="15000"
-         data-dependencies="agent-reference">
 
-  <div class="meta-guidance" style="display:none;">
-    <!-- Meta-Guidance for AI Assistants -->
-    This section documents HAL8000's Agent Skills system - proactive, model-invoked capabilities.
-    When updating:
-    - Document all Skills with triggers, tools, and behaviors
-    - Explain three-layer intelligence model (Skills → Commands → Agents)
-    - Provide clear comparison table
-    - Include activation examples
-    - Note: Skills are NEW in v1.5.0, complement Commands/Agents
-    TARGET: Comprehensive Skills reference for users and developers
-    AUDIENCE: All three (users need to know when Skills activate, developers need details)
-    KEY_POINTS: Model-invoked activation, four Skills catalog, triggers, tool permissions, integration
-    TONE: Clear and practical, emphasize proactive collaboration
-    VISUALS: three-layer-model diagram, skills-activation-flowchart
-  </div>
-
-  <h2>17. Skills Reference</h2>
-
-  <div class="overview">
-    <p><strong>Agent Skills</strong> are proactive capabilities that activate automatically based on context. Unlike Commands (user-invoked) or Agents (CPU-delegated), Skills are <strong>model-invoked</strong>—the CPU autonomously detects when to use them and activates them without requiring permission.</p>
-
-    <p>Skills implement collaborative intelligence: the CPU watches for patterns and suggests actions, while you maintain control through explicit Commands for critical operations.</p>
-  </div>
-
-  <h3>Three-Layer Intelligence Model</h3>
-
-  <p>HAL8000's intelligence operates in three complementary layers:</p>
-
-  <figure class="diagram-placeholder" data-diagram-id="three-layer-model">
-    <div class="placeholder-box">
-      [DIAGRAM: Three-Layer Intelligence Model]
-      Description: Vertical flowchart showing Skills (Proactive) → Commands (Explicit) → Agents (Delegated) with examples of each layer
-      Type: Layered block diagram with arrows
-      Details:
-      - Layer 1 (top): Skills - "I detect patterns and suggest" - Examples: context-awareness, architecture-consultant
-      - Layer 2 (middle): Commands - "You control critical operations" - Examples: /HAL-session-end, /HAL-system-check
-      - Layer 3 (bottom): Agents - "I offload heavy work" - Examples: research-synthesizer, hal-context-finder
-      Tools: Mermaid or SVG
-    </div>
-  </figure>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Aspect</th>
-        <th>Skills</th>
-        <th>Commands</th>
-        <th>Agents</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Invocation</strong></td>
-        <td>Automatic (CPU decides)</td>
-        <td>Explicit (user types <code>/HAL-*</code>)</td>
-        <td>Delegated (CPU invokes via Task)</td>
-      </tr>
-      <tr>
-        <td><strong>Purpose</strong></td>
-        <td>Proactive assistance</td>
-        <td>State operations</td>
-        <td>Heavy isolated work</td>
-      </tr>
-      <tr>
-        <td><strong>RAM Impact</strong></td>
-        <td>Minimal (selective loading)</td>
-        <td>Varies</td>
-        <td>Zero (isolated 200K context)</td>
-      </tr>
-      <tr>
-        <td><strong>Control</strong></td>
-        <td>Collaborative</td>
-        <td>User control</td>
-        <td>CPU control</td>
-      </tr>
-      <tr>
-        <td><strong>Example</strong></td>
-        <td>Detect missing context</td>
-        <td><code>/HAL-session-end</code></td>
-        <td>research-synthesizer</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>Skills Catalog</h3>
-
-  <h4>1. context-awareness</h4>
-
-  <p><strong>Location:</strong> <code>.claude/skills/context-awareness/</code></p>
-
-  <p><strong>Purpose:</strong> Detect when user questions require loading files not currently in RAM, and ask for clarification instead of guessing or loading speculatively.</p>
-
-  <p><strong>Triggers:</strong></p>
-  <ul>
-    <li>User asks about specific code/files/components not in current RAM</li>
-    <li>User references "that file", "the component", "this function" without clear antecedent</li>
-    <li>User asks "which file has X?" (implies CPU should know the file set)</li>
-    <li>User asks implementation details when CPU hasn't loaded implementation</li>
-    <li>User uses project-specific terms/names not in current context</li>
-  </ul>
-
-  <p><strong>Behavior:</strong></p>
-  <ul>
-    <li>Parse question for missing context signals</li>
-    <li>Ask user for clarification immediately</li>
-    <li>Suggest specific search terms or file paths</li>
-    <li>State what IS currently in context</li>
-    <li>After clarification, use hal-context-finder agent for discovery</li>
-  </ul>
-
-  <p><strong>Tools Allowed:</strong> <code>Read</code>, <code>Glob</code>, <code>Grep</code>, <code>AskUserQuestion</code></p>
-
-  <p><strong>Implementation:</strong> Context Awareness Protocol from BIOS Operating Principles</p>
-
-  <div class="example-box">
-    <strong>Example Activation:</strong>
-    <pre><code>User: "Which file contains the authentication logic?"
-
-CPU (context-awareness activates):
-"I don't currently have authentication files loaded. Should I search
-the codebase for authentication-related files? Or is there a specific
-directory/component I should check?"</code></pre>
-  </div>
-
-  <h4>2. architecture-consultant</h4>
-
-  <p><strong>Location:</strong> <code>.claude/skills/architecture-consultant/</code></p>
-
-  <p><strong>Purpose:</strong> Validate design decisions against HAL8000's architectural principles (von Neumann, Unix philosophy, Assembly concepts) and warn about violations.</p>
-
-  <p><strong>Triggers:</strong></p>
-  <ul>
-    <li>Creating new commands or agents</li>
-    <li>Modifying system structure or organization</li>
-    <li>Design discussions about new features</li>
-    <li>Code reviews</li>
-    <li>User asks "should I..." or "how should I..." about system design</li>
-  </ul>
-
-  <p><strong>Behavior:</strong></p>
-  <ul>
-    <li>Identify which principle is violated and why</li>
-    <li>Explain impact (immediate and long-term consequences)</li>
-    <li>Suggest architecturally-sound alternatives</li>
-    <li>Reference relevant architecture documentation if needed</li>
-    <li>Provide positive reinforcement for good designs</li>
-  </ul>
-
-  <p><strong>Tools Allowed:</strong> <code>Read</code> (read-only analysis)</p>
-
-  <p><strong>Reference:</strong> <code>.claude/skills/architecture-consultant/principles-reference.md</code> (quick lookup for principles)</p>
-
-  <div class="example-box">
-    <strong>Example Activation:</strong>
-    <pre><code>User: "I want to create a path .claude/commands/system/utilities/helpers/file-ops/"
-
-CPU (architecture-consultant activates):
-"⚠️ Architecture Warning: Depth limit exceeded
-
-Issue: Proposed path has 5 levels of depth
-Principle: Unix Philosophy - 'Simple, not complex' (max 3 levels)
-
-Impact:
-- Violates HAL8000 structural standard
-- Makes navigation harder
-
-Recommended approach:
-- Flatten to: .claude/commands/system/ (level 2)
-- OR: .claude/commands/utilities/ if distinct category needed"</code></pre>
-  </div>
-
-  <h4>3. hal-script-assistant</h4>
-
-  <p><strong>Location:</strong> <code>.claude/skills/hal-script-assistant/</code></p>
-
-  <p><strong>Purpose:</strong> Help write HAL-Script commands and agents by guiding template selection, generating code, and validating structure.</p>
-
-  <p><strong>Triggers:</strong></p>
-  <ul>
-    <li>User wants to create a new command</li>
-    <li>User asks about HAL-Script syntax or structure</li>
-    <li>User needs help choosing a template</li>
-    <li>User is editing existing command/agent</li>
-    <li>User invokes <code>/HAL-command-create</code> (automation)</li>
-  </ul>
-
-  <p><strong>Behavior:</strong></p>
-  <ul>
-    <li>Ask questions to determine appropriate template level (1-7)</li>
-    <li>Guide through template selection decision tree</li>
-    <li>Explain YAML frontmatter structure</li>
-    <li>Suggest tool permissions based on command purpose</li>
-    <li>Validate against architecture principles</li>
-    <li>Generate code following HAL-Script patterns</li>
-  </ul>
-
-  <p><strong>Tools Allowed:</strong> <code>Read</code>, <code>Write</code>, <code>Edit</code>, <code>Glob</code></p>
-
-  <p><strong>Integration:</strong> Works with command-builder agent and template library</p>
-
-  <p><strong>Reference:</strong> <code>.claude/skills/hal-script-assistant/template-selector.md</code> (decision tree for template selection)</p>
-
-  <div class="example-box">
-    <strong>Example Activation:</strong>
-    <pre><code>User: "I want to create a command that searches for files and analyzes them"
-
-CPU (hal-script-assistant activates):
-"Let me help you choose the right template for this command.
-
-Questions:
-1. Does it need conditionals or loops? (YES - searching and analyzing vary by file)
-2. Does it delegate to agents? (Depends on analysis complexity)
-
-Recommendation: Start with Level 3 (control-flow) template
-- Supports conditionals for different file types
-- Can add Level 4 (delegate) if analysis is heavy
-
-Template: .claude/libraries/internal/templates/level-3-control-flow.md
-
-Shall I help you generate the command structure?"</code></pre>
-  </div>
-
-  <h4>4. documentation-generator</h4>
-
-  <p><strong>Location:</strong> <code>.claude/skills/documentation-generator/</code></p>
-
-  <p><strong>Purpose:</strong> Create structured, professional documentation for sessions, decisions, architecture, and code.</p>
-
-  <p><strong>Triggers:</strong></p>
-  <ul>
-    <li>User says: "document this", "create docs", "write this up"</li>
-    <li>User requests: "session summary", "decision log", "architecture doc"</li>
-    <li>Major milestone completed (new feature, system change)</li>
-    <li>Complex decision made requiring rationale capture</li>
-  </ul>
-
-  <p><strong>Behavior:</strong></p>
-  <ul>
-    <li>Determine documentation type (session, decision, architecture, feature, README)</li>
-    <li>Gather context (review work, identify decisions, note deliverables)</li>
-    <li>Select and populate appropriate template</li>
-    <li>Generate file in correct location with descriptive filename</li>
-    <li>Report file location and summary to user</li>
-  </ul>
-
-  <p><strong>Tools Allowed:</strong> <code>Read</code>, <code>Write</code>, <code>Glob</code></p>
-
-  <p><strong>Templates:</strong> 5 professional templates in <code>.claude/skills/documentation-generator/templates/</code>
-    <ul>
-      <li><code>session-doc-template.md</code> - Session work summaries</li>
-      <li><code>decision-log-template.md</code> - Architectural/design decisions</li>
-      <li><code>architecture-doc-template.md</code> - System architecture documentation</li>
-      <li><code>feature-doc-template.md</code> - Feature documentation</li>
-      <li><code>readme-template.md</code> - Component/project READMEs</li>
-    </ul>
-  </p>
-
-  <div class="example-box">
-    <strong>Example Activation:</strong>
-    <pre><code>User: "Document today's work on the Skills integration"
-
-CPU (documentation-generator activates):
-"I'll create a session document for the Skills integration work.
-
-[Gathers context from current session]
-[Uses session-doc-template.md]
-[Creates file: data/sessions/summaries/2025-10-20-1430-skills-integration.md]
-
-✅ Session documentation created
-
-Location: data/sessions/summaries/2025-10-20-1430-skills-integration.md
-Type: Session Documentation
-Summary: Documented integration of 4 new Skills into HAL8000 architecture.
-Size: ~1,200 words"</code></pre>
-  </div>
-
-  <h3>When Skills Activate</h3>
-
-  <p>Skills trigger automatically based on context patterns. The CPU continuously monitors for activation conditions without requiring explicit permission:</p>
-
-  <figure class="diagram-placeholder" data-diagram-id="skills-activation-flow">
-    <div class="placeholder-box">
-      [DIAGRAM: Skills Activation Flowchart]
-      Description: Flowchart showing how CPU detects context patterns and activates appropriate Skills
-      Type: Decision flowchart
-      Details:
-      - Start: User input received
-      - Decision: Missing context detected? → YES → Activate context-awareness
-      - Decision: Design decision detected? → YES → Activate architecture-consultant
-      - Decision: Command creation detected? → YES → Activate hal-script-assistant
-      - Decision: Documentation request? → YES → Activate documentation-generator
-      - End: Normal processing (no Skill activation)
-      Tools: Mermaid flowchart
-    </div>
-  </figure>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Skill</th>
-        <th>Activation Trigger</th>
-        <th>User Experience</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>context-awareness</strong></td>
-        <td>User questions require files not in RAM</td>
-        <td>CPU asks clarifying questions instead of guessing</td>
-      </tr>
-      <tr>
-        <td><strong>architecture-consultant</strong></td>
-        <td>Design decisions or code reviews occur</td>
-        <td>CPU warns about principle violations, suggests alternatives</td>
-      </tr>
-      <tr>
-        <td><strong>hal-script-assistant</strong></td>
-        <td>Command creation or HAL-Script questions arise</td>
-        <td>CPU guides template selection and code generation</td>
-      </tr>
-      <tr>
-        <td><strong>documentation-generator</strong></td>
-        <td>User requests docs or major work completes</td>
-        <td>CPU creates structured documentation from templates</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>Tool Permissions</h3>
-
-  <p>Each Skill has explicitly whitelisted tools via the <code>allowed-tools</code> YAML frontmatter field. This implements security and performance optimization:</p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Skill</th>
-        <th>Allowed Tools</th>
-        <th>Rationale</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>context-awareness</strong></td>
-        <td><code>Read, Glob, Grep, AskUserQuestion</code></td>
-        <td>Read-only access + user questions. Cannot modify files.</td>
-      </tr>
-      <tr>
-        <td><strong>architecture-consultant</strong></td>
-        <td><code>Read</code></td>
-        <td>Pure analysis. Only reads architecture docs, cannot modify anything.</td>
-      </tr>
-      <tr>
-        <td><strong>hal-script-assistant</strong></td>
-        <td><code>Read, Write, Edit, Glob</code></td>
-        <td>Command creation requires write access. Limited to file operations.</td>
-      </tr>
-      <tr>
-        <td><strong>documentation-generator</strong></td>
-        <td><code>Read, Write, Glob</code></td>
-        <td>Documentation creation requires write access. No edit (only creates new files).</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>Skills vs. Permission Model</h3>
-
-  <p><strong>Key difference:</strong> When a Skill is active, the CPU can use its whitelisted tools <strong>without asking for permission</strong>. This enables proactive intelligence:</p>
-
-  <ul>
-    <li><strong>Without Skills:</strong> CPU must ask permission for every tool use, even simple Read operations</li>
-    <li><strong>With Skills:</strong> CPU can proactively use whitelisted tools when Skill context is detected</li>
-  </ul>
-
-  <div class="insight-box">
-    <strong>Design philosophy:</strong> Skills complement user control, they don't replace it. The CPU uses Skills for proactive assistance (suggesting, guiding, detecting), but critical operations (session-end, system state changes) remain under explicit user control via Commands.
-  </div>
-
-  <h3>Skills and Architecture Principles</h3>
-
-  <p>Skills follow HAL8000's core architectural principles:</p>
-
-  <h4>Von Neumann Architecture</h4>
-  <ul>
-    <li><strong>Stored-program:</strong> Skills are files (<code>SKILL.md</code>) loaded by CPU like commands</li>
-    <li><strong>Selective loading:</strong> Skills activate based on context, not loaded speculatively</li>
-    <li><strong>RAM awareness:</strong> Skills minimize RAM impact through selective tool use</li>
-  </ul>
-
-  <h4>Unix Philosophy</h4>
-  <ul>
-    <li><strong>Do one thing well:</strong> Each Skill has single responsibility (context, architecture, scripting, docs)</li>
-    <li><strong>Compose via interfaces:</strong> Skills complement Commands and Agents, not duplicate them</li>
-    <li><strong>Text streams:</strong> All Skills use plain text files (Markdown)</li>
-  </ul>
-
-  <h4>Assembly Principles</h4>
-  <ul>
-    <li><strong>Explicit control:</strong> Tool permissions explicitly whitelisted in YAML</li>
-    <li><strong>One-to-one mapping:</strong> Skill activation maps directly to context pattern detection</li>
-    <li><strong>Low-level visibility:</strong> Skill behavior is documented and predictable</li>
-  </ul>
-
-  <div class="technical">
-    <h3>Technical Implementation</h3>
-
-    <h4>Skill File Structure</h4>
-    <pre><code>.claude/skills/
-├── context-awareness/
-│   └── SKILL.md
-├── architecture-consultant/
-│   ├── SKILL.md
-│   └── principles-reference.md
-├── hal-script-assistant/
-│   ├── SKILL.md
-│   └── template-selector.md
-└── documentation-generator/
-    ├── SKILL.md
-    └── templates/
-        ├── session-doc-template.md
-        ├── decision-log-template.md
-        ├── architecture-doc-template.md
-        ├── feature-doc-template.md
-        └── readme-template.md</code></pre>
-
-    <h4>SKILL.md Format</h4>
-    <pre><code>---
-name: Skill Name
-description: What this Skill does and when to activate (critical for discovery!)
-allowed-tools:
-  - Read
-  - Write
----
-
-# Skill Name
-
-## Purpose
-[What this Skill does]
-
-## When to Activate
-[Specific triggers and patterns]
-
-## Protocol
-[Step-by-step behavior]
-
-## Examples
-[Concrete activation examples]
-
-## Integration with HAL8000
-[How this fits into architecture]</code></pre>
-
-    <h4>Auto-Discovery</h4>
-    <p>Skills are automatically discovered by Claude Code from <code>.claude/skills/</code>. The CPU reads all <code>SKILL.md</code> files on boot and monitors for activation patterns throughout the session.</p>
-
-    <h4>Invocation Architecture</h4>
-    <ol>
-      <li>User provides input</li>
-      <li>CPU parses input and context</li>
-      <li>CPU checks all Skill descriptions for pattern matches</li>
-      <li>If match found: Skill activates, CPU loads <code>SKILL.md</code></li>
-      <li>CPU executes Skill protocol using whitelisted tools</li>
-      <li>CPU provides output to user</li>
-    </ol>
-
-    <p><strong>RAM impact:</strong> Minimal. Skills are loaded only when activated (context-triggered), not speculatively.</p>
-  </div>
-
-  <div class="insight-box">
-    <strong>Version history:</strong> Skills were added in HAL8000 v1.5.0 (2025-10-20). This is a new capability layer that complements the existing Commands and Agents architecture.
-  </div>
-
-</section>
-
-
-
-            <!-- Section 18: File System Structure -->
+            <!-- Section 17: File System Structure -->
             <section id="file-system" data-status="complete" data-priority="2" 
          data-sources="CLAUDE.md:File System Structure,CLAUDE.md:Memory Architecture" 
          data-estimated-tokens="12000" 
@@ -10890,7 +10410,7 @@ allowed-tools:
     Source of truth: CLAUDE.md (File System Structure, Memory Architecture sections)
   </div>
 
-  <h2>18. File System</h2>
+  <h2>17. File System</h2>
 
   <h3>17.1 Overview</h3>
   
@@ -11532,7 +11052,7 @@ allowed-tools:
 
 </section>
 
-            <!-- Section 19: MCP Integration -->
+            <!-- Section 18: MCP Integration -->
             <section id="mcp-integration" data-status="complete" data-priority="2" 
          data-sources="CLAUDE.md:MCP Integration,.claude/commands/HAL-mcp-control.md" 
          data-estimated-tokens="12000" 
@@ -11551,7 +11071,7 @@ allowed-tools:
     Sources: CLAUDE.md MCP Integration section, .claude/commands/HAL-mcp-control.md
   </div>
 
-  <h2>19. MCP Integration</h2>
+  <h2>18. MCP Integration</h2>
 
   <h3>18.1 Introduction</h3>
   
@@ -12392,9 +11912,9 @@ exec omnisearch-server</code></pre>
 
 </section>
 
-            <!-- Section 20: External Tools -->
+            <!-- Section 19: External Tools -->
             <section id="external-tools" data-status="complete" data-priority="2" data-sources=".claude/state.json:external_agents,.claude/tools/" data-estimated-tokens="10000" data-dependencies="">
-                <h2>20. External Tools</h2>
+                <h2>19. External Tools</h2>
                 <div class="content">
                     <p>
                         HAL8000 integrates with external tools to extend capabilities beyond the core architecture. Following Unix philosophy, the system prefers host-installed tools over containerized alternatives for simplicity and direct access. External tools provide specialized functions: AI agents for massive context tasks, containers for isolated environments, and MCP servers for protocol-based integrations.
@@ -12745,7 +12265,7 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
                 <p class="part-description">Creating commands, building agents, library system, and contributing</p>
             </div>
 
-            <!-- Section 21: Creating Commands -->
+            <!-- Section 20: Creating Commands -->
 <section id="creating-commands">
     <h2>20. Creating Custom Commands</h2>
     <div class="content">
@@ -13652,9 +13172,9 @@ model: sonnet
     </div>
 </section>
 
-            <!-- Section 23: Library System -->
+            <!-- Section 22: Library System -->
 <section id="library-system" data-status="complete" data-priority="3" data-sources=".claude/libraries/" data-estimated-tokens="12000" data-dependencies="">
-    <h2>23. Library System</h2>
+    <h2>22. Library System</h2>
     <div class="content">
 
         <p>The Library System provides reusable instruction collections that enable pattern discovery and composition without reinventing solutions.</p>
@@ -13995,9 +13515,9 @@ cp .claude/libraries/internal/templates/level-2-workflow.md \\
     </div>
 </section>
 
-            <!-- Section 24: Contributing Patterns -->
+            <!-- Section 23: Contributing Patterns -->
 <section id="contributing" data-status="complete" data-priority="3" data-sources="" data-estimated-tokens="10000" data-dependencies="">
-    <h2>24. Contributing Patterns</h2>
+    <h2>23. Contributing Patterns</h2>
     <div class="content">
 
         <p>HAL8000 is a living system designed for continuous improvement through self-modifying code capabilities. This section guides effective contribution following von Neumann principles and Unix philosophy.</p>

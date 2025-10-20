@@ -135,13 +135,13 @@
     ]
   },
   "reference_manual": {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "file": "data/reference-manual/index.html",
     "command": ".claude/commands/HAL-refman.md",
     "assets_directory": "data/reference-manual/assets/",
-    "backup": "data/reference-manual/index.html.backup-pre-v1.1.0",
-    "total_sections": 31,
-    "completed": 31,
+    "backup": "data/reference-manual/index.html.backup-pre-v1.2.0",
+    "total_sections": 32,
+    "completed": 32,
     "status": "production-ready",
     "deployment_ready": true,
     "v1_1_0_enhancements": {
@@ -158,12 +158,30 @@
       "tables": 4,
       "completed_date": "2025-10-15T12:00:00Z"
     },
+    "v1_2_0_enhancements": {
+      "sections_added": 1,
+      "sections": [
+        "17. Skills Reference (complete new section in Part IV)"
+      ],
+      "sections_renumbered": "17-23 → 18-24",
+      "words_added": 3800,
+      "tables": 3,
+      "diagrams_placeholders": 2,
+      "skills_documented": 4,
+      "completed_date": "2025-10-20",
+      "notes": "Added comprehensive Skills Reference section documenting all 4 Agent Skills (context-awareness, architecture-consultant, hal-script-assistant, documentation-generator) with triggers, tools, examples, and integration details."
+    },
     "diagrams": {
-      "total_placeholders": 19,
+      "total_placeholders": 21,
       "completed": 19,
-      "remaining": 0,
+      "remaining": 2,
       "v1_0_0_diagrams": 12,
       "v1_1_0_diagrams": 7,
+      "v1_2_0_diagrams": 2,
+      "v1_2_0_pending": [
+        "three-layer-model (Skills → Commands → Agents)",
+        "skills-activation-flow (context pattern detection)"
+      ],
       "optimization_session": {
         "date": "2025-10-15T15:11:41Z",
         "diagrams_fixed": 7,
