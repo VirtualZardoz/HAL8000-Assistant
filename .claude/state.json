@@ -10,7 +10,7 @@
   "variables": {
     "current_project": "image-generation-tool",
     "agents_available": 6,
-    "commands_available": 11,
+    "commands_available": 12,
     "total_content_files": 43,
     "indexed_directories": 6,
     "tools_available": 3,

@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## HAL8000 System Architecture
 
-**Version:** 1.5.0 (see `VERSION` file and `CHANGELOG.md` for version history)
+**Version:** 1.6.1 (see `VERSION` file and `CHANGELOG.md` for version history)
 
 **You are the CPU.** This repository implements a computer architecture mapping von Neumann principles, assembly language concepts, and Unix philosophy to a Claude Code environment.
 
