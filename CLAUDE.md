@@ -749,6 +749,18 @@ External programs in `.claude/tools/` that extend CPU capabilities:
 - **Architecture:** Container = I/O device, Python script = device driver, volume mounts = data bus
 - **Dependencies:** Docker (containerized for 12+ Chrome/Puppeteer system libraries)
 
+### image-generation
+- **Purpose:** AI image generation via Stable Diffusion models (SDXL, SD1.5)
+- **Location:** `.claude/tools/image-generation/`
+- **Engine:** ComfyUI running in Docker container with CUDA GPU support (hal8000-image-gen:latest)
+- **Models:** SDXL (6.5GB, best quality), SD1.5 (4GB, faster), 
+- **Usage:** `python3 .claude/tools/image-generation/HAL-generate-image.py --prompt "description" --model sdxl --output image.png`
+- **Output:** `/mnt/d/~HAL8000/data/images/` (PNG files, typically 1-5MB)
+- **Performance:** ~10-15s per image (after model cached), first run downloads model
+- **Architecture:** Docker + NVIDIA GPU, volume mounts for model cache and output
+- **Dependencies:** Docker with GPU support (nvidia-docker2), RTX 3090 or similar
+- **Cache:** Models stored in `/mnt/d/~HAL8000/.docker-cache/models/` (persistent)
+
 ---
 
 ## Data Organization

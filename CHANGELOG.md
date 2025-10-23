@@ -5,6 +5,63 @@ All notable changes to the HAL8000 system will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2025-10-23
+
+### Added
+- **AI Image Generation Tool** - External tool for visual content creation
+  - **Location:** `.claude/tools/image-generation/`
+  - **Engine:** ComfyUI + Stable Diffusion in Docker container (hal8000-image-gen:latest)
+  - **GPU Support:** CUDA 12.1 with NVIDIA Docker runtime
+  - **Architecture:** Mirrors diagram-generation pattern (proven external tool design)
+
+  **Models Supported:**
+  1. **SDXL** (6.5GB) - Best quality, recommended default
+  2. **SD1.5** (4GB) - Faster generation, good quality
+  3. **FLUX** (23GB) - Maximum quality, state-of-the-art model
+
+  **Features:**
+  - Zero RAM impact (external Docker process)
+  - Persistent model caching in `.docker-cache/models/`
+  - GPU-accelerated generation (~10-15s per image after model cached)
+  - Automatic model downloading on first use
+  - Volume mounts for model persistence and output storage
+
+  **Files Included:**
+  - `HAL-generate-image.py` - Python driver script (user interface)
+  - `entrypoint.py` - Container entrypoint with ComfyUI integration
+  - `Dockerfile` - NVIDIA CUDA 12.1 + Ubuntu 22.04 + ComfyUI
+  - `requirements.txt` - Python dependencies
+  - `build-image.sh` - Build script with directory setup
+  - `README.md` - Technical documentation
+  - `INSTALL.md` - Installation and setup guide
+  - `QUICKSTART.txt` - Quick reference for users
+  - `CLAUDE.md` - Integration guide for HAL8000 CPU
+  - `image-generation-tool.md` - Architecture documentation
+
+  **Storage Requirements:**
+  - Docker image: ~3GB (C: drive)
+  - SDXL model: 6.5GB (D: drive, cached)
+  - SD1.5 model: 4GB (D: drive, optional)
+  - FLUX model: 23GB (D: drive, optional)
+  - Generated images: 1-5MB each (D: drive)
+
+### Enhanced
+- **CLAUDE.md (BIOS)** - Added image-generation tool to Tools (I/O Devices) section
+- **Reference Manual** - Section 20 (External Tools) updated with image generation tool documentation
+
+### Documentation
+- Comprehensive tool documentation (5 markdown files + architecture doc)
+- User guides for installation, usage, and troubleshooting
+- Integration patterns for HAL8000 CPU (prompt enhancement, model selection)
+- Performance expectations and storage requirements
+
+### Technical Details
+- **Pattern:** External tool (zero RAM impact on HAL8000 sessions)
+- **Performance:** ~0.7s container startup + 3-8s generation (model cached)
+- **First Run:** Additional 5-30 minutes for model download (one-time per model)
+- **Cache Strategy:** Persistent volume mounts, models survive container restarts
+- **GPU Requirement:** NVIDIA GPU with 8GB+ VRAM (tested on RTX 3090 24GB)
+
 ## [1.5.0] - 2025-10-20
 
 ### Added

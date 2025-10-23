@@ -12701,6 +12701,303 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
                         </tbody>
                     </table>
 
+                    <h3>AI Image Generation Tool</h3>
+                    <p>
+                        HAL8000 integrates AI-powered image generation through a Dockerized Stable Diffusion system. This tool enables on-demand creation of high-quality images using local GPU acceleration, maintaining zero RAM impact on HAL8000 sessions.
+                    </p>
+
+                    <h4>Image Generation System Overview</h4>
+                    <ul>
+                        <li><strong>Version:</strong> 1.0.0</li>
+                        <li><strong>Backend:</strong> ComfyUI + Stable Diffusion (SDXL, SD1.5)</li>
+                        <li><strong>Architecture:</strong> Docker container with NVIDIA GPU passthrough</li>
+                        <li><strong>Location:</strong> <code>.claude/tools/image-generation/</code></li>
+                        <li><strong>GPU:</strong> RTX 3090 (24GB VRAM) - local acceleration</li>
+                        <li><strong>Pattern:</strong> Mirrors diagram-generation tool (proven architecture)</li>
+                    </ul>
+
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li><strong>Dockerized Execution:</strong> Complete isolation, no host pollution</li>
+                        <li><strong>GPU-Accelerated:</strong> Local RTX 3090 for fast generation (3-8 seconds per image)</li>
+                        <li><strong>Multiple Models:</strong> SDXL (best quality), SD1.5 (faster)</li>
+                        <li><strong>Model Caching:</strong> Download once (~6.5GB), reuse forever</li>
+                        <li><strong>Zero RAM Impact:</strong> External execution, only file path returned to HAL8000</li>
+                        <li><strong>Cost-Effective:</strong> $0 per image after setup (vs. $0.04+ cloud services)</li>
+                    </ul>
+
+                    <h4>Usage Pattern</h4>
+                    <p><strong>Basic Image Generation:</strong></p>
+                    <pre><code># Standard quality (SDXL, default)
+python3 .claude/tools/image-generation/HAL-generate-image.py \
+  --prompt "futuristic computer CPU with glowing circuits, cyberpunk style" \
+  --output data/images/cpu.png
+
+# Fast generation (SD1.5)
+python3 .claude/tools/image-generation/HAL-generate-image.py \
+  --prompt "simple robot sketch" \
+  --model sd15 \
+  --steps 15 \
+  --output data/images/robot.png
+
+# High quality (more steps)
+python3 .claude/tools/image-generation/HAL-generate-image.py \
+  --prompt "detailed architectural visualization" \
+  --model sdxl \
+  --steps 40 \
+  --output data/images/architecture.png
+
+
+                    <p><strong>HAL8000 Integration:</strong></p>
+                    <p>
+                        When users request images, HAL8000 (Claude) automatically enhances prompts and invokes the tool. Users don't interact with the tool directly - they simply ask for images and Claude generates them.
+                    </p>
+
+                    <pre><code>User: "Generate an image of a friendly robot"
+
+Claude executes:
+  python3 .claude/tools/image-generation/HAL-generate-image.py \
+    --prompt "friendly humanoid robot assistant, modern design, clean background, detailed" \
+    --model sdxl \
+    --steps 25 \
+    --output data/images/robot-assistant.png
+
+User receives: "Image generated: data/images/robot-assistant.png"</code></pre>
+
+                    <h4>Text Overlay Feature</h4>
+                    <p>
+                        SD models cannot generate readable text (they produce gibberish). Use the <code>--text</code> parameter to overlay clean text with ImageMagick post-processing:
+                    </p>
+
+                    <pre><code># Simple text overlay (bottom center by default)
+python3 .claude/tools/image-generation/HAL-generate-image.py \
+  --prompt "solid blue background" \
+  --text "HELLO WORLD" \
+  --output labeled-image.png
+
+# Custom text positioning and styling
+python3 .claude/tools/image-generation/HAL-generate-image.py \
+  --prompt "cyberpunk city at night" \
+  --text "NEO TOKYO 2077" \
+  --text-position north \
+  --text-size 96 \
+  --text-color white \
+  --output cyberpunk-titled.png
+
+# Hex color support
+python3 .claude/tools/image-generation/HAL-generate-image.py \
+  --prompt "robot assistant" \
+  --text "HAL8000" \
+  --text-position center \
+  --text-size 120 \
+  --text-color "#00FF00" \
+  --output robot-labeled.png</code></pre>
+
+                    <p><strong>Text Options:</strong></p>
+                    <ul>
+                        <li><code>--text</code>: Text to overlay on image</li>
+                        <li><code>--text-position</code>: north, south (default), east, west, center</li>
+                        <li><code>--text-size</code>: Font size in points (default: 72)</li>
+                        <li><code>--text-color</code>: Color name (white, black, red, blue) or hex (#RRGGBB)</li>
+                    </ul>
+                    <p><strong>Note:</strong> Text is rendered with black stroke outline for readability on any background color.</p>
+
+                    <h4>Available Models</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Size</th>
+                                <th>VRAM</th>
+                                <th>Speed (RTX 3090)</th>
+                                <th>Quality</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SDXL</strong> (default)</td>
+                                <td>6.5GB</td>
+                                <td>6-8GB</td>
+                                <td>3-5 seconds</td>
+                                <td>★★★★★</td>
+                                <td>Production quality, high detail</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SD1.5</strong></td>
+                                <td>4GB</td>
+                                <td>4-5GB</td>
+                                <td>1-2 seconds</td>
+                                <td>★★★★</td>
+                                <td>Fast iterations, prototyping</td>
+                            </tr>
+                            <tr>
+                        </tbody>
+                    </table>
+
+
+                    <h4>Performance Characteristics</h4>
+                    <p><strong>First-Time Setup:</strong></p>
+                    <ul>
+                        <li>Docker image build: ~5-10 minutes (one-time)</li>
+                        <li>Model download: ~5-10 minutes per model (one-time)</li>
+                        <li>Total initial setup: ~15-20 minutes</li>
+                    </ul>
+
+                    <p><strong>Runtime Performance (RTX 3090):</strong></p>
+                    <ul>
+                        <li>Container startup: ~2 seconds</li>
+                        <li>Model load (from cache): ~3-5 seconds</li>
+                        <li>Image generation: ~3-8 seconds (depending on model/steps)</li>
+                        <li>Container cleanup: ~1 second</li>
+                        <li><strong>Total:</strong> ~10-15 seconds per image (after initial setup)</li>
+                    </ul>
+
+                    <h4>Storage Requirements</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Location</th>
+                                <th>Size</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Docker Image</td>
+                                <td>C: drive (WSL2)</td>
+                                <td>~3GB</td>
+                                <td>Container with ComfyUI + dependencies</td>
+                            </tr>
+                            <tr>
+                                <td>Model Cache</td>
+                                <td>D: drive (<code>.docker-cache/models/</code>)</td>
+                                <td>~6.5GB (SDXL) + 4GB (SD1.5)</td>
+                                <td>AI model weights (persistent)</td>
+                            </tr>
+                            <tr>
+                                <td>Generated Images</td>
+                                <td>D: drive (<code>data/images/</code>)</td>
+                                <td>~2-5MB each</td>
+                                <td>Output images</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="note">
+                        <strong>Hybrid Storage Strategy:</strong> Docker images on C: drive (~3GB), model weights and outputs on D: drive (~10-20GB). This optimizes space usage across drives while maintaining fast access via SSD caching.
+                    </div>
+
+                    <h4>Architecture Pattern</h4>
+                    <p><strong>Docker-Based I/O Device:</strong></p>
+                    <pre><code>User Request
+    ↓
+HAL8000 (Claude/CPU) - enhances prompt
+    ↓
+HAL-generate-image.py - driver script
+    ↓
+docker run hal8000-image-gen:latest --prompt "..." --output image.png
+    ↓
+Container: Start → Load Model → Generate → Save → Exit
+    ↓
+Image saved to data/images/
+    ↓
+HAL8000 returns file path to user (~10 tokens RAM impact)</code></pre>
+
+                    <div class="note">
+                        <strong>Zero RAM Impact:</strong> Like the diagram-generation tool, image generation runs in an external Docker container. Only the output file path is loaded into HAL8000's RAM (~10 tokens), not the generation process or intermediate data. This enables unlimited image generation without RAM constraints.
+                    </div>
+
+                    <h4>Installation and Setup</h4>
+                    <p><strong>Prerequisites:</strong></p>
+                    <ul>
+                        <li>Docker Desktop with WSL2 backend</li>
+                        <li>NVIDIA GPU drivers</li>
+                        <li>NVIDIA Container Toolkit (for GPU passthrough)</li>
+                        <li>~10GB free disk space (3GB C:, 7GB D:)</li>
+                    </ul>
+
+                    <p><strong>Build Process:</strong></p>
+                    <pre><code># Navigate to tool directory
+cd /mnt/d/~HAL8000/.claude/tools/image-generation
+
+# Build Docker image
+./build-image.sh
+
+# Test installation
+python3 HAL-generate-image.py \
+  --prompt "test: red circle" \
+  --model sd15 \
+  --output test.png</code></pre>
+
+                    <p><strong>Documentation Files:</strong></p>
+                    <ul>
+                        <li><code>README.md</code> - Complete user guide with examples</li>
+                        <li><code>INSTALL.md</code> - Detailed installation and troubleshooting</li>
+                        <li><code>QUICKSTART.txt</code> - Quick reference card</li>
+                        <li><code>CLAUDE.md</code> - HAL8000 integration guide</li>
+                        <li><code>image-generation-tool.md</code> - System documentation</li>
+                    </ul>
+
+                    <h4>Use Cases</h4>
+                    <p><strong>Typical Applications:</strong></p>
+                    <ul>
+                        <li><strong>Technical Illustrations:</strong> Hardware diagrams, system architectures, component visualizations</li>
+                        <li><strong>Concept Art:</strong> Design mockups, visual prototypes, creative explorations</li>
+                        <li><strong>Character Design:</strong> Robot assistants, AI entities, user avatars</li>
+                        <li><strong>Architectural Visualization:</strong> Building designs, interior layouts, spatial concepts</li>
+                        <li><strong>Abstract Art:</strong> Patterns, textures, stylistic explorations</li>
+                        <li><strong>Product Mockups:</strong> Device concepts, interface designs, packaging ideas</li>
+                    </ul>
+
+                    <div class="note">
+                        <strong>Cost Comparison:</strong> Cloud services (DALL-E 3, Midjourney) charge $0.04-0.08 per image. With local generation, after initial setup (~$0 for existing GPU hardware), each image costs only electricity (~$0.001). At 100 images/month, savings are ~$4-8/month. At 1000 images/month, savings are ~$40-80/month.
+                    </div>
+
+                    <h4>Comparison to Other Tools</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tool</th>
+                                <th>Type</th>
+                                <th>RAM Impact</th>
+                                <th>Speed</th>
+                                <th>Use Case</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>image-generation</strong></td>
+                                <td>Docker (GPU)</td>
+                                <td>Zero</td>
+                                <td>10-15s</td>
+                                <td>AI image creation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>diagram-generation</strong></td>
+                                <td>Docker</td>
+                                <td>Zero</td>
+                                <td>&lt;1s</td>
+                                <td>Technical diagrams (Mermaid)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>docling-cli</strong></td>
+                                <td>PowerShell</td>
+                                <td>Zero</td>
+                                <td>Variable</td>
+                                <td>Document processing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>gemini-cli</strong></td>
+                                <td>CLI</td>
+                                <td>Zero</td>
+                                <td>Variable</td>
+                                <td>Massive context analysis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <h3>Integration Patterns</h3>
 
                     <h4>External Tool Selection Decision Tree</h4>
@@ -12709,6 +13006,8 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
 └─ YES → Specialized capability type?
     ├─ Massive context (>200K) → Gemini CLI
     ├─ Document conversion → Docling CLI
+    ├─ AI image generation → Image Generation Tool
+    ├─ Technical diagrams → Diagram Generation Tool
     ├─ Web search/extraction → MCP omnisearch
     ├─ File system operations → MCP filesystem or core tools
     ├─ Code diagnostics → MCP ide
@@ -12721,17 +13020,27 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
                         <li><strong>MCP Servers:</strong> Token overhead per enabled server (~1-5K tokens each)</li>
                         <li><strong>External AI (Gemini):</strong> No RAM impact (separate process, returns results only)</li>
                         <li><strong>Document Conversion (Docling):</strong> No RAM impact (external PowerShell process, only converted output loaded)</li>
-                        <li><strong>Docker:</strong> No RAM impact (isolated container, communicate via I/O)</li>
+                        <li><strong>Image Generation:</strong> No RAM impact (Docker container, only file path returned ~10 tokens)</li>
+                        <li><strong>Diagram Generation:</strong> No RAM impact (Docker container, only file path returned)</li>
+                        <li><strong>Docker Containers:</strong> No RAM impact (isolated container, communicate via I/O)</li>
                     </ul>
 
                     <div class="note">
-                        <strong>Architecture Note:</strong> External tools extend HAL8000's capabilities without violating core architectural constraints. Gemini provides virtual memory beyond 200K limits. Docling enables universal document ingestion. MCP servers offer protocol-based integrations. Docker provides process isolation. All follow Unix philosophy: specialized tools composed via standard interfaces (bash, file I/O, PowerShell bridge, MCP protocol).
+                        <strong>Architecture Note:</strong> External tools extend HAL8000's capabilities without violating core architectural constraints. Gemini provides virtual memory beyond 200K limits. Docling enables universal document ingestion. Image Generation creates AI visuals with GPU acceleration. Diagram Generation produces technical diagrams. MCP servers offer protocol-based integrations. Docker provides process isolation. All follow Unix philosophy: specialized tools composed via standard interfaces (bash, file I/O, PowerShell bridge, MCP protocol, Docker containers).
                     </div>
 
                     <h3>Cross-Reference</h3>
                     <ul>
                         <li><strong>Commands:</strong> See <a href="#hal-mcp-control">HAL-mcp-control</a> for MCP server management, <a href="#hal-knowledge-ingest">HAL-knowledge-ingest</a> for automatic document ingestion</li>
-                        <li><strong>Tool Documentation:</strong> <code>.claude/tools/docling-cli.md</code> for complete docling reference, <code>.claude/tools/gemini-cli.md</code> for Gemini usage</li>
+                        <li><strong>Tool Documentation:</strong>
+                            <ul>
+                                <li><code>.claude/tools/image-generation/</code> - AI image generation (README.md, INSTALL.md, CLAUDE.md)</li>
+                                <li><code>.claude/tools/diagram-generation/</code> - Technical diagram generation</li>
+                                <li><code>.claude/tools/docling-cli.md</code> - Document processing</li>
+                                <li><code>.claude/tools/gemini-cli.md</code> - Massive context AI agent</li>
+                                <li><code>.claude/tools/image-generation-tool.md</code> - Image tool system documentation</li>
+                            </ul>
+                        </li>
                         <li><strong>Sub-Agents:</strong> See <a href="#sub-agents">5.4 Sub-Agents</a> for comparison with external AI agents</li>
                         <li><strong>Core Tools:</strong> See <a href="#core-tools">5.1 Core Tools</a> for built-in capabilities</li>
                         <li><strong>Resource Management:</strong> See <a href="#ram-management">4.3 RAM Management</a> for optimization guidelines</li>

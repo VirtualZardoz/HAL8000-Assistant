@@ -71,10 +71,14 @@ build/
 # docker-compose.yml
 
 # =============================================================================
-# Generated Diagrams (Optional)
+# Generated Content (AI-Generated Files)
 # =============================================================================
-# Uncomment if diagrams are generated dynamically and don't need versioning
-# data/diagrams/
+# Generated diagrams and images are reproducible - exclude from version control
+data/diagrams/
+data/images/
+
+# Docker model cache (large binary files)
+.docker-cache/
 
 # =============================================================================
 # Personal Notes and Drafts

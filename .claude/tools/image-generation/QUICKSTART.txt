@@ -1,0 +1,53 @@
+╔════════════════════════════════════════════════════════════════╗
+║           HAL8000 Image Generation - Quick Start              ║
+╚════════════════════════════════════════════════════════════════╝
+
+INSTALLATION (One-time, ~15 minutes):
+
+1. cd /mnt/d/~HAL8000/.claude/tools/image-generation
+2. ./build-image.sh
+3. Wait for build to complete (~5-10 min)
+
+FIRST IMAGE (Downloads model, ~10 minutes):
+
+python3 HAL-generate-image.py \
+  --prompt "futuristic CPU with glowing circuits" \
+  --output test.png
+
+SUBSEQUENT IMAGES (~10-15 seconds each):
+
+python3 HAL-generate-image.py \
+  --prompt "your description here" \
+  --output image.png
+
+MODELS:
+--model sdxl   (best quality, default, 3-5s)
+--model sd15   (faster, good quality, 1-2s)
+
+QUALITY:
+--steps 15     (fast)
+--steps 20     (balanced, default)
+--steps 40     (high quality)
+
+HELP:
+python3 HAL-generate-image.py --help
+
+DOCS:
+- README.md    : Full user guide
+- INSTALL.md   : Detailed installation
+- CLAUDE.md    : Integration guide
+
+STORAGE:
+- C: drive: ~3GB (Docker image)
+- D: drive: ~7GB (models) + ~5MB per image
+
+REQUIREMENTS:
+✓ Docker Desktop with WSL2
+✓ NVIDIA GPU (RTX 3090)
+✓ NVIDIA drivers + Container Toolkit
+✓ ~10GB free disk space
+
+═══════════════════════════════════════════════════════════════
+After installation, just ask Claude to generate images!
+Claude will use this tool automatically.
+═══════════════════════════════════════════════════════════════

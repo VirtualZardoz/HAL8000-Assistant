@@ -1,28 +1,22 @@
 {
-  "timestamp": "2025-10-16T12:12:27Z",
+  "version": "1.6.0",
   "architecture_type": "Modified von Neumann (Harvard-like organization with von Neumann capabilities)",
-  "active_session": ".claude/sessions/2025-10-16-1212-github-deployment-complete.md",
-  "context": "GitHub Deployment Complete: Successfully pushed HAL8000 v1.4.0 to https://github.com/VirtualZardoz/HAL8000. Created data/operations/ for deployment procedures. Repository contains 523 files, 75,266 lines. All sensitive data protected (.env, settings.local.json excluded). Root directory clean per Unix philosophy. Git configured (VirtualZardoz/shahram@sabeti.com), 2 commits pushed.",
-  "next_action": "Optional: Add GitHub repository topics for discoverability. Optional: Create LICENSE file. System ready for normal development work.",
-  "phase": "production",
+  "timestamp": "2025-10-23T14:32:24Z",
+  "active_session": ".claude/sessions/2025-10-23-1432-image-generation-tool-complete-flux-investigated.md",
+  "context": "Image generation tool v1.6.0 complete - SDXL/SD1.5 + text overlay working, FLUX investigated but timing out",
+  "next_action": "Check SDXL test (bash 22d199), remove FLUX if broken, finalize documentation, git commit",
+  "phase": "integration-complete",
   "loaded_commands": [],
   "variables": {
-    "current_project": "github-deployment",
-    "phase": "production",
+    "current_project": "image-generation-tool",
     "agents_available": 6,
     "commands_available": 11,
-    "tools_available": 3,
-    "total_content_files": 38,
+    "total_content_files": 43,
     "indexed_directories": 6,
-    "counts_validated": "2025-10-16T12:12:27Z",
-    "version": "1.5.0",
-    "manual_version": "1.1.0",
-    "depth_limit": 3,
-    "repository": "https://github.com/VirtualZardoz/HAL8000",
-    "git_user": "VirtualZardoz",
-    "git_email": "shahram@sabeti.com",
-    "commits": ["b660706", "4533588"],
-    "deployment_complete": true
+    "tools_available": 3,
+    "bios_documented": true,
+    "architecture_documented": true,
+    "counts_validated": "2025-10-23T14:32:24Z"
   },
   "diagram_tool": {
     "status": "production-ready",
@@ -31,308 +25,39 @@
     "output_dir": "data/diagrams/",
     "supported_types": ["process-flow", "swimlane", "bpmn", "sipoc"],
     "performance": "~0.7-0.8s per diagram",
-    "documentation": [
-      ".claude/tools/diagram-generation/README.md",
-      ".claude/tools/diagram-generation/LESSONS_LEARNED.md"
-    ],
     "bios_documented": true
   },
-  "docling_tool": {
-    "status": "production-ready",
-    "version": "latest",
-    "python_version": "3.13",
-    "path": "C:\\Users\\Shahram-Dev\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\docling.exe",
-    "access": "PowerShell bridge from WSL",
-    "supported_input_formats": ["pdf", "docx", "pptx", "xlsx", "png", "jpg", "jpeg", "gif", "bmp", "mp3", "wav", "mp4", "avi", "csv", "xml", "html", "md", "asciidoc"],
-    "supported_output_formats": ["md", "json", "html", "text", "doctags"],
-    "features": {
-      "ocr": ["easyocr", "rapidocr", "tesserocr", "tesseract", "ocrmac"],
-      "transcription": ["whisper_tiny", "whisper_small", "whisper_medium", "whisper_base", "whisper_large", "whisper_turbo"],
-      "table_extraction": ["fast", "accurate"],
-      "enrichment": ["code", "formula", "picture_classification", "picture_description"],
-      "image_export": ["placeholder", "embedded", "referenced"]
-    },
-    "integration": {
-      "hal_knowledge_ingest": "v1.1",
-      "automatic_conversion": true,
-      "format_detection": true
-    },
-    "ram_impact": "zero (external PowerShell process)",
-    "documentation": ".claude/tools/docling-cli.md",
-    "reference_manual": "section 19 (External Tools - Document Processing)",
-    "bios_documented": false
-  },
-  "prompt_templates": {
-    "status": "production-ready",
-    "location": ".claude/libraries/internal/templates/",
-    "principle": "Lego Block (composable sections)",
-    "framework_credit": "IndyDevDan's 7 Levels of Agentic Prompt Formats",
-    "templates": {
-      "master": "master-prompt-template.md",
-      "level_1": "level-1-basic.md",
-      "level_2": "level-2-workflow.md",
-      "level_3": "level-3-control-flow.md",
-      "level_4": "level-4-delegate.md",
-      "level_5": "level-5-supervisor.md",
-      "level_6": "level-6-workflow-composition.md",
-      "level_7": "level-7-system.md",
-      "guide": "template-guide.md"
-    },
-    "total_templates": 9,
-    "integration": {
-      "bios_documented": true,
-      "command_guide_updated": true,
-      "usage_method": "copy template → remove unused sections → fill logic"
-    },
-    "automation": {
-      "agent": ".claude/agents/command-builder.md",
-      "command": ".claude/commands/development/HAL-command-create.md",
-      "status": "production-ready",
-      "phase_3_complete": true,
-      "tested": "2025-10-15T10:30:00Z",
-      "test_result": "Successfully generated HAL-todo-report command using Level 2 template",
-      "capabilities": [
-        "Automated template selection",
-        "HAL-Script command composition",
-        "Quality validation",
-        "Production-ready output"
-      ]
-    },
-    "created": "2025-10-15",
-    "version": "1.2",
-    "phases_completed": {
-      "phase_1": "Foundation - Master template and 7 level templates created",
-      "phase_2": "Documentation - BIOS, command guide, state.json integration",
-      "phase_3": "Automation - command-builder agent and HAL-command-create command",
-      "phase_4": "Claude Code Integration - YAML frontmatter added to all commands, agents, templates"
-    }
-  },
-  "yaml_frontmatter": {
-    "status": "production-ready",
-    "integration_date": "2025-10-15T12:00:00Z",
-    "scope": {
-      "commands_updated": 10,
-      "agents_updated": 3,
-      "templates_updated": 9
-    },
-    "features": {
-      "command_palette_integration": true,
-      "parameter_hints": true,
-      "tool_whitelisting": true,
-      "model_selection": true
-    },
-    "documentation": {
-      "template_guide_updated": true,
-      "tool_reference_created": ".claude/libraries/internal/tool-reference.md",
-      "best_practices_documented": true
-    },
-    "benefits": [
-      "Enhanced command discoverability in Claude Code UI",
-      "Parameter hints for better user experience",
-      "Tool whitelisting for agent security and performance",
-      "Model selection for cost/performance optimization",
-      "Improved documentation and standardization"
-    ]
-  },
-  "reference_manual": {
-    "version": "1.2.0",
-    "file": "data/reference-manual/index.html",
-    "command": ".claude/commands/HAL-refman.md",
-    "assets_directory": "data/reference-manual/assets/",
-    "backup": "data/reference-manual/index.html.backup-pre-v1.2.0",
-    "total_sections": 32,
-    "completed": 32,
-    "status": "production-ready",
-    "deployment_ready": true,
-    "v1_1_0_enhancements": {
-      "sections_added": 5,
-      "sections": [
-        "20.4 Using Prompt Templates",
-        "20.5 YAML Frontmatter for Commands",
-        "21.4 YAML Frontmatter for Agents",
-        "21.5 Tool Selection and Security",
-        "22.3 Template Library"
-      ],
-      "words_added": 3500,
-      "code_examples": 15,
-      "tables": 4,
-      "completed_date": "2025-10-15T12:00:00Z"
-    },
-    "v1_2_0_enhancements": {
-      "sections_added": 1,
-      "sections": [
-        "17. Skills Reference (complete new section in Part IV)"
-      ],
-      "sections_renumbered": "17-23 → 18-24",
-      "words_added": 3800,
-      "tables": 3,
-      "diagrams_placeholders": 2,
-      "skills_documented": 4,
-      "completed_date": "2025-10-20",
-      "notes": "Added comprehensive Skills Reference section documenting all 4 Agent Skills (context-awareness, architecture-consultant, hal-script-assistant, documentation-generator) with triggers, tools, examples, and integration details."
-    },
-    "diagrams": {
-      "total_placeholders": 21,
-      "completed": 19,
-      "remaining": 2,
-      "v1_0_0_diagrams": 12,
-      "v1_1_0_diagrams": 7,
-      "v1_2_0_diagrams": 2,
-      "v1_2_0_pending": [
-        "three-layer-model (Skills → Commands → Agents)",
-        "skills-activation-flow (context pattern detection)"
-      ],
-      "optimization_session": {
-        "date": "2025-10-15T15:11:41Z",
-        "diagrams_fixed": 7,
-        "ascii_art_replaced": 3,
-        "fixes": [
-          "frontmatter-benefits.png - multi-row layout with subgraphs",
-          "agent-security-model.svg - expanded viewBox, fixed clipping",
-          "tool-selection-flowchart.png - 2x scale balanced layout",
-          "template-automation-workflow.png - horizontal with subgraphs",
-          "mcp-architecture.png - new Mermaid diagram (replaced ASCII)",
-          "directory-structure.png - new horizontal LR layout (replaced ASCII)",
-          "agent-workflow.png - new horizontal LR layout (replaced ASCII)"
-        ]
+  "image_generation_tool": {
+    "status": "sdxl-sd15-working-flux-problematic",
+    "version": "1.6.0",
+    "backend": "ComfyUI + Stable Diffusion",
+    "text_overlay": "working (ImageMagick)",
+    "models": {
+      "sdxl": {
+        "size_gb": 6.5,
+        "speed_seconds": "3-5",
+        "quality": "★★★★★",
+        "status": "tested-working"
       },
-      "diagram_types": {
-        "mermaid_png": 5,
-        "custom_svg": 2,
-        "inline_embedded": 2
+      "sd15": {
+        "size_gb": 4,
+        "speed_seconds": "1-2",
+        "quality": "★★★★",
+        "status": "tested-working"
       },
-      "total_size": "~1.1MB",
-      "tooling_pattern": "Mermaid for flowcharts, custom SVG for special shapes (pyramid, concentric circles)",
-      "last_updated": "2025-10-15T15:11:41Z"
-    },
-    "visual_enhancements": {
-      "card_based_levels": true,
-      "color_coding": true,
-      "hover_effects": true,
-      "material_design": true,
-      "responsive_sizing": true
-    }
-  },
-  "github_deployment": {
-    "status": "complete",
-    "repository": "https://github.com/VirtualZardoz/HAL8000",
-    "commits": [
-      {
-        "hash": "b660706",
-        "message": "Initial commit: HAL8000 v1.4.0",
-        "files": 523,
-        "lines": 75266
-      },
-      {
-        "hash": "4533588",
-        "message": "Remove deployment docs from root (already in data/operations/)",
-        "files": 3,
-        "lines": -698
-      }
-    ],
-    "git_config": {
-      "user": "VirtualZardoz",
-      "email": "shahram@sabeti.com"
-    },
-    "security": {
-      "env_protected": true,
-      "settings_local_protected": true,
-      "template_safe": true
-    },
-    "operations_docs": {
-      "location": "data/operations/",
-      "files": [
-        "GITHUB_SETUP.md",
-        "SECURITY_REVIEW.md",
-        "PUSH_TO_GITHUB.md"
-      ]
-    },
-    "deployment_date": "2025-10-16T12:12:27Z"
-  },
-  "agent_skills": {
-    "status": "production-ready",
-    "integration_date": "2025-10-20",
-    "location": ".claude/skills/",
-    "invocation": "model-invoked (automatic, context-based)",
-    "total_skills": 4,
-    "skills": {
-      "context-awareness": {
-        "purpose": "Detect missing context before answering",
-        "triggers": "User questions about code/files not in RAM",
-        "tools": ["Read", "Glob", "Grep", "AskUserQuestion"],
-        "behavior": "Ask for clarification instead of guessing",
-        "implements": "Context Awareness Protocol (BIOS)"
-      },
-      "architecture-consultant": {
-        "purpose": "Validate design against HAL8000 principles",
-        "triggers": "Code reviews, design discussions, command creation",
-        "tools": ["Read"],
-        "behavior": "Warn about principle violations",
-        "reference": "principles-reference.md"
-      },
-      "hal-script-assistant": {
-        "purpose": "Help write HAL-Script commands and agents",
-        "triggers": "Command creation, HAL-Script questions",
-        "tools": ["Read", "Write", "Edit", "Glob"],
-        "behavior": "Guide template selection, generate code",
-        "integration": "command-builder agent + template library"
-      },
-      "documentation-generator": {
-        "purpose": "Create structured documentation",
-        "triggers": "User requests docs or major milestone",
-        "tools": ["Read", "Write", "Glob"],
-        "behavior": "Generate session docs, decision logs, architecture docs",
-        "templates": 5,
-        "template_types": ["session-doc", "decision-log", "architecture-doc", "feature-doc", "readme"]
+      "flux": {
+        "size_gb": 23,
+        "speed_seconds": "timeout-15min",
+        "quality": "★★★★★★",
+        "status": "not-working-low-gpu-utilization"
       }
     },
-    "three_layer_model": {
-      "layer_1": "Skills (Proactive - model decides)",
-      "layer_2": "Commands (Explicit - user invokes)",
-      "layer_3": "Agents (Delegated - CPU offloads)"
-    },
-    "rationale": {
-      "skills_included": "1 (context-awareness), 4 (architecture-consultant), 5 (hal-script-assistant), 6 (documentation-generator)",
-      "skills_excluded": "2 (ram-guardian), 3 (session-continuity)",
-      "exclusion_reason": "Skills 2 and 3 would evaluate constantly (high bandwidth). User already monitors RAM/sessions.",
-      "decision_date": "2025-10-20",
-      "decision_log": "data/architecture/decisions/2025-10-20-skills-scope-decision.md (to be created)"
-    },
-    "supporting_files": {
-      "architecture-consultant": ["principles-reference.md"],
-      "hal-script-assistant": ["template-selector.md"],
-      "documentation-generator": [
-        "templates/session-doc-template.md",
-        "templates/decision-log-template.md",
-        "templates/architecture-doc-template.md",
-        "templates/feature-doc-template.md",
-        "templates/readme-template.md"
-      ]
-    },
-    "bios_documented": true,
-    "bios_sections": ["Memory Architecture", "Memory Components table", "Agent Skills section"]
-  },
-  "bug_fixes": {
-    "session_end_timestamp_sync": {
-      "fixed": "2025-10-15T07:35:23Z",
-      "severity": "high",
-      "issue": "state.json pointed to non-existent session files",
-      "resolution": "Atomic timestamp generation + mandatory file verification",
-      "documentation": "data/architecture/session-end-bug-fix-2025-10-15.md"
-    },
-    "cpu_boot_protocol_violation": {
-      "identified": "2025-10-15T07:53:22Z",
-      "severity": "critical",
-      "issue": "CPU not executing Read tool during boot, fabricating acknowledgments",
-      "resolution": "Enhanced BIOS with moral framing and urgent alerts",
-      "documentation": [
-        ".claude/sessions/2025-10-15-0753-boot-protocol-investigation.md",
-        "data/architecture/cpu-boot-protocol-fix-2025-10-15.md"
-      ],
-      "verification_status": "verified_successful",
-      "verified_date": "2025-10-15T08:30:00Z",
-      "verification_method": "Fresh session test - CPU executed Read tool and cited actual state.json values",
-      "version_bump": "1.1.0 → 1.1.1 (PATCH)"
-    }
+    "docker_image": "hal8000-image-gen:latest",
+    "script": ".claude/tools/image-generation/HAL-generate-image.py",
+    "output_dir": "data/images/",
+    "model_cache": "/mnt/d/~HAL8000/.docker-cache/models/",
+    "gpu": "RTX 3090 (24GB VRAM)",
+    "ram_impact": "zero",
+    "bios_documented": true
   }
 }
