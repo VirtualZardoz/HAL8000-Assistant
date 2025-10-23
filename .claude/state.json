@@ -1,11 +1,11 @@
 {
-  "version": "1.6.0",
+  "version": "1.6.1",
   "architecture_type": "Modified von Neumann (Harvard-like organization with von Neumann capabilities)",
-  "timestamp": "2025-10-23T14:32:24Z",
-  "active_session": ".claude/sessions/2025-10-23-1432-image-generation-tool-complete-flux-investigated.md",
-  "context": "Image generation tool v1.6.0 complete - SDXL/SD1.5 + text overlay working, FLUX investigated but timing out",
-  "next_action": "Check SDXL test (bash 22d199), remove FLUX if broken, finalize documentation, git commit",
-  "phase": "integration-complete",
+  "timestamp": "2025-10-23T15:37:00Z",
+  "active_session": ".claude/sessions/2025-10-23-1537-image-generation-tool-v1-6-1-complete.md",
+  "context": "Image Generation Tool v1.6.1 complete - SDXL/SD1.5 + text overlay + fast text-only overlay working, FLUX removed, all changes pushed to GitHub",
+  "next_action": "Tool is production-complete, no outstanding work",
+  "phase": "production-complete",
   "loaded_commands": [],
   "variables": {
     "current_project": "image-generation-tool",
@@ -16,7 +16,7 @@
     "tools_available": 3,
     "bios_documented": true,
     "architecture_documented": true,
-    "counts_validated": "2025-10-23T14:32:24Z"
+    "counts_validated": "2025-10-23T15:37:00Z"
   },
   "diagram_tool": {
     "status": "production-ready",
@@ -28,10 +28,10 @@
     "bios_documented": true
   },
   "image_generation_tool": {
-    "status": "sdxl-sd15-working-flux-problematic",
-    "version": "1.6.0",
+    "status": "production-complete",
+    "version": "1.6.1",
     "backend": "ComfyUI + Stable Diffusion",
-    "text_overlay": "working (ImageMagick)",
+    "text_overlay": "working (two methods: generation-time + post-processing)",
     "models": {
       "sdxl": {
         "size_gb": 6.5,
@@ -44,13 +44,11 @@
         "speed_seconds": "1-2",
         "quality": "★★★★",
         "status": "tested-working"
-      },
-      "flux": {
-        "size_gb": 23,
-        "speed_seconds": "timeout-15min",
-        "quality": "★★★★★★",
-        "status": "not-working-low-gpu-utilization"
       }
+    },
+    "tools": {
+      "HAL-generate-image.py": "Full generation + optional text overlay",
+      "HAL-add-text.py": "Fast text-only overlay (1.4s, 20x faster)"
     },
     "docker_image": "hal8000-image-gen:latest",
     "script": ".claude/tools/image-generation/HAL-generate-image.py",
@@ -58,6 +56,9 @@
     "model_cache": "/mnt/d/~HAL8000/.docker-cache/models/",
     "gpu": "RTX 3090 (24GB VRAM)",
     "ram_impact": "zero",
-    "bios_documented": true
+    "storage": "11GB (SDXL + SD1.5 + VAE)",
+    "flux_status": "investigated-removed-incompatible",
+    "bios_documented": true,
+    "git_status": "pushed-to-origin"
   }
 }

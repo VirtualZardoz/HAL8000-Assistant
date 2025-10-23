@@ -1,0 +1,88 @@
+{
+  "version": "2.0-hierarchical",
+  "directory": ".claude/skills/",
+  "files": {
+    ".claude/skills/context-awareness/SKILL.md": {
+      "type": "skill",
+      "category": "proactive",
+      "topics": ["context-detection", "missing-context", "proactive"],
+      "summary": "Detect when user questions require loading files not currently in context",
+      "size_estimate_tokens": 1049
+    },
+    ".claude/skills/architecture-consultant/SKILL.md": {
+      "type": "skill",
+      "category": "validation",
+      "topics": ["architecture", "design-validation", "principles"],
+      "summary": "Validate design decisions against HAL8000 architectural principles",
+      "size_estimate_tokens": 1695
+    },
+    ".claude/skills/architecture-consultant/principles-reference.md": {
+      "type": "skill",
+      "category": "reference",
+      "topics": ["von-neumann", "unix-philosophy", "assembly-principles"],
+      "summary": "Reference document for HAL8000 architectural principles",
+      "size_estimate_tokens": 1555
+    },
+    ".claude/skills/hal-script-assistant/SKILL.md": {
+      "type": "skill",
+      "category": "development",
+      "topics": ["hal-script", "command-creation", "templates"],
+      "summary": "Help write HAL-Script commands and agents with template guidance",
+      "size_estimate_tokens": 2577
+    },
+    ".claude/skills/hal-script-assistant/template-selector.md": {
+      "type": "skill",
+      "category": "reference",
+      "topics": ["templates", "selection-guide", "levels"],
+      "summary": "Guide for selecting appropriate prompt templates for command creation",
+      "size_estimate_tokens": 2179
+    },
+    ".claude/skills/documentation-generator/SKILL.md": {
+      "type": "skill",
+      "category": "documentation",
+      "topics": ["documentation", "session-docs", "architecture-docs"],
+      "summary": "Generate professional documentation for sessions and decisions",
+      "size_estimate_tokens": 2577
+    },
+    ".claude/skills/documentation-generator/templates/session-doc-template.md": {
+      "type": "skill",
+      "category": "template",
+      "topics": ["session-documentation", "template"],
+      "summary": "Template for session documentation",
+      "size_estimate_tokens": 645
+    },
+    ".claude/skills/documentation-generator/templates/decision-log-template.md": {
+      "type": "skill",
+      "category": "template",
+      "topics": ["decision-log", "template"],
+      "summary": "Template for decision log documentation",
+      "size_estimate_tokens": 882
+    },
+    ".claude/skills/documentation-generator/templates/architecture-doc-template.md": {
+      "type": "skill",
+      "category": "template",
+      "topics": ["architecture", "template"],
+      "summary": "Template for architecture documentation",
+      "size_estimate_tokens": 1473
+    },
+    ".claude/skills/documentation-generator/templates/feature-doc-template.md": {
+      "type": "skill",
+      "category": "template",
+      "topics": ["feature-documentation", "template"],
+      "summary": "Template for feature documentation",
+      "size_estimate_tokens": 1616
+    },
+    ".claude/skills/documentation-generator/templates/readme-template.md": {
+      "type": "skill",
+      "category": "template",
+      "topics": ["readme", "template"],
+      "summary": "Template for README documentation",
+      "size_estimate_tokens": 502
+    }
+  },
+  "statistics": {
+    "total_files": 11,
+    "total_tokens_estimate": 16750
+  },
+  "last_updated": "2025-10-23T16:00:00Z"
+}

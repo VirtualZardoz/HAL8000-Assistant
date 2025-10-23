@@ -1,42 +1,58 @@
 {
   "version": "2.0-hierarchical",
   "directory": ".claude/agents/",
-  "last_updated": "2025-10-05T19:30:00Z",
+  "last_updated": "2025-10-23T16:00:00Z",
   "files": {
     ".claude/agents/claude-code-validator.md": {
       "type": "agent",
       "category": "validation",
       "topics": ["compatibility", "claude-code", "external-validation", "deprecation"],
       "summary": "Validates HAL8000 commands and agents against external Claude Code documentation to detect deprecated tools, API changes, and compatibility issues.",
-      "size_estimate_tokens": 931
+      "size_estimate_tokens": 1317
+    },
+    ".claude/agents/command-builder.md": {
+      "type": "agent",
+      "category": "development",
+      "topics": ["code-generation", "hal-script", "templates", "command-creation"],
+      "summary": "HAL-Script command generation specialist using Prompt Template System for creating new commands.",
+      "size_estimate_tokens": 3320
+    },
+    ".claude/agents/documentation-writer.md": {
+      "type": "agent",
+      "category": "documentation",
+      "topics": ["documentation", "writing", "formatting", "professional"],
+      "summary": "Professional documentation writer for HAL8000 system with expertise in technical writing and formatting.",
+      "size_estimate_tokens": 3318
     },
     ".claude/agents/hal-context-finder.md": {
       "type": "agent",
       "category": "context-discovery",
       "topics": ["context-loading", "file-discovery", "RAM-optimization", "navigation"],
-      "summary": "Discovers and loads specific context from the HAL8000 system without consuming tokens in the main conversation window for efficient context management.",
-      "size_estimate_tokens": 1689
+      "summary": "Discovers and loads specific context from HAL8000 system without consuming main session RAM (saves 60-85%).",
+      "size_estimate_tokens": 2100
     },
     ".claude/agents/research-synthesizer.md": {
       "type": "agent",
       "category": "web-research",
       "topics": ["web-search", "research", "information-gathering", "RAM-optimization"],
-      "summary": "Performs ANY web research task using isolated 200K context, returning only clean summaries to save 60-85% RAM compared to direct searches.",
-      "size_estimate_tokens": 979
+      "summary": "Comprehensive web research specialist using isolated 200K context, saves 60-85% RAM compared to direct searches.",
+      "size_estimate_tokens": 963
     },
     ".claude/agents/system-maintenance.md": {
       "type": "agent",
       "category": "system-health",
       "topics": ["health-check", "integrity-audit", "compliance", "validation"],
-      "summary": "Audits HAL8000 system for structural integrity, principle compliance, and operational health by validating directory structure, file naming, and architectural consistency.",
-      "size_estimate_tokens": 1390
+      "summary": "Audits HAL8000 system for structural integrity, principle compliance, and operational health.",
+      "size_estimate_tokens": 1835
     }
   },
   "statistics": {
-    "total_files": 4,
-    "total_tokens_estimate": 4989,
+    "total_files": 6,
+    "total_tokens_estimate": 12853,
     "categories": {
       "validation": 1,
+      "development": 1,
+      "documentation": 1,
       "context-discovery": 1,
       "web-research": 1,
       "system-health": 1

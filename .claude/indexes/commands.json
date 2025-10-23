@@ -1,7 +1,7 @@
 {
   "version": "3.0-hierarchical",
   "directory": ".claude/commands/",
-  "last_updated": "2025-10-14T17:15:00Z",
+  "last_updated": "2025-10-23T16:00:00Z",
   "structure": "Organized by purpose: system/, development/, documentation/",
   "files": {
     ".claude/commands/README.md": {
@@ -9,84 +9,98 @@
       "category": "command-organization",
       "topics": ["commands", "hal-script", "programming", "guide"],
       "summary": "Command directory organization guide and HAL-Script programming introduction.",
-      "size_estimate_tokens": 3500
+      "size_estimate_tokens": 2123
     },
     ".claude/commands/system/HAL-session-end.md": {
       "type": "command",
       "category": "session-management",
       "topics": ["session", "continuity", "checkpoint", "state"],
       "summary": "End current session and save state for continuity after RAM wipe.",
-      "size_estimate_tokens": 2800
+      "size_estimate_tokens": 2279
     },
     ".claude/commands/system/HAL-system-check.md": {
       "type": "command",
       "category": "health-monitoring",
       "topics": ["system", "health", "integrity", "audit"],
       "summary": "Perform comprehensive system health check and architecture validation.",
-      "size_estimate_tokens": 1400
+      "size_estimate_tokens": 810
     },
     ".claude/commands/system/HAL-register-dump.md": {
       "type": "command",
       "category": "debugging",
       "topics": ["registers", "CPU", "state", "debugging"],
       "summary": "Display current CPU register states for debugging and inspection.",
-      "size_estimate_tokens": 3450
+      "size_estimate_tokens": 1954
     },
     ".claude/commands/system/HAL-index-update.md": {
       "type": "command",
       "category": "index-maintenance",
       "topics": ["indexing", "filesystem", "libraries", "discovery"],
       "summary": "Update hierarchical file system and library indexes for efficient discovery.",
-      "size_estimate_tokens": 4575
+      "size_estimate_tokens": 2622
     },
     ".claude/commands/system/HAL-library-update.md": {
       "type": "command",
       "category": "package-management",
       "topics": ["libraries", "packages", "updates", "external"],
       "summary": "Update external libraries from source repositories (package manager).",
-      "size_estimate_tokens": 3650
+      "size_estimate_tokens": 2106
     },
     ".claude/commands/system/HAL-mcp-control.md": {
       "type": "command",
       "category": "mcp-management",
       "topics": ["MCP", "servers", "dynamic-control", "RAM-optimization"],
       "summary": "Dynamic MCP server control for RAM optimization (enable/disable servers).",
-      "size_estimate_tokens": 2700
+      "size_estimate_tokens": 1555
+    },
+    ".claude/commands/system/HAL-knowledge-ingest.md": {
+      "type": "command",
+      "category": "knowledge-management",
+      "topics": ["ingestion", "classification", "knowledge", "organization"],
+      "summary": "Intelligently ingest and file knowledge with automatic classification.",
+      "size_estimate_tokens": 3219
     },
     ".claude/commands/development/HAL-CC-check.md": {
       "type": "command",
       "category": "validation",
       "topics": ["compatibility", "validation", "claude-code", "external"],
       "summary": "Validate HAL8000 against external Claude Code documentation for compatibility.",
-      "size_estimate_tokens": 1780
+      "size_estimate_tokens": 1071
     },
     ".claude/commands/development/HAL-context-find.md": {
       "type": "command",
       "category": "context-discovery",
       "topics": ["context", "discovery", "hal-context-finder", "RAM-efficient"],
       "summary": "Find and load system context via hal-context-finder agent (saves 60-85% RAM).",
-      "size_estimate_tokens": 2790
+      "size_estimate_tokens": 1555
+    },
+    ".claude/commands/development/HAL-command-create.md": {
+      "type": "command",
+      "category": "development",
+      "topics": ["command-creation", "hal-script", "templates", "generation"],
+      "summary": "Create new HAL-Script commands using template system and command-builder agent.",
+      "size_estimate_tokens": 2730
     },
     ".claude/commands/documentation/HAL-refman.md": {
       "type": "command",
       "category": "documentation",
       "topics": ["reference-manual", "documentation", "lifecycle", "management"],
       "summary": "HAL8000 Reference Manual lifecycle management (create, update, export).",
-      "size_estimate_tokens": 4790
+      "size_estimate_tokens": 2731
     }
   },
   "statistics": {
-    "total_files": 10,
-    "total_tokens_estimate": 31435,
+    "total_files": 12,
+    "total_tokens_estimate": 24755,
     "categories": {
-      "system-operations": 6,
-      "development-validation": 2,
-      "documentation-applications": 1,
+      "system-operations": 7,
+      "development": 3,
+      "documentation": 1,
       "guides": 1
     },
     "by_directory": {
-      "system": 6,
-      "development": 2,
+      "system": 7,
+      "development": 3,
       "documentation": 1,
       "root": 1
     }

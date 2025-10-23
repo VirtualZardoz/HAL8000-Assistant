@@ -1,0 +1,36 @@
+{
+  "version": "2.0-hierarchical",
+  "directory": "data/operations/",
+  "last_updated": "2025-10-23T16:00:00Z",
+  "files": {
+    "data/operations/SECURITY_REVIEW.md": {
+      "type": "operations",
+      "category": "security",
+      "topics": ["security", "review", "best-practices", "privacy"],
+      "summary": "Security review and best practices for HAL8000 deployment and usage.",
+      "size_estimate_tokens": 1248
+    },
+    "data/operations/GITHUB_SETUP.md": {
+      "type": "operations",
+      "category": "deployment",
+      "topics": ["github", "setup", "repository", "configuration"],
+      "summary": "GitHub repository setup and configuration guide for HAL8000 deployment.",
+      "size_estimate_tokens": 2189
+    },
+    "data/operations/PUSH_TO_GITHUB.md": {
+      "type": "operations",
+      "category": "deployment",
+      "topics": ["github", "push", "deployment", "workflow"],
+      "summary": "Workflow and procedures for pushing HAL8000 updates to GitHub repository.",
+      "size_estimate_tokens": 1412
+    }
+  },
+  "statistics": {
+    "total_files": 3,
+    "total_tokens_estimate": 4849,
+    "categories": {
+      "security": 1,
+      "deployment": 2
+    }
+  }
+}

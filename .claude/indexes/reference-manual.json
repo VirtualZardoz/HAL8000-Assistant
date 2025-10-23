@@ -1,0 +1,140 @@
+{
+  "version": "2.0-hierarchical",
+  "directory": "data/reference-manual/",
+  "last_updated": "2025-10-23T16:00:00Z",
+  "description": "HAL8000 Reference Manual editorial workflow and artifacts",
+  "files": {
+    "data/reference-manual/refactoring-workflow.md": {
+      "type": "documentation",
+      "category": "workflow",
+      "topics": ["workflow", "refactoring", "editorial", "process"],
+      "summary": "Reference Manual editorial workflow and refactoring process documentation.",
+      "size_estimate_tokens": 3004
+    },
+    "data/reference-manual/refactored/DIAGRAM-CREATION-GUIDE.md": {
+      "type": "documentation",
+      "category": "guide",
+      "topics": ["diagrams", "mermaid", "creation", "guide"],
+      "summary": "Comprehensive guide for creating diagrams for Reference Manual sections.",
+      "size_estimate_tokens": 7882
+    },
+    "data/reference-manual/critiques/2025-10-10-1651-comprehensive-editorial-review.md": {
+      "type": "critique",
+      "category": "editorial-review",
+      "topics": ["editorial", "review", "critique", "comprehensive"],
+      "summary": "Comprehensive editorial review and critique of Reference Manual v1.0.0.",
+      "size_estimate_tokens": 4613
+    },
+    "data/reference-manual/prompts/2025-10-10-1651-comprehensive-editorial-review.md": {
+      "type": "prompt",
+      "category": "editorial-review",
+      "topics": ["prompt", "review", "editorial"],
+      "summary": "Prompt for comprehensive editorial review agent task.",
+      "size_estimate_tokens": 1011
+    },
+    "data/reference-manual/prompts/2025-10-10-1715-phase1-critical-fixes.md": {
+      "type": "prompt",
+      "category": "phase1",
+      "topics": ["prompt", "critical-fixes", "phase1"],
+      "summary": "Phase 1 critical fixes prompt for editorial review.",
+      "size_estimate_tokens": 2767
+    },
+    "data/reference-manual/prompts/2025-10-10-1736-phase1-critical-fixes-v2-diff.md": {
+      "type": "prompt",
+      "category": "phase1",
+      "topics": ["prompt", "diff", "fixes"],
+      "summary": "Phase 1 v2 differential fixes prompt.",
+      "size_estimate_tokens": 1608
+    },
+    "data/reference-manual/prompts/2025-10-10-1900-phase3-enhancement.md": {
+      "type": "prompt",
+      "category": "phase3",
+      "topics": ["prompt", "enhancement", "phase3"],
+      "summary": "Phase 3 enhancement prompt for editorial review.",
+      "size_estimate_tokens": 1340
+    },
+    "data/reference-manual/prompts/2025-10-10-2355-phase2-high-priority.md": {
+      "type": "prompt",
+      "category": "phase2",
+      "topics": ["prompt", "high-priority", "phase2"],
+      "summary": "Phase 2 high-priority fixes prompt.",
+      "size_estimate_tokens": 885
+    },
+    "data/reference-manual/refactored/2025-10-10-1715-phase1-output.md": {
+      "type": "refactored",
+      "category": "phase1",
+      "topics": ["output", "phase1", "large"],
+      "summary": "Phase 1 refactored output (large file, 288KB).",
+      "size_estimate_tokens": 72182
+    },
+    "data/reference-manual/refactored/2025-10-10-1736-phase1-changes.md": {
+      "type": "refactored",
+      "category": "phase1",
+      "topics": ["changes", "phase1", "large"],
+      "summary": "Phase 1 changes documentation (large file, 246KB).",
+      "size_estimate_tokens": 61614
+    },
+    "data/reference-manual/refactored/2025-10-10-1736-phase1-progress.md": {
+      "type": "refactored",
+      "category": "phase1",
+      "topics": ["progress", "tracking"],
+      "summary": "Phase 1 progress tracking.",
+      "size_estimate_tokens": 722
+    },
+    "data/reference-manual/refactored/2025-10-10-1900-phase3-analysis.md": {
+      "type": "refactored",
+      "category": "phase3",
+      "topics": ["analysis", "phase3"],
+      "summary": "Phase 3 analysis documentation.",
+      "size_estimate_tokens": 2995
+    },
+    "data/reference-manual/refactored/2025-10-10-2355-phase2-changes.md": {
+      "type": "refactored",
+      "category": "phase2",
+      "topics": ["changes", "phase2"],
+      "summary": "Phase 2 changes documentation.",
+      "size_estimate_tokens": 13741
+    },
+    "data/reference-manual/refactored/2025-10-10-2355-phase2-changes-v2.md": {
+      "type": "refactored",
+      "category": "phase2",
+      "topics": ["changes", "phase2", "v2"],
+      "summary": "Phase 2 changes v2 documentation.",
+      "size_estimate_tokens": 9350
+    },
+    "data/reference-manual/refactored/2025-10-10-PHASE1-COMPLETE.md": {
+      "type": "refactored",
+      "category": "completion",
+      "topics": ["phase1", "completion", "summary"],
+      "summary": "Phase 1 completion summary and report.",
+      "size_estimate_tokens": 1187
+    },
+    "data/reference-manual/refactored/2025-10-10-PHASE2-COMPLETE.md": {
+      "type": "refactored",
+      "category": "completion",
+      "topics": ["phase2", "completion", "summary"],
+      "summary": "Phase 2 completion summary and report.",
+      "size_estimate_tokens": 2084
+    },
+    "data/reference-manual/refactored/2025-10-10-PHASE3-COMPLETE.md": {
+      "type": "refactored",
+      "category": "completion",
+      "topics": ["phase3", "completion", "summary"],
+      "summary": "Phase 3 completion summary and report.",
+      "size_estimate_tokens": 3618
+    }
+  },
+  "statistics": {
+    "total_files": 17,
+    "total_tokens_estimate": 190603,
+    "categories": {
+      "workflow": 1,
+      "guide": 1,
+      "critique": 1,
+      "prompts": 4,
+      "refactored": 9,
+      "completion": 3
+    },
+    "note": "Large files (phase1 outputs) contain 133,796 tokens combined"
+  }
+}
