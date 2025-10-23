@@ -419,3 +419,26 @@ Part of HAL8000 system. See main repository for license details.
 - **Architecture Pattern**: Based on HAL8000 diagram-generation tool
 
 **Note on FLUX**: FLUX.1-dev was investigated but found incompatible with our setup (timeouts, low GPU utilization). See FLUX-STATUS.md for details. SDXL provides excellent quality as primary model.
+
+## Text Overlay Only (Fast!)
+
+If you already have an image and just want to add text (no generation):
+
+```bash
+python3 HAL-add-text.py \
+  --input existing-image.png \
+  --text "Title Text" \
+  --output titled-image.png
+```
+
+**Performance:** ~1.4 seconds (vs 30+ seconds for regeneration)
+
+**Options:**
+- `--position` - north, south, east, west, center
+- `--size` - Font size in points (default: 72)
+- `--color` - white, black, red, blue, or hex #RRGGBB
+
+**Use cases:**
+- Adding titles to generated images
+- Creating variations with different text
+- Batch labeling of images
