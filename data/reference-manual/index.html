@@ -5778,6 +5778,164 @@ After task:
 ☑ Update state.json
 ☑ Append to system.log</code></pre>
 
+    <h3>11.7 Fork and Rebrand Procedure</h3>
+
+    <p>
+        When cloning HAL8000 to create your own personalized system, you must isolate your fork
+        from the original repository and rebrand all internal references. This prevents accidental
+        commits to the upstream HAL8000 repo and ensures your system has its own identity.
+    </p>
+
+    <p><strong>Use Case:</strong> You've forked/cloned HAL8000 from GitHub and want to create an independent system with a custom name (e.g., "MyProjectAI", "HAL8001-Chapter").</p>
+
+    <p><strong>Complete Protocol:</strong> <code>data/architecture/fork-and-rebrand-protocol.md</code></p>
+
+    <h4>Quick Reference: Fork and Rebrand Steps</h4>
+
+    <p>The full protocol includes detailed instructions and automation scripts. Here's the high-level overview:</p>
+
+    <h5>Phase 1: Clone from GitHub</h5>
+    <pre><code># Option A: Fork on GitHub first, then clone
+git clone https://github.com/YOUR-USERNAME/YourSystemName.git /path/to/system
+cd /path/to/system
+
+# Option B: Direct clone (no fork relationship)
+git clone https://github.com/anthropics/HAL8000.git /path/to/YourSystemName
+cd /path/to/YourSystemName</code></pre>
+
+    <h5>Phase 2: Filesystem Rebrand</h5>
+    <pre><code># Set variables
+export OLD_NAME="HAL8000"
+export NEW_NAME="YourSystemName"
+export OLD_PATH="/mnt/d/~HAL8000"
+export NEW_PATH="/path/to/YourSystemName"
+
+# Update core files (CLAUDE.md, state.json, VERSION, CHANGELOG.md)
+sed -i "s/${OLD_NAME}/${NEW_NAME}/g" CLAUDE.md
+sed -i "s|${OLD_PATH}|${NEW_PATH}|g" CLAUDE.md
+# ... (see protocol for complete commands)
+
+# Batch update system components
+find .claude/commands -name "*.md" -type f -exec sed -i "s/${OLD_NAME}/${NEW_NAME}/g" {} +
+find .claude/agents -name "*.md" -type f -exec sed -i "s/${OLD_NAME}/${NEW_NAME}/g" {} +
+# ... (see protocol for all directories)
+
+# Update configuration and documentation
+sed -i "s/${OLD_NAME}/${NEW_NAME}/g" README.md .mcp.json
+# ... (see protocol for complete list)</code></pre>
+
+    <h5>Phase 3: Git Isolation and Reconnection</h5>
+    <pre><code># Commit rebrand changes
+git add -A
+git commit -m "Fork and rebrand from HAL8000 to ${NEW_NAME}"
+
+# Update remote to YOUR repository
+git remote set-url origin https://github.com/YOUR-USERNAME/YourSystemName.git
+
+# Optional: Keep HAL8000 as upstream (read-only)
+git remote add upstream https://github.com/anthropics/HAL8000.git
+git remote set-url --push upstream DISABLE  # Prevent accidental push
+
+# Push to YOUR repository
+git push -u origin main
+
+# Verify isolation
+git remote -v
+# Should show:
+# origin    https://github.com/YOUR-USERNAME/YourSystemName.git (fetch/push)
+# upstream  https://github.com/anthropics/HAL8000.git (fetch)
+# upstream  DISABLE (push)</code></pre>
+
+    <h5>Phase 4: Verification</h5>
+    <pre><code># Search for old references (should find ZERO except in session history)
+grep -r "HAL8000" \
+  --exclude-dir=".claude/sessions" \
+  --exclude="*.log" \
+  --include="*.md" \
+  --include="*.json" \
+  .
+
+# Validate JSON configs
+find . -name "*.json" -type f -exec sh -c 'jq . "{}" > /dev/null' \;
+
+# Rebuild Docker images (if using tools)
+docker build -t yourname-mermaid:latest .claude/tools/diagram-generation/
+
+# Test system boot (start new Claude Code session)
+# Should show: "✅ YourSystemName CPU Operational"</code></pre>
+
+    <h4>Critical Success Criteria</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Check</th>
+                <th>Expected Result</th>
+                <th>Why Important</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Old name references</td>
+                <td>Zero (except <code>.claude/sessions/</code>)</td>
+                <td>Ensures complete rebrand</td>
+            </tr>
+            <tr>
+                <td>Git remote origin</td>
+                <td>Points to YOUR repository</td>
+                <td>Prevents commits to HAL8000</td>
+            </tr>
+            <tr>
+                <td>Git push test</td>
+                <td>Pushes to YOUR repo successfully</td>
+                <td>Confirms isolation</td>
+            </tr>
+            <tr>
+                <td>CLAUDE.md updated</td>
+                <td>All references use new name</td>
+                <td>BIOS reflects new identity</td>
+            </tr>
+            <tr>
+                <td>state.json valid</td>
+                <td>Valid JSON with new name</td>
+                <td>System boots correctly</td>
+            </tr>
+            <tr>
+                <td>Docker images</td>
+                <td>Rebuilt with new name (if applicable)</td>
+                <td>Tools work correctly</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Common Pitfalls</h4>
+    <ul>
+        <li><strong>Forgetting to update git remote:</strong> Results in pushing customizations to original HAL8000 repo (permission denied or pollution of upstream)</li>
+        <li><strong>Skipping verification phase:</strong> Old references remain, causing confusion and errors</li>
+        <li><strong>Not rebuilding Docker images:</strong> Tools fail with "image not found" errors</li>
+        <li><strong>Modifying session files:</strong> Destroys historical audit trail (sessions should remain unchanged)</li>
+        <li><strong>Breaking JSON syntax:</strong> sed replacements can corrupt JSON; always validate with <code>jq</code></li>
+    </ul>
+
+    <h4>Time and Resources</h4>
+    <ul>
+        <li><strong>Duration:</strong> 1-2 hours (single session)</li>
+        <li><strong>RAM Impact:</strong> ~40-50% during filesystem operations</li>
+        <li><strong>Scope:</strong> ~500+ references across ~200+ files</li>
+        <li><strong>Automation:</strong> Automation script available in protocol (<code>.claude/tools/fork-and-rebrand.sh</code>)</li>
+    </ul>
+
+    <h4>Post-Rebrand Recommendations</h4>
+    <ul>
+        <li><strong>Customize your system:</strong> Add custom commands, agents, templates</li>
+        <li><strong>Update GitHub settings:</strong> Add description, topics, collaborators</li>
+        <li><strong>Choose sync strategy:</strong> Pull future HAL8000 updates (keep upstream) or go fully independent (remove upstream)</li>
+        <li><strong>Document customizations:</strong> Create <code>data/architecture/customizations.md</code> to track your changes</li>
+    </ul>
+
+    <p><strong>📘 Full Protocol:</strong> See <code>data/architecture/fork-and-rebrand-protocol.md</code> for complete step-by-step instructions, troubleshooting, and automation scripts.</p>
+
+    <p><strong>⚠️ Deprecated Guide:</strong> The old <code>system-name-migration-guide-2025-10-16.md</code> is deprecated (filesystem-only, no Git handling). Use the fork-and-rebrand protocol instead.</p>
+
 </section>
 
             <!-- Section 12: Session Management -->
@@ -8453,17 +8611,18 @@ Library reindexed. Use /HAL-context-find to discover new patterns.</code></pre>
         <p><strong>Success Output:</strong></p>
         <pre><code>✅ Knowledge Ingested Successfully
 
-📁 Filed as: data/architecture/system-name-migration-guide-2025-10-16.md
+📁 Filed as: data/architecture/fork-and-rebrand-protocol.md
 📂 Category: architecture
-🏷️  Tags: migration, system-rename, configuration, docker, procedure, adr
-📊 Size: 12 KB
+🏷️  Tags: fork, clone, rebrand, github, migration, setup, procedure
+📊 Size: 45 KB
 
 🔗 Related Content:
   - data/architecture/hal8000-versioning-guide.md
+  - data/operations/GITHUB_SETUP.md
 
 💡 Next Actions:
   - Review: Read the filed document
-  - Find related: /HAL-context-find "migration"</code></pre>
+  - Find related: /HAL-context-find "fork rebrand"</code></pre>
 
         <p><strong>Classification Uncertainty Output:</strong></p>
         <pre><code>⚠️  Classification Uncertain

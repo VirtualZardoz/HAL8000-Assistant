@@ -1,6 +1,10 @@
 # GitHub Setup Guide
 
-This guide walks you through pushing the HAL8000 repository to GitHub.
+**Note:** This guide is for the original HAL8000 system setup. If you are **forking HAL8000 to create your own personalized system**, use the **Fork and Rebrand Protocol** instead:
+- See: `data/architecture/fork-and-rebrand-protocol.md`
+- The Fork and Rebrand Protocol covers cloning, renaming, and GitHub repository isolation
+
+This guide is for pushing the original HAL8000 repository to GitHub.
 
 ## Prerequisites
 
@@ -317,6 +321,18 @@ After pushing to GitHub:
 4. 📄 Add LICENSE if desired
 5. 🎯 Create GitHub Issues for planned features
 6. 📊 Set up GitHub Actions for CI/CD (optional)
+
+## For Fork Users
+
+If you forked HAL8000 to create your own personalized system, follow the complete **Fork and Rebrand Protocol**:
+- **Location:** `data/architecture/fork-and-rebrand-protocol.md`
+- **What it covers:**
+  - Cloning from GitHub (fork or direct clone)
+  - Complete filesystem rebrand (all references updated)
+  - Git isolation (prevent commits to original HAL8000)
+  - Git reconnection (connect to your new repository)
+  - Verification and testing
+- **Why use it:** Ensures your customizations stay in your repository and don't accidentally get pushed to the original HAL8000 repo
 
 ## Resources
 

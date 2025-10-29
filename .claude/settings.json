@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(date:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(echo:*)",
+      "Bash(wc:*)",
+      "Bash(find:*)",
+      "Bash(test:*)",
+      "Bash(cat:*)",
+      "Bash(git:*)",
+      "Bash(mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Read(//mnt/d/~HAL8000/**)",
+      "Write(//mnt/d/~HAL8000/**)",
+      "Edit(//mnt/d/~HAL8000/**)"
+    ]
+  }
+}

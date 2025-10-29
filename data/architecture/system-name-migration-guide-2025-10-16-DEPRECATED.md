@@ -1,12 +1,27 @@
 ---
-title: System Name Migration Guide
+title: System Name Migration Guide (DEPRECATED)
 date_ingested: 2025-10-16
+date_deprecated: 2025-10-29
 source: /mnt/d/~HAL8000/temp/system-name-migration-guide.md
 category: architecture
-tags: migration, system-rename, configuration, docker, procedure, adr
+tags: migration, system-rename, configuration, docker, procedure, adr, deprecated
+status: DEPRECATED
+replaced_by: fork-and-rebrand-protocol.md
 ---
 
-# System Name Migration Guide
+# ⚠️ DEPRECATED: System Name Migration Guide
+
+**STATUS: DEPRECATED as of 2025-10-29**
+
+**This guide has been superseded by:** `fork-and-rebrand-protocol.md`
+
+**Why deprecated:** This guide only covered filesystem renaming but did not address the critical fork/clone workflow including GitHub repository isolation and reconnection. The new protocol provides complete coverage of the fork-and-rebrand process.
+
+**Use the new protocol:** See `data/architecture/fork-and-rebrand-protocol.md` for complete fork and rebrand instructions.
+
+---
+
+## Original Document (For Historical Reference)
 
 **For:** HAL8000-based system clones requiring name changes
 **Version:** 1.0
