@@ -1,0 +1,26 @@
+{
+  "directory": "data/videos",
+  "last_updated": "2025-10-30T17:00:00Z",
+  "file_count": 2,
+  "total_bytes": 8500,
+  "estimated_tokens": 2125,
+  "subdirectories": [
+    {
+      "name": "i-finally-cracked-claude-agent-skills",
+      "files": [
+        {
+          "path": "data/videos/i-finally-cracked-claude-agent-skills/knowledge-brief.md",
+          "type": "video-knowledge",
+          "topics": ["claude", "agent skills", "video transcript"],
+          "estimated_tokens": 1500
+        },
+        {
+          "path": "data/videos/i-finally-cracked-claude-agent-skills/metadata.json",
+          "type": "video-metadata",
+          "topics": ["metadata", "video info"],
+          "estimated_tokens": 625
+        }
+      ]
+    }
+  ]
+}

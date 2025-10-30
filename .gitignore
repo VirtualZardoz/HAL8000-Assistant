@@ -76,9 +76,17 @@ build/
 # Generated diagrams and images are reproducible - exclude from version control
 data/diagrams/
 data/images/
+data/videos/
 
 # Docker model cache (large binary files)
 .docker-cache/
+
+# =============================================================================
+# Architecture Protection - Prevent Nested .claude Directories
+# =============================================================================
+# Only one .claude directory should exist (at system root)
+# Prevents confusion and session file creation in wrong locations
+data/**/.claude/
 
 # =============================================================================
 # Personal Notes and Drafts

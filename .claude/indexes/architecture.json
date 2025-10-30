@@ -1,7 +1,7 @@
 {
   "version": "2.0-hierarchical",
   "directory": "data/architecture/",
-  "last_updated": "2025-10-23T16:00:00Z",
+  "last_updated": "2025-10-30T17:00:00Z",
   "files": {
     "data/architecture/hal8000-agent-architecture.md": {
       "type": "architecture-spec",
@@ -94,17 +94,24 @@
       "summary": "CPU boot protocol fix ensuring proper BIOS loading and state initialization.",
       "size_estimate_tokens": 2116
     },
-    "data/architecture/system-name-migration-guide-2025-10-16.md": {
+    "data/architecture/fork-and-rebrand-protocol.md": {
+      "type": "architecture-spec",
+      "category": "protocol",
+      "topics": ["forking", "rebrand", "migration", "customization"],
+      "summary": "Complete protocol for forking and rebranding HAL8000 for customized deployments.",
+      "size_estimate_tokens": 3500
+    },
+    "data/architecture/system-name-migration-guide-2025-10-16-DEPRECATED.md": {
       "type": "architecture-spec",
       "category": "migration",
-      "topics": ["naming", "migration", "system-name", "branding"],
-      "summary": "System name migration guide for HAL8000 branding and naming conventions.",
-      "size_estimate_tokens": 2930
+      "topics": ["naming", "migration", "system-name", "branding", "DEPRECATED"],
+      "summary": "DEPRECATED: System name migration guide superseded by fork-and-rebrand-protocol.md",
+      "size_estimate_tokens": 734
     }
   },
   "statistics": {
-    "total_files": 14,
-    "total_tokens_estimate": 49790,
+    "total_files": 15,
+    "total_tokens_estimate": 51094,
     "categories": {
       "agent-system": 1,
       "bus-system": 1,
@@ -117,6 +124,7 @@
       "programming-language": 1,
       "release-notes": 1,
       "bugfix": 2,
+      "protocol": 1,
       "migration": 1
     }
   }

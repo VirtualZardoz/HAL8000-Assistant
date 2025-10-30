@@ -1,7 +1,7 @@
 {
   "version": "3.0-hierarchical",
   "directory": ".claude/commands/",
-  "last_updated": "2025-10-23T16:00:00Z",
+  "last_updated": "2025-10-30T17:00:00Z",
   "structure": "Organized by purpose: system/, development/, documentation/",
   "files": {
     ".claude/commands/README.md": {
@@ -60,6 +60,13 @@
       "summary": "Intelligently ingest and file knowledge with automatic classification.",
       "size_estimate_tokens": 3219
     },
+    ".claude/commands/system/HAL-learn-video.md": {
+      "type": "command",
+      "category": "knowledge-acquisition",
+      "topics": ["video", "learning", "transcript", "youtube"],
+      "summary": "Extract knowledge from YouTube videos using video-learning skill.",
+      "size_estimate_tokens": 2500
+    },
     ".claude/commands/development/HAL-CC-check.md": {
       "type": "command",
       "category": "validation",
@@ -90,16 +97,16 @@
     }
   },
   "statistics": {
-    "total_files": 12,
-    "total_tokens_estimate": 24755,
+    "total_files": 13,
+    "total_tokens_estimate": 27255,
     "categories": {
-      "system-operations": 7,
+      "system-operations": 8,
       "development": 3,
       "documentation": 1,
       "guides": 1
     },
     "by_directory": {
-      "system": 7,
+      "system": 8,
       "development": 3,
       "documentation": 1,
       "root": 1

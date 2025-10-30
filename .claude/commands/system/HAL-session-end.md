@@ -56,12 +56,13 @@ This command implements the session continuity protocol by capturing the current
 # Generate timestamp ONCE (single source of truth)
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 DATE_PREFIX=$(date -u +"%Y-%m-%d-%H%M")
-SESSION_FILE=".claude/sessions/${DATE_PREFIX}-${DESCRIPTION}.md"
+SESSION_FILE="/mnt/d/~HAL8000/.claude/sessions/${DATE_PREFIX}-${DESCRIPTION}.md"
 
 # Store these values - they MUST NOT change during this command execution
 # TIMESTAMP = for state.json timestamp field
 # DATE_PREFIX = for session filename prefix
-# SESSION_FILE = exact path for both file creation AND state.json active_session field
+# SESSION_FILE = ABSOLUTE path for both file creation AND state.json active_session field
+# CRITICAL: Must use absolute path to avoid creating file in wrong directory
 ```
 
 **Anti-Pattern (NEVER DO THIS):**
@@ -76,7 +77,7 @@ date -u +"%Y-%m-%dT%H:%M:%SZ"  # Different time! Used for state.json
 ```bash
 # RIGHT: Single timestamp generation, reused everywhere
 TIMESTAMP="2025-10-15T12:30:45Z"  # Generated ONCE
-SESSION_FILE=".claude/sessions/2025-10-15-1230-description.md"  # Uses TIMESTAMP
+SESSION_FILE="/mnt/d/~HAL8000/.claude/sessions/2025-10-15-1230-description.md"  # ABSOLUTE path
 # ... later in execution ...
 # Use $TIMESTAMP and $SESSION_FILE variables (same values)
 ```
@@ -128,9 +129,12 @@ INDEXES_COUNT=$(ls .claude/indexes/*.json 2>/dev/null | grep -v master.json | wc
 
 ### Step 2.9: Verify Session File Creation (CRITICAL - MUST DO BEFORE Step 3)
 
-**MANDATORY VERIFICATION:** Before updating state.json, verify the session file actually exists.
+**MANDATORY VERIFICATION:** Before updating state.json, verify the session file actually exists in the correct system directory.
 
 ```bash
+# Define expected system directory (absolute path)
+EXPECTED_DIR="/mnt/d/~HAL8000/.claude/sessions"
+
 # Verify session file was created successfully
 if [ ! -f "$SESSION_FILE" ]; then
   echo "ERROR: Session file creation failed: $SESSION_FILE"
@@ -138,8 +142,17 @@ if [ ! -f "$SESSION_FILE" ]; then
   exit 1
 fi
 
-# If we get here, session file exists - safe to update state.json
+# Verify session file is in correct system directory (not nested somewhere else)
+if [[ "$SESSION_FILE" != "$EXPECTED_DIR"* ]]; then
+  echo "ERROR: Session file not in system directory: $SESSION_FILE"
+  echo "Expected directory: $EXPECTED_DIR"
+  echo "ABORT: Session file created in wrong location"
+  exit 1
+fi
+
+# If we get here, session file exists in correct location - safe to update state.json
 echo "✓ Session file verified: $SESSION_FILE"
+echo "✓ Location validated: System .claude/sessions directory"
 ```
 
 **Rationale:**
@@ -174,9 +187,9 @@ Use validated counts from Step 2.5 and verified SESSION_FILE path:
 
 **Critical Requirements:**
 - `timestamp` field: Use $TIMESTAMP from Step 1 (NOT regenerated)
-- `active_session` field: Use $SESSION_FILE from Step 1 (VERIFIED exists in Step 2.9)
+- `active_session` field: Use $SESSION_FILE from Step 1 (ABSOLUTE path, VERIFIED exists and location in Step 2.9)
 - Always use filesystem counts, not previous state.json values
-- Session file MUST exist before writing this update
+- Session file MUST exist in system directory before writing this update
 
 ### Step 4: Append to .claude/system.log
 

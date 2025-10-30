@@ -1,53 +1,76 @@
 {
   "version": "2.0-hierarchical",
-  "last_updated": "2025-10-05T19:30:00Z",
+  "last_updated": "2025-10-30T17:00:00Z",
   "directories": {
-    ".claude/commands/": {
-      "index_file": ".claude/indexes/commands.json",
-      "file_count": 8,
-      "total_tokens_estimate": 8467,
-      "primary_topics": ["validation", "context-management", "system-maintenance", "session-management", "RAM-optimization"],
-      "last_indexed": "2025-10-05T19:30:00Z"
-    },
-    ".claude/sessions/": {
-      "index_file": ".claude/indexes/sessions.json",
-      "file_count": 12,
-      "total_tokens_estimate": 12922,
-      "primary_topics": ["architecture-implementation", "infrastructure", "MCP", "libraries", "context-awareness"],
-      "last_indexed": "2025-10-05T19:30:00Z"
-    },
     "data/research/": {
       "index_file": ".claude/indexes/research.json",
       "file_count": 4,
       "total_tokens_estimate": 7061,
       "primary_topics": ["von-neumann", "unix-philosophy", "assembly", "claude-code-constraints"],
-      "last_indexed": "2025-10-05T19:30:00Z"
+      "last_indexed": "2025-10-30T17:00:00Z"
     },
     "data/architecture/": {
       "index_file": ".claude/indexes/architecture.json",
-      "file_count": 7,
-      "total_tokens_estimate": 19144,
-      "primary_topics": ["registers", "buses", "agents", "libraries", "io-system"],
-      "last_indexed": "2025-10-05T19:30:00Z"
+      "file_count": 15,
+      "total_tokens_estimate": 51094,
+      "primary_topics": ["registers", "buses", "agents", "libraries", "io-system", "hal-script"],
+      "last_indexed": "2025-10-30T17:00:00Z"
+    },
+    "data/reference-manual/": {
+      "index_file": ".claude/indexes/reference-manual.json",
+      "file_count": 16,
+      "total_tokens_estimate": 187597,
+      "primary_topics": ["editorial-workflow", "diagrams", "phases", "completion"],
+      "last_indexed": "2025-10-30T17:00:00Z"
+    },
+    "data/videos/": {
+      "index_file": ".claude/indexes/videos.json",
+      "file_count": 2,
+      "total_tokens_estimate": 2125,
+      "primary_topics": ["video-transcripts", "knowledge-briefs", "metadata"],
+      "last_indexed": "2025-10-30T17:00:00Z"
+    },
+    ".claude/commands/": {
+      "index_file": ".claude/indexes/commands.json",
+      "file_count": 13,
+      "total_tokens_estimate": 27255,
+      "primary_topics": ["validation", "context-management", "system-maintenance", "session-management", "RAM-optimization"],
+      "last_indexed": "2025-10-30T17:00:00Z"
     },
     ".claude/agents/": {
       "index_file": ".claude/indexes/agents.json",
-      "file_count": 4,
-      "total_tokens_estimate": 4989,
-      "primary_topics": ["context-discovery", "web-research", "validation", "system-health"],
-      "last_indexed": "2025-10-05T19:30:00Z"
+      "file_count": 6,
+      "total_tokens_estimate": 12853,
+      "primary_topics": ["context-discovery", "web-research", "validation", "system-health", "documentation"],
+      "last_indexed": "2025-10-30T17:00:00Z"
     },
-    ".claude/tools/": {
-      "index_file": ".claude/indexes/tools.json",
-      "file_count": 7,
-      "total_tokens_estimate": 6388,
-      "primary_topics": ["MCP", "docker", "gemini", "external-tools", "server-control"],
-      "last_indexed": "2025-10-05T19:30:00Z"
+    ".claude/sessions/": {
+      "index_file": ".claude/indexes/sessions.json",
+      "file_count": 48,
+      "total_tokens_estimate": 92125,
+      "primary_topics": ["architecture-implementation", "infrastructure", "MCP", "libraries", "refman", "releases"],
+      "last_indexed": "2025-10-30T17:00:00Z"
+    },
+    ".claude/skills/": {
+      "index_file": ".claude/indexes/skills.json",
+      "file_count": 17,
+      "total_tokens_estimate": 28250,
+      "primary_topics": ["context-awareness", "architecture-validation", "hal-script", "documentation", "skill-creation", "video-learning"],
+      "last_indexed": "2025-10-30T17:00:00Z"
     }
   },
+  "libraries": {
+    "index_file": ".claude/libraries/index.json",
+    "internal_count": 18,
+    "external_count": 226,
+    "total_libraries": 244,
+    "last_indexed": "2025-10-30T17:00:00Z",
+    "note": "Library index too large (35k+ tokens), use direct library index for details"
+  },
   "statistics": {
-    "total_directories": 6,
-    "total_files": 42,
-    "total_estimated_tokens": 58971
+    "total_directories": 8,
+    "total_files": 121,
+    "total_estimated_tokens": 408360,
+    "libraries_total": 244
   }
 }
