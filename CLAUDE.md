@@ -176,6 +176,14 @@ Returns clean summary (not raw data)
 Main Session (RAM += summary only, not full processing cost)
 ```
 
+**Progressive Disclosure Pattern:**
+Sub-agents implement a form of progressive disclosure where context is loaded only when needed:
+- Main session: Lightweight metadata and control logic
+- Sub-agent: Heavy processing and data loading (isolated)
+- Return: Minimal summary (discarding intermediate data)
+
+This pattern prevents "context window explosion" where all data loads into main RAM upfront.
+
 **When to Delegate to Sub-Agents:**
 
 ALWAYS delegate:
@@ -674,13 +682,27 @@ Proactive capabilities in `.claude/skills/` that activate automatically based on
 
 ### Three-Layer Intelligence Model
 
+HAL8000's extensibility follows a three-layer pattern where each layer serves distinct purposes based on **trigger mechanism**, **context efficiency**, and **control requirements**.
+
 ```
-Skills (Proactive)  → I detect patterns and suggest actions
+Skills (Proactive)  → Agent-triggered, context-efficient, modular
     ↓
-Commands (Explicit) → You control critical operations
+Commands (Explicit) → User-triggered, state operations, critical workflows
     ↓
-Agents (Delegated)  → I offload heavy work to isolated context
+Agents (Delegated)  → Context isolation, heavy processing, no persistence
 ```
+
+**Design Framework:**
+This model aligns with Claude Code best practices for feature selection (see: `data/videos/i-finally-cracked-claude-agent-skills/knowledge-brief.md`):
+
+- **Skills**: Use when agent should trigger automatically, need context efficiency through progressive disclosure, building reusable modular solutions
+- **Commands**: Use when user should explicitly control, state operations require confirmation, critical workflows need user oversight
+- **Agents**: Use when need context isolation, protecting main RAM is critical, heavy processing in separate context, no persistence required
+
+**Key Trade-offs:**
+- Skills: High modularity + agent-triggered ↔ Always loaded metadata
+- Commands: User control + persistence ↔ Manual invocation required
+- Agents: Context isolation + fresh RAM ↔ No persistence (volatility by design)
 
 ### Available Skills
 
@@ -716,11 +738,23 @@ Agents (Delegated)  → I offload heavy work to isolated context
 
 | Aspect | Skills | Commands | Agents |
 |--------|--------|----------|--------|
-| Invocation | Automatic (I decide) | Explicit (you type `/HAL-*`) | Delegated (I invoke via Task) |
-| Purpose | Proactive assistance | State operations | Heavy isolated work |
-| RAM Impact | Minimal (selective loading) | Varies | Zero (isolated context) |
-| Control | Collaborative | User control | CPU control |
-| Example | Detect missing context | `/HAL-session-end` | research-synthesizer |
+| **Invocation** | Automatic (I decide) | Explicit (you type `/HAL-*`) | Delegated (I invoke via Task) |
+| **Trigger Mechanism** | Agent-triggered by context | User-explicit action | CPU delegates heavy work |
+| **Purpose** | Proactive assistance | State operations | Heavy isolated work |
+| **Context Efficiency** | High (progressive disclosure) | Varies | N/A (isolated context) |
+| **Context Persistence** | Yes (main session) | Yes (main session) | ❌ No (volatility by design) |
+| **RAM Impact** | Minimal (selective loading) | Varies | Zero (isolated context) |
+| **Modularity** | High (dedicated directories) | Medium (HAL-Script files) | Medium (agent definitions) |
+| **Control** | Collaborative | User control | CPU control |
+| **Best For** | Repeat solutions, patterns | Critical workflows, state ops | Context isolation, parallel work |
+| **Example** | Detect missing context | `/HAL-session-end` | research-synthesizer |
+
+**Decision Framework:**
+1. **Does agent need to trigger automatically?** → Skill
+2. **Does user need explicit control?** → Command (especially for state operations)
+3. **Need context isolation or protect main RAM?** → Agent
+4. **Is it a repeat solution pattern?** → Skill (high modularity)
+5. **Is it heavy processing (>30K intermediate data)?** → Agent
 
 ### When Skills Activate
 
