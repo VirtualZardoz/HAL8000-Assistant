@@ -14,14 +14,14 @@
       "type": "skill",
       "category": "validation",
       "topics": ["architecture", "design-validation", "principles"],
-      "summary": "Validate design decisions against HAL8000 architectural principles",
+      "summary": "Validate design decisions against HAL8000-Assistant architectural principles",
       "size_estimate_tokens": 1695
     },
     ".claude/skills/architecture-consultant/principles-reference.md": {
       "type": "skill",
       "category": "reference",
       "topics": ["von-neumann", "unix-philosophy", "assembly-principles"],
-      "summary": "Reference document for HAL8000 architectural principles",
+      "summary": "Reference document for HAL8000-Assistant architectural principles",
       "size_estimate_tokens": 1555
     },
     ".claude/skills/hal-script-assistant/SKILL.md": {

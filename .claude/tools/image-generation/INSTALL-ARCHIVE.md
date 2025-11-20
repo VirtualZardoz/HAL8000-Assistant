@@ -1,6 +1,6 @@
 # Image Generation Tool - Installation Guide
 
-Quick start guide for setting up the HAL8000 Image Generation system.
+Quick start guide for setting up the HAL8000-Assistant Image Generation system.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Before installation, ensure you have:
 ### 1. Navigate to Tool Directory
 
 ```bash
-cd /mnt/d/~HAL8000/.claude/tools/image-generation
+cd /mnt/d/~HAL8000-Assistant/.claude/tools/image-generation
 ```
 
 ### 2. Build Docker Image
@@ -85,7 +85,7 @@ docker images | grep hal8000-image-gen
 # Should show: hal8000-image-gen:latest
 
 # 2. Model cache directory created
-ls -lh /mnt/d/~HAL8000/.docker-cache/models/checkpoints/
+ls -lh /mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/
 # Should show downloaded models
 
 # 3. Test image generated
@@ -185,7 +185,7 @@ python3 HAL-generate-image.py --prompt "test" --output test.png
 
 Or manually download:
 ```bash
-cd /mnt/d/~HAL8000/.docker-cache/models/checkpoints/
+cd /mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/
 
 # SDXL (6.5GB - auto-downloads)
 wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
@@ -219,14 +219,14 @@ wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pru
    - Click "Files and versions" tab
    - Find `flux1-dev.safetensors` (23.8 GB)
    - Click download icon (↓)
-   - Save to: `/mnt/d/~HAL8000/.docker-cache/models/checkpoints/`
+   - Save to: `/mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/`
 
    **Option B: CLI Download with Token**
    ```bash
    # Get your token: https://huggingface.co/settings/tokens
    # Create a new token with "read" access
 
-   cd /mnt/d/~HAL8000/.docker-cache/models/checkpoints/
+   cd /mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/
 
    wget --header="Authorization: Bearer YOUR_HF_TOKEN_HERE" \
      https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors
@@ -236,12 +236,12 @@ wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pru
    ```bash
    # If you downloaded to Windows Downloads folder:
    mv /mnt/c/Users/YOUR_USERNAME/Downloads/flux1-dev.safetensors \
-      /mnt/d/~HAL8000/.docker-cache/models/checkpoints/
+      /mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/
    ```
 
 4. **Verify File**:
    ```bash
-   ls -lh /mnt/d/~HAL8000/.docker-cache/models/checkpoints/flux1-dev.safetensors
+   ls -lh /mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/flux1-dev.safetensors
    # Should show: ~23GB file
    ```
 
@@ -298,13 +298,13 @@ To completely remove the system:
 docker rmi hal8000-image-gen:latest
 
 # 2. Remove model cache
-rm -rf /mnt/d/~HAL8000/.docker-cache/models/
+rm -rf /mnt/d/~HAL8000-Assistant/.docker-cache/models/
 
 # 3. Remove generated images
-rm -rf /mnt/d/~HAL8000/data/images/*.png
+rm -rf /mnt/d/~HAL8000-Assistant/data/images/*.png
 
 # 4. Remove tool files (optional)
-rm -rf /mnt/d/~HAL8000/.claude/tools/image-generation/
+rm -rf /mnt/d/~HAL8000-Assistant/.claude/tools/image-generation/
 ```
 
 **Disk space freed**: ~10-20GB
@@ -316,9 +316,9 @@ rm -rf /mnt/d/~HAL8000/.claude/tools/image-generation/
 Once installed successfully:
 
 1. **Read README.md** for full usage documentation
-2. **Read CLAUDE.md** to understand HAL8000 integration
+2. **Read CLAUDE.md** to understand HAL8000-Assistant integration
 3. **Test various prompts** to learn effective prompt engineering
-4. **Ask HAL8000** to generate images (Claude will use this tool automatically)
+4. **Ask HAL8000-Assistant** to generate images (Claude will use this tool automatically)
 
 ---
 

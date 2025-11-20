@@ -1,4 +1,4 @@
-# HAL8000 Tool Reference
+# HAL8000-Assistant Tool Reference
 
 **Version:** 1.0
 **Created:** 2025-10-15
@@ -395,13 +395,13 @@ Before finalizing agent frontmatter:
 
 ---
 
-## Examples from HAL8000
+## Examples from HAL8000-Assistant
 
 ### Example 1: hal-context-finder
 ```yaml
 ---
 name: hal-context-finder
-description: Discovers and loads HAL8000 system context
+description: Discovers and loads HAL8000-Assistant system context
 tools:
   - Read
   - Grep

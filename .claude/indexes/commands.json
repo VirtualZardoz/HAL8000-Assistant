@@ -71,7 +71,7 @@
       "type": "command",
       "category": "validation",
       "topics": ["compatibility", "validation", "claude-code", "external"],
-      "summary": "Validate HAL8000 against external Claude Code documentation for compatibility.",
+      "summary": "Validate HAL8000-Assistant against external Claude Code documentation for compatibility.",
       "size_estimate_tokens": 1071
     },
     ".claude/commands/development/HAL-context-find.md": {
@@ -92,7 +92,7 @@
       "type": "command",
       "category": "documentation",
       "topics": ["reference-manual", "documentation", "lifecycle", "management"],
-      "summary": "HAL8000 Reference Manual lifecycle management (create, update, export).",
+      "summary": "HAL8000-Assistant Reference Manual lifecycle management (create, update, export).",
       "size_estimate_tokens": 2731
     }
   },
@@ -114,7 +114,7 @@
   },
   "programming_language": {
     "name": "HAL-Script",
-    "description": "Natural language programming for HAL8000",
+    "description": "Natural language programming for HAL8000-Assistant",
     "specification": "data/architecture/hal-script-language.md",
     "examples": ".claude/commands/README.md"
   }

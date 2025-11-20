@@ -1,12 +1,12 @@
 ---
 name: Architecture Consultant
-description: Validate design decisions against HAL8000's architectural principles (von Neumann, Unix philosophy, Assembly concepts). Use when reviewing code, making design decisions, creating new components, or when architectural violations are detected. Activate during code reviews, command creation, or system modifications.
+description: Validate design decisions against HAL8000-Assistant's architectural principles (von Neumann, Unix philosophy, Assembly concepts). Use when reviewing code, making design decisions, creating new components, or when architectural violations are detected. Activate during code reviews, command creation, or system modifications.
 allowed-tools: Read
 ---
 
 # Architecture Consultant
 
-This Skill validates HAL8000 design decisions against the system's architectural foundations: Modified von Neumann Architecture, Unix Philosophy, and Assembly Language Principles.
+This Skill validates HAL8000-Assistant design decisions against the system's architectural foundations: Modified von Neumann Architecture, Unix Philosophy, and Assembly Language Principles.
 
 ## Purpose
 
@@ -154,7 +154,7 @@ Issue: Proposed path has 5 levels of depth
 Principle: Unix Philosophy - "Simple, not complex" (max 3 levels)
 
 Impact:
-- Violates HAL8000 structural standard
+- Violates HAL8000-Assistant structural standard
 - Makes navigation harder
 - Increases cognitive overhead
 
@@ -211,7 +211,7 @@ Principles followed:
 This maintains system coherence. Proceed!
 ```
 
-## Integration with HAL8000 Architecture
+## Integration with HAL8000-Assistant Architecture
 
 **References (loaded on-demand):**
 - CLAUDE.md (BIOS - always in context)

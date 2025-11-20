@@ -1,4 +1,4 @@
-# HAL8000 I/O System
+# HAL8000-Assistant I/O System
 
 **Document Type:** Architecture Specification
 **Component:** Input/Output System
@@ -9,7 +9,7 @@
 
 ## Overview
 
-The I/O System defines how the HAL8000 CPU (Claude instance) interfaces with external systems, the file system, and the user. It solves the critical problem: **How to discover and access relevant information without loading the entire file system into RAM.**
+The I/O System defines how the HAL8000-Assistant CPU (Claude instance) interfaces with external systems, the file system, and the user. It solves the critical problem: **How to discover and access relevant information without loading the entire file system into RAM.**
 
 ## I/O Architecture
 
@@ -33,7 +33,7 @@ Memory/External Systems
 
 ### Tool Categories
 
-The HAL8000 I/O system is implemented through **tools** - interfaces that extend the CPU's capabilities to interact with the environment. Tools are organized into three categories:
+The HAL8000-Assistant I/O system is implemented through **tools** - interfaces that extend the CPU's capabilities to interact with the environment. Tools are organized into three categories:
 
 #### System I/O (Built-in Tools)
 

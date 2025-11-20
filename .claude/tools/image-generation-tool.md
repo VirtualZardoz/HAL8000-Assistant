@@ -16,13 +16,13 @@ AI-powered image generation system running in isolated Docker containers. Archit
 
 **Architectural Position:**
 ```
-HAL8000 (Claude, 200K context)
+HAL8000-Assistant (Claude, 200K context)
     ↓ command
 Docker Container (ComfyUI + SDXL, isolated)
     ↓ GPU processing (RTX 3090)
 Returns image file
     ↓ result
-HAL8000 (RAM += file path only, ~10 tokens)
+HAL8000-Assistant (RAM += file path only, ~10 tokens)
 ```
 
 ---
@@ -31,10 +31,10 @@ HAL8000 (RAM += file path only, ~10 tokens)
 
 | Tool Type | Context | Control | Use Case |
 |-----------|---------|---------|----------|
-| **Image Generation** (Docker) | External | HAL8000 controls | AI image generation |
-| **Diagram Generation** (Docker) | External | HAL8000 controls | Technical diagrams |
-| **Gemini CLI** (External) | 1M tokens | HAL8000 delegates | Heavy analysis |
-| **Sub-Agents** (Task) | 200K | HAL8000 spawns | Research, context discovery |
+| **Image Generation** (Docker) | External | HAL8000-Assistant controls | AI image generation |
+| **Diagram Generation** (Docker) | External | HAL8000-Assistant controls | Technical diagrams |
+| **Gemini CLI** (External) | 1M tokens | HAL8000-Assistant delegates | Heavy analysis |
+| **Sub-Agents** (Task) | 200K | HAL8000-Assistant spawns | Research, context discovery |
 
 ---
 
@@ -172,7 +172,7 @@ python3 .claude/tools/image-generation/HAL-generate-image.py \
 
 **❌ WRONG (Hypothetical):**
 ```
-Load image processing library → Process in HAL8000 RAM
+Load image processing library → Process in HAL8000-Assistant RAM
 Result: RAM += 50K-100K tokens
 ```
 
@@ -218,7 +218,7 @@ C: drive (~3-5GB):
   └── Docker images/
       └── hal8000-image-gen:latest (~3GB)
 
-D: drive (/mnt/d/~HAL8000/):
+D: drive (/mnt/d/~HAL8000-Assistant/):
   ├── .docker-cache/models/          (~6-20GB)
   │   └── checkpoints/
   │       ├── sd_xl_base_1.0.safetensors (6.5GB)
@@ -328,13 +328,13 @@ Error: "no space left on device"
 
 Response to user:
 "Not enough disk space. The model cache requires ~6.5GB on D: drive.
- Current models location: /mnt/d/~HAL8000/.docker-cache/models/
+ Current models location: /mnt/d/~HAL8000-Assistant/.docker-cache/models/
  You can free space or move the cache."
 ```
 
 ---
 
-## Integration with HAL8000 Architecture
+## Integration with HAL8000-Assistant Architecture
 
 ### Tool Discovery
 
@@ -346,7 +346,7 @@ Discoverable via:
 
 ### Architectural Consistency
 
-**Follows HAL8000 Principles**:
+**Follows HAL8000-Assistant Principles**:
 - ✅ **Von Neumann**: External I/O device pattern
 - ✅ **Unix Philosophy**: Single responsibility (image generation only)
 - ✅ **Assembly**: Direct hardware access (GPU via Docker)
@@ -379,7 +379,7 @@ docker rmi hal8000-image-gen:latest
 
 ```bash
 # Free up ~6-20GB (models will re-download on next use)
-rm -rf /mnt/d/~HAL8000/.docker-cache/models/*
+rm -rf /mnt/d/~HAL8000-Assistant/.docker-cache/models/*
 ```
 
 ### Check Disk Usage
@@ -389,10 +389,10 @@ rm -rf /mnt/d/~HAL8000/.docker-cache/models/*
 docker images | grep hal8000-image-gen
 
 # Model cache
-du -sh /mnt/d/~HAL8000/.docker-cache/models/
+du -sh /mnt/d/~HAL8000-Assistant/.docker-cache/models/
 
 # Generated images
-du -sh /mnt/d/~HAL8000/data/images/
+du -sh /mnt/d/~HAL8000-Assistant/data/images/
 ```
 
 ---
@@ -432,17 +432,17 @@ du -sh /mnt/d/~HAL8000/data/images/
 
 ## Summary
 
-Image Generation Tool is HAL8000's **visual content creation device**:
+Image Generation Tool is HAL8000-Assistant's **visual content creation device**:
 - **Docker-based** for isolation and reproducibility
 - **GPU-accelerated** for fast generation (RTX 3090)
-- **Zero RAM impact** on HAL8000 session
+- **Zero RAM impact** on HAL8000-Assistant session
 - **Production-ready** quality with SDXL
 - **Proactively used** when user requests visual content
 - **Returns file paths** not raw image data
 
 **Integration Pattern:**
 ```
-User Request → HAL8000 enhances prompt → Docker generates → File saved → Path returned
+User Request → HAL8000-Assistant enhances prompt → Docker generates → File saved → Path returned
 ```
 
-This extends HAL8000's capabilities to visual domain while maintaining efficient resource usage and architectural consistency.
+This extends HAL8000-Assistant's capabilities to visual domain while maintaining efficient resource usage and architectural consistency.

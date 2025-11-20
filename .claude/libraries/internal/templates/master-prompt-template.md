@@ -63,7 +63,7 @@ parameters:
 
 **Example Variable Usage:**
 ```markdown
-Input: search_path = "/mnt/d/~HAL8000/data/"
+Input: search_path = "/mnt/d/~HAL8000-Assistant/data/"
 Config: recursive = true, depth_limit = 3
 Output: file_list = [array of matching files]
 ```

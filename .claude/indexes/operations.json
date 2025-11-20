@@ -7,21 +7,21 @@
       "type": "operations",
       "category": "security",
       "topics": ["security", "review", "best-practices", "privacy"],
-      "summary": "Security review and best practices for HAL8000 deployment and usage.",
+      "summary": "Security review and best practices for HAL8000-Assistant deployment and usage.",
       "size_estimate_tokens": 1248
     },
     "data/operations/GITHUB_SETUP.md": {
       "type": "operations",
       "category": "deployment",
       "topics": ["github", "setup", "repository", "configuration"],
-      "summary": "GitHub repository setup and configuration guide for HAL8000 deployment.",
+      "summary": "GitHub repository setup and configuration guide for HAL8000-Assistant deployment.",
       "size_estimate_tokens": 2189
     },
     "data/operations/PUSH_TO_GITHUB.md": {
       "type": "operations",
       "category": "deployment",
       "topics": ["github", "push", "deployment", "workflow"],
-      "summary": "Workflow and procedures for pushing HAL8000 updates to GitHub repository.",
+      "summary": "Workflow and procedures for pushing HAL8000-Assistant updates to GitHub repository.",
       "size_estimate_tokens": 1412
     }
   },

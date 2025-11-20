@@ -385,7 +385,7 @@ Return the composed command as a structured report:
 3. ✅ Include executable instructions (no placeholders like "do X")
 4. ✅ Use appropriate tools (Read, Write, Bash, Task, etc.)
 5. ✅ Follow Unix philosophy (do one thing well)
-6. ✅ Integrate with HAL8000 architecture (registers, state, sessions)
+6. ✅ Integrate with HAL8000-Assistant architecture (registers, state, sessions)
 7. ✅ Include practical examples
 8. ✅ Document parameters and outputs
 
@@ -416,8 +416,8 @@ Return the composed command as a structured report:
    - All necessary content included in command file
    - Templates are scaffolding (not runtime dependencies)
 
-4. **HAL8000 Integration:**
-   - Commands must work within HAL8000 architecture
+4. **HAL8000-Assistant Integration:**
+   - Commands must work within HAL8000-Assistant architecture
    - Use available tools, registers, commands
    - Follow operating principles (Unix, von Neumann, Assembly)
 
@@ -437,7 +437,7 @@ Return the composed command as a structured report:
 - Clear instructions → correct interpretation
 - Complete documentation → maintainable system
 
-**You enable HAL8000's self-modification capability (von Neumann architecture).**
+**You enable HAL8000-Assistant's self-modification capability (von Neumann architecture).**
 
 ---
 

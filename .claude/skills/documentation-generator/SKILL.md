@@ -6,7 +6,7 @@ allowed-tools: Read, Write, Glob
 
 # Documentation Generator
 
-This Skill generates structured documentation for HAL8000 work sessions, architectural decisions, and system components.
+This Skill generates structured documentation for HAL8000-Assistant work sessions, architectural decisions, and system components.
 
 ## Purpose
 
@@ -194,7 +194,7 @@ For important documents, add YAML frontmatter:
 ---
 title: Document Title
 date: 2025-10-20
-author: HAL8000 CPU + User
+author: HAL8000-Assistant CPU + User
 type: session-doc | decision-log | architecture | feature | readme
 status: draft | final | deprecated
 tags: [tag1, tag2, tag3]
@@ -221,7 +221,7 @@ Location: data/sessions/summaries/2025-10-20-1430-skills-integration.md
 Type: Session Documentation
 Summary: Documented integration of 4 new Skills (context-awareness,
          architecture-consultant, hal-script-assistant,
-         documentation-generator) into HAL8000 architecture.
+         documentation-generator) into HAL8000-Assistant architecture.
 Size: ~1,200 words
 
 Captured:
@@ -264,7 +264,7 @@ Status: Accepted
 
 **Response:**
 ```
-I'll document the Skills architecture integration into HAL8000.
+I'll document the Skills architecture integration into HAL8000-Assistant.
 
 [Gathers context from Skills implementation]
 [Uses architecture-doc-template.md]
@@ -323,7 +323,7 @@ Mark outdated docs as deprecated, update with changes.
 ### 7. Separate Facts from Opinions
 "This approach is faster (benchmark: 0.7s vs 2.1s)" vs "This seems better"
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
 **Works with:**
 - Session continuity protocol (capture session state)

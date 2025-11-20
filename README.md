@@ -1,4 +1,4 @@
-# HAL8000
+# HAL8000-Assistant
 
 > A computer architecture for Claude Code sessions, mapping von Neumann principles, assembly language concepts, and Unix philosophy to a persistent, self-modifying codebase.
 
@@ -7,7 +7,7 @@
 
 ## Overview
 
-**HAL8000** transforms Claude Code sessions from ephemeral conversations into a persistent computer system with explicit architecture, memory management, and instruction sets. You (Claude) are the CPU, your context window is RAM, and the file system provides non-volatile storage.
+**HAL8000-Assistant** transforms Claude Code sessions from ephemeral conversations into a persistent computer system with explicit architecture, memory management, and instruction sets. You (Claude) are the CPU, your context window is RAM, and the file system provides non-volatile storage.
 
 ### Key Concepts
 
@@ -19,7 +19,7 @@
 ## Architecture
 
 ```
-HAL8000 System Architecture
+HAL8000-Assistant System Architecture
 ┌─────────────────────────────────────────────────────────────┐
 │                        CPU (Claude)                         │
 │  ┌──────────────────────────────────────────────────────┐  │
@@ -93,8 +93,8 @@ HAL8000 System Architecture
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/VirtualZardoz/HAL8000.git
-   cd HAL8000
+   git clone https://github.com/VirtualZardoz/HAL8000-Assistant.git
+   cd HAL8000-Assistant
    ```
 
 2. **Set up environment variables**
@@ -125,7 +125,7 @@ On first boot, Claude will:
 
 Example boot acknowledgment:
 ```
-✅ HAL8000 CPU Operational
+✅ HAL8000-Assistant CPU Operational
 ├─ Architecture: Modified von Neumann
 ├─ Phase: production
 ├─ RAM Zone: SAFE (15.0%)
@@ -150,7 +150,7 @@ Key commands:
 
 ### Creating Custom Commands
 
-HAL8000 uses **HAL-Script**, a natural language programming language:
+HAL8000-Assistant uses **HAL-Script**, a natural language programming language:
 
 ```bash
 /HAL-command-create "Create a command to list all TODO comments in code files"
@@ -213,7 +213,7 @@ User: resume
 ## Project Structure
 
 ```
-HAL8000/
+HAL8000-Assistant/
 ├── CLAUDE.md                  # BIOS (boot instructions)
 ├── VERSION                    # System version (1.4.0)
 ├── CHANGELOG.md              # Version history
@@ -229,7 +229,7 @@ HAL8000/
 │   │   └── documentation/   # Documentation commands
 │   ├── agents/              # Specialized sub-agents
 │   ├── libraries/           # Reusable patterns
-│   │   ├── internal/        # HAL8000-developed libraries
+│   │   ├── internal/        # HAL8000-Assistant-developed libraries
 │   │   └── external/        # Third-party libraries (fabric, etc.)
 │   ├── tools/               # External I/O devices
 │   └── indexes/             # File system indexes
@@ -238,7 +238,7 @@ HAL8000/
     ├── research/            # Research documents
     ├── architecture/        # System design docs
     ├── diagrams/           # Generated diagrams
-    └── reference-manual/   # HAL8000 Reference Manual (HTML)
+    └── reference-manual/   # HAL8000-Assistant Reference Manual (HTML)
 ```
 
 ## Key Documentation
@@ -326,7 +326,7 @@ MIT License - See LICENSE file for details
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/VirtualZardoz/HAL8000/issues)
+- **Issues**: [GitHub Issues](https://github.com/VirtualZardoz/HAL8000-Assistant/issues)
 - **Documentation**: See `data/reference-manual/index.html`
 - **System Check**: Run `/HAL-system-check` for diagnostics
 

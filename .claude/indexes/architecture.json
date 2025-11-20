@@ -21,7 +21,7 @@
       "type": "architecture-spec",
       "category": "io-system",
       "topics": ["input-output", "file-access", "tools", "discovery"],
-      "summary": "I/O System defines how HAL8000 CPU interfaces with external systems and file system.",
+      "summary": "I/O System defines how HAL8000-Assistant CPU interfaces with external systems and file system.",
       "size_estimate_tokens": 4462
     },
     "data/architecture/hal8000-library-architecture.md": {
@@ -42,42 +42,42 @@
       "type": "architecture-spec",
       "category": "system-overview",
       "topics": ["system-design", "architecture-overview", "components", "production"],
-      "summary": "Complete HAL8000 system architecture design with all core components operational.",
+      "summary": "Complete HAL8000-Assistant system architecture design with all core components operational.",
       "size_estimate_tokens": 3806
     },
     "data/architecture/hal8000-v1-gap-analysis.md": {
       "type": "architecture-spec",
       "category": "system-analysis",
       "topics": ["gap-analysis", "v1.0.0", "production-ready", "validation"],
-      "summary": "HAL8000 v1.0.0 gap analysis verifying achievement of all core architectural goals.",
+      "summary": "HAL8000-Assistant v1.0.0 gap analysis verifying achievement of all core architectural goals.",
       "size_estimate_tokens": 2930
     },
     "data/architecture/hal8000-versioning-guide.md": {
       "type": "architecture-spec",
       "category": "system-management",
       "topics": ["versioning", "releases", "changelog", "semantic-versioning"],
-      "summary": "Version management guidelines and release process for HAL8000 system.",
+      "summary": "Version management guidelines and release process for HAL8000-Assistant system.",
       "size_estimate_tokens": 2949
     },
     "data/architecture/hal8000-missing-components-analysis.md": {
       "type": "architecture-spec",
       "category": "system-analysis",
       "topics": ["gap-analysis", "missing-components", "future-work"],
-      "summary": "Analysis of missing components and future architectural work for HAL8000.",
+      "summary": "Analysis of missing components and future architectural work for HAL8000-Assistant.",
       "size_estimate_tokens": 5034
     },
     "data/architecture/hal-script-language.md": {
       "type": "architecture-spec",
       "category": "programming-language",
       "topics": ["hal-script", "language-spec", "natural-language", "programming"],
-      "summary": "HAL-Script natural language programming language specification for HAL8000.",
+      "summary": "HAL-Script natural language programming language specification for HAL8000-Assistant.",
       "size_estimate_tokens": 4583
     },
     "data/architecture/v1-1-0-changes-summary.md": {
       "type": "architecture-spec",
       "category": "release-notes",
       "topics": ["v1.1.0", "changes", "hal-script", "formalization"],
-      "summary": "HAL8000 v1.1.0 changes summary documenting HAL-Script formalization.",
+      "summary": "HAL8000-Assistant v1.1.0 changes summary documenting HAL-Script formalization.",
       "size_estimate_tokens": 2159
     },
     "data/architecture/session-end-bug-fix-2025-10-15.md": {
@@ -98,7 +98,7 @@
       "type": "architecture-spec",
       "category": "protocol",
       "topics": ["forking", "rebrand", "migration", "customization"],
-      "summary": "Complete protocol for forking and rebranding HAL8000 for customized deployments.",
+      "summary": "Complete protocol for forking and rebranding HAL8000-Assistant for customized deployments.",
       "size_estimate_tokens": 3500
     },
     "data/architecture/system-name-migration-guide-2025-10-16-DEPRECATED.md": {

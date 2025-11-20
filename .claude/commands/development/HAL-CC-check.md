@@ -1,6 +1,6 @@
 ---
 name: HAL-CC-check
-description: Validate HAL8000 commands and agents for Claude Code compatibility via claude-code-validator agent
+description: Validate HAL8000-Assistant commands and agents for Claude Code compatibility via claude-code-validator agent
 parameters:
   - name: file_path
     description: Optional specific file path to validate (defaults to all commands/agents)
@@ -12,7 +12,7 @@ parameters:
 
 ## Purpose
 
-Validates HAL8000 commands and agents for compatibility with the current Claude Code environment by invoking the `claude-code-validator` agent.
+Validates HAL8000-Assistant commands and agents for compatibility with the current Claude Code environment by invoking the `claude-code-validator` agent.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ No parameters required.
 
 ## Description
 
-This command verifies that all HAL8000 CPU-level components (commands and agents) are compatible with the external Claude Code architecture. It detects:
+This command verifies that all HAL8000-Assistant CPU-level components (commands and agents) are compatible with the external Claude Code architecture. It detects:
 
 - Deprecated tools that need replacement
 - Invalid tool references
@@ -33,7 +33,7 @@ This command verifies that all HAL8000 CPU-level components (commands and agents
 
 **Use Cases:**
 - After Anthropic releases Claude Code updates
-- Before major HAL8000 development sessions
+- Before major HAL8000-Assistant development sessions
 - When commands/agents behave unexpectedly
 - Periodic maintenance (quarterly recommended)
 
@@ -48,7 +48,7 @@ Inform user that Claude Code compatibility check is starting.
 ## Step 2: Invoke Validator Agent
 Use Task tool to launch claude-code-validator agent with this prompt:
 
-"Validate all HAL8000 commands and agents for Claude Code compatibility.
+"Validate all HAL8000-Assistant commands and agents for Claude Code compatibility.
 
 Tasks:
 1. Fetch current Claude Code documentation from docs.claude.com (start with claude_code_docs_map.md)
@@ -118,7 +118,7 @@ Display results to user
 
 ## Related Commands
 
-- **HAL-system-check** - Validates internal HAL8000 structure and principles
+- **HAL-system-check** - Validates internal HAL8000-Assistant structure and principles
 - **HAL-register-dump** - Shows current CPU state
 - **HAL-session-end** - Saves state before RAM wipe
 

@@ -2,7 +2,7 @@
 title: System Name Migration Guide (DEPRECATED)
 date_ingested: 2025-10-16
 date_deprecated: 2025-10-29
-source: /mnt/d/~HAL8000/temp/system-name-migration-guide.md
+source: /mnt/d/~HAL8000-Assistant/temp/system-name-migration-guide.md
 category: architecture
 tags: migration, system-rename, configuration, docker, procedure, adr, deprecated
 status: DEPRECATED
@@ -23,16 +23,16 @@ replaced_by: fork-and-rebrand-protocol.md
 
 ## Original Document (For Historical Reference)
 
-**For:** HAL8000-based system clones requiring name changes
+**For:** HAL8000-Assistant-based system clones requiring name changes
 **Version:** 1.0
 **Date:** 2025-10-16
-**Based on:** HAL8000 → HAL8001-Chapter migration (2025-10-15)
+**Based on:** HAL8000-Assistant → HAL8001-Chapter migration (2025-10-15)
 
 ---
 
 ## Overview
 
-This guide provides a comprehensive procedure for migrating your HAL8000-based system to a new name. The migration process updates all system references, paths, Docker images, and configuration while preserving historical records for audit purposes.
+This guide provides a comprehensive procedure for migrating your HAL8000-Assistant-based system to a new name. The migration process updates all system references, paths, Docker images, and configuration while preserving historical records for audit purposes.
 
 **Migration Scope:** Complete system-wide rename affecting ~500+ references across ~200+ files
 
@@ -51,7 +51,7 @@ Before starting, verify:
 - [ ] **Backup:** Create filesystem backup (optional but recommended)
 - [ ] **Docker images:** Note any custom Docker images requiring rename
 - [ ] **External dependencies:** Identify any external systems referencing old name
-- [ ] **New name chosen:** Decide on exact new system name (e.g., HAL8001-Chapter, HAL8000-Production, etc.)
+- [ ] **New name chosen:** Decide on exact new system name (e.g., HAL8001-Chapter, HAL8000-Assistant-Production, etc.)
 
 ---
 
@@ -60,9 +60,9 @@ Before starting, verify:
 Define these variables before starting:
 
 ```bash
-OLD_NAME="HAL8000"                        # Your current system name
+OLD_NAME="HAL8000-Assistant"                        # Your current system name
 NEW_NAME="HAL8001-Chapter"                # Your new system name
-OLD_PATH="/mnt/d/~HAL8000"                # Current base path
+OLD_PATH="/mnt/d/~HAL8000-Assistant"                # Current base path
 NEW_PATH="/mnt/d/~HAL8001-Chapter"        # New base path
 OLD_DOCKER="hal8000-mermaid:latest"       # Current Docker image name
 NEW_DOCKER="hal8001-chapter-mermaid:latest"  # New Docker image name
@@ -298,7 +298,7 @@ If applicable, update:
 
 ## Migration Statistics (Reference)
 
-From HAL8000 → HAL8001-Chapter migration:
+From HAL8000-Assistant → HAL8001-Chapter migration:
 
 | Metric | Count |
 |--------|-------|
@@ -397,6 +397,6 @@ After successful migration, your system will be fully operational under the new 
 
 **Metadata:**
 - Ingested: 2025-10-16 08:40:19
-- Source: /mnt/d/~HAL8000/temp/system-name-migration-guide.md
+- Source: /mnt/d/~HAL8000-Assistant/temp/system-name-migration-guide.md
 - Classification: architecture (confidence: high)
 - Related: data/architecture/hal8000-versioning-guide.md

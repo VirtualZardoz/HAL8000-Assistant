@@ -2,7 +2,7 @@
   "version": "2.0-hierarchical",
   "directory": "data/reference-manual/",
   "last_updated": "2025-10-23T16:00:00Z",
-  "description": "HAL8000 Reference Manual editorial workflow and artifacts",
+  "description": "HAL8000-Assistant Reference Manual editorial workflow and artifacts",
   "files": {
     "data/reference-manual/refactoring-workflow.md": {
       "type": "documentation",

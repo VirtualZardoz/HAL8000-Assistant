@@ -1,7 +1,7 @@
 # Diagram Generation Tool - Containerization Lessons Learned
 
 **Date**: 2025-10-13
-**System**: HAL8000
+**System**: HAL8000-Assistant
 **Decision**: Use Docker containerization instead of direct npx installation
 
 ---
@@ -84,7 +84,7 @@ libasound2
 - Reproducible across systems
 - Easy to remove (delete image = clean state)
 - Self-contained, portable
-- Aligns with HAL8000 architecture (container as I/O device)
+- Aligns with HAL8000-Assistant architecture (container as I/O device)
 
 **Cons**:
 - Container startup overhead (~100ms)
@@ -285,7 +285,7 @@ Remove `shell=True` - Docker commands work better without shell intermediary.
 
 ### System Philosophy
 
-**Validated**: Container-as-I/O-device fits HAL8000 architecture perfectly
+**Validated**: Container-as-I/O-device fits HAL8000-Assistant architecture perfectly
 
 **Key Insight**: Containerization IS Unix philosophy at infrastructure level:
 - Single purpose (render diagrams)
@@ -335,7 +335,7 @@ Remove `shell=True` - Docker commands work better without shell intermediary.
 
 **Would we do it again?** **Absolutely.**
 
-This tool serves as a **reference implementation** for future HAL8000 tools requiring complex dependencies.
+This tool serves as a **reference implementation** for future HAL8000-Assistant tools requiring complex dependencies.
 
 ---
 

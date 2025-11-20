@@ -26,7 +26,7 @@ The BIOS (CLAUDE.md) and new architecture guide (`data/architecture/feature-sele
 ### 2. New Architecture Guide Created
 - Comprehensive 467-line guide: `data/architecture/feature-selection-guide.md`
 - Decision trees, comparison tables, pitfalls, composition patterns
-- 100% validation of HAL8000 features
+- 100% validation of HAL8000-Assistant features
 - Quick reference card
 - Extension guidelines
 
@@ -88,7 +88,7 @@ After the comparison table, add:
 ```html
 <h4>Decision Framework</h4>
 
-<p>When creating new HAL8000 capabilities, use this systematic framework:</p>
+<p>When creating new HAL8000-Assistant capabilities, use this systematic framework:</p>
 
 <ol>
   <li><strong>Does agent need to trigger automatically?</strong> → Skill</li>
@@ -197,7 +197,7 @@ After Skills/Commands/Agents sections:
 ```html
 <h3>11.4 Choosing the Right Feature Type</h3>
 
-<p>HAL8000 provides three extensibility layers, each serving distinct purposes:</p>
+<p>HAL8000-Assistant provides three extensibility layers, each serving distinct purposes:</p>
 
 <table>
   <thead>
@@ -283,16 +283,16 @@ not full processing cost (50-150K tokens).</p>
 <h2>17.5 Feature Selection Guide</h2>
 
 <p>The <a href="../architecture/feature-selection-guide.html">Feature Selection Guide</a>
-provides comprehensive guidance for extending HAL8000 capabilities.</p>
+provides comprehensive guidance for extending HAL8000-Assistant capabilities.</p>
 
 <h3>What the Guide Covers</h3>
 
 <ul>
   <li><strong>Quick Decision Tree:</strong> 4-question framework for rapid classification</li>
   <li><strong>Detailed Comparison:</strong> 8 dimensions comparing Skills/Commands/Agents</li>
-  <li><strong>When to Use Each Type:</strong> Checklists with HAL8000 examples</li>
+  <li><strong>When to Use Each Type:</strong> Checklists with HAL8000-Assistant examples</li>
   <li><strong>Decision Frameworks:</strong> Trigger-first, Context-first, Use-case patterns</li>
-  <li><strong>Architecture Validation:</strong> 100% validation of HAL8000 features</li>
+  <li><strong>Architecture Validation:</strong> 100% validation of HAL8000-Assistant features</li>
   <li><strong>Common Pitfalls:</strong> Anti-patterns with solutions</li>
   <li><strong>Composition Patterns:</strong> How features work together</li>
   <li><strong>Extension Guidelines:</strong> 5-step process for new capabilities</li>
@@ -324,7 +324,7 @@ provides comprehensive guidance for extending HAL8000 capabilities.</p>
 
 <h3>Feature Classification Validation</h3>
 
-<p>HAL8000's features have been validated against Claude Code community best practices
+<p>HAL8000-Assistant's features have been validated against Claude Code community best practices
 (see <code>data/videos/i-finally-cracked-claude-agent-skills/knowledge-brief.md</code>).</p>
 
 <h4>Validation Results</h4>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HAL8000 Text Overlay Tool
+HAL8000-Assistant Text Overlay Tool
 
 Adds text overlay to existing images using ImageMagick (via Docker).
 Fast and efficient - no image regeneration required.
@@ -99,7 +99,7 @@ def add_text_overlay(
 
 def main():
     parser = argparse.ArgumentParser(
-        description='HAL8000 Text Overlay Tool - Add text to existing images',
+        description='HAL8000-Assistant Text Overlay Tool - Add text to existing images',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

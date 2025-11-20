@@ -1,4 +1,4 @@
-# HAL8000 v1.1.0 Changes Summary
+# HAL8000-Assistant v1.1.0 Changes Summary
 
 **Date:** 2025-10-14
 **Version:** 1.0.0 → 1.1.0 (proposed)
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This session formalized **HAL-Script**, HAL8000's natural language programming language, and reorganized the command structure for better clarity. No functional changes - purely organizational and documentation improvements.
+This session formalized **HAL-Script**, HAL8000-Assistant's natural language programming language, and reorganized the command structure for better clarity. No functional changes - purely organizational and documentation improvements.
 
 ---
 
@@ -65,7 +65,7 @@ This session formalized **HAL-Script**, HAL8000's natural language programming l
 
 **Created:** `data/architecture/hal-script-language.md` (17K tokens)
 
-**Purpose:** Formalize natural language programming paradigm for HAL8000
+**Purpose:** Formalize natural language programming paradigm for HAL8000-Assistant
 
 **Contents:**
 - Language overview and rationale
@@ -82,7 +82,7 @@ This session formalized **HAL-Script**, HAL8000's natural language programming l
 - Best practices and examples
 - Complete programs (simple and complex)
 
-**Key Insight:** Natural language IS HAL8000's programming language. Commands are executable HAL-Script programs.
+**Key Insight:** Natural language IS HAL8000-Assistant's programming language. Commands are executable HAL-Script programs.
 
 ---
 
@@ -142,7 +142,7 @@ Commands are organized by purpose into subdirectories:
 [etc.]
 
 ### HAL-Script Programming Language
-Commands are written in **HAL-Script**, HAL8000's natural language programming language.
+Commands are written in **HAL-Script**, HAL8000-Assistant's natural language programming language.
 [Introduction and references]
 ```
 
@@ -333,7 +333,7 @@ All command files moved from `.claude/commands/` to subdirectories:
 - ✅ No breaking changes
 
 **What this means:**
-- HAL8000 now has an explicit programming model
+- HAL8000-Assistant now has an explicit programming model
 - Users can create their own commands/programs
 - System is more organized and scalable
 - Documentation supports learning and development
@@ -343,4 +343,4 @@ All command files moved from `.claude/commands/` to subdirectories:
 ---
 
 **Report Generated:** 2025-10-14T17:20:00Z
-**System Version:** HAL8000 v1.0.0 → v1.1.0 (proposed)
+**System Version:** HAL8000-Assistant v1.0.0 → v1.1.0 (proposed)

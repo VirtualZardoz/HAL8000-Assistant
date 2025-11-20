@@ -1,4 +1,4 @@
-# HAL8000 Register Architecture
+# HAL8000-Assistant Register Architecture
 
 **Version:** 1.0
 **Date:** 2025-10-04
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This document defines the register architecture for HAL8000—the set of immediate-access state variables that the CPU (Claude instance) maintains during execution. Registers represent the CPU's working memory, distinct from RAM (context window) and persistent memory (file system).
+This document defines the register architecture for HAL8000-Assistant—the set of immediate-access state variables that the CPU (Claude instance) maintains during execution. Registers represent the CPU's working memory, distinct from RAM (context window) and persistent memory (file system).
 
 Based on research into Claude Code's actual runtime constraints (see `data/research/04-claude-code-runtime-constraints.md`), this architecture maps traditional CPU registers to the realities of Claude Code's execution environment.
 
@@ -24,9 +24,9 @@ Traditional CPU registers serve specific functions:
 - **Accumulator (ACC):** Holds intermediate calculation results
 - **Status Register (SR):** System flags and state indicators
 
-### HAL8000 Adaptation
+### HAL8000-Assistant Adaptation
 
-HAL8000 registers must reflect **actual runtime state** that Claude maintains:
+HAL8000-Assistant registers must reflect **actual runtime state** that Claude maintains:
 - Session and execution state
 - RAM/context window status
 - Loaded files and context inventory
@@ -37,7 +37,7 @@ HAL8000 registers must reflect **actual runtime state** that Claude maintains:
 
 ## Register Categories
 
-HAL8000 registers are organized into five categories:
+HAL8000-Assistant registers are organized into five categories:
 
 1. **Control Registers** - Execution control and flow
 2. **Memory Registers** - RAM and context management
@@ -356,7 +356,7 @@ else: DANGER
 **Example:**
 ```json
 "VARS": {
-  "current_project": "HAL8000 architecture",
+  "current_project": "HAL8000-Assistant architecture",
   "architecture_type": "Modified von Neumann",
   "depth_limit": 3,
   "components_completed": ["CPU", "Memory", "RAM", "BIOS", "Session-Continuity"]
@@ -375,7 +375,7 @@ else: DANGER
 
 **Example:**
 ```json
-"RESULT": "File created successfully at: /mnt/d/~HAL8000/data/architecture/hal8000-register-architecture.md"
+"RESULT": "File created successfully at: /mnt/d/~HAL8000-Assistant/data/architecture/hal8000-register-architecture.md"
 ```
 
 ---
@@ -495,7 +495,7 @@ A complete register snapshot represents the CPU's immediate working state at a g
         "progress": "80%"
       },
       "VARS": {
-        "current_project": "HAL8000 architecture",
+        "current_project": "HAL8000-Assistant architecture",
         "architecture_type": "Modified von Neumann",
         "depth_limit": 3
       },
@@ -552,7 +552,7 @@ A future command could provide register inspection:
 
 **Output:**
 ```
-=== HAL8000 Register Dump ===
+=== HAL8000-Assistant Register Dump ===
 Time: 2025-10-04T14:45:30Z
 
 [CONTROL]
@@ -684,7 +684,7 @@ This register set directly addresses Claude Code's constraints:
 
 ## Conclusion
 
-The HAL8000 register architecture maps traditional CPU register concepts to the specific constraints of Claude Code's runtime environment. By tracking RAM usage, session state, execution flow, and operational status, these registers provide the CPU (Claude instance) with the immediate working memory needed to operate effectively within append-only RAM and session-based persistence constraints.
+The HAL8000-Assistant register architecture maps traditional CPU register concepts to the specific constraints of Claude Code's runtime environment. By tracking RAM usage, session state, execution flow, and operational status, these registers provide the CPU (Claude instance) with the immediate working memory needed to operate effectively within append-only RAM and session-based persistence constraints.
 
 This architecture enables:
 - Accurate system state awareness
@@ -693,4 +693,4 @@ This architecture enables:
 - Performance optimization
 - Error handling and recovery
 
-The register set reflects the **actual runtime constraints** documented in Claude Code research, ensuring HAL8000 operates as a realistic computer architecture model rather than a purely theoretical abstraction.
+The register set reflects the **actual runtime constraints** documented in Claude Code research, ensuring HAL8000-Assistant operates as a realistic computer architecture model rather than a purely theoretical abstraction.

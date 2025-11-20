@@ -1,10 +1,10 @@
 # MCP Server Requirements
 
-This document lists the MCP (Model Context Protocol) servers required and recommended for HAL8000 operation.
+This document lists the MCP (Model Context Protocol) servers required and recommended for HAL8000-Assistant operation.
 
 ## Overview
 
-HAL8000 uses MCP servers to extend Claude Code capabilities beyond built-in tools. MCP servers provide specialized functionality for web research, file operations, AI/ML models, and vector databases.
+HAL8000-Assistant uses MCP servers to extend Claude Code capabilities beyond built-in tools. MCP servers provide specialized functionality for web research, file operations, AI/ML models, and vector databases.
 
 **Dynamic Control:** Use `/HAL-mcp-control` command to selectively enable/disable servers per session, optimizing RAM usage (~500-1000 tokens per server).
 
@@ -122,7 +122,7 @@ HAL8000 uses MCP servers to extend Claude Code capabilities beyond built-in tool
 
 ## Dynamic Control
 
-**HAL8000 provides dynamic MCP server management to optimize RAM usage.**
+**HAL8000-Assistant provides dynamic MCP server management to optimize RAM usage.**
 
 ### Quick Start
 
@@ -190,7 +190,7 @@ Or manually add to `.mcp.json`:
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/mnt/d/~HAL8000"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/mnt/d/~HAL8000-Assistant"]
     }
   }
 }
@@ -268,7 +268,7 @@ Validates:
 
 **filesystem not connecting:**
 - Verify MCP configuration in Claude Code settings
-- Check path permissions for `/mnt/d/~HAL8000`
+- Check path permissions for `/mnt/d/~HAL8000-Assistant`
 - Ensure `@modelcontextprotocol/server-filesystem` package is available
 
 **Agents failing:**

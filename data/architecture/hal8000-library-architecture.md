@@ -1,4 +1,4 @@
-# HAL8000 Library Architecture
+# HAL8000-Assistant Library Architecture
 
 **Document Type:** Architecture Specification
 **Component:** Library System
@@ -9,7 +9,7 @@
 
 ## Overview
 
-The Library System provides reusable instruction collections that the HAL8000 CPU can compose to accomplish tasks. Libraries solve the problem: **How to reuse proven solutions without reinventing them, while maintaining discoverability as the collection grows.**
+The Library System provides reusable instruction collections that the HAL8000-Assistant CPU can compose to accomplish tasks. Libraries solve the problem: **How to reuse proven solutions without reinventing them, while maintaining discoverability as the collection grows.**
 
 Libraries are organized instruction sets stored as markdown files, indexed for discovery, and loaded on-demand to manage RAM efficiently.
 
@@ -19,7 +19,7 @@ Libraries are organized instruction sets stored as markdown files, indexed for d
 
 ### Problem Statement
 
-As the HAL8000 system evolves, we will:
+As the HAL8000-Assistant system evolves, we will:
 - Develop workflows and procedures that solve recurring problems
 - Accumulate external instruction collections from other sources
 - Need to discover "Do we already have a solution for X?"
@@ -313,7 +313,7 @@ last_updated: "2025-10-05"
 
 ### Overview
 
-The HAL8000 package manager handles the complete lifecycle of external libraries through dedicated commands. This is essential OS infrastructure - every operating system has package management (apt, yum, npm, pip, cargo).
+The HAL8000-Assistant package manager handles the complete lifecycle of external libraries through dedicated commands. This is essential OS infrastructure - every operating system has package management (apt, yum, npm, pip, cargo).
 
 **Package manager operations:**
 - **Update:** `/HAL-library-update [library-name]` (implemented)
@@ -703,7 +703,7 @@ Decision: Load now with caution, or checkpoint first
 - Hierarchical categories (development/frontend, development/backend)
 
 **Collaborative Libraries:**
-- Share internal libraries with other HAL8000 instances
+- Share internal libraries with other HAL8000-Assistant instances
 - Community library repository
 - Import/export library collections
 

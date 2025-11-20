@@ -1,14 +1,14 @@
-# HAL8000 Versioning Guide
+# HAL8000-Assistant Versioning Guide
 
 **Version:** 1.0.0
 **Created:** 2025-10-14
-**Purpose:** Formal guidelines for version management in HAL8000 system
+**Purpose:** Formal guidelines for version management in HAL8000-Assistant system
 
 ---
 
 ## Overview
 
-HAL8000 uses **Semantic Versioning 2.0.0** adapted for computer architecture principles. This guide defines when and how to increment version numbers.
+HAL8000-Assistant uses **Semantic Versioning 2.0.0** adapted for computer architecture principles. This guide defines when and how to increment version numbers.
 
 ---
 
@@ -167,9 +167,9 @@ HAL8000 uses **Semantic Versioning 2.0.0** adapted for computer architecture pri
 
 ## Dual Version Tracking
 
-HAL8000 tracks two independent versions:
+HAL8000-Assistant tracks two independent versions:
 
-### 1. System Version (HAL8000 Core)
+### 1. System Version (HAL8000-Assistant Core)
 **Location:** `VERSION` file (root)
 **Tracks:** BIOS, commands, agents, architecture, tools
 
@@ -387,7 +387,7 @@ Before declaring a new version:
 
 ---
 
-## Examples from HAL8000 History
+## Examples from HAL8000-Assistant History
 
 ### v1.0.0 (2025-10-04) - Production Release
 **Type:** MAJOR

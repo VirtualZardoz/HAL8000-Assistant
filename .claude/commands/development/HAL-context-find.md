@@ -5,7 +5,7 @@ description: Find and load system context without consuming main session RAM
 
 # HAL Context Find Command
 
-This command launches the `hal-context-finder` specialized agent to discover and load HAL8000 system context efficiently. It preserves main session RAM by delegating navigation and file loading to an isolated sub-agent context.
+This command launches the `hal-context-finder` specialized agent to discover and load HAL8000-Assistant system context efficiently. It preserves main session RAM by delegating navigation and file loading to an isolated sub-agent context.
 
 ## Usage
 
@@ -68,8 +68,8 @@ Agent returns structured response:
 [Complete file contents with clear source headers]
 
 ## File Locations
-- /mnt/d/~HAL8000/path/to/file1.md
-- /mnt/d/~HAL8000/path/to/file2.md
+- /mnt/d/~HAL8000-Assistant/path/to/file1.md
+- /mnt/d/~HAL8000-Assistant/path/to/file2.md
 
 ## Summary
 Found [N] relevant files for query "[query]".
@@ -153,7 +153,7 @@ Savings: 30K tokens (85%)
 
 ## Architecture Alignment
 
-This command implements HAL8000 architecture principles:
+This command implements HAL8000-Assistant architecture principles:
 
 **Von Neumann:**
 - Sub-agent as virtual memory extension (isolated address space)

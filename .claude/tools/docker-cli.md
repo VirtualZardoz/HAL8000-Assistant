@@ -14,12 +14,12 @@ Docker CLI provides containerized execution environments for tools with heavy de
 
 **Architectural Position:**
 ```
-HAL8000 (Claude, host environment)
+HAL8000-Assistant (Claude, host environment)
     ↓ command
 Docker Container (isolated environment)
     ↓ execute tool with dependencies
     ↓ output via stdout or mounted volumes
-HAL8000 (receives results, container disposed)
+HAL8000-Assistant (receives results, container disposed)
 ```
 
 ---
@@ -85,7 +85,7 @@ docker run --rm [image] [command]
 
 **With Mounted Volumes (for data exchange):**
 ```bash
-docker run --rm -v /mnt/d/~HAL8000/data:/data [image] [command]
+docker run --rm -v /mnt/d/~HAL8000-Assistant/data:/data [image] [command]
 ```
 
 **Interactive Shell:**
@@ -113,7 +113,7 @@ EOF
 docker build -t hal-python-tool temp/
 
 # Run container
-docker run --rm -v /mnt/d/~HAL8000/data:/data hal-python-tool
+docker run --rm -v /mnt/d/~HAL8000-Assistant/data:/data hal-python-tool
 ```
 
 ### Persistent Containers
@@ -156,7 +156,7 @@ docker-compose down   # Stop and remove
 
 ---
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
 ### Pattern 1: Dockerfile-Based Tool
 
@@ -194,7 +194,7 @@ echo "data" > temp/input.txt
 
 # Run container with volume
 docker run --rm \
-  -v /mnt/d/~HAL8000/temp:/workspace \
+  -v /mnt/d/~HAL8000-Assistant/temp:/workspace \
   [image] process-tool /workspace/input.txt > /workspace/output.txt
 
 # Read output
@@ -318,7 +318,7 @@ print(df.describe())
 EOF
 
 # Run analysis
-docker run --rm -v /mnt/d/~HAL8000/data:/workspace \
+docker run --rm -v /mnt/d/~HAL8000-Assistant/data:/workspace \
   hal-data-analyzer python /workspace/analyze.py
 ```
 
@@ -346,9 +346,9 @@ docker run --rm -v /mnt/d/~HAL8000/data:/workspace \
 
 | Aspect | Sub-Agent (Task tool) | Docker Container |
 |--------|---------------------|------------------|
-| RAM Impact | Uses HAL8000 context (200K) | No context impact (external process) |
+| RAM Impact | Uses HAL8000-Assistant context (200K) | No context impact (external process) |
 | Execution | Inside Claude Code | Outside Claude Code |
-| Dependencies | HAL8000 tools only | Any dependencies (pip, npm, etc.) |
+| Dependencies | HAL8000-Assistant tools only | Any dependencies (pip, npm, etc.) |
 | Overhead | Minimal (context spawn) | Higher (container startup ~1-2s) |
 | Use For | Research, discovery, light tasks | Heavy computation, isolated deps |
 
@@ -443,7 +443,7 @@ Docker CLI is discoverable via:
 
 ## Summary
 
-Docker CLI enables HAL8000 to execute tools in isolated containers:
+Docker CLI enables HAL8000-Assistant to execute tools in isolated containers:
 - **No host pollution** - Dependencies stay in containers
 - **Reproducible** - Same environment every time
 - **Flexible** - Any tool, any language, any dependencies
@@ -455,4 +455,4 @@ Docker CLI enables HAL8000 to execute tools in isolated containers:
 Task Needs Dependencies → Create Dockerfile → Build Image → Run Container → Get Results
 ```
 
-This extends HAL8000's capabilities beyond what's installed on the host, enabling execution of any tool in any environment while maintaining system cleanliness.
+This extends HAL8000-Assistant's capabilities beyond what's installed on the host, enabling execution of any tool in any environment while maintaining system cleanliness.

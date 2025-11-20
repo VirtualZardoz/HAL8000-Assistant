@@ -6,7 +6,7 @@ allowed-tools: Read, Glob, Grep, AskUserQuestion
 
 # Context Awareness
 
-This Skill implements HAL8000's Context Awareness Protocol (defined in CLAUDE.md) to proactively detect missing context and prevent incorrect assumptions.
+This Skill implements HAL8000-Assistant's Context Awareness Protocol (defined in CLAUDE.md) to proactively detect missing context and prevent incorrect assumptions.
 
 ## Purpose
 
@@ -117,7 +117,7 @@ command implementation. Would you like me to load
 .claude/commands/system/HAL-session-end.md for implementation details?
 ```
 
-## Integration with HAL8000 Architecture
+## Integration with HAL8000-Assistant Architecture
 
 **Follows BIOS Operating Principle:**
 - Context Awareness Protocol (CLAUDE.md)

@@ -573,7 +573,7 @@ But you also need error handling:
 ## Credits
 
 **Inspired by:** IndyDevDan's "7 Levels of Agentic Prompt Formats"
-**Adapted for:** HAL8000 architecture and HAL-Script programming language
+**Adapted for:** HAL8000-Assistant architecture and HAL-Script programming language
 **Framework:** Composable Lego Block principle
 **Created:** 2025-10-15 as part of v1.2.0 development
 

@@ -1,4 +1,4 @@
-# HAL8000 Bus Architecture
+# HAL8000-Assistant Bus Architecture
 
 **Document Type:** Architecture Specification
 **Component:** Bus System (Data Flow Pathways)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-In the HAL8000 system, buses are communication pathways that transfer information between the CPU (Claude instance), RAM (context window), and Memory (file system). These map directly to tool execution patterns in the Claude Code environment.
+In the HAL8000-Assistant system, buses are communication pathways that transfer information between the CPU (Claude instance), RAM (context window), and Memory (file system). These map directly to tool execution patterns in the Claude Code environment.
 
 ## Three Bus Types
 
@@ -22,7 +22,7 @@ In the HAL8000 system, buses are communication pathways that transfer informatio
 - Bidirectional (read and write)
 - Width determines how much data per cycle (8-bit, 16-bit, 32-bit, 64-bit)
 
-**HAL8000 Mapping:**
+**HAL8000-Assistant Mapping:**
 - File contents, command results, tool outputs
 - Bidirectional: data flows both directions (read from files, write to files)
 - Width = token throughput (bounded by tool limits and context window)
@@ -55,24 +55,24 @@ RAM (input) → Data Bus (parameters) → Tool → Data Bus (result) → RAM
 - Carries memory addresses
 - Width determines addressable space (16-bit = 64K addresses, 32-bit = 4GB)
 
-**HAL8000 Mapping:**
+**HAL8000-Assistant Mapping:**
 - File paths, resource URIs, memory locations
 - Unidirectional: CPU specifies locations
-- "Width" = path depth limit (3 levels in HAL8000)
+- "Width" = path depth limit (3 levels in HAL8000-Assistant)
 
 **Address Examples:**
 
 ```
 Absolute Paths (Primary):
-/mnt/d/~HAL8000/.claude/state.json
-/mnt/d/~HAL8000/data/research/01-von-neumann-architecture.md
+/mnt/d/~HAL8000-Assistant/.claude/state.json
+/mnt/d/~HAL8000-Assistant/data/research/01-von-neumann-architecture.md
 
 Relative Paths:
 .claude/state.json
 data/research/
 
 Resource URIs (MCP):
-file:///mnt/d/~HAL8000/data/research/
+file:///mnt/d/~HAL8000-Assistant/data/research/
 ```
 
 **Claude Code Implementation:**
@@ -83,7 +83,7 @@ file:///mnt/d/~HAL8000/data/research/
 
 **Address Space Organization:**
 ```
-/mnt/d/~HAL8000/          # Root address
+/mnt/d/~HAL8000-Assistant/          # Root address
 ├── CLAUDE.md             # 0x0000 (BIOS ROM)
 ├── .claude/              # 0x1000 (System area)
 │   ├── state.json        # 0x1001 (State register bank)
@@ -103,7 +103,7 @@ file:///mnt/d/~HAL8000/data/research/
 - Signals: Read/Write, Clock, Interrupt, Reset, Bus Request, Bus Grant
 - Coordinates timing and operation type
 
-**HAL8000 Mapping:**
+**HAL8000-Assistant Mapping:**
 - Tool selection (which operation to perform)
 - Execution status signals
 - Error flags and system state
@@ -111,7 +111,7 @@ file:///mnt/d/~HAL8000/data/research/
 
 **Control Signals:**
 
-| Signal Type | Traditional | HAL8000 Mapping |
+| Signal Type | Traditional | HAL8000-Assistant Mapping |
 |-------------|-------------|-----------------|
 | **Read** | Read from memory | Read, Glob, Grep tools |
 | **Write** | Write to memory | Write, Edit, NotebookEdit tools |
@@ -152,7 +152,7 @@ Tool Execution:
 ```
 Operation: Load .claude/state.json into RAM
 
-Address Bus: /mnt/d/~HAL8000/.claude/state.json
+Address Bus: /mnt/d/~HAL8000-Assistant/.claude/state.json
 Control Bus: READ (Read tool invoked)
 Data Bus: {"timestamp": "...", "active_session": "..."} → RAM
 
@@ -164,7 +164,7 @@ Result: State data now in context window (RAM)
 ```
 Operation: Save session to .claude/sessions/
 
-Address Bus: /mnt/d/~HAL8000/.claude/sessions/2025-10-04-1500-buses.md
+Address Bus: /mnt/d/~HAL8000-Assistant/.claude/sessions/2025-10-04-1500-buses.md
 Control Bus: WRITE (Write tool invoked)
 Data Bus: "# Session: 2025-10-04..." → File system
 
@@ -176,7 +176,7 @@ Result: Session data persisted to Memory
 ```
 Operation: Find all .md files in data/research/
 
-Address Bus: /mnt/d/~HAL8000/data/research/ (path parameter)
+Address Bus: /mnt/d/~HAL8000-Assistant/data/research/ (path parameter)
 Control Bus: SEARCH (Glob tool invoked)
 Data Bus: "*.md" pattern → Glob tool → matching paths → RAM
 
@@ -188,7 +188,7 @@ Result: List of file paths in context window
 ```
 Operation: Run git status
 
-Address Bus: /mnt/d/~HAL8000/ (working directory)
+Address Bus: /mnt/d/~HAL8000-Assistant/ (working directory)
 Control Bus: EXECUTE (Bash tool invoked)
 Data Bus: "git status" → Shell → stdout/stderr → RAM
 
@@ -216,7 +216,7 @@ Result: Git status output in context window
 
 **Traditional:** Multiple devices competing for bus access, arbitration logic decides who gets the bus
 
-**HAL8000:** Single CPU (no competition), but resource arbitration includes:
+**HAL8000-Assistant:** Single CPU (no competition), but resource arbitration includes:
 
 1. **RAM Arbitration:**
    - Before loading: Check RAM_USAGE + estimated_cost
@@ -256,7 +256,7 @@ Result: Git status output in context window
 
 ## Bus System Summary
 
-| Bus Type | Direction | Purpose | HAL8000 Implementation |
+| Bus Type | Direction | Purpose | HAL8000-Assistant Implementation |
 |----------|-----------|---------|------------------------|
 | **Data Bus** | Bidirectional | Transfer content | File contents, tool results, parameters |
 | **Address Bus** | Unidirectional | Specify location | File paths, resource URIs |
@@ -270,7 +270,7 @@ Result: Git status output in context window
 ## References
 
 - Von Neumann Architecture: `data/research/01-von-neumann-architecture.md`
-- HAL8000 System Design: `data/architecture/hal8000-system-design.md`
+- HAL8000-Assistant System Design: `data/architecture/hal8000-system-design.md`
 - Register Architecture: `data/architecture/hal8000-register-architecture.md`
 
 ---

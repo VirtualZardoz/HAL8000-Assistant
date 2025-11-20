@@ -19,7 +19,7 @@ parameters:
 
 ## Purpose
 
-Updates both the hierarchical file system indexes and the library index with metadata about files in the HAL8000 system. Uses a **master index** pointing to **per-directory indexes** for infinite scalability. This enables efficient discovery of relevant files and libraries without loading the entire file system into RAM.
+Updates both the hierarchical file system indexes and the library index with metadata about files in the HAL8000-Assistant system. Uses a **master index** pointing to **per-directory indexes** for infinite scalability. This enables efficient discovery of relevant files and libraries without loading the entire file system into RAM.
 
 ## Usage
 

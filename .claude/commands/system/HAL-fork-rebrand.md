@@ -1,6 +1,6 @@
 ---
 name: HAL-fork-rebrand
-description: Fork and rebrand HAL8000 to create your own independent system
+description: Fork and rebrand HAL8000-Assistant to create your own independent system
 parameters:
   - name: mode
     description: Execution mode (interactive | auto | verify)
@@ -20,16 +20,16 @@ parameters:
 
 ## Purpose
 
-Automate the complete Fork and Rebrand Protocol to transform a HAL8000 clone into an independent, personalized system with a new name and GitHub repository.
+Automate the complete Fork and Rebrand Protocol to transform a HAL8000-Assistant clone into an independent, personalized system with a new name and GitHub repository.
 
 This command executes the comprehensive rebrand procedure documented in `data/architecture/fork-and-rebrand-protocol.md`, handling:
 - Interactive collection of new system identity
 - Filesystem updates (all paths, names, references)
 - Git isolation and reconnection
 - Verification and validation
-- Safe operation preventing accidental commits to original HAL8000
+- Safe operation preventing accidental commits to original HAL8000-Assistant
 
-**Critical Safety:** This command ensures you CANNOT accidentally commit to anthropics/HAL8000 by reconfiguring git remotes and setting push-disable on upstream.
+**Critical Safety:** This command ensures you CANNOT accidentally commit to anthropics/HAL8000-Assistant by reconfiguring git remotes and setting push-disable on upstream.
 
 ---
 
@@ -89,7 +89,7 @@ This command executes the comprehensive rebrand procedure documented in `data/ar
 
 3. **Detect current state:**
    - If `state.json` contains `migration` field → Already rebranded
-   - If git remote origin points to anthropics/HAL8000 → Needs rebrand
+   - If git remote origin points to anthropics/HAL8000-Assistant → Needs rebrand
    - If neither → Unclear state, warn user
 
 4. **Branch based on execution mode:**
@@ -129,7 +129,7 @@ question: "How should we set up your GitHub repository?"
 header: "Git Strategy"
 options:
   - label: "Already Forked"
-    description: "I've already forked HAL8000 on GitHub to my account"
+    description: "I've already forked HAL8000-Assistant on GitHub to my account"
   - label: "Need to Create"
     description: "I need to create a new GitHub repository (manual or via gh CLI)"
   - label: "Local Only"
@@ -157,8 +157,8 @@ DOCKER_REBUILD = answer_to_question_4 (yes/no)
 
 **Derive additional variables:**
 ```
-OLD_NAME = "HAL8000"
-OLD_PATH = "/mnt/d/~HAL8000"  # Extract from current pwd
+OLD_NAME = "HAL8000-Assistant"
+OLD_PATH = "/mnt/d/~HAL8000-Assistant"  # Extract from current pwd
 NEW_PATH = "/mnt/d/~${NEW_NAME}"
 NEW_GITHUB_REPO = "${NEW_NAME}"  # Default to system name
 OLD_DOCKER = "hal8000-mermaid:latest"
@@ -169,9 +169,9 @@ NEW_DOCKER = "$(echo ${NEW_NAME} | tr '[:upper:]' '[:lower:]')-mermaid:latest"
 Display summary and ask for final confirmation:
 ```
 You are about to rebrand:
-  OLD: HAL8000 → NEW: ${NEW_NAME}
+  OLD: HAL8000-Assistant → NEW: ${NEW_NAME}
   Path: ${OLD_PATH} → ${NEW_PATH}
-  GitHub: anthropics/HAL8000 → ${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}
+  GitHub: anthropics/HAL8000-Assistant → ${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}
 
 This will modify system files, git configuration, and Docker images.
 This operation is SAFE but comprehensive.
@@ -248,10 +248,10 @@ cat > CHANGELOG.tmp << EOF
 ## [${NEW_VERSION}] - $(date +%Y-%m-%d)
 
 ### Changed
-- Forked from HAL8000 and rebranded to ${NEW_NAME}
+- Forked from HAL8000-Assistant and rebranded to ${NEW_NAME}
 - Updated all system references and paths
 - Reconfigured git remote to new repository
-- System now independent from original HAL8000
+- System now independent from original HAL8000-Assistant
 - Migration executed via /HAL-fork-rebrand command
 
 $(cat CHANGELOG.md | tail -n +2)
@@ -314,8 +314,8 @@ find . -maxdepth 2 -name ".env*" -type f -exec sed -i "s|${OLD_PATH}|${NEW_PATH}
 ```bash
 # README.md (critical for GitHub)
 sed -i "s/${OLD_NAME}/${NEW_NAME}/g" README.md
-sed -i "s|anthropics/HAL8000|${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}|g" README.md
-sed -i "s|github.com/anthropics/HAL8000|github.com/${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}|g" README.md
+sed -i "s|anthropics/HAL8000-Assistant|${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}|g" README.md
+sed -i "s|github.com/anthropics/HAL8000-Assistant|github.com/${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}|g" README.md
 
 # Architecture docs
 find data/architecture -name "*.md" -type f -exec sed -i "s/${OLD_NAME}/${NEW_NAME}/g" {} +
@@ -366,7 +366,7 @@ Date: $(date -Iseconds)
 Command: /HAL-fork-rebrand v1.0
 Original System: ${OLD_NAME}
 New System: ${NEW_NAME}
-Original Repository: https://github.com/anthropics/HAL8000
+Original Repository: https://github.com/anthropics/HAL8000-Assistant
 New Repository: https://github.com/${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}
 Migration Type: Fork and Rebrand
 Scope: Comprehensive (filesystem + git + docker)
@@ -389,7 +389,7 @@ EOF
 
 ### Phase 3: Git Isolation and Reconnection
 
-**CRITICAL SAFETY PHASE: Prevent accidental commits to HAL8000**
+**CRITICAL SAFETY PHASE: Prevent accidental commits to HAL8000-Assistant**
 
 #### 3.1: Verify Current Git State
 
@@ -413,19 +413,19 @@ git add -A
 
 # Create comprehensive rebrand commit
 git commit -m "$(cat <<EOF
-Fork and rebrand from HAL8000 to ${NEW_NAME}
+Fork and rebrand from HAL8000-Assistant to ${NEW_NAME}
 
-This system is forked from HAL8000 and rebranded as an independent system.
+This system is forked from HAL8000-Assistant and rebranded as an independent system.
 
 Changes:
-- Updated all system name references (HAL8000 → ${NEW_NAME})
+- Updated all system name references (HAL8000-Assistant → ${NEW_NAME})
 - Updated all filesystem paths (${OLD_PATH} → ${NEW_PATH})
 - Updated Docker image names (${OLD_DOCKER} → ${NEW_DOCKER})
 - Updated documentation and README
 - Reconfigured for independent operation
 - Migration executed via /HAL-fork-rebrand command
 
-Original: https://github.com/anthropics/HAL8000
+Original: https://github.com/anthropics/HAL8000-Assistant
 New System: ${NEW_NAME}
 Repository: https://github.com/${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}
 
@@ -451,9 +451,9 @@ fi
 # Update origin to point to user's fork
 git remote set-url origin https://github.com/${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}.git
 
-# Add upstream for pulling HAL8000 updates (push-disabled)
-git remote add upstream https://github.com/anthropics/HAL8000.git 2>/dev/null || \
-  git remote set-url upstream https://github.com/anthropics/HAL8000.git
+# Add upstream for pulling HAL8000-Assistant updates (push-disabled)
+git remote add upstream https://github.com/anthropics/HAL8000-Assistant.git 2>/dev/null || \
+  git remote set-url upstream https://github.com/anthropics/HAL8000-Assistant.git
 git remote set-url --push upstream DISABLE
 
 # Verify configuration
@@ -467,7 +467,7 @@ if command -v gh &> /dev/null; then
   # Attempt to create repo via gh CLI
   echo "Creating GitHub repository via gh CLI..."
   gh repo create ${NEW_GITHUB_REPO} --public --source=. --remote=origin \
-    --description="Personalized HAL8000-based system - von Neumann architecture, HAL-Script programming"
+    --description="Personalized HAL8000-Assistant-based system - von Neumann architecture, HAL-Script programming"
 
   if [ $? -ne 0 ]; then
     WARN: "gh repo create failed. Please create repository manually on GitHub."
@@ -482,7 +482,7 @@ else
   echo "GitHub CLI (gh) not found. Please create repository manually:"
   echo "1. Go to https://github.com/new"
   echo "2. Repository name: ${NEW_GITHUB_REPO}"
-  echo "3. Description: Personalized HAL8000-based system"
+  echo "3. Description: Personalized HAL8000-Assistant-based system"
   echo "4. Choose Public or Private"
   echo "5. Do NOT initialize with README (we already have one)"
   echo "6. Create repository"
@@ -496,7 +496,7 @@ else
 fi
 
 # Add upstream
-git remote add upstream https://github.com/anthropics/HAL8000.git 2>/dev/null || true
+git remote add upstream https://github.com/anthropics/HAL8000-Assistant.git 2>/dev/null || true
 git remote set-url --push upstream DISABLE
 ```
 
@@ -506,7 +506,7 @@ git remote set-url --push upstream DISABLE
 git remote remove origin 2>/dev/null || true
 
 # Add upstream as read-only
-git remote add upstream https://github.com/anthropics/HAL8000.git 2>/dev/null || true
+git remote add upstream https://github.com/anthropics/HAL8000-Assistant.git 2>/dev/null || true
 git remote set-url --push upstream DISABLE
 
 # Warn user
@@ -536,7 +536,7 @@ fi
 #### 3.5: Verify Git Isolation
 
 ```bash
-# Critical safety check: Ensure CANNOT push to HAL8000
+# Critical safety check: Ensure CANNOT push to HAL8000-Assistant
 ORIGIN_URL=$(git remote get-url origin 2>/dev/null || echo "NONE")
 UPSTREAM_PUSH=$(git remote get-url --push upstream 2>/dev/null || echo "NONE")
 
@@ -553,7 +553,7 @@ fi
 if [ "$UPSTREAM_PUSH" == "DISABLE" ] || [ "$UPSTREAM_PUSH" == "NONE" ]; then
   echo "✓ Upstream push disabled (safe)"
 else
-  ERROR: "Upstream push NOT disabled! You could accidentally push to HAL8000!"
+  ERROR: "Upstream push NOT disabled! You could accidentally push to HAL8000-Assistant!"
   echo "  Run: git remote set-url --push upstream DISABLE"
 fi
 ```
@@ -563,7 +563,7 @@ fi
 ✓ Phase 3 Complete: Git Isolation and Reconnection
   - Rebrand changes committed
   - Git remote reconfigured: origin → ${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}
-  - Upstream (HAL8000) push-disabled: SAFE
+  - Upstream (HAL8000-Assistant) push-disabled: SAFE
   - Changes pushed to new repository: [success | manual required]
 ```
 
@@ -733,10 +733,10 @@ fi
 
 ```
 ════════════════════════════════════════════════════════════════
-  HAL8000 Fork and Rebrand Complete
+  HAL8000-Assistant Fork and Rebrand Complete
 ════════════════════════════════════════════════════════════════
 
-Original System:  HAL8000
+Original System:  HAL8000-Assistant
 New System:       ${NEW_NAME}
 GitHub Repository: https://github.com/${NEW_GITHUB_USER}/${NEW_GITHUB_REPO}
 Migration Date:   $(date)
@@ -784,13 +784,13 @@ Success Criteria:
    - Add project data to data/projects/
 
 5. Optional: Update GitHub Settings:
-   - Add description: "Personalized HAL8000-based system"
+   - Add description: "Personalized HAL8000-Assistant-based system"
    - Add topics: claude-code, ai-architecture, hal8000, fork
    - Configure branch protection
    - Add collaborators
 
 6. Optional: Set Upstream Sync Strategy:
-   - To pull HAL8000 updates: git fetch upstream && git merge upstream/main
+   - To pull HAL8000-Assistant updates: git fetch upstream && git merge upstream/main
    - To work independently: git remote remove upstream
    - See: data/architecture/fork-and-rebrand-protocol.md
 
@@ -828,15 +828,15 @@ Command complete. System is now ${NEW_NAME}.
 /HAL-fork-rebrand
 
 ════════════════════════════════════════════════════════════════
-  HAL8000 Fork and Rebrand
+  HAL8000-Assistant Fork and Rebrand
 ════════════════════════════════════════════════════════════════
 
 [User prompts via AskUserQuestion]
 
 Confirmation:
-  OLD: HAL8000 → NEW: MySystemName
-  Path: /mnt/d/~HAL8000 → /mnt/d/~MySystemName
-  GitHub: anthropics/HAL8000 → myuser/MySystemName
+  OLD: HAL8000-Assistant → NEW: MySystemName
+  Path: /mnt/d/~HAL8000-Assistant → /mnt/d/~MySystemName
+  GitHub: anthropics/HAL8000-Assistant → myuser/MySystemName
 
 Proceed? yes
 
@@ -869,7 +869,7 @@ Phase 4: Verification
   ✓ Verification score: 8/8
 
 ════════════════════════════════════════════════════════════════
-  HAL8000 Fork and Rebrand Complete
+  HAL8000-Assistant Fork and Rebrand Complete
 ════════════════════════════════════════════════════════════════
 [Detailed completion report as shown in Phase 5]
 ════════════════════════════════════════════════════════════════
@@ -892,7 +892,7 @@ Current System Identity:
 Migration Record:
   ✓ Found in state.json
   Date: 2025-11-09T14:30:00-08:00
-  From: HAL8000
+  From: HAL8000-Assistant
   To: MySystemName
   Type: fork-and-rebrand
   Command: HAL-fork-rebrand v1.0
@@ -922,7 +922,7 @@ Verification Score: 8/8
 
 - **Detection:** git not installed, not in git repository, CLAUDE.md not found
 - **Action:** Abort before making any changes
-- **User message:** `"Error: Prerequisites not met. Ensure you're in HAL8000 root directory with git installed."`
+- **User message:** `"Error: Prerequisites not met. Ensure you're in HAL8000-Assistant root directory with git installed."`
 - **Recovery:** None (command hasn't modified anything)
 - **User action:** Install git, navigate to correct directory, try again
 
@@ -991,7 +991,7 @@ Phase 4 error (verification) → Report but complete (user fixes manually)
 
 ### Example 1: Complete Interactive Rebrand
 
-**Scenario:** User has forked HAL8000 to their GitHub account and wants to rebrand
+**Scenario:** User has forked HAL8000-Assistant to their GitHub account and wants to rebrand
 
 **Command:**
 ```bash
@@ -999,7 +999,7 @@ Phase 4 error (verification) → Report but complete (user fixes manually)
 ```
 
 **What happens:**
-1. System detects HAL8000 identity from CLAUDE.md
+1. System detects HAL8000-Assistant identity from CLAUDE.md
 2. Prompts user for:
    - New name: "MyProjectAI"
    - GitHub username: "johndoe"
@@ -1019,9 +1019,9 @@ Phase 4 error (verification) → Report but complete (user fixes manually)
 
 **Output:**
 ```
-✅ HAL8000 Fork and Rebrand Complete
+✅ HAL8000-Assistant Fork and Rebrand Complete
 
-Original System:  HAL8000
+Original System:  HAL8000-Assistant
 New System:       MyProjectAI
 GitHub Repository: https://github.com/johndoe/MyProjectAI
 
@@ -1071,7 +1071,7 @@ Current System Identity:
 Migration Record:
   ✓ Found in state.json
   Date: 2025-11-09T14:30:00-08:00
-  From: HAL8000
+  From: HAL8000-Assistant
   To: MyProjectAI
 
 Verification Score: 8/8
@@ -1106,7 +1106,7 @@ Verification Score: 8/8
    GitHub CLI (gh) not found. Please create repository manually:
    1. Go to https://github.com/new
    2. Repository name: PersonalClaude
-   3. Description: Personalized HAL8000-based system
+   3. Description: Personalized HAL8000-Assistant-based system
    4. Choose Public or Private
    5. Do NOT initialize with README
    6. Create repository
@@ -1217,7 +1217,7 @@ None (executes directly without delegation)
   - Git origin points to user's fork
   - Zero old references in active files
 - Validation:
-  - `grep -r "HAL8000" . --exclude-dir=".claude/sessions" | wc -l` returns 0
+  - `grep -r "HAL8000-Assistant" . --exclude-dir=".claude/sessions" | wc -l` returns 0
   - `cat .claude/state.json | jq .migration.to` returns "TestSystem"
   - `git remote get-url origin` contains user's repository
 
@@ -1306,7 +1306,7 @@ None (executes directly without delegation)
    - Trade-off: Less granular error reporting per file
 
 4. **Git Safety (Upstream Push-Disable):**
-   - Rationale: CRITICAL to prevent accidental HAL8000 commits
+   - Rationale: CRITICAL to prevent accidental HAL8000-Assistant commits
    - Upstream remote kept for pulling updates
    - Push explicitly disabled with DISABLE marker
    - This is the most important safety feature
@@ -1368,7 +1368,7 @@ None (executes directly without delegation)
    - Track which is which
 
 5. **Upstream Sync Command:**
-   - `/HAL-sync-upstream` to pull HAL8000 updates
+   - `/HAL-sync-upstream` to pull HAL8000-Assistant updates
    - Handle merge conflicts intelligently
    - Preserve customizations
 
@@ -1383,7 +1383,7 @@ None (executes directly without delegation)
 **Maintenance:**
 
 - Update command when fork-and-rebrand-protocol.md changes
-- Test with each HAL8000 version release
+- Test with each HAL8000-Assistant version release
 - Verify compatibility with new system components
 - Update if file structure changes
 
@@ -1408,7 +1408,7 @@ None (executes directly without delegation)
   - Git safety features (upstream push-disable)
   - Verify mode for status checking
 
-**Maintainer:** HAL8000 System
+**Maintainer:** HAL8000-Assistant System
 **Last Updated:** 2025-11-09
 **Status:** Production
 **Criticality:** High (modifies core system files and git configuration)
@@ -1423,4 +1423,4 @@ None (executes directly without delegation)
 
 **Template Version:** 1.0
 **Template Level:** 3 - Control Flow (with Level 7 production enhancements)
-**Usage:** Interactive fork and rebrand automation for HAL8000 clones
+**Usage:** Interactive fork and rebrand automation for HAL8000-Assistant clones

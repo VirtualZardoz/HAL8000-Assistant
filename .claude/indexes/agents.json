@@ -7,7 +7,7 @@
       "type": "agent",
       "category": "validation",
       "topics": ["compatibility", "claude-code", "external-validation", "deprecation"],
-      "summary": "Validates HAL8000 commands and agents against external Claude Code documentation to detect deprecated tools, API changes, and compatibility issues.",
+      "summary": "Validates HAL8000-Assistant commands and agents against external Claude Code documentation to detect deprecated tools, API changes, and compatibility issues.",
       "size_estimate_tokens": 1317
     },
     ".claude/agents/command-builder.md": {
@@ -21,14 +21,14 @@
       "type": "agent",
       "category": "documentation",
       "topics": ["documentation", "writing", "formatting", "professional"],
-      "summary": "Professional documentation writer for HAL8000 system with expertise in technical writing and formatting.",
+      "summary": "Professional documentation writer for HAL8000-Assistant system with expertise in technical writing and formatting.",
       "size_estimate_tokens": 3318
     },
     ".claude/agents/hal-context-finder.md": {
       "type": "agent",
       "category": "context-discovery",
       "topics": ["context-loading", "file-discovery", "RAM-optimization", "navigation"],
-      "summary": "Discovers and loads specific context from HAL8000 system without consuming main session RAM (saves 60-85%).",
+      "summary": "Discovers and loads specific context from HAL8000-Assistant system without consuming main session RAM (saves 60-85%).",
       "size_estimate_tokens": 2100
     },
     ".claude/agents/research-synthesizer.md": {
@@ -42,7 +42,7 @@
       "type": "agent",
       "category": "system-health",
       "topics": ["health-check", "integrity-audit", "compliance", "validation"],
-      "summary": "Audits HAL8000 system for structural integrity, principle compliance, and operational health.",
+      "summary": "Audits HAL8000-Assistant system for structural integrity, principle compliance, and operational health.",
       "size_estimate_tokens": 1835
     }
   },

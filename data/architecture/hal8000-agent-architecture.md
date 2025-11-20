@@ -1,4 +1,4 @@
-# HAL8000 Agent Architecture
+# HAL8000-Assistant Agent Architecture
 
 **Document Type:** Architecture Specification
 **Component:** Agent System (Co-Processors)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-Agents in the HAL8000 system are **co-processors** - independent computational units with their own CPU and isolated RAM. They extend the system's effective memory capacity and processing capabilities through task delegation and parallel execution.
+Agents in the HAL8000-Assistant system are **co-processors** - independent computational units with their own CPU and isolated RAM. They extend the system's effective memory capacity and processing capabilities through task delegation and parallel execution.
 
 Agents solve the fundamental problem: **How to perform context-heavy work without consuming limited main session RAM.**
 
@@ -53,7 +53,7 @@ Result: One research task consumes most RAM
 - Returns only final results to main CPU
 - Main CPU never sees intermediate state
 
-**HAL8000 agents follow the same model:**
+**HAL8000-Assistant agents follow the same model:**
 ```
 Main CPU (Claude instance)
    ↓ delegate task
@@ -74,7 +74,7 @@ Main CPU
 
 **Hardware analogy:**
 
-| Hardware Component | HAL8000 Equivalent | Key Characteristic |
+| Hardware Component | HAL8000-Assistant Equivalent | Key Characteristic |
 |-------------------|-------------------|-------------------|
 | Main CPU | Main Claude instance | Primary processing, 200K RAM |
 | GPU | research-synthesizer agent | Specialized for web research |
@@ -85,7 +85,7 @@ Main CPU
 **Motherboard view:**
 ```
 ┌─────────────────────────────────────────────────────┐
-│                   HAL8000 Motherboard               │
+│                   HAL8000-Assistant Motherboard               │
 │                                                     │
 │  ┌──────────────┐        ┌───────────────────┐   │
 │  │  Main CPU    │        │  Co-Processor 1   │   │
@@ -311,7 +311,7 @@ Main RAM impact: +15K (includes full content)
 
 ### claude-code-validator
 
-**Purpose:** Validate HAL8000 commands against Claude Code documentation
+**Purpose:** Validate HAL8000-Assistant commands against Claude Code documentation
 
 **Tools:**
 - WebFetch (Claude Code docs)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HAL8000 Image Generation Tool
+HAL8000-Assistant Image Generation Tool
 
 Generates AI images via Dockerized Stable Diffusion.
 Architecture mirrors HAL-generate-diagram.py (proven pattern).
@@ -55,7 +55,7 @@ def generate_image(
     output_filename = output_path.name
 
     # Model cache on D: drive (hybrid approach)
-    model_cache = Path('/mnt/d/~HAL8000/.docker-cache/models')
+    model_cache = Path('/mnt/d/~HAL8000-Assistant/.docker-cache/models')
     model_cache.mkdir(parents=True, exist_ok=True)
 
     # Ensure output directory exists
@@ -113,7 +113,7 @@ def generate_image(
 
 def main():
     parser = argparse.ArgumentParser(
-        description='HAL8000 AI Image Generation Tool',
+        description='HAL8000-Assistant AI Image Generation Tool',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -138,7 +138,7 @@ Models:
 
 Notes:
   - First run downloads model (~6.5GB SDXL, ~4GB SD1.5)
-  - Models cached in /mnt/d/~HAL8000/.docker-cache/models/
+  - Models cached in /mnt/d/~HAL8000-Assistant/.docker-cache/models/
   - Subsequent runs use cached models (much faster)
   - Requires Docker with GPU support (nvidia-docker)
   - Container runs isolated, no host pollution

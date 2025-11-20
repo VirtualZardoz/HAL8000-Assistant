@@ -1,4 +1,14 @@
-# HAL8000 Changelog
+# Changelog
+
+## [1.0.0-HAL8000-Assistant] - 2025-01-20
+
+### Changed
+- Forked from HAL8000 and rebranded to HAL8000-Assistant
+- Updated all system references and paths
+- Reconfigured git remote to new repository
+- System now independent from original HAL8000
+- Migration executed via /HAL-fork-rebrand command
+
 
 All notable changes to the HAL8000 system will be documented in this file.
 

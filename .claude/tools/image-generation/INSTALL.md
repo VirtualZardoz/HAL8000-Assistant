@@ -19,7 +19,7 @@ Models download automatically on first use:
 - **SDXL**: ~6.5GB (best quality)
 - **SD1.5**: ~4GB (faster)
 
-Cached in: /mnt/d/~HAL8000/.docker-cache/models/checkpoints/
+Cached in: /mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/
 
 ## GPU Requirements
 

@@ -1,4 +1,4 @@
-# HAL8000 Architecture Principles - Quick Reference
+# HAL8000-Assistant Architecture Principles - Quick Reference
 
 This document provides quick-lookup principles for the architecture-consultant Skill.
 
@@ -10,7 +10,7 @@ This document provides quick-lookup principles for the architecture-consultant S
 - **Self-Modifying**: Commands can create/modify other commands
 - **Sequential Processing**: Fetch-decode-execute cycle
 
-### HAL8000-Specific Adaptations
+### HAL8000-Assistant-Specific Adaptations
 - **Append-Only RAM**: Context window accumulates, no eviction
 - **Session Boundaries**: Only way to garbage-collect RAM
 - **Selective Loading**: Permanent commitment on file read
@@ -34,7 +34,7 @@ This document provides quick-lookup principles for the architecture-consultant S
 5. **Simple, not complex** - Max 3-level depth
 6. **Text streams** - Plain text, human-readable
 
-### HAL8000 Structural Rules
+### HAL8000-Assistant Structural Rules
 - **Max depth: 3 levels** (except `.claude/libraries/external/`)
 - **One purpose per file/component**
 - **Plain text formats** (Markdown, JSON, text)
@@ -59,7 +59,7 @@ This document provides quick-lookup principles for the architecture-consultant S
 4. **One-to-One Mapping** - Command = operation
 5. **Low-Level Visibility** - Inspectable state
 
-### HAL8000 Mappings
+### HAL8000-Assistant Mappings
 - **Registers**: CPU state tracking (see /HAL-register-dump)
 - **Instructions**: HAL-Script commands
 - **Fetch-Decode-Execute**: Command interpretation cycle
@@ -77,7 +77,7 @@ This document provides quick-lookup principles for the architecture-consultant S
 
 ### ✅ Compliant (≤3 levels)
 ```
-/mnt/d/~HAL8000/                    # Level 0 (root)
+/mnt/d/~HAL8000-Assistant/                    # Level 0 (root)
 ├── .claude/                        # Level 1
 │   ├── commands/                   # Level 2
 │   │   └── system/                 # Level 3 ✓

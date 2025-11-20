@@ -1,6 +1,6 @@
 ---
 name: HAL-refman
-description: Manage HAL8000 Reference Manual development across multiple sessions with intelligent context loading
+description: Manage HAL8000-Assistant Reference Manual development across multiple sessions with intelligent context loading
 parameters:
   - name: command
     description: Command to execute (section-id, next, status, export, diagrams, complete)
@@ -14,7 +14,7 @@ parameters:
 
 # HAL-refman Command
 
-**Purpose:** Manage HAL8000 Reference Manual development across multiple sessions with intelligent context loading.
+**Purpose:** Manage HAL8000-Assistant Reference Manual development across multiple sessions with intelligent context loading.
 
 **Usage:**
 ```bash
@@ -40,7 +40,7 @@ When invoked without arguments or with "status":
 
 **Output Format:**
 ```
-📖 HAL8000 Reference Manual - Development Status
+📖 HAL8000-Assistant Reference Manual - Development Status
 
 Progress:
 ├─ Total Sections: [N]
@@ -77,7 +77,7 @@ When invoked with a section ID:
 5. Extract hidden writing guidelines from `.meta-guidance` div
 6. **Launch documentation-writer sub-agent** via Task tool with prompt:
    ```
-   Write [doc_type] documentation for HAL8000 Reference Manual.
+   Write [doc_type] documentation for HAL8000-Assistant Reference Manual.
 
    Section: [section-title]
    Section ID: [section-id]
@@ -175,12 +175,12 @@ When invoked with "export":
    - Strip all `data-*` attributes
    - Remove all `.meta-guidance` divs
    - Validate all internal links
-   - Generate `data/reference-manual/HAL8000-Reference-Manual-v[version].html`
+   - Generate `data/reference-manual/HAL8000-Assistant-Reference-Manual-v[version].html`
    - Update state.json: `reference_manual.status = "complete"`
 
 **Output Format:**
 ```
-📦 Exporting HAL8000 Reference Manual
+📦 Exporting HAL8000-Assistant Reference Manual
 
 Validation:
 ├─ All sections complete: ✅
@@ -188,7 +188,7 @@ Validation:
 ├─ Diagrams integrated: [N/N] ✅
 └─ Metadata stripped: ✅
 
-Generated: data/reference-manual/HAL8000-Reference-Manual-v1.0.0.html
+Generated: data/reference-manual/HAL8000-Assistant-Reference-Manual-v1.0.0.html
 Size: [X]KB
 
 🎉 Reference manual export complete!

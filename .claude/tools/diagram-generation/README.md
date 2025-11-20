@@ -1,4 +1,4 @@
-# HAL8000 Diagram Generation Tool
+# HAL8000-Assistant Diagram Generation Tool
 
 ## Overview
 
@@ -8,7 +8,7 @@ Professional workflow diagram generation using Mermaid CLI running in Docker con
 
 **Container as I/O Device Pattern:**
 - Docker container = isolated rendering environment
-- Python script = device driver (interfaces between HAL8000 and container)
+- Python script = device driver (interfaces between HAL8000-Assistant and container)
 - Volume mounts = data bus (file exchange)
 - No host dependencies beyond Docker
 
@@ -70,7 +70,7 @@ python3 .claude/tools/diagram-generation/HAL-generate-diagram.py process-flow "H
 
 ### Generated Files
 
-- **Diagrams**: `/mnt/d/~HAL8000/data/diagrams/` - Final PNG/SVG/PDF files
+- **Diagrams**: `/mnt/d/~HAL8000-Assistant/data/diagrams/` - Final PNG/SVG/PDF files
 - **Source**: `.claude/tools/diagram-generation/temp/` - Reusable .mmd templates
 
 ### File Naming
@@ -139,7 +139,7 @@ Located in `templates/` directory:
 
 ## Architecture Integration
 
-**HAL8000 Principles:**
+**HAL8000-Assistant Principles:**
 
 ✅ **Unix Philosophy**
 - Do one thing well: Render diagrams
@@ -192,7 +192,7 @@ cd .claude/tools/diagram-generation
 
 ```bash
 # Remove old diagrams
-rm /mnt/d/~HAL8000/data/diagrams/*.png
+rm /mnt/d/~HAL8000-Assistant/data/diagrams/*.png
 
 # Remove temp files (or wait for auto-cleanup after 7 days)
 rm .claude/tools/diagram-generation/temp/*.mmd
@@ -225,12 +225,12 @@ docker rmi hal8000-mermaid:latest
 - PlantUML support for BPMN 2.0 compliance
 - Batch diagram generation
 - Custom styling and themes
-- Integration with HAL8000 system architecture diagrams
+- Integration with HAL8000-Assistant system architecture diagrams
 - Direct .mmd file editing workflow
 
 ---
 
-**Version**: 1.0.0-HAL8000
+**Version**: 1.0.0-HAL8000-Assistant
 **Ported from**: HAL 7000 Personal Assistant
 **Integration date**: 2025-10-13
 **Status**: Production Ready

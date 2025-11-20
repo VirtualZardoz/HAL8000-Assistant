@@ -26,7 +26,7 @@ import json
 from datetime import datetime, timedelta
 
 # HAL System Paths
-HAL_ROOT = Path("/mnt/d/~HAL8000")
+HAL_ROOT = Path("/mnt/d/~HAL8000-Assistant")
 TOOLS_DIR = HAL_ROOT / ".claude" / "tools" / "diagram-generation"
 TEMPLATES_DIR = TOOLS_DIR / "templates"
 OUTPUT_DIR = HAL_ROOT / "data" / "diagrams"

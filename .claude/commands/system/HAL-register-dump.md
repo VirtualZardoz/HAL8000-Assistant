@@ -13,7 +13,7 @@ description: Display current CPU register state for system introspection
 
 ## Description
 
-Dumps the current state of all HAL8000 CPU registers, providing a snapshot of the system's immediate working memory. This command allows inspection of the CPU's internal state without modifying it.
+Dumps the current state of all HAL8000-Assistant CPU registers, providing a snapshot of the system's immediate working memory. This command allows inspection of the CPU's internal state without modifying it.
 
 Registers are virtual - they represent actual runtime state scattered across the system. This command aggregates and formats that state for human-readable output.
 
@@ -54,7 +54,7 @@ When executed, the CPU will:
 
 ```
 ================================================================================
-                        HAL8000 REGISTER DUMP
+                        HAL8000-Assistant REGISTER DUMP
 ================================================================================
 Timestamp: 2025-10-04T15:30:45Z
 Model: claude-sonnet-4-5-20250929
@@ -102,7 +102,7 @@ Model: claude-sonnet-4-5-20250929
 [DATA REGISTERS]
   ACC (Accumulator)           : Executing register dump
   VARS (Session Variables)    : 4 variables
-    - current_project         : HAL8000 architecture
+    - current_project         : HAL8000-Assistant architecture
     - architecture_type       : Modified von Neumann
     - depth_limit             : 3
     - phase                   : register-architecture-complete
@@ -265,7 +265,7 @@ Total: 5 files, ~58K tokens
 
 This command implements the **introspection capability** fundamental to assembly-level programming. In traditional assembly, developers can inspect CPU registers directly (e.g., `REGISTER DUMP` or debugger commands).
 
-HAL8000 provides the same capability for the virtual CPU, enabling:
+HAL8000-Assistant provides the same capability for the virtual CPU, enabling:
 - System state visibility
 - Debugging support
 - Educational understanding

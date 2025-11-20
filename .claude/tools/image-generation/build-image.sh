@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build HAL8000 Image Generation Docker Image
+# Build HAL8000-Assistant Image Generation Docker Image
 # Similar to diagram-generation/build-image.sh
 
 set -e  # Exit on error
@@ -8,7 +8,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 echo "=================================================="
-echo "HAL8000 Image Generation System - Build Script"
+echo "HAL8000-Assistant Image Generation System - Build Script"
 echo "=================================================="
 echo ""
 
@@ -34,7 +34,7 @@ if ! docker run --rm --gpus all nvidia/cuda:12.1.0-base-ubuntu22.04 nvidia-smi &
 fi
 
 # Create model cache directory
-MODEL_CACHE="/mnt/d/~HAL8000/.docker-cache/models"
+MODEL_CACHE="/mnt/d/~HAL8000-Assistant/.docker-cache/models"
 echo "Creating model cache directory: $MODEL_CACHE"
 mkdir -p "$MODEL_CACHE"
 mkdir -p "$MODEL_CACHE/checkpoints"
@@ -42,7 +42,7 @@ mkdir -p "$MODEL_CACHE/vae"
 mkdir -p "$MODEL_CACHE/clip"
 
 # Create output directory
-OUTPUT_DIR="/mnt/d/~HAL8000/data/images"
+OUTPUT_DIR="/mnt/d/~HAL8000-Assistant/data/images"
 echo "Creating output directory: $OUTPUT_DIR"
 mkdir -p "$OUTPUT_DIR"
 

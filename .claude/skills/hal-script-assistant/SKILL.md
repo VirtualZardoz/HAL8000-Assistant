@@ -1,16 +1,16 @@
 ---
 name: HAL-Script Assistant
-description: Help write HAL-Script commands and agents for HAL8000. Use when creating new commands, editing existing commands, writing agent prompts, or when user asks about HAL-Script syntax, command structure, or template selection. Activate on questions about command creation, HAL-Script programming, or template usage.
+description: Help write HAL-Script commands and agents for HAL8000-Assistant. Use when creating new commands, editing existing commands, writing agent prompts, or when user asks about HAL-Script syntax, command structure, or template selection. Activate on questions about command creation, HAL-Script programming, or template usage.
 allowed-tools: Read, Write, Edit, Glob
 ---
 
 # HAL-Script Assistant
 
-This Skill assists with writing HAL-Script (HAL8000's natural language programming language) for commands, agents, and Skills.
+This Skill assists with writing HAL-Script (HAL8000-Assistant's natural language programming language) for commands, agents, and Skills.
 
 ## Purpose
 
-Guide users in creating well-structured, architecturally-sound HAL-Script programs using the template system and HAL8000 conventions.
+Guide users in creating well-structured, architecturally-sound HAL-Script programs using the template system and HAL8000-Assistant conventions.
 
 ## When to Activate
 
@@ -312,7 +312,7 @@ Check against principles:
 ```yaml
 ---
 name: Version Display
-description: Display HAL8000 system version
+description: Display HAL8000-Assistant system version
 allowed-tools:
   - Read
 ---
@@ -320,11 +320,11 @@ allowed-tools:
 # Version Display
 
 ## Purpose
-Display current HAL8000 system version from VERSION file.
+Display current HAL8000-Assistant system version from VERSION file.
 
 ## Instructions
-1. Read /mnt/d/~HAL8000/VERSION file
-2. Display version to user in format: "HAL8000 v[X.Y.Z]"
+1. Read /mnt/d/~HAL8000-Assistant/VERSION file
+2. Display version to user in format: "HAL8000-Assistant v[X.Y.Z]"
 
 ## Error Handling
 IF VERSION file not found:
@@ -462,7 +462,7 @@ IF agent fails:
    - Add explicit control flow (IF/ELSE)
    - Include error handling for edge cases
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
 **Works with:**
 - command-builder agent (automates creation)

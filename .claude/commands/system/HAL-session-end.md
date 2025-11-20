@@ -56,7 +56,7 @@ This command implements the session continuity protocol by capturing the current
 # Generate timestamp ONCE (single source of truth)
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 DATE_PREFIX=$(date -u +"%Y-%m-%d-%H%M")
-SESSION_FILE="/mnt/d/~HAL8000/.claude/sessions/${DATE_PREFIX}-${DESCRIPTION}.md"
+SESSION_FILE="/mnt/d/~HAL8000-Assistant/.claude/sessions/${DATE_PREFIX}-${DESCRIPTION}.md"
 
 # Store these values - they MUST NOT change during this command execution
 # TIMESTAMP = for state.json timestamp field
@@ -77,7 +77,7 @@ date -u +"%Y-%m-%dT%H:%M:%SZ"  # Different time! Used for state.json
 ```bash
 # RIGHT: Single timestamp generation, reused everywhere
 TIMESTAMP="2025-10-15T12:30:45Z"  # Generated ONCE
-SESSION_FILE="/mnt/d/~HAL8000/.claude/sessions/2025-10-15-1230-description.md"  # ABSOLUTE path
+SESSION_FILE="/mnt/d/~HAL8000-Assistant/.claude/sessions/2025-10-15-1230-description.md"  # ABSOLUTE path
 # ... later in execution ...
 # Use $TIMESTAMP and $SESSION_FILE variables (same values)
 ```
@@ -133,7 +133,7 @@ INDEXES_COUNT=$(ls .claude/indexes/*.json 2>/dev/null | grep -v master.json | wc
 
 ```bash
 # Define expected system directory (absolute path)
-EXPECTED_DIR="/mnt/d/~HAL8000/.claude/sessions"
+EXPECTED_DIR="/mnt/d/~HAL8000-Assistant/.claude/sessions"
 
 # Verify session file was created successfully
 if [ ! -f "$SESSION_FILE" ]; then
@@ -297,7 +297,7 @@ When resuming this session:
 
 ## Architecture Alignment
 
-This command implements the HAL8000 architecture principles:
+This command implements the HAL8000-Assistant architecture principles:
 
 **Von Neumann:**
 - Session files are stored-program concept (state as data)

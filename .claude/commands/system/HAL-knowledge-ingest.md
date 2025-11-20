@@ -33,7 +33,7 @@ model: claude-sonnet-4-5
 
 ## Purpose
 
-Intelligently ingest random knowledge and dispatch it to the appropriate location in the HAL8000 codebase with consistent formatting and organization.
+Intelligently ingest random knowledge and dispatch it to the appropriate location in the HAL8000-Assistant codebase with consistent formatting and organization.
 
 **Problem Solved:**
 - No manual decision about where to file knowledge

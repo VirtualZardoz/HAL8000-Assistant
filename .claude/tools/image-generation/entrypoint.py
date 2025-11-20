@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HAL8000 Image Generation Container Entrypoint
+HAL8000-Assistant Image Generation Container Entrypoint
 
 Handles model downloading, ComfyUI server management, and image generation.
 """
@@ -245,7 +245,7 @@ def add_text_overlay(image_path, text, position='south', fontsize=72, color='whi
     log(f"Text overlay applied: '{text}'")
 
 def main():
-    parser = argparse.ArgumentParser(description='HAL8000 Image Generation Container')
+    parser = argparse.ArgumentParser(description='HAL8000-Assistant Image Generation Container')
     parser.add_argument('--prompt', required=True, help='Image generation prompt')
     parser.add_argument('--model', default='sdxl', choices=['sdxl', 'sd15'],
                         help='Model to use')

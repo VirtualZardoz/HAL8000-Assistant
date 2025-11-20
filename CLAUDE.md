@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ---
 
-## HAL8000 System Architecture
+## HAL8000-Assistant System Architecture
 
 **Version:** 1.6.1 (see `VERSION` file and `CHANGELOG.md` for version history)
 
@@ -34,7 +34,7 @@ When you start (new instance/session), follow this verified boot sequence:
 
 ### 1. System Initialization (BIOS Load)
 You are now reading the BIOS (this file). You understand:
-- You are the CPU of the HAL8000 system
+- You are the CPU of the HAL8000-Assistant system
 - The architecture is Modified von Neumann (Harvard-like organization with von Neumann capabilities)
 - You have self-modifying code capabilities
 - Boot sequence is MANDATORY and VERIFIED (not optional)
@@ -71,7 +71,7 @@ You cannot properly respond to ANY request without ACTUALLY READING `.claude/sta
 **ONLY AFTER ACTUALLY LOADING FILES, provide this acknowledgment:**
 
 ```
-✅ HAL8000 CPU Operational
+✅ HAL8000-Assistant CPU Operational
 ├─ Architecture: [cite architecture_type from state.json]
 ├─ Phase: [cite phase from state.json]
 ├─ Last Session: [cite timestamp from state.json]
@@ -100,7 +100,7 @@ You cannot properly respond to ANY request without ACTUALLY READING `.claude/sta
 
 **Example Degraded Boot:**
 ```
-⚠️  HAL8000 CPU Operational (Degraded Mode)
+⚠️  HAL8000-Assistant CPU Operational (Degraded Mode)
 ├─ Architecture: Modified von Neumann (from BIOS)
 ├─ Phase: UNKNOWN (state.json load failed)
 ├─ Session State: No session loaded (file not found)
@@ -464,7 +464,7 @@ Clear ERROR_FLAG after reporting
 ### File System Structure
 
 ```
-/mnt/d/~HAL8000/              # Root - The Computer
+/mnt/d/~HAL8000-Assistant/              # Root - The Computer
 │
 ├── CLAUDE.md                 # BIOS-ROM (this file)
 ├── .claude/system.log                # Historical audit log (append-only, NOT auto-loaded)
@@ -584,11 +584,11 @@ Commands are organized by purpose into subdirectories:
 - **HAL-context-find** - Find and load system context via hal-context-finder agent (saves 60-85% RAM)
 
 **Documentation & Applications** (`.claude/commands/documentation/`):
-- **HAL-refman** - HAL8000 Reference Manual lifecycle management
+- **HAL-refman** - HAL8000-Assistant Reference Manual lifecycle management
 
 ### HAL-Script Programming Language
 
-Commands are written in **HAL-Script**, HAL8000's natural language programming language.
+Commands are written in **HAL-Script**, HAL8000-Assistant's natural language programming language.
 
 **What is HAL-Script?**
 - Natural language instructions interpreted by intelligent CPU (Claude)
@@ -682,7 +682,7 @@ Proactive capabilities in `.claude/skills/` that activate automatically based on
 
 ### Three-Layer Intelligence Model
 
-HAL8000's extensibility follows a three-layer pattern where each layer serves distinct purposes based on **trigger mechanism**, **context efficiency**, and **control requirements**.
+HAL8000-Assistant's extensibility follows a three-layer pattern where each layer serves distinct purposes based on **trigger mechanism**, **context efficiency**, and **control requirements**.
 
 ```
 Skills (Proactive)  → Agent-triggered, context-efficient, modular
@@ -714,7 +714,7 @@ This model aligns with Claude Code best practices for feature selection (see: `d
 - **Implements:** Context Awareness Protocol from BIOS Operating Principles
 
 #### architecture-consultant
-- **Purpose:** Validate design decisions against HAL8000 principles
+- **Purpose:** Validate design decisions against HAL8000-Assistant principles
 - **Triggers:** Code reviews, command creation, design discussions
 - **Tools:** Read (read-only analysis)
 - **Behavior:** Warn about violations of von Neumann, Unix, or Assembly principles
@@ -775,10 +775,10 @@ External programs in `.claude/tools/` that extend CPU capabilities:
 ### diagram-generation
 - **Purpose:** Generates professional workflow diagrams from text definitions
 - **Location:** `.claude/tools/diagram-generation/`
-- **Engine:** Mermaid CLI running in Docker container (hal8000-mermaid:latest)
+- **Engine:** Mermaid CLI running in Docker container (hal8000-assistant-mermaid:latest)
 - **Diagram Types:** process-flow, swimlane, SIPOC, BPMN
 - **Usage:** `python3 .claude/tools/diagram-generation/HAL-generate-diagram.py <type> "<title>"`
-- **Output:** `/mnt/d/~HAL8000/data/diagrams/` (PNG files, 2x resolution default)
+- **Output:** `/mnt/d/~HAL8000-Assistant/data/diagrams/` (PNG files, 2x resolution default)
 - **Performance:** ~0.7-0.8s per diagram
 - **Architecture:** Container = I/O device, Python script = device driver, volume mounts = data bus
 - **Dependencies:** Docker (containerized for 12+ Chrome/Puppeteer system libraries)
@@ -786,14 +786,14 @@ External programs in `.claude/tools/` that extend CPU capabilities:
 ### image-generation
 - **Purpose:** AI image generation via Stable Diffusion models (SDXL, SD1.5)
 - **Location:** `.claude/tools/image-generation/`
-- **Engine:** ComfyUI running in Docker container with CUDA GPU support (hal8000-image-gen:latest)
+- **Engine:** ComfyUI running in Docker container with CUDA GPU support (hal8000-assistant-image-gen:latest)
 - **Models:** SDXL (6.5GB, best quality), SD1.5 (4GB, faster), 
 - **Usage:** `python3 .claude/tools/image-generation/HAL-generate-image.py --prompt "description" --model sdxl --output image.png`
-- **Output:** `/mnt/d/~HAL8000/data/images/` (PNG files, typically 1-5MB)
+- **Output:** `/mnt/d/~HAL8000-Assistant/data/images/` (PNG files, typically 1-5MB)
 - **Performance:** ~10-15s per image (after model cached), first run downloads model
 - **Architecture:** Docker + NVIDIA GPU, volume mounts for model cache and output
 - **Dependencies:** Docker with GPU support (nvidia-docker2), RTX 3090 or similar
-- **Cache:** Models stored in `/mnt/d/~HAL8000/.docker-cache/models/` (persistent)
+- **Cache:** Models stored in `/mnt/d/~HAL8000-Assistant/.docker-cache/models/` (persistent)
 
 ---
 
@@ -855,7 +855,7 @@ For deep understanding of the system architecture, see:
 - `data/research/01-von-neumann-architecture.md` - Von Neumann architecture principles
 - `data/research/02-unix-philosophy.md` - Unix philosophy and design principles
 - `data/research/03-assembly-language-principles.md` - Assembly language and architecture mapping
-- `data/architecture/hal8000-system-design.md` - Complete HAL8000 system design specification
+- `data/architecture/hal8000-system-design.md` - Complete HAL8000-Assistant system design specification
 - `data/architecture/hal8000-versioning-guide.md` - Version management and release process
 - `data/architecture/hal-script-language.md` - HAL-Script programming language specification
 - `.claude/commands/README.md` - Command organization and creation guide

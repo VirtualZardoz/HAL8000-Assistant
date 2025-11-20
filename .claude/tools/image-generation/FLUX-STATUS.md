@@ -4,7 +4,7 @@
 
 ## Investigation Summary
 
-FLUX.1-dev was investigated during October 2025 development but found to be incompatible with our HAL8000 setup:
+FLUX.1-dev was investigated during October 2025 development but found to be incompatible with our HAL8000-Assistant setup:
 
 - **Model Size**: 23GB (UNet + CLIP encoders + VAE)
 - **Performance**: Timeouts after 15 minutes with low GPU utilization (21%)

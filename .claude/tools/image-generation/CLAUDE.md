@@ -1,4 +1,4 @@
-# Image Generation Tool - HAL8000 Integration
+# Image Generation Tool - HAL8000-Assistant Integration
 
 **Category:** External Tool (Dockerized)
 **Purpose:** AI image generation via Stable Diffusion
@@ -7,7 +7,7 @@
 
 ---
 
-## Quick Reference for Claude (HAL8000 CPU)
+## Quick Reference for Claude (HAL8000-Assistant CPU)
 
 ### When to Use
 
@@ -106,9 +106,9 @@ python3 .claude/tools/image-generation/HAL-generate-image.py \
 
 ### File Locations
 
-**Generated Images**: `/mnt/d/~HAL8000/data/images/`
-**Model Cache**: `/mnt/d/~HAL8000/.docker-cache/models/`
-**Tool Directory**: `/mnt/d/~HAL8000/.claude/tools/image-generation/`
+**Generated Images**: `/mnt/d/~HAL8000-Assistant/data/images/`
+**Model Cache**: `/mnt/d/~HAL8000-Assistant/.docker-cache/models/`
+**Tool Directory**: `/mnt/d/~HAL8000-Assistant/.claude/tools/image-generation/`
 
 ### First-Time Setup
 
@@ -160,11 +160,11 @@ Return path to user
 - **Model cache**: ~6.5GB SDXL + 4GB SD1.5 (D: drive)
 - **Generated images**: ~2-5MB each (D: drive)
 
-### RAM Impact on HAL8000 Session
+### RAM Impact on HAL8000-Assistant Session
 
 **This tool has ZERO RAM impact!**
 - Runs in external Docker container
-- No context loaded into HAL8000 RAM
+- No context loaded into HAL8000-Assistant RAM
 - Only returns image path (minimal tokens)
 
 ### Comparison to Other Tools
@@ -203,12 +203,12 @@ Start (2s) → Load Model (3-5s) → Generate (3-8s) → Save → Exit (1s)
 HAL-generate-image.py
     ↓ mounts volumes
 Container sees:
-    /models → /mnt/d/~HAL8000/.docker-cache/models (persistent)
-    /output → /mnt/d/~HAL8000/data/images (persistent)
+    /models → /mnt/d/~HAL8000-Assistant/.docker-cache/models (persistent)
+    /output → /mnt/d/~HAL8000-Assistant/data/images (persistent)
     ↓
 Generated image saved to /output/filename.png
     ↓
-Maps back to: /mnt/d/~HAL8000/data/images/filename.png
+Maps back to: /mnt/d/~HAL8000-Assistant/data/images/filename.png
 ```
 
 ---

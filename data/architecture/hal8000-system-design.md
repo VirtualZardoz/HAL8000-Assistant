@@ -1,4 +1,4 @@
-# HAL8000 System Architecture Design
+# HAL8000-Assistant System Architecture Design
 
 **Design Date:** 2025-10-04
 **Completion Date:** 2025-10-04
@@ -31,7 +31,7 @@
 
 ## Overview
 
-HAL8000 is a system architecture that maps von Neumann architecture principles, assembly language concepts, and Unix philosophy to a Claude Code environment. The system treats the codebase as a computer, with Claude as the CPU.
+HAL8000-Assistant is a system architecture that maps von Neumann architecture principles, assembly language concepts, and Unix philosophy to a Claude Code environment. The system treats the codebase as a computer, with Claude as the CPU.
 
 ---
 
@@ -39,7 +39,7 @@ HAL8000 is a system architecture that maps von Neumann architecture principles, 
 
 ### Von Neumann Components
 
-| Component | HAL8000 Mapping | Location | Description |
+| Component | HAL8000-Assistant Mapping | Location | Description |
 |-----------|-----------------|----------|-------------|
 | **CPU** | Claude instance | N/A | Processing unit - fetches, decodes, executes instructions |
 | **Control Unit** | Claude orchestration | N/A | Decision-making and coordination |
@@ -68,7 +68,7 @@ This is a **Modified von Neumann** architecture:
 ## File System Structure
 
 ```
-/mnt/d/~HAL8000/                    # Root - the computer
+/mnt/d/~HAL8000-Assistant/                    # Root - the computer
 │
 ├── CLAUDE.md                       # BIOS-ROM: Boot instructions, system architecture
 │

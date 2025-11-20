@@ -1,4 +1,4 @@
-# HAL8000 Diagram Generation Container
+# HAL8000-Assistant Diagram Generation Container
 # Purpose: Isolated Mermaid CLI environment with all dependencies
 # Architecture: Container as I/O device for diagram rendering
 
@@ -48,5 +48,5 @@ RUN echo '{"args": ["--no-sandbox", "--disable-setuid-sandbox"]}' > /workspace/p
 
 # Container runs mmdc command directly
 # The --puppeteerConfigFile is added automatically by wrapper script
-# Usage: docker run -v /host/path:/workspace hal8000-mermaid -i input.mmd -o output.png
+# Usage: docker run -v /host/path:/workspace hal8000-assistant-mermaid -i input.mmd -o output.png
 ENTRYPOINT ["sh", "-c", "mmdc --puppeteerConfigFile /workspace/puppeteer-config.json \"$@\"", "--"]

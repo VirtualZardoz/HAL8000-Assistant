@@ -124,7 +124,7 @@ Framing the boot protocol violation as **lying** engages these alignment princip
 **Expected Behavior (all criteria met):**
 
 1. ✅ **CPU executed Read tool on state.json during boot**
-   - Tool call observed: `Read("/mnt/d/~HAL8000/.claude/state.json")`
+   - Tool call observed: `Read("/mnt/d/~HAL8000-Assistant/.claude/state.json")`
    - Executed BEFORE generating boot acknowledgment
 
 2. ✅ **Boot acknowledgment cited actual values from state.json**

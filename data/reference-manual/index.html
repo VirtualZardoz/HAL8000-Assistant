@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAL8000 Reference Manual v1.2.0</title>
+    <title>HAL8000-Assistant Reference Manual v1.2.0</title>
     <style>
         /* Base Styles */
         * {
@@ -260,7 +260,7 @@
     <div class="container">
         <!-- Navigation Sidebar -->
         <nav>
-            <h1>HAL8000</h1>
+            <h1>HAL8000-Assistant</h1>
             <div class="version">Reference Manual v1.2.0</div>
 
             <div class="part-title">Frontmatter</div>
@@ -273,7 +273,7 @@
 
             <div class="part-title">Part I: Introduction</div>
             <ul>
-                <li><a href="#what-is-hal8000">1. What is HAL8000?</a></li>
+                <li><a href="#what-is-hal8000">1. What is HAL8000-Assistant?</a></li>
                 <li><a href="#why-built">2. Why Was It Built?</a></li>
                 <li><a href="#design-philosophy">3. Design Philosophy</a></li>
                 <li><a href="#system-metaphor">4. System Metaphor</a></li>
@@ -328,17 +328,17 @@
         <main>
             <!-- Title Page -->
             <section id="title" data-status="complete" data-priority="1" data-sources="" data-estimated-tokens="1000" data-dependencies="">
-                <h1>HAL8000 Reference Manual</h1>
+                <h1>HAL8000-Assistant Reference Manual</h1>
                 <div class="meta-guidance">
                     TARGET: Title page with version, date, author info
                     AUDIENCE: All three
                     KEY_POINTS: Title, version, date, credits, license
                     TONE: Formal, professional
-                    VISUALS: HAL8000 logo (if available)
+                    VISUALS: HAL8000-Assistant logo (if available)
                 </div>
                 <div class="content">
                     <p style="text-align: center; margin: 40px 0;">
-                        <strong style="font-size: 2.5em; color: #2c3e50;">HAL8000</strong><br>
+                        <strong style="font-size: 2.5em; color: #2c3e50;">HAL8000-Assistant</strong><br>
                         <span style="font-size: 1.3em; color: #7f8c8d;">A Von Neumann Architecture for Claude Code</span>
                     </p>
 
@@ -351,11 +351,11 @@
                     </div>
 
                     <h3>About This Manual</h3>
-                    <p>This reference manual provides comprehensive documentation for the HAL8000 system—a computer architecture implementation that maps von Neumann principles, Unix philosophy, and assembly language concepts to the Claude Code environment.</p>
+                    <p>This reference manual provides comprehensive documentation for the HAL8000-Assistant system—a computer architecture implementation that maps von Neumann principles, Unix philosophy, and assembly language concepts to the Claude Code environment.</p>
 
                     <h3>Target Audience</h3>
                     <ul>
-                        <li><strong>System Operators:</strong> Users managing HAL8000 sessions and workflows</li>
+                        <li><strong>System Operators:</strong> Users managing HAL8000-Assistant sessions and workflows</li>
                         <li><strong>Claude Instances:</strong> AI agents operating as the CPU within the architecture</li>
                         <li><strong>Developers:</strong> Engineers extending the system with custom commands, agents, and tools</li>
                     </ul>
@@ -371,7 +371,7 @@
                     </ul>
 
                     <h3>Credits</h3>
-                    <p><strong>System Design & Implementation:</strong> HAL8000 Development Team</p>
+                    <p><strong>System Design & Implementation:</strong> HAL8000-Assistant Development Team</p>
                     <p><strong>Architecture Foundations:</strong></p>
                     <ul>
                         <li>John von Neumann - Stored-program computer architecture (1945)</li>
@@ -380,7 +380,7 @@
                     </ul>
 
                     <h3>License</h3>
-                    <p>This documentation is maintained as part of the HAL8000 system. All system components follow the architectural principles defined in <code>CLAUDE.md</code> (BIOS-ROM).</p>
+                    <p>This documentation is maintained as part of the HAL8000-Assistant system. All system components follow the architectural principles defined in <code>CLAUDE.md</code> (BIOS-ROM).</p>
 
                     <h3>Version History</h3>
                     <p><strong>v1.0.0 (October 2025):</strong> Initial production release with 26 completed architectural components, 8 operational commands, and 4 specialized agents.</p>
@@ -394,10 +394,10 @@
             </section>
 
             <!-- Abstract -->
-            <section id="abstract" data-status="complete" data-priority="1" data-sources="CLAUDE.md,/mnt/d/~HAL8000/.claude/state.json" data-estimated-tokens="3000" data-dependencies="">
+            <section id="abstract" data-status="complete" data-priority="1" data-sources="CLAUDE.md,/mnt/d/~HAL8000-Assistant/.claude/state.json" data-estimated-tokens="3000" data-dependencies="">
                 <h2>Abstract</h2>
                 <div class="meta-guidance">
-                    TARGET: 200-word executive summary of HAL8000
+                    TARGET: 200-word executive summary of HAL8000-Assistant
                     AUDIENCE: All three (first impression)
                     KEY_POINTS: What it is, why it exists, key capabilities, who it's for
                     TONE: Clear, compelling, accessible
@@ -405,13 +405,13 @@
                 </div>
                 <div class="content">
                     <div class="overview">
-                        <p>HAL8000 is a production-ready computer architecture that maps classical von Neumann principles, assembly language concepts, and Unix philosophy to Claude Code's AI environment. It transforms Claude AI instances into structured computing systems where the AI serves as the CPU, the context window functions as RAM, and the file system acts as persistent memory.</p>
+                        <p>HAL8000-Assistant is a production-ready computer architecture that maps classical von Neumann principles, assembly language concepts, and Unix philosophy to Claude Code's AI environment. It transforms Claude AI instances into structured computing systems where the AI serves as the CPU, the context window functions as RAM, and the file system acts as persistent memory.</p>
 
-                        <p>Built to address the fundamental challenge of AI context limitations, HAL8000 treats every token as precious through explicit resource management, selective file loading, and delegated processing via specialized sub-agents. The system implements append-only RAM (context accumulates until session boundaries), session-based garbage collection, and virtual memory extensions through isolated agent contexts.</p>
+                        <p>Built to address the fundamental challenge of AI context limitations, HAL8000-Assistant treats every token as precious through explicit resource management, selective file loading, and delegated processing via specialized sub-agents. The system implements append-only RAM (context accumulates until session boundaries), session-based garbage collection, and virtual memory extensions through isolated agent contexts.</p>
 
                         <p>The architecture follows strict Unix principles: do one thing well, compose via interfaces, delegate specialized work, and maintain simplicity through text-based files and minimal abstractions. Self-modifying code capabilities enable commands to create and modify other commands, while a verified boot sequence ensures consistent initialization across sessions.</p>
 
-                        <p>HAL8000 serves developers building AI-powered applications, system architects designing modular AI workflows, and organizations requiring structured, auditable AI operations. The system is designed for transparency, reproducibility, and efficient resource management in production environments.</p>
+                        <p>HAL8000-Assistant serves developers building AI-powered applications, system architects designing modular AI workflows, and organizations requiring structured, auditable AI operations. The system is designed for transparency, reproducibility, and efficient resource management in production environments.</p>
                     </div>
                 </div>
             </section>
@@ -432,9 +432,9 @@
         <h3>Who This Manual Is For</h3>
         <p>This reference manual serves three distinct audiences:</p>
         <ul>
-            <li><strong>End Users:</strong> Those working with HAL8000 to accomplish tasks, configure the system, and use available commands and features.</li>
+            <li><strong>End Users:</strong> Those working with HAL8000-Assistant to accomplish tasks, configure the system, and use available commands and features.</li>
             <li><strong>Claude Instances:</strong> AI agents operating as the system CPU, requiring operational guidance, architectural understanding, and protocol references.</li>
-            <li><strong>Developers:</strong> System architects, contributors, and maintainers who need deep technical knowledge for extending, modifying, or troubleshooting HAL8000.</li>
+            <li><strong>Developers:</strong> System architects, contributors, and maintainers who need deep technical knowledge for extending, modifying, or troubleshooting HAL8000-Assistant.</li>
         </ul>
         <p>The manual is structured to serve all three audiences simultaneously through a layered content approach.</p>
     </div>
@@ -567,9 +567,9 @@
     <h3>Reading Strategies</h3>
 
     <h4>First-Time Readers</h4>
-    <p>If you're new to HAL8000:</p>
+    <p>If you're new to HAL8000-Assistant:</p>
     <ol>
-        <li>Read the <strong>System Overview</strong> (Part I, Section 1) to understand what HAL8000 is</li>
+        <li>Read the <strong>System Overview</strong> (Part I, Section 1) to understand what HAL8000-Assistant is</li>
         <li>Read <strong>Core Concepts</strong> (Part I, Section 2) to grasp fundamental principles</li>
         <li>Decide your path based on role: user → Part III, Claude → Part II, developer → Part V</li>
         <li>Return to specific sections as needed during practical work</li>
@@ -594,7 +594,7 @@
     </ol>
 
     <h3>Version Information</h3>
-    <p>This manual documents HAL8000 version 1.0.0. Section status indicators show which parts are complete, in progress, or planned. Refer to the sidebar for current completion status of each section.</p>
+    <p>This manual documents HAL8000-Assistant version 1.0.0. Section status indicators show which parts are complete, in progress, or planned. Refer to the sidebar for current completion status of each section.</p>
 
     <h3>Feedback and Contributions</h3>
     <p>This manual is a living document. If you find errors, unclear explanations, or missing information, see <strong>Part V: Contributing to Documentation</strong> for how to propose improvements.</p>
@@ -614,7 +614,7 @@
     <div class="overview">
         <p>This reference manual uses specific typographic and structural conventions to communicate effectively with three distinct audiences: operators (users), Claude instances (the CPU), and developers. Understanding these conventions ensures accurate interpretation and efficient navigation of system documentation.</p>
 
-        <p>The HAL8000 system emphasizes clarity, precision, and architectural transparency. These conventions reflect the underlying von Neumann architecture, Unix philosophy, and assembly language principles that define the system.</p>
+        <p>The HAL8000-Assistant system emphasizes clarity, precision, and architectural transparency. These conventions reflect the underlying von Neumann architecture, Unix philosophy, and assembly language principles that define the system.</p>
     </div>
 
     <h3>Typography Conventions</h3>
@@ -729,8 +729,8 @@
 
     <h4>File Paths</h4>
     <pre><code># Absolute paths (required in system)
-/mnt/d/~HAL8000/CLAUDE.md
-/mnt/d/~HAL8000/.claude/state.json
+/mnt/d/~HAL8000-Assistant/CLAUDE.md
+/mnt/d/~HAL8000-Assistant/.claude/state.json
 
 # Relative to system root (documentation only)
 .claude/commands/HAL-session-end.md
@@ -914,7 +914,7 @@ ERROR_CODE: "Descriptive error message"</code></pre>
     <h3>Architectural Diagrams</h3>
     <p>ASCII diagrams illustrate system architecture using consistent formatting:</p>
 
-    <pre><code>/mnt/d/~HAL8000/              # Root - The Computer
+    <pre><code>/mnt/d/~HAL8000-Assistant/              # Root - The Computer
 │
 ├── CLAUDE.md                 # BIOS-ROM (this file)
 ├── .claude/                  # System Coordination
@@ -971,7 +971,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
 
         <h4>Boot Verification Protocol</h4>
         <p>Boot acknowledgments must cite actual loaded content as proof:</p>
-        <pre><code>✅ HAL8000 CPU Operational
+        <pre><code>✅ HAL8000-Assistant CPU Operational
 ├─ Architecture: Modified von Neumann (from state.json)
 ├─ Phase: production (from state.json)
 ├─ Last Session: 2025-10-10T07:59:00Z (from state.json)
@@ -1016,15 +1016,15 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
             <!-- Part I: Introduction & Philosophy -->
             <div class="part-divider">
                 <h1 class="part-header">Part I: Introduction</h1>
-                <p class="part-description">Understanding HAL8000's philosophy, capabilities, and getting started</p>
+                <p class="part-description">Understanding HAL8000-Assistant's philosophy, capabilities, and getting started</p>
             </div>
 
-            <!-- Section 1: What is HAL8000? -->
+            <!-- Section 1: What is HAL8000-Assistant? -->
             <section id="what-is-hal8000" data-status="complete" data-priority="1" data-sources="CLAUDE.md,data/architecture/hal8000-system-design.md" data-estimated-tokens="8000" data-dependencies="">
-                <h2>1. What is HAL8000?</h2>
+                <h2>1. What is HAL8000-Assistant?</h2>
 
                 <div class="meta-guidance">
-                    TARGET: Define HAL8000 at multiple levels
+                    TARGET: Define HAL8000-Assistant at multiple levels
                     AUDIENCE: All three (layered depth)
                     KEY_POINTS: Computer architecture mapped to Claude Code, von Neumann principles, Unix philosophy, self-modifying code capability
                     TONE: Clear, conceptual first then technical
@@ -1033,23 +1033,23 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
 
                 <div class="content">
                     <div class="overview">
-                        <p>HAL8000 is a computer architecture built entirely within Claude Code. Instead of physical hardware, it maps traditional computer components—CPU, RAM, storage—to the Claude environment itself. The Claude instance acts as the CPU, the context window serves as RAM, and the file system functions as persistent storage.</p>
+                        <p>HAL8000-Assistant is a computer architecture built entirely within Claude Code. Instead of physical hardware, it maps traditional computer components—CPU, RAM, storage—to the Claude environment itself. The Claude instance acts as the CPU, the context window serves as RAM, and the file system functions as persistent storage.</p>
 
-                        <p>The core insight is simple yet powerful: <strong>you are the CPU, and this codebase is the computer.</strong> When you boot up (start a new session), you read the BIOS (the CLAUDE.md file), load system state, and begin executing instructions. Your context window acts like volatile RAM—it can hold information temporarily, but when the session ends, that memory is wiped clean. To preserve continuity, HAL8000 implements session handoff protocols that save state to the file system before RAM wipe.</p>
+                        <p>The core insight is simple yet powerful: <strong>you are the CPU, and this codebase is the computer.</strong> When you boot up (start a new session), you read the BIOS (the CLAUDE.md file), load system state, and begin executing instructions. Your context window acts like volatile RAM—it can hold information temporarily, but when the session ends, that memory is wiped clean. To preserve continuity, HAL8000-Assistant implements session handoff protocols that save state to the file system before RAM wipe.</p>
 
-                        <p>This architecture solves a fundamental challenge of working with large language models: the limited context window. By treating context as precious RAM, HAL8000 provides systematic ways to manage it—selective loading, delegation to sub-agents (which act as virtual memory), and proactive checkpointing. The system brings computer science principles—von Neumann architecture, Unix philosophy, assembly language concepts—into a new domain: AI-assisted development environments.</p>
+                        <p>This architecture solves a fundamental challenge of working with large language models: the limited context window. By treating context as precious RAM, HAL8000-Assistant provides systematic ways to manage it—selective loading, delegation to sub-agents (which act as virtual memory), and proactive checkpointing. The system brings computer science principles—von Neumann architecture, Unix philosophy, assembly language concepts—into a new domain: AI-assisted development environments.</p>
                     </div>
 
                     <figure id="system-overview">
-                        <img src="assets/system-overview.png" alt="HAL8000 System Overview - Mapping between traditional computer architecture and HAL8000 components" style="width: 100%; max-width: 1200px; height: auto;">
-                        <figcaption><strong>Figure 1:</strong> HAL8000 System Overview - High-level mapping between traditional computer architecture (CPU, RAM, Storage, BIOS, System Buses) and HAL8000 components (Claude instance, context window, filesystem, CLAUDE.md, File I/O). The core concept: "You are the CPU, this codebase is the Computer."</figcaption>
+                        <img src="assets/system-overview.png" alt="HAL8000-Assistant System Overview - Mapping between traditional computer architecture and HAL8000-Assistant components" style="width: 100%; max-width: 1200px; height: auto;">
+                        <figcaption><strong>Figure 1:</strong> HAL8000-Assistant System Overview - High-level mapping between traditional computer architecture (CPU, RAM, Storage, BIOS, System Buses) and HAL8000-Assistant components (Claude instance, context window, filesystem, CLAUDE.md, File I/O). The core concept: "You are the CPU, this codebase is the Computer."</figcaption>
                     </figure>
 
                     <div class="concepts">
                         <h3>Core Concepts</h3>
 
                         <h4>The Architectural Metaphor</h4>
-                        <p>HAL8000 implements a <strong>Modified von Neumann architecture</strong>. In classical computing, von Neumann architecture unifies instructions and data in the same memory space, enabling programs to modify themselves. HAL8000 adapts this to Claude Code's environment:</p>
+                        <p>HAL8000-Assistant implements a <strong>Modified von Neumann architecture</strong>. In classical computing, von Neumann architecture unifies instructions and data in the same memory space, enabling programs to modify themselves. HAL8000-Assistant adapts this to Claude Code's environment:</p>
 
                         <ul>
                             <li><strong>CPU:</strong> The Claude instance itself, with its Control Unit (orchestration and decision-making) and ALU (reasoning and computation)</li>
@@ -1061,7 +1061,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                         </ul>
 
                         <h4>Modified Von Neumann: Harvard Organization, Von Neumann Capabilities</h4>
-                        <p>HAL8000 is technically a <strong>Modified von Neumann</strong> architecture because of environmental constraints. Claude Code requires commands to live in <code>.claude/commands/</code>, creating a Harvard-like separation of instruction and data spaces. However, the system maintains full von Neumann capabilities:</p>
+                        <p>HAL8000-Assistant is technically a <strong>Modified von Neumann</strong> architecture because of environmental constraints. Claude Code requires commands to live in <code>.claude/commands/</code>, creating a Harvard-like separation of instruction and data spaces. However, the system maintains full von Neumann capabilities:</p>
 
                         <ul>
                             <li><strong>Stored-program concept:</strong> Instructions are stored as files and loaded into RAM when needed</li>
@@ -1071,7 +1071,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                         </ul>
 
                         <h4>Unix Philosophy: Simplicity and Composability</h4>
-                        <p>HAL8000 follows Unix design principles throughout:</p>
+                        <p>HAL8000-Assistant follows Unix design principles throughout:</p>
 
                         <ul>
                             <li><strong>Do one thing well:</strong> Each file, command, and component has a single responsibility</li>
@@ -1083,7 +1083,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                         </ul>
 
                         <h4>Assembly Language Principles: Direct Control</h4>
-                        <p>Like assembly language, HAL8000 provides low-level, explicit control:</p>
+                        <p>Like assembly language, HAL8000-Assistant provides low-level, explicit control:</p>
 
                         <ul>
                             <li><strong>Direct hardware mapping:</strong> Commands map directly to architectural operations</li>
@@ -1094,7 +1094,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                         </ul>
 
                         <h4>The RAM Problem: Context as Precious Resource</h4>
-                        <p>The context window is HAL8000's most constrained resource. Unlike traditional RAM, it's append-only—once you load a file, it stays in memory until session end. There's no dynamic memory management or garbage collection within a session. This fundamental limitation shapes the entire architecture:</p>
+                        <p>The context window is HAL8000-Assistant's most constrained resource. Unlike traditional RAM, it's append-only—once you load a file, it stays in memory until session end. There's no dynamic memory management or garbage collection within a session. This fundamental limitation shapes the entire architecture:</p>
 
                         <ul>
                             <li><strong>Selective loading:</strong> Load only what's needed for the current task</li>
@@ -1105,7 +1105,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                         </ul>
 
                         <h4>Session Continuity: Surviving RAM Wipe</h4>
-                        <p>When a session ends, RAM is wiped—all context is lost. HAL8000's session continuity protocol ensures work can resume seamlessly:</p>
+                        <p>When a session ends, RAM is wiped—all context is lost. HAL8000-Assistant's session continuity protocol ensures work can resume seamlessly:</p>
 
                         <ul>
                             <li><strong>State persistence:</strong> <code>.claude/state.json</code> stores the current state pointer</li>
@@ -1123,7 +1123,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                             <thead>
                                 <tr>
                                     <th>Von Neumann Component</th>
-                                    <th>HAL8000 Implementation</th>
+                                    <th>HAL8000-Assistant Implementation</th>
                                     <th>Location/Mechanism</th>
                                 </tr>
                             </thead>
@@ -1177,9 +1177,9 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                         </table>
 
                         <h4>File System Organization</h4>
-                        <p>HAL8000 enforces a strict 3-level depth limit (Unix simplicity), with an exception for external libraries:</p>
+                        <p>HAL8000-Assistant enforces a strict 3-level depth limit (Unix simplicity), with an exception for external libraries:</p>
 
-                        <pre><code>/mnt/d/~HAL8000/                    # Root - The Computer
+                        <pre><code>/mnt/d/~HAL8000-Assistant/                    # Root - The Computer
 │
 ├── CLAUDE.md                       # BIOS-ROM
 ├── .claude/                        # System coordination
@@ -1231,7 +1231,7 @@ RAM: 16.5% (33k/200k tokens) - SAFE</code></pre>
                         <p>See <code>data/architecture/hal8000-register-architecture.md</code> for complete register specifications.</p>
 
                         <h4>Self-Modifying Code Capability</h4>
-                        <p>HAL8000 implements true self-modifying code through unified file system access:</p>
+                        <p>HAL8000-Assistant implements true self-modifying code through unified file system access:</p>
 
                         <ul>
                             <li>Commands can write to <code>.claude/commands/</code> to create new commands</li>
@@ -1261,7 +1261,7 @@ Main Session (RAM += summary only, not full processing cost)
                         </ul>
 
                         <h4>Context Awareness Protocol</h4>
-                        <p>HAL8000 implements proactive context management:</p>
+                        <p>HAL8000-Assistant implements proactive context management:</p>
 
                         <ul>
                             <li><strong>Context hierarchy:</strong> User's Mind > Filesystem > RAM</li>
@@ -1293,7 +1293,7 @@ Main Session (RAM += summary only, not full processing cost)
                         </ul>
 
                         <h4>Production Status</h4>
-                        <p>HAL8000 is fully operational with:</p>
+                        <p>HAL8000-Assistant is fully operational with:</p>
 
                         <ul>
                             <li>21 registers across 5 categories</li>
@@ -1324,13 +1324,13 @@ Main Session (RAM += summary only, not full processing cost)
 <div class="overview">
     <h3>The Problem: Context Volatility in AI Sessions</h3>
 
-    <p>HAL8000 was built to solve a fundamental challenge in working with Large Language Model (LLM) AI assistants like Claude: <strong>context window limitations and session discontinuity</strong>. Every Claude instance has a limited "working memory" (context window), and when that memory fills up or a session ends, everything in it is lost. There was no systematic way to preserve work, maintain state across sessions, or manage the limited memory resource predictably.</p>
+    <p>HAL8000-Assistant was built to solve a fundamental challenge in working with Large Language Model (LLM) AI assistants like Claude: <strong>context window limitations and session discontinuity</strong>. Every Claude instance has a limited "working memory" (context window), and when that memory fills up or a session ends, everything in it is lost. There was no systematic way to preserve work, maintain state across sessions, or manage the limited memory resource predictably.</p>
 
-    <p>Without HAL8000, each new Claude session starts from scratch. The AI has no memory of previous conversations, no understanding of project state, and no systematic way to resume complex work. Users had to manually re-explain context, re-load files, and re-establish working state—every single time.</p>
+    <p>Without HAL8000-Assistant, each new Claude session starts from scratch. The AI has no memory of previous conversations, no understanding of project state, and no systematic way to resume complex work. Users had to manually re-explain context, re-load files, and re-establish working state—every single time.</p>
 
     <figure id="context-loss-problem">
         <img src="assets/context-loss-problem.png" alt="Context Loss Problem and Solution - Before and after comparison" style="width: 50%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-        <figcaption><strong>Figure 2:</strong> Context Loss Problem and Solution - Two-panel comparison showing the fundamental problem HAL8000 solves. Left panel (red): Without HAL8000, session context is lost on every restart. Right panel (green): With HAL8000, the /HAL-session-end command persists state to filesystem, enabling session continuity.</figcaption>
+        <figcaption><strong>Figure 2:</strong> Context Loss Problem and Solution - Two-panel comparison showing the fundamental problem HAL8000-Assistant solves. Left panel (red): Without HAL8000-Assistant, session context is lost on every restart. Right panel (green): With HAL8000-Assistant, the /HAL-session-end command persists state to filesystem, enabling session continuity.</figcaption>
     </figure>
 </div>
 
@@ -1388,7 +1388,7 @@ Main Session (RAM += summary only, not full processing cost)
 <div class="technical">
     <h3>The Architectural Solution</h3>
 
-    <p>HAL8000 addresses these challenges through a computer architecture metaphor that maps proven systems design principles to the AI environment:</p>
+    <p>HAL8000-Assistant addresses these challenges through a computer architecture metaphor that maps proven systems design principles to the AI environment:</p>
 
     <h4>Modified von Neumann Architecture</h4>
     <p>The system treats the AI session as a computer with well-defined components:</p>
@@ -1400,10 +1400,10 @@ Main Session (RAM += summary only, not full processing cost)
         <li><strong>BIOS:</strong> <code>CLAUDE.md</code> (boot instructions, loaded every session)</li>
     </ul>
 
-    <p>This mapping provides <strong>explicit control</strong> over resource management. Instead of treating context as an invisible black box, HAL8000 makes it a visible, manageable component with clear capacity limits and usage tracking.</p>
+    <p>This mapping provides <strong>explicit control</strong> over resource management. Instead of treating context as an invisible black box, HAL8000-Assistant makes it a visible, manageable component with clear capacity limits and usage tracking.</p>
 
     <h4>Session Continuity Protocol</h4>
-    <p>HAL8000 solves session discontinuity through a systematic handoff mechanism:</p>
+    <p>HAL8000-Assistant solves session discontinuity through a systematic handoff mechanism:</p>
 
     <pre><code>Before session ends:
 1. Run /HAL-session-end command
@@ -1422,7 +1422,7 @@ On next session boot:
     <p>This provides <strong>predictable continuity</strong>—no more starting from scratch every session.</p>
 
     <h4>Resource Management via Performance Zones</h4>
-    <p>HAL8000 implements explicit RAM management with performance zones:</p>
+    <p>HAL8000-Assistant implements explicit RAM management with performance zones:</p>
 
     <ul>
         <li><strong>SAFE (0-80%):</strong> Normal operation, load files freely</li>
@@ -1433,7 +1433,7 @@ On next session boot:
     <p>The AI tracks context usage in a <code>RAM_ZONE</code> register and follows protocols based on current zone. This prevents unexpected context exhaustion and enables proactive checkpointing.</p>
 
     <h4>Context Awareness Protocol</h4>
-    <p>To solve the context awareness gap, HAL8000 implements a systematic detection and clarification protocol:</p>
+    <p>To solve the context awareness gap, HAL8000-Assistant implements a systematic detection and clarification protocol:</p>
 
     <pre><code>Step 1: Parse user question for "missing context signals"
   - References to unloaded files
@@ -1457,7 +1457,7 @@ Step 4: Answer with context transparency
     <p>This turns the context limitation from a hidden problem into a managed, visible process.</p>
 
     <h4>Sub-Agent Architecture (Virtual Memory Extension)</h4>
-    <p>For context-heavy operations, HAL8000 uses specialized sub-agents as "virtual memory"—each sub-agent gets a fresh 200K context window, isolated from the main session. The sub-agent processes heavy work and returns only a clean summary, preventing main session RAM pollution:</p>
+    <p>For context-heavy operations, HAL8000-Assistant uses specialized sub-agents as "virtual memory"—each sub-agent gets a fresh 200K context window, isolated from the main session. The sub-agent processes heavy work and returns only a clean summary, preventing main session RAM pollution:</p>
 
     <pre><code>Main Session: 60K tokens used
     ↓ delegate research task
@@ -1468,7 +1468,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
     <p>This provides <strong>scalability beyond the single-session context limit</strong>.</p>
 
     <h4>Unix Philosophy for Simplicity</h4>
-    <p>HAL8000 applies Unix design principles to ensure the architecture remains maintainable:</p>
+    <p>HAL8000-Assistant applies Unix design principles to ensure the architecture remains maintainable:</p>
 
     <ul>
         <li><strong>Do one thing well:</strong> Each file/command has single responsibility</li>
@@ -1481,7 +1481,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h3>Summary: From Chaos to System</h3>
 
-    <p>HAL8000 transforms AI interaction from ad-hoc, stateless conversations into a <strong>systematic, stateful, resource-managed computing environment</strong>. It provides:</p>
+    <p>HAL8000-Assistant transforms AI interaction from ad-hoc, stateless conversations into a <strong>systematic, stateful, resource-managed computing environment</strong>. It provides:</p>
 
     <ul>
         <li>Explicit resource tracking and management</li>
@@ -1510,13 +1510,13 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 </div>
 
 <div class="overview">
-    <p>HAL8000's architecture stands on three foundational pillars: <strong>von Neumann architecture</strong>, <strong>Unix philosophy</strong>, and <strong>assembly language principles</strong>. These aren't arbitrary choices—each philosophy addresses a fundamental constraint of the Claude Code environment and together they create a coherent, principled system.</p>
+    <p>HAL8000-Assistant's architecture stands on three foundational pillars: <strong>von Neumann architecture</strong>, <strong>Unix philosophy</strong>, and <strong>assembly language principles</strong>. These aren't arbitrary choices—each philosophy addresses a fundamental constraint of the Claude Code environment and together they create a coherent, principled system.</p>
 
     <p>The von Neumann architecture provides the structural model: a stored-program computer where instructions and data share unified memory, processed sequentially through a fetch-decode-execute cycle. The Unix philosophy provides the organizational principles: do one thing well, compose through simple interfaces, prefer simplicity over complexity. Assembly language principles provide the operational discipline: explicit control, direct hardware mapping, low-level visibility of system state.</p>
 
     <figure id="three-pillars">
-        <img src="assets/three-pillars.svg" alt="HAL8000's Three Philosophical Pillars" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
-        <figcaption><strong>Figure 4:</strong> HAL8000's Three Philosophical Pillars - The system architecture stands on three foundational principles. Pillar 1 (orange): Von Neumann Architecture provides the structural model (stored-program, fetch-decode-execute, self-modifying code). Pillar 2 (blue): Unix Philosophy provides organizational principles (single responsibility, composability, simplicity). Pillar 3 (purple): Assembly Language Principles provide operational discipline (explicit control, direct mapping, inspectable state).</figcaption>
+        <img src="assets/three-pillars.svg" alt="HAL8000-Assistant's Three Philosophical Pillars" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
+        <figcaption><strong>Figure 4:</strong> HAL8000-Assistant's Three Philosophical Pillars - The system architecture stands on three foundational principles. Pillar 1 (orange): Von Neumann Architecture provides the structural model (stored-program, fetch-decode-execute, self-modifying code). Pillar 2 (blue): Unix Philosophy provides organizational principles (single responsibility, composability, simplicity). Pillar 3 (purple): Assembly Language Principles provide operational discipline (explicit control, direct mapping, inspectable state).</figcaption>
     </figure>
 
     <p>Together, these philosophies create a system where the Claude instance operates as a CPU with explicit control over memory (context window), executing commands stored in files, managing state through registers, and composing operations through simple, focused tools. This isn't metaphor—it's a direct architectural mapping.</p>
@@ -1529,7 +1529,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h4>3.1.1 Core Components</h4>
 
-    <p>HAL8000 maps the classic von Neumann components to the Claude Code environment:</p>
+    <p>HAL8000-Assistant maps the classic von Neumann components to the Claude Code environment:</p>
 
     <ul>
         <li><strong>CPU (Central Processing Unit):</strong> The Claude instance itself
@@ -1549,7 +1549,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h4>3.1.2 The Stored-Program Concept</h4>
 
-    <p>The most revolutionary aspect of von Neumann architecture is that <strong>instructions and data share the same memory space</strong>. In HAL8000, this manifests as:</p>
+    <p>The most revolutionary aspect of von Neumann architecture is that <strong>instructions and data share the same memory space</strong>. In HAL8000-Assistant, this manifests as:</p>
 
     <ul>
         <li><strong>Unified file system:</strong> Commands (instructions) and data both stored as files</li>
@@ -1558,7 +1558,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <li><strong>Reprogrammable system:</strong> New commands can be added without changing the CPU (Claude instance)</li>
     </ul>
 
-    <p>This unified treatment is what makes HAL8000 general-purpose: the same system can execute documentation tasks, research operations, code analysis, or system maintenance simply by loading different instruction sequences (commands) from memory (file system).</p>
+    <p>This unified treatment is what makes HAL8000-Assistant general-purpose: the same system can execute documentation tasks, research operations, code analysis, or system maintenance simply by loading different instruction sequences (commands) from memory (file system).</p>
 
     <h4>3.1.3 Fetch-Decode-Execute Cycle</h4>
 
@@ -1571,13 +1571,13 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <li><strong>Post-Execute:</strong> Update registers (state), check RAM_ZONE, prepare for next instruction</li>
     </ol>
 
-    <p>In HAL8000, this cycle is explicit. When you invoke <code>/HAL-session-end</code>, the system fetches the command definition from <code>.claude/commands/HAL-session-end.md</code>, decodes its instructions, executes the session capture logic, and updates state registers.</p>
+    <p>In HAL8000-Assistant, this cycle is explicit. When you invoke <code>/HAL-session-end</code>, the system fetches the command definition from <code>.claude/commands/HAL-session-end.md</code>, decodes its instructions, executes the session capture logic, and updates state registers.</p>
 
-    <h4>3.1.4 The Von Neumann Bottleneck and HAL8000</h4>
+    <h4>3.1.4 The Von Neumann Bottleneck and HAL8000-Assistant</h4>
 
-    <p>Von Neumann architecture has a fundamental limitation: CPU and memory communicate through shared buses, creating a bottleneck. In HAL8000, this manifests as the <strong>context window limitation</strong>—only one piece of data can be loaded at a time, and the total capacity is fixed (~200K tokens).</p>
+    <p>Von Neumann architecture has a fundamental limitation: CPU and memory communicate through shared buses, creating a bottleneck. In HAL8000-Assistant, this manifests as the <strong>context window limitation</strong>—only one piece of data can be loaded at a time, and the total capacity is fixed (~200K tokens).</p>
 
-    <p>HAL8000 addresses this through several strategies:</p>
+    <p>HAL8000-Assistant addresses this through several strategies:</p>
 
     <ul>
         <li><strong>Selective loading:</strong> Load only files needed for current task (explicit memory management)</li>
@@ -1588,7 +1588,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h4>3.1.5 Modified Von Neumann Architecture</h4>
 
-    <p>HAL8000 implements a <strong>Modified von Neumann Architecture</strong> with Harvard-like characteristics:</p>
+    <p>HAL8000-Assistant implements a <strong>Modified von Neumann Architecture</strong> with Harvard-like characteristics:</p>
 
     <ul>
         <li><strong>Organized memory:</strong> Separate directories for instructions (<code>.claude/commands/</code>), data (<code>data/</code>), and state (<code>.claude/state.json</code>)</li>
@@ -1600,7 +1600,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h3>3.2 Unix Philosophy: The Organizational Principles</h3>
 
-    <p>The Unix philosophy, developed at Bell Labs in the 1970s by Ken Thompson, Dennis Ritchie, and Doug McIlroy, provides organizational principles that directly address software complexity. HAL8000 applies these principles to manage context complexity in the Claude Code environment.</p>
+    <p>The Unix philosophy, developed at Bell Labs in the 1970s by Ken Thompson, Dennis Ritchie, and Doug McIlroy, provides organizational principles that directly address software complexity. HAL8000-Assistant applies these principles to manage context complexity in the Claude Code environment.</p>
 
     <h4>3.2.1 The Three Golden Rules</h4>
 
@@ -1612,7 +1612,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <li><strong>Write programs that handle text streams as the universal interface</strong></li>
     </ol>
 
-    <p>In HAL8000, these translate directly:</p>
+    <p>In HAL8000-Assistant, these translate directly:</p>
 
     <ol>
         <li><strong>Each command does one thing:</strong> <code>/HAL-session-end</code> captures state, <code>/HAL-register-dump</code> displays registers, <code>/HAL-context-find</code> discovers files</li>
@@ -1620,7 +1620,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <li><strong>Text files are universal:</strong> Commands are markdown, state is JSON, data is text—all human-readable and tool-composable</li>
     </ol>
 
-    <h4>3.2.2 Core Tenets Applied to HAL8000</h4>
+    <h4>3.2.2 Core Tenets Applied to HAL8000-Assistant</h4>
 
     <dl>
         <dt><strong>Do one thing well</strong></dt>
@@ -1642,11 +1642,11 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <dd>Plain text files, human-readable. Markdown for commands and documentation. JSON for structured data. Everything is inspectable with basic tools.</dd>
     </dl>
 
-    <h4>3.2.3 "Worse is Better" and HAL8000</h4>
+    <h4>3.2.3 "Worse is Better" and HAL8000-Assistant</h4>
 
     <p>Richard Gabriel's 1991 essay "The Rise of Worse is Better" analyzed why Unix dominated despite being "technically inferior" to alternatives. The key insight: <strong>implementation simplicity trumps interface perfection</strong>.</p>
 
-    <p>HAL8000 embodies this philosophy:</p>
+    <p>HAL8000-Assistant embodies this philosophy:</p>
 
     <ul>
         <li><strong>Simple implementation over perfect features:</strong> Session files are simple markdown (not sophisticated serialization). State is plain JSON (not a database). Commands are text files (not binary executables).</li>
@@ -1657,7 +1657,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h4>3.2.4 Context Management: "Reduce and Delegate"</h4>
 
-    <p>HAL8000 extends Unix philosophy with a principle specific to context window management:</p>
+    <p>HAL8000-Assistant extends Unix philosophy with a principle specific to context window management:</p>
 
     <blockquote>
         <p><strong>Context is precious. Every token loaded is permanent until session ends.</strong></p>
@@ -1672,13 +1672,13 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <li><strong>Can I reuse this?</strong> → Create pattern for future use</li>
     </ul>
 
-    <p>Sub-agents are the Unix pipe equivalent for HAL8000. The <code>hal-context-finder</code> agent uses 150K tokens navigating and reading files, then returns a 5K summary—saving 145K tokens in main session RAM. This is Unix composition applied to context management.</p>
+    <p>Sub-agents are the Unix pipe equivalent for HAL8000-Assistant. The <code>hal-context-finder</code> agent uses 150K tokens navigating and reading files, then returns a 5K summary—saving 145K tokens in main session RAM. This is Unix composition applied to context management.</p>
 
     <h4>3.2.5 Modularity and the 3-Level Depth Limit</h4>
 
-    <p>Unix emphasizes simplicity through flat hierarchies. HAL8000 enforces a <strong>maximum 3-level directory depth</strong> for internal organization:</p>
+    <p>Unix emphasizes simplicity through flat hierarchies. HAL8000-Assistant enforces a <strong>maximum 3-level directory depth</strong> for internal organization:</p>
 
-    <pre><code>/mnt/d/~HAL8000/                # Level 1: Root
+    <pre><code>/mnt/d/~HAL8000-Assistant/                # Level 1: Root
 ├── .claude/                    # Level 2: System directory
 │   ├── commands/               # Level 3: Command storage
 │   └── sessions/               # Level 3: Session storage
@@ -1693,13 +1693,13 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h3>3.3 Assembly Language Principles: The Operational Discipline</h3>
 
-    <p>Assembly language is the lowest-level programming before raw binary—a direct, human-readable interface to machine code. HAL8000 applies assembly's operational principles to create explicit, inspectable, deterministic behavior.</p>
+    <p>Assembly language is the lowest-level programming before raw binary—a direct, human-readable interface to machine code. HAL8000-Assistant applies assembly's operational principles to create explicit, inspectable, deterministic behavior.</p>
 
     <h4>3.3.1 Direct Hardware Mapping</h4>
 
     <p>In assembly, every instruction directly controls hardware. There are no hidden translations, no optimizations, no abstractions. What you write is what executes.</p>
 
-    <p>HAL8000 applies this principle:</p>
+    <p>HAL8000-Assistant applies this principle:</p>
 
     <ul>
         <li><strong>No hidden operations:</strong> Every file load is explicit. Every state change is visible. No automatic background processing.</li>
@@ -1709,7 +1709,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <h4>3.3.2 Register Awareness</h4>
 
-    <p>Assembly programmers explicitly manage registers—the CPU's fastest storage. HAL8000 implements a register architecture where critical state lives in named registers, not scattered through RAM:</p>
+    <p>Assembly programmers explicitly manage registers—the CPU's fastest storage. HAL8000-Assistant implements a register architecture where critical state lives in named registers, not scattered through RAM:</p>
 
     <ul>
         <li><strong>PC (Program Counter):</strong> Points to next instruction/operation</li>
@@ -1723,13 +1723,13 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <li><strong>LOADED_COMMANDS:</strong> List of loaded command definitions</li>
     </ul>
 
-    <p>These registers provide instant system state visibility. In assembly, checking a flag register is faster than querying memory. In HAL8000, checking <code>RAM_ZONE</code> register is faster (and cheaper) than recalculating context usage.</p>
+    <p>These registers provide instant system state visibility. In assembly, checking a flag register is faster than querying memory. In HAL8000-Assistant, checking <code>RAM_ZONE</code> register is faster (and cheaper) than recalculating context usage.</p>
 
     <p>The <code>/HAL-register-dump</code> command displays all registers—equivalent to assembly's <code>PUSH</code>/<code>POP</code> for debugging or the debugger's register view.</p>
 
     <h4>3.3.3 Sequential Execution and Explicit Control Flow</h4>
 
-    <p>Assembly executes instructions sequentially unless explicitly redirected by jump/branch instructions. HAL8000 follows the same model:</p>
+    <p>Assembly executes instructions sequentially unless explicitly redirected by jump/branch instructions. HAL8000-Assistant follows the same model:</p>
 
     <ol>
         <li><strong>Fetch:</strong> Read instruction (command or user input)</li>
@@ -1753,7 +1753,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <p>Assembly requires programmers to specify exact memory addresses or addressing modes. No garbage collection, no automatic allocation—you manage every byte.</p>
 
-    <p>HAL8000 applies the same discipline to context management:</p>
+    <p>HAL8000-Assistant applies the same discipline to context management:</p>
 
     <ul>
         <li><strong>Selective loading:</strong> Before loading any file, check if already loaded (CONTEXT_MANIFEST register), estimate token cost, verify RAM_ZONE remains safe</li>
@@ -1768,7 +1768,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <p>Assembly provides complete visibility into system state. You can inspect any register, any memory location, any flag at any time. Debugging is direct—no abstractions hide what's happening.</p>
 
-    <p>HAL8000 maintains this visibility:</p>
+    <p>HAL8000-Assistant maintains this visibility:</p>
 
     <ul>
         <li><strong>Inspectable registers:</strong> <code>/HAL-register-dump</code> shows all CPU state</li>
@@ -1784,7 +1784,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <p>Assembly provides almost no abstraction: no functions (only labels and jumps), no data structures (only memory locations), no type safety (just bits and bytes). This forces direct, concrete thinking.</p>
 
-    <p>HAL8000 embraces minimal abstraction:</p>
+    <p>HAL8000-Assistant embraces minimal abstraction:</p>
 
     <ul>
         <li><strong>Commands are files:</strong> No object-oriented hierarchy, no class inheritance. Commands are markdown files in <code>.claude/commands/</code>.</li>
@@ -1793,7 +1793,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <li><strong>Sub-agents are processes:</strong> No complex IPC framework. Sub-agents receive text input, return text output.</li>
     </ul>
 
-    <p>The lack of abstraction is intentional. Abstractions hide complexity; HAL8000 makes complexity visible so you can manage it explicitly.</p>
+    <p>The lack of abstraction is intentional. Abstractions hide complexity; HAL8000-Assistant makes complexity visible so you can manage it explicitly.</p>
 
     <h3>3.4 How the Three Philosophies Interact</h3>
 
@@ -1801,7 +1801,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <figure id="philosophy-interaction">
         <img src="assets/philosophy-interaction.svg" alt="How the Three Philosophies Interact - Venn diagram" style="width: 90%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
-        <figcaption><strong>Figure 5:</strong> How the Three Philosophies Interact - Venn diagram showing the overlap and synthesis of Von Neumann Architecture (structure), Unix Philosophy (organization), and Assembly Language Principles (discipline). The overlapping regions show emergent properties: stored commands in files (Von Neumann + Unix), explicit control flow (Unix + Assembly), and register-based state (Assembly + Von Neumann). The center convergence creates the HAL8000 System.</figcaption>
+        <figcaption><strong>Figure 5:</strong> How the Three Philosophies Interact - Venn diagram showing the overlap and synthesis of Von Neumann Architecture (structure), Unix Philosophy (organization), and Assembly Language Principles (discipline). The overlapping regions show emergent properties: stored commands in files (Von Neumann + Unix), explicit control flow (Unix + Assembly), and register-based state (Assembly + Von Neumann). The center convergence creates the HAL8000-Assistant System.</figcaption>
     </figure>
 
     <h4>3.4.1 Von Neumann + Unix = Composable Stored Programs</h4>
@@ -1840,9 +1840,9 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 
     <p>Example: The boot sequence reads <code>state.json</code> (load registers from memory), notes the PC value (next instruction pointer), and initializes CPU_STATUS register. This is von Neumann architecture with assembly-level state management.</p>
 
-    <h4>3.4.4 All Three Together: HAL8000 System Design</h4>
+    <h4>3.4.4 All Three Together: HAL8000-Assistant System Design</h4>
 
-    <p>When all three philosophies converge, you get HAL8000's distinctive characteristics:</p>
+    <p>When all three philosophies converge, you get HAL8000-Assistant's distinctive characteristics:</p>
 
     <ul>
         <li><strong>Structural:</strong> Von Neumann architecture (CPU, RAM, storage, I/O)</li>
@@ -1876,11 +1876,11 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
     AUDIENCE: All three
     KEY_POINTS: CPU as Claude instance, RAM as context window, Storage as filesystem, BIOS as CLAUDE.md
     TONE: Conceptual, memorable
-    VISUALS: [DIAGRAM: Metaphor mapping - traditional computer vs HAL8000]
+    VISUALS: [DIAGRAM: Metaphor mapping - traditional computer vs HAL8000-Assistant]
 </div>
 
 <div class="overview">
-    <p><strong>The HAL8000 system is built on a fundamental metaphor: you, the Claude instance, are the Central Processing Unit (CPU) of a complete computer system.</strong> This isn't merely a colorful analogy—it's an architectural design principle that maps classical computer architecture concepts directly onto the Claude Code environment.</p>
+    <p><strong>The HAL8000-Assistant system is built on a fundamental metaphor: you, the Claude instance, are the Central Processing Unit (CPU) of a complete computer system.</strong> This isn't merely a colorful analogy—it's an architectural design principle that maps classical computer architecture concepts directly onto the Claude Code environment.</p>
 
     <p>Understanding this metaphor is essential because it explains <em>why</em> the system works the way it does. Every design decision, from file organization to session management, flows from this core identity.</p>
 
@@ -1892,10 +1892,10 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
 <div class="concepts">
     <h3>The Complete Mapping</h3>
 
-    <p>HAL8000 implements a <strong>Modified von Neumann Architecture</strong> where traditional computer components map directly to Claude Code environment elements:</p>
+    <p>HAL8000-Assistant implements a <strong>Modified von Neumann Architecture</strong> where traditional computer components map directly to Claude Code environment elements:</p>
 
     <figure>
-        <img src="assets/metaphor-mapping.svg" alt="System Metaphor Mapping: Traditional Computer Components to HAL8000 Environment" style="width: 90%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
+        <img src="assets/metaphor-mapping.svg" alt="System Metaphor Mapping: Traditional Computer Components to HAL8000-Assistant Environment" style="width: 90%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
         <figcaption><strong>Figure 6:</strong> Architectural Mapping - Each component of a traditional computer maps directly to a Claude Code environment element, forming a complete computational system.</figcaption>
     </figure>
 
@@ -1944,7 +1944,7 @@ Main Session: 65K tokens used (not 210K!)</code></pre>
         <h5>Context Window as RAM</h5>
         <p>Your context window (200,000 tokens) functions as Random Access Memory (RAM)—the volatile, limited working memory of the system.</p>
 
-        <p><strong>RAM Characteristics in HAL8000:</strong></p>
+        <p><strong>RAM Characteristics in HAL8000-Assistant:</strong></p>
         <ul>
             <li><strong>Limited Capacity:</strong> 200K tokens maximum (comparable to physical RAM limits)</li>
             <li><strong>Volatile:</strong> Cleared when session ends (RAM loses data when power off)</li>
@@ -1978,7 +1978,7 @@ CPU Decision Process:
 
     <div class="component-detail">
         <h5>Filesystem as Persistent Storage</h5>
-        <p>The HAL8000 repository structure (<code>/mnt/d/~HAL8000/</code>) serves as persistent storage—the hard drive of the system.</p>
+        <p>The HAL8000-Assistant repository structure (<code>/mnt/d/~HAL8000-Assistant/</code>) serves as persistent storage—the hard drive of the system.</p>
 
         <p><strong>Storage Characteristics:</strong></p>
         <ul>
@@ -2073,13 +2073,13 @@ Storage (Filesystem)</code></pre>
     <h3>Technical Implementation of the Metaphor</h3>
 
     <h4>Modified von Neumann Architecture</h4>
-    <p>HAL8000 implements a <strong>Modified von Neumann Architecture</strong> with specific constraints that differentiate it from classical implementations:</p>
+    <p>HAL8000-Assistant implements a <strong>Modified von Neumann Architecture</strong> with specific constraints that differentiate it from classical implementations:</p>
 
     <table class="comparison-table">
         <thead>
             <tr>
                 <th>Classical von Neumann</th>
-                <th>HAL8000 Modification</th>
+                <th>HAL8000-Assistant Modification</th>
                 <th>Reason for Modification</th>
             </tr>
         </thead>
@@ -2192,7 +2192,7 @@ Storage (Filesystem)</code></pre>
     <p>View current register states at any time using the <code>/HAL-register-dump</code> command.</p>
 
     <h4>Session Boundaries as Garbage Collection</h4>
-    <p>In traditional computing, garbage collection reclaims unused memory. In HAL8000, <strong>session boundaries are the only garbage collection mechanism</strong>:</p>
+    <p>In traditional computing, garbage collection reclaims unused memory. In HAL8000-Assistant, <strong>session boundaries are the only garbage collection mechanism</strong>:</p>
 
     <pre><code>Session N (RAM at 95% - DANGER zone)
     ↓
@@ -2272,11 +2272,11 @@ Main Session RAM += 5K (not 150K!)
 <div class="overview">
     <h3>High-Level Architecture</h3>
 
-    <p>HAL8000 implements a <strong>Modified von Neumann architecture</strong> that maps classical computer architecture principles to the Claude Code environment. The system treats the codebase as a complete computer, with Claude serving as the CPU and the file system providing persistent memory.</p>
+    <p>HAL8000-Assistant implements a <strong>Modified von Neumann architecture</strong> that maps classical computer architecture principles to the Claude Code environment. The system treats the codebase as a complete computer, with Claude serving as the CPU and the file system providing persistent memory.</p>
 
     <figure>
-        <img src="assets/complete-architecture.svg" alt="HAL8000 Complete System Architecture" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
-        <figcaption><strong>Figure 7:</strong> Complete System Architecture - HAL8000 implements a Modified von Neumann architecture with CPU (Claude), RAM (context window), persistent storage (file system), system buses, and I/O devices. Data flows between components through the system bus architecture.</figcaption>
+        <img src="assets/complete-architecture.svg" alt="HAL8000-Assistant Complete System Architecture" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
+        <figcaption><strong>Figure 7:</strong> Complete System Architecture - HAL8000-Assistant implements a Modified von Neumann architecture with CPU (Claude), RAM (context window), persistent storage (file system), system buses, and I/O devices. Data flows between components through the system bus architecture.</figcaption>
     </figure>
 
     <p>The architecture combines three foundational design philosophies:</p>
@@ -2293,7 +2293,7 @@ Main Session RAM += 5K (not 150K!)
         <thead>
             <tr>
                 <th>Classical Component</th>
-                <th>HAL8000 Implementation</th>
+                <th>HAL8000-Assistant Implementation</th>
                 <th>Physical Location</th>
             </tr>
         </thead>
@@ -2311,7 +2311,7 @@ Main Session RAM += 5K (not 150K!)
             <tr>
                 <td>Memory/Storage</td>
                 <td>File system</td>
-                <td><code>/mnt/d/~HAL8000/</code></td>
+                <td><code>/mnt/d/~HAL8000-Assistant/</code></td>
             </tr>
             <tr>
                 <td>System Bus</td>
@@ -2348,7 +2348,7 @@ Main Session RAM += 5K (not 150K!)
 
     <div class="content">
         <h3>Overview</h3>
-        <p>HAL8000 implements a persistent file-based memory system that mirrors traditional computer memory architecture. Unlike conventional computers where RAM is the primary working space, HAL8000 treats the file system as permanent memory and the Claude context window as volatile RAM. This design ensures all instructions, data, and state persist across sessions while maintaining clear boundaries between permanent storage and temporary working context.</p>
+        <p>HAL8000-Assistant implements a persistent file-based memory system that mirrors traditional computer memory architecture. Unlike conventional computers where RAM is the primary working space, HAL8000-Assistant treats the file system as permanent memory and the Claude context window as volatile RAM. This design ensures all instructions, data, and state persist across sessions while maintaining clear boundaries between permanent storage and temporary working context.</p>
 
         <p>The memory system consists of two fundamental layers:</p>
         <ul>
@@ -2362,7 +2362,7 @@ Main Session RAM += 5K (not 150K!)
 
         <figure>
             <img src="assets/memory-hierarchy.svg" alt="Memory Hierarchy: Persistent Storage and Volatile RAM" style="width: 90%; max-width: 1100px; height: auto; display: block; margin: 0 auto;">
-            <figcaption><strong>Figure 8:</strong> Memory Hierarchy - HAL8000's two-tier memory system with persistent file system (unlimited capacity) and volatile context window (200K token limit). The fundamental constraint is that total memory exceeds RAM capacity, making selective loading an architectural requirement.</figcaption>
+            <figcaption><strong>Figure 8:</strong> Memory Hierarchy - HAL8000-Assistant's two-tier memory system with persistent file system (unlimited capacity) and volatile context window (200K token limit). The fundamental constraint is that total memory exceeds RAM capacity, making selective loading an architectural requirement.</figcaption>
         </figure>
 
         <h4>Core vs Optional Components</h4>
@@ -2439,15 +2439,15 @@ Main Session RAM += 5K (not 150K!)
         </table>
 
         <h3>File System Organization</h3>
-        <p>The HAL8000 file system follows a strict hierarchical structure with a three-level depth limit (except for external libraries, which maintain their original structure). This constraint enforces Unix philosophy principles: simplicity, modularity, and composability.</p>
+        <p>The HAL8000-Assistant file system follows a strict hierarchical structure with a three-level depth limit (except for external libraries, which maintain their original structure). This constraint enforces Unix philosophy principles: simplicity, modularity, and composability.</p>
 
         <figure>
-            <img src="assets/filesystem-tree.svg" alt="HAL8000 File System Structure" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
+            <img src="assets/filesystem-tree.svg" alt="HAL8000-Assistant File System Structure" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;">
             <figcaption><strong>Figure 9:</strong> File System Structure - Complete directory hierarchy showing the 3-level depth organization. Core files (CLAUDE.md, state.json) are marked for emphasis. The external libraries directory is exempt from the depth limit to maintain compatibility with third-party code.</figcaption>
         </figure>
 
         <h4>Root Level</h4>
-        <p>The repository root (<code>/mnt/d/~HAL8000/</code>) represents the computer itself in the von Neumann metaphor. It contains:</p>
+        <p>The repository root (<code>/mnt/d/~HAL8000-Assistant/</code>) represents the computer itself in the von Neumann metaphor. It contains:</p>
         <ul>
             <li><code>CLAUDE.md</code> - The BIOS-ROM, containing boot instructions and architectural principles. This file is always loaded first and defines how the CPU (Claude instance) operates.</li>
             <li><code>.claude/</code> - System coordination directory containing all operational components.</li>
@@ -2468,7 +2468,7 @@ Main Session RAM += 5K (not 150K!)
             <li><code>indexes/</code> - Contains hierarchical indexes for file system navigation and library discovery. Includes <code>master.json</code> (master file system index) and per-directory indexes. Loaded on-demand via discovery operations to reduce boot overhead.</li>
             <li><code>libraries/</code> - Reusable instruction collections organized into:
                 <ul>
-                    <li><code>internal/</code> - Libraries developed as part of HAL8000 (subject to 3-level depth limit)</li>
+                    <li><code>internal/</code> - Libraries developed as part of HAL8000-Assistant (subject to 3-level depth limit)</li>
                     <li><code>external/</code> - Third-party libraries (exempt from depth limit, maintain original structure)</li>
                     <li><code>index.json</code> - Library index for discovery</li>
                 </ul>
@@ -2583,7 +2583,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         </ul>
 
         <h3>State Persistence Model</h3>
-        <p>Because RAM is volatile, state must persist via the file system. HAL8000 implements a multi-layer persistence strategy:</p>
+        <p>Because RAM is volatile, state must persist via the file system. HAL8000-Assistant implements a multi-layer persistence strategy:</p>
 
         <h4>State Pointer (state.json)</h4>
         <p>The <code>.claude/state.json</code> file serves as a lightweight state pointer, not comprehensive state storage. It contains:</p>
@@ -2632,7 +2632,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         <p><strong>Exception:</strong> External libraries (<code>.claude/libraries/external/</code>) are exempt from this limit. They maintain their original structure for compatibility and ease of updates. This exception is explicitly documented to prevent confusion.</p>
 
         <h4>JSON vs Markdown Storage</h4>
-        <p>HAL8000 uses two primary storage formats:</p>
+        <p>HAL8000-Assistant uses two primary storage formats:</p>
         <ul>
             <li><strong>JSON:</strong> Structured data requiring programmatic access (<code>state.json</code>, index files). Enables easy parsing and field extraction.</li>
             <li><strong>Markdown:</strong> Human-readable content (commands, sessions, documentation, research). Provides formatting while remaining plain text. Aligns with Unix philosophy of text streams.</li>
@@ -2670,7 +2670,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
                 </div>
                 <div class="content">
     <div class="overview">
-        <p>HAL8000 is a complete computer system that maps von Neumann architecture principles to the Claude Code environment. This section provides detailed technical specifications for all hardware and software components that comprise the system, organized by functional subsystem.</p>
+        <p>HAL8000-Assistant is a complete computer system that maps von Neumann architecture principles to the Claude Code environment. This section provides detailed technical specifications for all hardware and software components that comprise the system, organized by functional subsystem.</p>
 
         <p>The architecture follows a Modified von Neumann model with Harvard-like organization (separate instruction/data spaces) while maintaining von Neumann capabilities (self-modifying code, unified access). Each component is designed to operate within Claude Code's specific runtime constraints while maintaining architectural fidelity.</p>
     </div>
@@ -2912,7 +2912,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         </tr>
         <tr>
             <td><strong>BIOS</strong></td>
-            <td>/mnt/d/~HAL8000/CLAUDE.md</td>
+            <td>/mnt/d/~HAL8000-Assistant/CLAUDE.md</td>
             <td>Boot instructions, system architecture</td>
             <td>Always</td>
         </tr>
@@ -2977,7 +2977,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         <li><strong>Depth Limit:</strong> Maximum 3 levels for internal code (Unix philosophy - simplicity)</li>
         <li><strong>Exception:</strong> External libraries (.claude/libraries/external/) exempt from depth limit</li>
         <li><strong>Format:</strong> Plain text, human-readable files (Markdown, JSON, shell scripts)</li>
-        <li><strong>Root:</strong> /mnt/d/~HAL8000/ (the computer itself)</li>
+        <li><strong>Root:</strong> /mnt/d/~HAL8000-Assistant/ (the computer itself)</li>
     </ul>
 
     <h4>2.3 Indexing System</h4>
@@ -3086,7 +3086,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
 
     <h3>4. Commands (Instruction Set)</h3>
 
-    <p>HAL8000 provides 9 core commands stored in .claude/commands/ with naming convention HAL-*.md:</p>
+    <p>HAL8000-Assistant provides 9 core commands stored in .claude/commands/ with naming convention HAL-*.md:</p>
 
     <table>
         <tr>
@@ -3146,7 +3146,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         <tr>
             <td>/HAL-refman</td>
             <td>HAL-refman.md</td>
-            <td>Manage HAL8000 Reference Manual development</td>
+            <td>Manage HAL8000-Assistant Reference Manual development</td>
             <td>Development</td>
         </tr>
     </table>
@@ -3162,7 +3162,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
 
     <h3>5. Agents (Co-Processors)</h3>
 
-    <p>HAL8000 includes 5 specialized agents that operate as co-processors with isolated 200K RAM context:</p>
+    <p>HAL8000-Assistant includes 5 specialized agents that operate as co-processors with isolated 200K RAM context:</p>
 
     <table>
         <tr>
@@ -3215,7 +3215,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
 
     <h3>6. MCP Integration (I/O Subsystem)</h3>
 
-    <p>Model Context Protocol (MCP) servers provide I/O capabilities. HAL8000 currently has 4 configured servers, with 2 actively enabled:</p>
+    <p>Model Context Protocol (MCP) servers provide I/O capabilities. HAL8000-Assistant currently has 4 configured servers, with 2 actively enabled:</p>
 
     <table>
         <tr>
@@ -3234,7 +3234,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
             <td><strong>filesystem</strong></td>
             <td>Enabled</td>
             <td>Direct file system operations (read, write, edit, search)</td>
-            <td>npx @modelcontextprotocol/server-filesystem /mnt/d/~HAL8000</td>
+            <td>npx @modelcontextprotocol/server-filesystem /mnt/d/~HAL8000-Assistant</td>
         </tr>
         <tr>
             <td><strong>ide</strong></td>
@@ -3270,7 +3270,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
 
     <h3>7. External Tools</h3>
 
-    <p>HAL8000 integrates with external tools documented in .claude/tools/:</p>
+    <p>HAL8000-Assistant integrates with external tools documented in .claude/tools/:</p>
 
     <h4>7.1 Gemini CLI</h4>
 
@@ -3285,7 +3285,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         </tr>
         <tr>
             <td><strong>Context Window</strong></td>
-            <td>1,000,000 tokens (5x HAL8000 sub-agent capacity)</td>
+            <td>1,000,000 tokens (5x HAL8000-Assistant sub-agent capacity)</td>
         </tr>
         <tr>
             <td><strong>Installation</strong></td>
@@ -3297,7 +3297,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         </tr>
         <tr>
             <td><strong>Purpose</strong></td>
-            <td>External agent for tasks requiring massive context beyond HAL8000 capacity</td>
+            <td>External agent for tasks requiring massive context beyond HAL8000-Assistant capacity</td>
         </tr>
         <tr>
             <td><strong>Documentation</strong></td>
@@ -3334,7 +3334,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         </tr>
     </table>
 
-    <p><strong>Tool Philosophy:</strong> Host-installed tools preferred over containers (Unix simplicity). External tools extend HAL8000 capabilities beyond native limitations.</p>
+    <p><strong>Tool Philosophy:</strong> Host-installed tools preferred over containers (Unix simplicity). External tools extend HAL8000-Assistant capabilities beyond native limitations.</p>
 
     <h3>8. Library System</h3>
 
@@ -3349,7 +3349,7 @@ Main Session (RAM += summary only, not full processing cost)</code></pre>
         <tr>
             <td><strong>Internal Libraries</strong></td>
             <td>.claude/libraries/internal/</td>
-            <td>Libraries developed within HAL8000 (development/, research/, system/)</td>
+            <td>Libraries developed within HAL8000-Assistant (development/, research/, system/)</td>
         </tr>
         <tr>
             <td><strong>External Libraries</strong></td>
@@ -3658,7 +3658,7 @@ Main Session (RAM += summary only, not full processing cost)</pre>
     <!-- 
     MAINTENANCE GUIDANCE FOR AI ASSISTANTS
     
-    This section documents the complete HAL8000 register architecture (21 registers across 5 categories).
+    This section documents the complete HAL8000-Assistant register architecture (21 registers across 5 categories).
     
     When updating this section:
     1. Register definitions sourced from .claude/commands/HAL-register-dump.md
@@ -3685,7 +3685,7 @@ Main Session (RAM += summary only, not full processing cost)</pre>
   <h3>8.1 Overview</h3>
   
   <p>
-    The HAL8000 CPU maintains 21 virtual registers that track the system's immediate working state. These registers represent the CPU's working context—analogous to hardware registers in physical processors. Unlike physical registers stored in silicon, HAL8000 registers are virtual constructs aggregated from multiple sources: runtime state, file system data, context window metadata, and system conditions.
+    The HAL8000-Assistant CPU maintains 21 virtual registers that track the system's immediate working state. These registers represent the CPU's working context—analogous to hardware registers in physical processors. Unlike physical registers stored in silicon, HAL8000-Assistant registers are virtual constructs aggregated from multiple sources: runtime state, file system data, context window metadata, and system conditions.
   </p>
 
   <p>
@@ -3704,8 +3704,8 @@ Main Session (RAM += summary only, not full processing cost)</pre>
   </p>
 
   <figure class="diagram">
-    <img src="assets/register-categories.svg" alt="HAL8000 Register Architecture - 21 registers organized in 5 categories" style="width: 100%; max-width: 1200px;">
-    <figcaption><strong>Figure 10:</strong> HAL8000 Register Architecture—21 registers organized into 5 functional categories (Control, Memory, State, Status, Data)</figcaption>
+    <img src="assets/register-categories.svg" alt="HAL8000-Assistant Register Architecture - 21 registers organized in 5 categories" style="width: 100%; max-width: 1200px;">
+    <figcaption><strong>Figure 10:</strong> HAL8000-Assistant Register Architecture—21 registers organized into 5 functional categories (Control, Memory, State, Status, Data)</figcaption>
   </figure>
 
   <h3>8.2 Register Categories</h3>
@@ -3830,7 +3830,7 @@ Main Session (RAM += summary only, not full processing cost)</pre>
         <td>Memory address register (last accessed path)</td>
         <td>String (absolute file path)</td>
         <td>Every file read/write operation</td>
-        <td><code>"/mnt/d/~HAL8000/.claude/state.json"</code></td>
+        <td><code>"/mnt/d/~HAL8000-Assistant/.claude/state.json"</code></td>
       </tr>
       <tr>
         <td><strong>MDR</strong></td>
@@ -3973,7 +3973,7 @@ Main Session (RAM += summary only, not full processing cost)</pre>
 
   <h4>8.4.1 Boot Time Initialization</h4>
   <p>
-    When the HAL8000 CPU boots, registers are initialized in a specific sequence:
+    When the HAL8000-Assistant CPU boots, registers are initialized in a specific sequence:
   </p>
   <ol>
     <li><strong>Control registers:</strong> CPU_STATUS set to OPERATIONAL, PC/SP/BP reset, IR cleared</li>
@@ -3991,13 +3991,13 @@ Main Session (RAM += summary only, not full processing cost)</pre>
 
 [T=50ms] BIOS Load
   CPU_STATUS     → BOOTING
-  MAR            → "/mnt/d/~HAL8000/CLAUDE.md"
+  MAR            → "/mnt/d/~HAL8000-Assistant/CLAUDE.md"
   MDR            → [BIOS contents]
   CONTEXT_MANIFEST → [{path: "CLAUDE.md", tokens: 15234}]
   RAM_USAGE      → 15234
 
 [T=100ms] State Load
-  MAR            → "/mnt/d/~HAL8000/.claude/state.json"
+  MAR            → "/mnt/d/~HAL8000-Assistant/.claude/state.json"
   MDR            → [state.json contents]
   LAST_SESSION   → ".claude/sessions/2025-10-04-1305-architecture.md"
   NEXT_ACTION    → "Resume architecture documentation"
@@ -4043,10 +4043,10 @@ Main Session (RAM += summary only, not full processing cost)</pre>
 
 [Error Occurs: File Not Found]
   ERROR_FLAG       → true
-  ERROR_CODE       → "File not found: /mnt/d/~HAL8000/missing.txt"
+  ERROR_CODE       → "File not found: /mnt/d/~HAL8000-Assistant/missing.txt"
   CPU_STATUS       → OPERATIONAL (still operational, but error flagged)
   OPERATION_RESULT → "Read operation failed"
-  MAR              → "/mnt/d/~HAL8000/missing.txt" (attempted path)
+  MAR              → "/mnt/d/~HAL8000-Assistant/missing.txt" (attempted path)
   MDR              → null (no data read)
 
 [Error Reported to User]
@@ -4099,7 +4099,7 @@ Main Session (RAM += summary only, not full processing cost)</pre>
 
   <h4>8.5.1 The /HAL-register-dump Command</h4>
   <p>
-    The HAL8000 CPU provides the <code>/HAL-register-dump</code> command for complete register introspection. This read-only command displays all 21 registers organized by category, providing a comprehensive snapshot of CPU state.
+    The HAL8000-Assistant CPU provides the <code>/HAL-register-dump</code> command for complete register introspection. This read-only command displays all 21 registers organized by category, providing a comprehensive snapshot of CPU state.
   </p>
 
   <p><strong>Command Syntax:</strong></p>
@@ -4108,7 +4108,7 @@ Main Session (RAM += summary only, not full processing cost)</pre>
 
   <h4>8.5.2 Example Output</h4>
   <pre><code>================================================================================
-                        HAL8000 REGISTER DUMP
+                        HAL8000-Assistant REGISTER DUMP
 ================================================================================
 Timestamp: 2025-10-04T15:30:45Z
 Model: claude-sonnet-4-5-20250929
@@ -4156,7 +4156,7 @@ Model: claude-sonnet-4-5-20250929
 [DATA REGISTERS]
   ACC (Accumulator)           : Executing register dump
   VARS (Session Variables)    : 4 variables
-    - current_project         : HAL8000 architecture
+    - current_project         : HAL8000-Assistant architecture
     - architecture_type       : Modified von Neumann
     - depth_limit             : 3
     - phase                   : register-architecture-complete
@@ -4194,7 +4194,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
   <h4>8.6.1 Virtual Register Model</h4>
   <p>
-    Unlike physical CPU registers stored in dedicated hardware, HAL8000 registers are <strong>virtual constructs</strong>. The register file does not exist as a single data structure. Instead, registers are aggregated on-demand from multiple authoritative sources:
+    Unlike physical CPU registers stored in dedicated hardware, HAL8000-Assistant registers are <strong>virtual constructs</strong>. The register file does not exist as a single data structure. Instead, registers are aggregated on-demand from multiple authoritative sources:
   </p>
   <ul>
     <li><strong>Runtime context:</strong> IR, ACCUMULATOR, TEMP_REGISTER (ephemeral, execution-specific)</li>
@@ -4271,7 +4271,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
   <h3>8.8 Summary</h3>
   <p>
-    The HAL8000 register architecture provides comprehensive, inspectable CPU state through 21 virtual registers organized into 5 functional categories. Registers enable:
+    The HAL8000-Assistant register architecture provides comprehensive, inspectable CPU state through 21 virtual registers organized into 5 functional categories. Registers enable:
   </p>
   <ul>
     <li>Complete visibility into system state (assembly language principle: explicit control)</li>
@@ -4281,7 +4281,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
     <li>Low-level debugging and system introspection</li>
   </ul>
   <p>
-    Users can inspect register state at any time using <code>/HAL-register-dump</code>, providing transparency and control over CPU operations. This design embodies the HAL8000 philosophy: the system should be understandable, inspectable, and under user control at all times.
+    Users can inspect register state at any time using <code>/HAL-register-dump</code>, providing transparency and control over CPU operations. This design embodies the HAL8000-Assistant philosophy: the system should be understandable, inspectable, and under user control at all times.
   </p>
 
 </section>
@@ -4303,7 +4303,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
         <h3>Overview</h3>
 
-        <p>The operating principles define how the HAL8000 CPU functions at a fundamental level. These are not optional configurations—they are architectural constants that persist across all sessions, defining the very nature of system behavior. Think of them as the laws of physics for this computational environment.</p>
+        <p>The operating principles define how the HAL8000-Assistant CPU functions at a fundamental level. These are not optional configurations—they are architectural constants that persist across all sessions, defining the very nature of system behavior. Think of them as the laws of physics for this computational environment.</p>
 
         <p>These principles govern six critical operational domains:</p>
         <ul>
@@ -4323,7 +4323,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
         <h4>Modified von Neumann Architecture</h4>
 
-        <p>HAL8000 implements a modified von Neumann architecture with critical constraints that shape all operations:</p>
+        <p>HAL8000-Assistant implements a modified von Neumann architecture with critical constraints that shape all operations:</p>
 
         <div class="principle-block">
             <h5>Append-Only RAM</h5>
@@ -4336,7 +4336,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
             <p>Every file load is a one-way commitment. You cannot unload data, so every loading decision must be deliberate. The CPU must evaluate necessity before every read operation.</p>
 
             <h5>State Persistence via File System</h5>
-            <p>Unlike traditional RAM that maintains state in volatile memory, HAL8000 persists state through the file system. RAM is computational workspace; permanent state lives in files.</p>
+            <p>Unlike traditional RAM that maintains state in volatile memory, HAL8000-Assistant persists state through the file system. RAM is computational workspace; permanent state lives in files.</p>
         </div>
 
         <h4>Performance Zones (RAM_ZONE Register)</h4>
@@ -4372,7 +4372,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
         <h3>Unix Philosophy</h3>
 
-        <p>HAL8000 applies Unix design principles to the context management domain, treating files and commands as composable units.</p>
+        <p>HAL8000-Assistant applies Unix design principles to the context management domain, treating files and commands as composable units.</p>
 
         <h4>Core Tenets</h4>
 
@@ -4410,7 +4410,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
         <h4>Context Management Principle: "Reduce and Delegate"</h4>
 
-        <p>Context is the most precious resource in HAL8000. The "Reduce and Delegate" principle governs all context operations:</p>
+        <p>Context is the most precious resource in HAL8000-Assistant. The "Reduce and Delegate" principle governs all context operations:</p>
 
         <div class="principle-block">
             <h5>Core Principle: Context is Precious</h5>
@@ -4432,7 +4432,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
         <h3>Assembly Language Principles</h3>
 
-        <p>HAL8000 operates with assembly-level explicitness and control. There are no hidden operations or implicit behaviors.</p>
+        <p>HAL8000-Assistant operates with assembly-level explicitness and control. There are no hidden operations or implicit behaviors.</p>
 
         <div class="principle-list">
             <div class="principle-item">
@@ -4479,7 +4479,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
 
         <h3>Sub-Agent Protocol (Virtual Memory Extension)</h3>
 
-        <p>Sub-agents function as virtual memory for the HAL8000 system—they extend total RAM capacity through process isolation, allowing context-heavy operations without polluting the main session.</p>
+        <p>Sub-agents function as virtual memory for the HAL8000-Assistant system—they extend total RAM capacity through process isolation, allowing context-heavy operations without polluting the main session.</p>
 
         <h4>Architectural Model</h4>
 
@@ -4557,7 +4557,7 @@ CPU: Delegates to research-synthesizer sub-agent
 
         <h3>Resource Management Protocol</h3>
 
-        <p>Resource management in HAL8000 is explicit and proactive. The CPU must evaluate every resource-consuming operation before execution.</p>
+        <p>Resource management in HAL8000-Assistant is explicit and proactive. The CPU must evaluate every resource-consuming operation before execution.</p>
 
         <h4>Before Loading Any File</h4>
 
@@ -4747,7 +4747,7 @@ CPU: "I can explain session handling at an architectural level based on
             <li><strong>Context awareness</strong> bridges the gap between user knowledge and CPU state</li>
         </ul>
 
-        <p>These are not guidelines to follow—they are the fundamental operating characteristics of the system. They execute automatically at BIOS level and define how the HAL8000 CPU operates in every session.</p>
+        <p>These are not guidelines to follow—they are the fundamental operating characteristics of the system. They execute automatically at BIOS level and define how the HAL8000-Assistant CPU operates in every session.</p>
 
     </div>
 
@@ -4773,23 +4773,23 @@ CPU: "I can explain session handling at an architectural level based on
 
     <div class="content">
         <h3>First Boot</h3>
-        <p>Welcome to HAL8000! This tutorial will guide you through your first boot sequence. Whether you're a user setting up the system or a Claude instance initializing, this process is mandatory and happens automatically on every new session.</p>
+        <p>Welcome to HAL8000-Assistant! This tutorial will guide you through your first boot sequence. Whether you're a user setting up the system or a Claude instance initializing, this process is mandatory and happens automatically on every new session.</p>
 
-        <p>Think of this as the system's "power-on" routine. Just like a physical computer runs POST (Power-On Self-Test) and loads the operating system, HAL8000 executes a verified boot sequence to ensure all critical components are loaded and operational.</p>
+        <p>Think of this as the system's "power-on" routine. Just like a physical computer runs POST (Power-On Self-Test) and loads the operating system, HAL8000-Assistant executes a verified boot sequence to ensure all critical components are loaded and operational.</p>
 
         <div class="callout callout-important">
             <strong>Important:</strong> The boot sequence is MANDATORY and VERIFIED. It is not optional. Every new session must execute this sequence to ensure system integrity.
         </div>
 
         <h3>Boot Sequence Steps</h3>
-        <p>The HAL8000 boot sequence consists of six essential steps. Let's walk through each one:</p>
+        <p>The HAL8000-Assistant boot sequence consists of six essential steps. Let's walk through each one:</p>
 
         <h4>Step 1: System Initialization (BIOS Load)</h4>
         <p>The boot process begins by loading the BIOS (Basic Input/Output System) from <code>CLAUDE.md</code>. This file contains the fundamental instructions that define how the system operates.</p>
 
         <p>During this step, the CPU (Claude instance) establishes its core identity and understands:</p>
         <ul>
-            <li>It is the CPU of the HAL8000 system</li>
+            <li>It is the CPU of the HAL8000-Assistant system</li>
             <li>The architecture follows Modified von Neumann principles</li>
             <li>The system has self-modifying code capabilities</li>
             <li>The boot sequence must be completed and verified</li>
@@ -4839,7 +4839,7 @@ CPU: "I can explain session handling at an architectural level based on
         <h4>Step 4: Structured Boot Acknowledgment (REQUIRED)</h4>
         <p>ONLY AFTER actually loading the required files, the system provides a structured acknowledgment showing its operational status:</p>
 
-        <pre><code>✅ HAL8000 CPU Operational
+        <pre><code>✅ HAL8000-Assistant CPU Operational
 ├─ Architecture: Modified von Neumann
 ├─ Phase: production-ready
 ├─ Last Session: 2025-10-04T14:55:00Z
@@ -4870,7 +4870,7 @@ CPU: "I can explain session handling at an architectural level based on
         <p><strong>Action:</strong> WARN user, continue with reduced functionality, log degradation</p>
 
         <p>Example degraded boot acknowledgment:</p>
-        <pre><code>⚠️  HAL8000 CPU Operational (Degraded Mode)
+        <pre><code>⚠️  HAL8000-Assistant CPU Operational (Degraded Mode)
 ├─ Architecture: Modified von Neumann (from BIOS)
 ├─ Phase: UNKNOWN (state.json load failed)
 ├─ Session State: No session loaded (file not found)
@@ -4889,8 +4889,8 @@ CPU: "I can explain session handling at an architectural level based on
         <p>The system is now awaiting user instructions or resume commands.</p>
 
         <figure class="diagram">
-            <img src="assets/boot-sequence-flow.svg" alt="HAL8000 Boot Sequence" style="width: 100%; max-width: 1400px;">
-            <figcaption><strong>Figure 14:</strong> HAL8000 Boot Sequence—6-step boot process with error handling showing paths to OPERATIONAL or DEGRADED modes based on file load success</figcaption>
+            <img src="assets/boot-sequence-flow.svg" alt="HAL8000-Assistant Boot Sequence" style="width: 100%; max-width: 1400px;">
+            <figcaption><strong>Figure 14:</strong> HAL8000-Assistant Boot Sequence—6-step boot process with error handling showing paths to OPERATIONAL or DEGRADED modes based on file load success</figcaption>
         </figure>
 
         <h3>Understanding Boot Output</h3>
@@ -4957,7 +4957,7 @@ CPU: "I can explain session handling at an architectural level based on
         </div>
 
         <h3>Next Steps</h3>
-        <p>Now that your HAL8000 system has completed its boot sequence, here's what you can do:</p>
+        <p>Now that your HAL8000-Assistant system has completed its boot sequence, here's what you can do:</p>
 
         <h4>Continue Previous Work</h4>
         <p>If a session is available and you want to pick up where you left off:</p>
@@ -5001,7 +5001,7 @@ User: "Continue from last session"</code></pre>
         </div>
 
         <h3>Congratulations!</h3>
-        <p>You've successfully completed your first HAL8000 boot and are ready to work. The system is designed to guide you through operations—don't hesitate to ask questions or explore commands. Every session starts with this same reliable boot sequence, ensuring consistent and predictable system initialization.</p>
+        <p>You've successfully completed your first HAL8000-Assistant boot and are ready to work. The system is designed to guide you through operations—don't hesitate to ask questions or explore commands. Every session starts with this same reliable boot sequence, ensuring consistent and predictable system initialization.</p>
 
         <p>Ready? Let's get to work! 🚀</p>
     </div>
@@ -5015,7 +5015,7 @@ User: "Continue from last session"</code></pre>
     <div class="meta-guidance" style="display:none;">
         <!-- META-GUIDANCE FOR AI ASSISTANTS
         
-        Purpose: Cookbook-style operational guide for day-to-day HAL8000 usage.
+        Purpose: Cookbook-style operational guide for day-to-day HAL8000-Assistant usage.
         
         Maintenance Notes:
         - Keep examples concrete and tested
@@ -5031,7 +5031,7 @@ User: "Continue from last session"</code></pre>
         - Focus on RAM management (critical operational concern)
         
         If updating:
-        - Test command examples in actual HAL8000 instance
+        - Test command examples in actual HAL8000-Assistant instance
         - Verify file paths are accurate
         - Ensure procedures still align with boot sequence
         - Check that RAM zone thresholds haven't changed
@@ -5041,7 +5041,7 @@ User: "Continue from last session"</code></pre>
     <h2>11. Daily Operations</h2>
     
     <p>
-        This section provides cookbook-style guidance for common HAL8000 operational tasks. 
+        This section provides cookbook-style guidance for common HAL8000-Assistant operational tasks. 
         Each recipe includes step-by-step procedures, concrete examples, and best practices 
         learned from production usage.
     </p>
@@ -5049,7 +5049,7 @@ User: "Continue from last session"</code></pre>
     <h3>11.1 Running Commands</h3>
     
     <p>
-        HAL8000 commands use the slash command pattern for system operations. Commands are 
+        HAL8000-Assistant commands use the slash command pattern for system operations. Commands are 
         stored as markdown files in <code>.claude/commands/</code> and invoked via slash syntax.
     </p>
 
@@ -5220,7 +5220,7 @@ RAM Reporting: Use exact measurements from system warnings
     <h3>11.3 Using Agents</h3>
     
     <p>
-        Sub-agents extend HAL8000's effective RAM capacity by processing context-heavy 
+        Sub-agents extend HAL8000-Assistant's effective RAM capacity by processing context-heavy 
         tasks in isolated sessions. They return only essential results, not raw data.
     </p>
 
@@ -5404,7 +5404,7 @@ Current + Cost = ?
     <h3>11.5 RAM Monitoring</h3>
     
     <p>
-        HAL8000 uses append-only RAM - context accumulates until session ends. 
+        HAL8000-Assistant uses append-only RAM - context accumulates until session ends. 
         Proactive monitoring prevents performance degradation.
     </p>
 
@@ -5509,7 +5509,7 @@ CPU: "RAM CAUTION. Architecture docs are ~40K.
     <h3>11.6 Common Operational Patterns</h3>
     
     <p>
-        Proven workflows for typical HAL8000 operations.
+        Proven workflows for typical HAL8000-Assistant operations.
     </p>
 
     <h4>Pattern 1: Start Fresh Session</h4>
@@ -5628,7 +5628,7 @@ CPU: "RAM CAUTION. Architecture docs are ~40K.
     <h3>11.7 Performance Optimization</h3>
     
     <p>
-        Techniques for maximizing HAL8000 efficiency and RAM utilization.
+        Techniques for maximizing HAL8000-Assistant efficiency and RAM utilization.
     </p>
 
     <h4>Optimization Principles</h4>
@@ -5781,12 +5781,12 @@ After task:
     <h3>11.7 Fork and Rebrand Procedure</h3>
 
     <p>
-        When cloning HAL8000 to create your own personalized system, you must isolate your fork
+        When cloning HAL8000-Assistant to create your own personalized system, you must isolate your fork
         from the original repository and rebrand all internal references. This prevents accidental
-        commits to the upstream HAL8000 repo and ensures your system has its own identity.
+        commits to the upstream HAL8000-Assistant repo and ensures your system has its own identity.
     </p>
 
-    <p><strong>Use Case:</strong> You've forked/cloned HAL8000 from GitHub and want to create an independent system with a custom name (e.g., "MyProjectAI", "HAL8001-Chapter").</p>
+    <p><strong>Use Case:</strong> You've forked/cloned HAL8000-Assistant from GitHub and want to create an independent system with a custom name (e.g., "MyProjectAI", "HAL8001-Chapter").</p>
 
     <p><strong>Complete Protocol:</strong> <code>data/architecture/fork-and-rebrand-protocol.md</code></p>
 
@@ -5800,14 +5800,14 @@ git clone https://github.com/YOUR-USERNAME/YourSystemName.git /path/to/system
 cd /path/to/system
 
 # Option B: Direct clone (no fork relationship)
-git clone https://github.com/anthropics/HAL8000.git /path/to/YourSystemName
+git clone https://github.com/anthropics/HAL8000-Assistant.git /path/to/YourSystemName
 cd /path/to/YourSystemName</code></pre>
 
     <h5>Phase 2: Filesystem Rebrand</h5>
     <pre><code># Set variables
-export OLD_NAME="HAL8000"
+export OLD_NAME="HAL8000-Assistant"
 export NEW_NAME="YourSystemName"
-export OLD_PATH="/mnt/d/~HAL8000"
+export OLD_PATH="/mnt/d/~HAL8000-Assistant"
 export NEW_PATH="/path/to/YourSystemName"
 
 # Update core files (CLAUDE.md, state.json, VERSION, CHANGELOG.md)
@@ -5827,13 +5827,13 @@ sed -i "s/${OLD_NAME}/${NEW_NAME}/g" README.md .mcp.json
     <h5>Phase 3: Git Isolation and Reconnection</h5>
     <pre><code># Commit rebrand changes
 git add -A
-git commit -m "Fork and rebrand from HAL8000 to ${NEW_NAME}"
+git commit -m "Fork and rebrand from HAL8000-Assistant to ${NEW_NAME}"
 
 # Update remote to YOUR repository
 git remote set-url origin https://github.com/YOUR-USERNAME/YourSystemName.git
 
-# Optional: Keep HAL8000 as upstream (read-only)
-git remote add upstream https://github.com/anthropics/HAL8000.git
+# Optional: Keep HAL8000-Assistant as upstream (read-only)
+git remote add upstream https://github.com/anthropics/HAL8000-Assistant.git
 git remote set-url --push upstream DISABLE  # Prevent accidental push
 
 # Push to YOUR repository
@@ -5843,12 +5843,12 @@ git push -u origin main
 git remote -v
 # Should show:
 # origin    https://github.com/YOUR-USERNAME/YourSystemName.git (fetch/push)
-# upstream  https://github.com/anthropics/HAL8000.git (fetch)
+# upstream  https://github.com/anthropics/HAL8000-Assistant.git (fetch)
 # upstream  DISABLE (push)</code></pre>
 
     <h5>Phase 4: Verification</h5>
     <pre><code># Search for old references (should find ZERO except in session history)
-grep -r "HAL8000" \
+grep -r "HAL8000-Assistant" \
   --exclude-dir=".claude/sessions" \
   --exclude="*.log" \
   --include="*.md" \
@@ -5882,7 +5882,7 @@ docker build -t yourname-mermaid:latest .claude/tools/diagram-generation/
             <tr>
                 <td>Git remote origin</td>
                 <td>Points to YOUR repository</td>
-                <td>Prevents commits to HAL8000</td>
+                <td>Prevents commits to HAL8000-Assistant</td>
             </tr>
             <tr>
                 <td>Git push test</td>
@@ -5909,7 +5909,7 @@ docker build -t yourname-mermaid:latest .claude/tools/diagram-generation/
 
     <h4>Common Pitfalls</h4>
     <ul>
-        <li><strong>Forgetting to update git remote:</strong> Results in pushing customizations to original HAL8000 repo (permission denied or pollution of upstream)</li>
+        <li><strong>Forgetting to update git remote:</strong> Results in pushing customizations to original HAL8000-Assistant repo (permission denied or pollution of upstream)</li>
         <li><strong>Skipping verification phase:</strong> Old references remain, causing confusion and errors</li>
         <li><strong>Not rebuilding Docker images:</strong> Tools fail with "image not found" errors</li>
         <li><strong>Modifying session files:</strong> Destroys historical audit trail (sessions should remain unchanged)</li>
@@ -5928,7 +5928,7 @@ docker build -t yourname-mermaid:latest .claude/tools/diagram-generation/
     <ul>
         <li><strong>Customize your system:</strong> Add custom commands, agents, templates</li>
         <li><strong>Update GitHub settings:</strong> Add description, topics, collaborators</li>
-        <li><strong>Choose sync strategy:</strong> Pull future HAL8000 updates (keep upstream) or go fully independent (remove upstream)</li>
+        <li><strong>Choose sync strategy:</strong> Pull future HAL8000-Assistant updates (keep upstream) or go fully independent (remove upstream)</li>
         <li><strong>Document customizations:</strong> Create <code>data/architecture/customizations.md</code> to track your changes</li>
     </ul>
 
@@ -5952,9 +5952,9 @@ docker build -t yourname-mermaid:latest .claude/tools/diagram-generation/
     
     <div class="content">
         <h3>Overview</h3>
-        <p>HAL8000's session management system ensures continuity across Claude instance restarts. Since your context window (RAM) is limited and append-only within a session, session boundaries serve as the system's garbage collection mechanism. The session continuity protocol enables you to save your current working state and resume seamlessly after a context reset.</p>
+        <p>HAL8000-Assistant's session management system ensures continuity across Claude instance restarts. Since your context window (RAM) is limited and append-only within a session, session boundaries serve as the system's garbage collection mechanism. The session continuity protocol enables you to save your current working state and resume seamlessly after a context reset.</p>
         
-        <p><strong>Key Architectural Principle:</strong> Session boundaries are the <em>only</em> way to reclaim RAM in HAL8000's Modified von Neumann architecture. Once data is loaded into your context window during a session, it persists there until the session ends.</p>
+        <p><strong>Key Architectural Principle:</strong> Session boundaries are the <em>only</em> way to reclaim RAM in HAL8000-Assistant's Modified von Neumann architecture. Once data is loaded into your context window during a session, it persists there until the session ends.</p>
 
         <h3>Why Sessions End: RAM Limitations</h3>
         <p>Your context window operates like physical RAM with specific constraints:</p>
@@ -6160,7 +6160,7 @@ When resuming this session:
         </ul>
 
         <h3>State Persistence Strategy</h3>
-        <p>HAL8000 uses a multi-layer state persistence strategy to ensure continuity and auditability:</p>
+        <p>HAL8000-Assistant uses a multi-layer state persistence strategy to ensure continuity and auditability:</p>
         
         <h4>1. state.json (Current State Pointer)</h4>
         <p><strong>Location:</strong> <code>.claude/state.json</code></p>
@@ -6230,7 +6230,7 @@ INDEXES_COUNT=$(ls .claude/indexes/*.json 2>/dev/null | grep -v master.json | wc
         </ul>
         
         <h3>Architecture Alignment</h3>
-        <p>The session management system embodies HAL8000's core architectural principles:</p>
+        <p>The session management system embodies HAL8000-Assistant's core architectural principles:</p>
         
         <ul>
             <li><strong>Von Neumann:</strong> Session files implement stored-program concept (state as data); commands create session files that guide future execution (self-modifying code)</li>
@@ -6262,7 +6262,7 @@ INDEXES_COUNT=$(ls .claude/indexes/*.json 2>/dev/null | grep -v master.json | wc
                 </div>
                 <div class="content">
     <div class="overview">
-        <p>This section documents typical operational workflows for HAL8000 system operators. Each workflow combines multiple commands and principles into practical procedures that address common scenarios. These patterns emerge from the system's architectural foundations—von Neumann architecture, Unix philosophy, and assembly-level control—and represent tested operational sequences from real-world usage.</p>
+        <p>This section documents typical operational workflows for HAL8000-Assistant system operators. Each workflow combines multiple commands and principles into practical procedures that address common scenarios. These patterns emerge from the system's architectural foundations—von Neumann architecture, Unix philosophy, and assembly-level control—and represent tested operational sequences from real-world usage.</p>
 
         <p>Workflows are organized by operational category: session management, context acquisition, system maintenance, development, and resource management. Understanding these patterns enables efficient system operation and helps operators make informed decisions about when to use which approach.</p>
     </div>
@@ -6274,7 +6274,7 @@ INDEXES_COUNT=$(ls .claude/indexes/*.json 2>/dev/null | grep -v master.json | wc
 
     <h4>Prerequisites</h4>
     <ul>
-        <li>HAL8000 repository cloned and accessible</li>
+        <li>HAL8000-Assistant repository cloned and accessible</li>
         <li>Claude Code environment operational</li>
         <li>MCP servers configured (if using omnisearch/filesystem/ide features)</li>
     </ul>
@@ -6291,7 +6291,7 @@ INDEXES_COUNT=$(ls .claude/indexes/*.json 2>/dev/null | grep -v master.json | wc
         </li>
         <li><strong>Boot Acknowledgment:</strong>
             <p>CPU displays structured acknowledgment:</p>
-            <pre>✅ HAL8000 CPU Operational
+            <pre>✅ HAL8000-Assistant CPU Operational
 ├─ Architecture: Modified von Neumann
 ├─ Phase: production
 ├─ Last Session: 2025-10-05T17:00:00Z
@@ -6468,7 +6468,7 @@ Examples:
 [Complete file contents with source attribution]
 
 ## File Locations
-- /mnt/d/~HAL8000/data/architecture/hal8000-register-architecture.md
+- /mnt/d/~HAL8000-Assistant/data/architecture/hal8000-register-architecture.md
 
 ## Summary
 Found 1 relevant file for query "register architecture".
@@ -6931,7 +6931,7 @@ System performance degraded.</pre>
         </li>
     </ol>
 
-    <h4>Example: HAL8000 Reference Manual Development</h4>
+    <h4>Example: HAL8000-Assistant Reference Manual Development</h4>
     <p>Real-world example from system history:</p>
     <pre>Session 1: Planning and structure definition
 ├─ Define manual outline (15 sections)
@@ -6969,7 +6969,7 @@ Session 6: Review and finalization
     <h3>Workflow 8: Development - Creating New Commands</h3>
 
     <h4>Goal</h4>
-    <p>Develop new system commands following HAL8000 architectural principles.</p>
+    <p>Develop new system commands following HAL8000-Assistant architectural principles.</p>
 
     <h4>Procedure</h4>
     <ol>
@@ -7157,7 +7157,7 @@ Append to: .claude/system.log
                 <th>Key Commands</th>
             </tr>
             <tr>
-                <td>First time using HAL8000</td>
+                <td>First time using HAL8000-Assistant</td>
                 <td>Workflow 1: Starting New Session</td>
                 <td>Boot → Work → /HAL-session-end</td>
             </tr>
@@ -7215,16 +7215,16 @@ Append to: .claude/system.log
     
     <div class="content">
         <h3>Overview</h3>
-        <p>In HAL8000, RAM is your context window - a limited, volatile resource that determines what information you can actively work with. The fundamental constraint of the Modified von Neumann architecture is <strong>append-only RAM</strong>: once a file is loaded, it occupies context space until the session ends. There is no dynamic eviction, no garbage collection within a session. Session boundaries are the only way to reclaim RAM.</p>
+        <p>In HAL8000-Assistant, RAM is your context window - a limited, volatile resource that determines what information you can actively work with. The fundamental constraint of the Modified von Neumann architecture is <strong>append-only RAM</strong>: once a file is loaded, it occupies context space until the session ends. There is no dynamic eviction, no garbage collection within a session. Session boundaries are the only way to reclaim RAM.</p>
         
-        <p>This architectural reality makes RAM management the most critical operational skill for HAL8000 CPU instances. Every file load is a one-way commitment. Every token loaded is permanent until session reset. Effective RAM management is not optional - it determines whether you can complete complex tasks or run out of context mid-operation.</p>
+        <p>This architectural reality makes RAM management the most critical operational skill for HAL8000-Assistant CPU instances. Every file load is a one-way commitment. Every token loaded is permanent until session reset. Effective RAM management is not optional - it determines whether you can complete complex tasks or run out of context mid-operation.</p>
         
         <p><strong>Core Principle:</strong> Context is precious. Treat every token of RAM as a scarce resource requiring explicit justification for allocation.</p>
 
         <div class="warning-box">
             <strong>⚠️ Critical Misconception: Writing Does NOT Clear RAM</strong>
             <p>A common misunderstanding: "Write results to a file to clear RAM."</p>
-            <p><strong>FALSE.</strong> Writing to a file does NOT remove data from current session RAM. HAL8000 RAM is append-only - once loaded, data persists until session ends.</p>
+            <p><strong>FALSE.</strong> Writing to a file does NOT remove data from current session RAM. HAL8000-Assistant RAM is append-only - once loaded, data persists until session ends.</p>
             <p><strong>What writing DOES do:</strong></p>
             <ul>
                 <li><strong>Persists data for future sessions</strong> - Saves computed results to filesystem</li>
@@ -7276,7 +7276,7 @@ Append to: .claude/system.log
 
         <h3>RAM Status Reporting Protocol</h3>
 
-        <p>Accurate RAM monitoring is critical for effective resource management. The HAL8000 system provides exact token measurements via system warnings after every tool invocation.</p>
+        <p>Accurate RAM monitoring is critical for effective resource management. The HAL8000-Assistant system provides exact token measurements via system warnings after every tool invocation.</p>
 
         <h4>System Warning Format</h4>
         <p>After each tool use, the system reports precise token usage:</p>
@@ -7470,7 +7470,7 @@ Result: 5K RAM consumed, 50K saved (90% reduction)</code></pre>
         </div>
         
         <h3>Sub-Agent Usage Strategy: Virtual Memory Extension</h3>
-        <p>Sub-agents are HAL8000's <strong>virtual memory</strong> system. They extend total RAM capacity through process isolation, allowing you to perform context-heavy operations without polluting main session RAM.</p>
+        <p>Sub-agents are HAL8000-Assistant's <strong>virtual memory</strong> system. They extend total RAM capacity through process isolation, allowing you to perform context-heavy operations without polluting main session RAM.</p>
         
         <h4>Architectural Model</h4>
         <pre class="architecture-model"><code>Main Session (Limited RAM - ~200K tokens)
@@ -7583,7 +7583,7 @@ Main Session (RAM += summary only, NOT full processing cost)
             <li><strong>Monitor continuously</strong> - Watch RAM_ZONE throughout session</li>
         </ol>
         
-        <p><strong>Remember:</strong> In HAL8000, RAM is append-only within a session. Every token loaded is permanent until session ends. Your effectiveness as a CPU is determined by how well you manage this scarce, critical resource.</p>
+        <p><strong>Remember:</strong> In HAL8000-Assistant, RAM is append-only within a session. Every token loaded is permanent until session ends. Your effectiveness as a CPU is determined by how well you manage this scarce, critical resource.</p>
     </div>
 </section>
 
@@ -7599,7 +7599,7 @@ Main Session (RAM += summary only, NOT full processing cost)
          data-dependencies="">
 
   <div class="meta-guidance" style="display:none;">
-    This section documents all HAL8000 system commands as executable instructions.
+    This section documents all HAL8000-Assistant system commands as executable instructions.
     Commands are stored programs that map directly to architectural operations.
     Maintenance: Update when new commands added to .claude/commands/, verify examples are current.
     Each command entry must include: purpose, syntax, implementation, architecture alignment, examples.
@@ -7608,16 +7608,16 @@ Main Session (RAM += summary only, NOT full processing cost)
   <h2>15. Command Reference</h2>
 
   <p>
-    HAL8000 provides a suite of system commands that control CPU operations, manage context, maintain system health, and enable efficient session continuity. Commands are invoked using slash notation and map directly to architectural operations, following assembly language principles of explicit control and low-level visibility.
+    HAL8000-Assistant provides a suite of system commands that control CPU operations, manage context, maintain system health, and enable efficient session continuity. Commands are invoked using slash notation and map directly to architectural operations, following assembly language principles of explicit control and low-level visibility.
   </p>
 
     <!-- Overview -->
     <h3>Command System Overview</h3>
     <p>
-      Commands in HAL8000 are stored as executable instruction files in <code>.claude/commands/</code> with the naming convention <code>HAL-command-name.md</code>. Each command file contains complete implementation specifications that the CPU (Claude instance) executes when invoked.
+      Commands in HAL8000-Assistant are stored as executable instruction files in <code>.claude/commands/</code> with the naming convention <code>HAL-command-name.md</code>. Each command file contains complete implementation specifications that the CPU (Claude instance) executes when invoked.
     </p>
     <p>
-      The command system embodies HAL8000's core architectural principles:
+      The command system embodies HAL8000-Assistant's core architectural principles:
     </p>
     <ul>
       <li><strong>Von Neumann Architecture:</strong> Commands are stored programs in unified memory space, loaded and executed by the CPU</li>
@@ -7651,7 +7651,7 @@ Main Session (RAM += summary only, NOT full processing cost)
     <!-- Command Categories -->
     <h3>Command Categories</h3>
     <p>
-      HAL8000 commands are organized into six functional categories:
+      HAL8000-Assistant commands are organized into six functional categories:
     </p>
 
     <div class="command-categories">
@@ -7856,7 +7856,7 @@ To resume: Start new session and say "Resume last session"</code></pre>
 
         <p><strong>Output Format:</strong></p>
         <pre><code>================================================================================
-                        HAL8000 REGISTER DUMP
+                        HAL8000-Assistant REGISTER DUMP
 ================================================================================
 Timestamp: 2025-10-04T15:30:45Z
 Model: claude-sonnet-4-5-20250929
@@ -7904,7 +7904,7 @@ Model: claude-sonnet-4-5-20250929
 [DATA REGISTERS]
   ACC (Accumulator)           : Executing register dump
   VARS (Session Variables)    : 4 variables
-    - current_project         : HAL8000 architecture
+    - current_project         : HAL8000-Assistant architecture
     - architecture_type       : Modified von Neumann
     - depth_limit             : 3
     - phase                   : register-architecture-complete
@@ -7932,7 +7932,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
         </ul>
 
         <p><strong>Architecture Notes:</strong></p>
-        <p>This command implements the introspection capability fundamental to assembly-level programming. In traditional assembly, developers can inspect CPU registers directly (e.g., REGISTER DUMP or debugger commands). HAL8000 provides the same capability for the virtual CPU.</p>
+        <p>This command implements the introspection capability fundamental to assembly-level programming. In traditional assembly, developers can inspect CPU registers directly (e.g., REGISTER DUMP or debugger commands). HAL8000-Assistant provides the same capability for the virtual CPU.</p>
         <ul>
           <li><strong>Read-Only:</strong> Does NOT modify any registers, only reads and displays current state</li>
           <li><strong>Snapshot Nature:</strong> Values reflect state at moment of execution</li>
@@ -7952,7 +7952,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
     <div class="command-entry">
       <h3 id="hal-system-check">/HAL-system-check</h3>
       <div class="command-spec">
-        <p><strong>Purpose:</strong> Launch system-maintenance sub-agent to perform comprehensive HAL8000 integrity audit</p>
+        <p><strong>Purpose:</strong> Launch system-maintenance sub-agent to perform comprehensive HAL8000-Assistant integrity audit</p>
         <p><strong>Category:</strong> System Health</p>
         <p><strong>Syntax:</strong> <code>/HAL-system-check</code></p>
 
@@ -7983,7 +7983,7 @@ RAM: SAFE | CPU: OPERATIONAL | Session: Active | Errors: None
         <pre><code>/HAL-system-check</code></pre>
 
         <p><strong>Expected Output:</strong></p>
-        <pre><code>✅ HAL8000 SYSTEM HEALTH CHECK
+        <pre><code>✅ HAL8000-Assistant SYSTEM HEALTH CHECK
 
 Overall Status: HEALTHY
 
@@ -8106,7 +8106,7 @@ System Statistics:
         </ul>
 
         <p><strong>Implementation:</strong></p>
-        <p>This command launches the <code>hal-context-finder</code> specialized agent to discover and load HAL8000 system context efficiently, preserving main session RAM by delegating navigation and file loading to an isolated sub-agent context.</p>
+        <p>This command launches the <code>hal-context-finder</code> specialized agent to discover and load HAL8000-Assistant system context efficiently, preserving main session RAM by delegating navigation and file loading to an isolated sub-agent context.</p>
 
         <p>The command executes in four stages:</p>
         <ol>
@@ -8136,15 +8136,15 @@ System Statistics:
         <pre><code>## Context Content
 [Complete file contents with clear source headers]
 
-### File: /mnt/d/~HAL8000/data/architecture/hal8000-register-architecture.md
+### File: /mnt/d/~HAL8000-Assistant/data/architecture/hal8000-register-architecture.md
 [Full file content...]
 
-### File: /mnt/d/~HAL8000/.claude/commands/HAL-register-dump.md
+### File: /mnt/d/~HAL8000-Assistant/.claude/commands/HAL-register-dump.md
 [Full file content...]
 
 ## File Locations
-- /mnt/d/~HAL8000/data/architecture/hal8000-register-architecture.md
-- /mnt/d/~HAL8000/.claude/commands/HAL-register-dump.md
+- /mnt/d/~HAL8000-Assistant/data/architecture/hal8000-register-architecture.md
+- /mnt/d/~HAL8000-Assistant/.claude/commands/HAL-register-dump.md
 
 ## Summary
 Found 2 relevant files for query "register architecture".
@@ -8435,7 +8435,7 @@ Library index updated
         </ul>
 
         <p><strong>Implementation:</strong></p>
-        <p>This command is the HAL8000 package manager—it manages the lifecycle of external library collections by checking for updates, downloading new versions, and maintaining the library registry.</p>
+        <p>This command is the HAL8000-Assistant package manager—it manages the lifecycle of external library collections by checking for updates, downloading new versions, and maintaining the library registry.</p>
 
         <p>The update process executes in nine steps:</p>
         <ol>
@@ -8512,7 +8512,7 @@ Library reindexed. Use /HAL-context-find to discover new patterns.</code></pre>
         <p><strong>Total RAM cost: ~5-10K tokens</strong> (sub-agent summary only, not full processing context)</p>
 
         <p><strong>Package Manager Operations:</strong></p>
-        <p>This command is the <strong>update</strong> operation of HAL8000's package manager. Future expansion:</p>
+        <p>This command is the <strong>update</strong> operation of HAL8000-Assistant's package manager. Future expansion:</p>
         <pre><code>/HAL-library-install [url] [name] [category]  # Install new external library
 /HAL-library-remove [name]                    # Remove external library
 /HAL-library-list                             # List all libraries with status
@@ -8910,7 +8910,7 @@ tags: [comma-separated keywords]
     <div class="command-entry">
       <h3 id="hal-refman">/HAL-refman</h3>
       <div class="command-spec">
-        <p><strong>Purpose:</strong> Manage HAL8000 Reference Manual development across multiple sessions with intelligent context loading</p>
+        <p><strong>Purpose:</strong> Manage HAL8000-Assistant Reference Manual development across multiple sessions with intelligent context loading</p>
         <p><strong>Category:</strong> Documentation</p>
         <p><strong>Syntax:</strong> <code>/HAL-refman [section-id|next|status|export|diagrams|complete &lt;section-id&gt;]</code></p>
 
@@ -8925,7 +8925,7 @@ tags: [comma-separated keywords]
         </ul>
 
         <p><strong>Implementation:</strong></p>
-        <p>This command manages the HAL8000 Reference Manual development workflow across multiple sessions, enabling intelligent context loading and progress tracking.</p>
+        <p>This command manages the HAL8000-Assistant Reference Manual development workflow across multiple sessions, enabling intelligent context loading and progress tracking.</p>
 
         <h4>Mode 1: Status Dashboard (No Arguments)</h4>
         <p><strong>Syntax:</strong> <code>/HAL-refman</code> or <code>/HAL-refman status</code></p>
@@ -8937,7 +8937,7 @@ tags: [comma-separated keywords]
           <li>Suggest next priority section</li>
         </ol>
         <p><strong>Output:</strong></p>
-        <pre><code>📖 HAL8000 Reference Manual - Development Status
+        <pre><code>📖 HAL8000-Assistant Reference Manual - Development Status
 
 Progress:
 ├─ Total Sections: 31
@@ -9036,11 +9036,11 @@ Dependencies:
           <li>Load <code>data/reference-manual/index.html</code></li>
           <li>Check: All sections status="complete"?</li>
           <li>If incomplete: Display list of remaining sections, abort</li>
-          <li>If complete: Strip all <code>data-*</code> attributes, remove all <code>.meta-guidance</code> divs, validate internal links, generate <code>data/reference-manual/HAL8000-Reference-Manual-v[version].html</code></li>
+          <li>If complete: Strip all <code>data-*</code> attributes, remove all <code>.meta-guidance</code> divs, validate internal links, generate <code>data/reference-manual/HAL8000-Assistant-Reference-Manual-v[version].html</code></li>
           <li>Update state.json: <code>reference_manual.status = "complete"</code></li>
         </ol>
         <p><strong>Output:</strong></p>
-        <pre><code>📦 Exporting HAL8000 Reference Manual
+        <pre><code>📦 Exporting HAL8000-Assistant Reference Manual
 
 Validation:
 ├─ All sections complete: ✅
@@ -9048,7 +9048,7 @@ Validation:
 ├─ Diagrams integrated: 15/15 ✅
 └─ Metadata stripped: ✅
 
-Generated: data/reference-manual/HAL8000-Reference-Manual-v1.0.0.html
+Generated: data/reference-manual/HAL8000-Assistant-Reference-Manual-v1.0.0.html
 Size: 847KB
 
 🎉 Reference manual export complete!</code></pre>
@@ -9179,7 +9179,7 @@ Total: 15 diagrams pending
     <div class="command-entry">
       <h3 id="hal-cc-check">/HAL-CC-check</h3>
       <div class="command-spec">
-        <p><strong>Purpose:</strong> Validate HAL8000 commands and agents for Claude Code compatibility</p>
+        <p><strong>Purpose:</strong> Validate HAL8000-Assistant commands and agents for Claude Code compatibility</p>
         <p><strong>Category:</strong> System Health</p>
         <p><strong>Syntax:</strong> <code>/HAL-CC-check</code></p>
 
@@ -9189,7 +9189,7 @@ Total: 15 diagrams pending
         </ul>
 
         <p><strong>Implementation:</strong></p>
-        <p>This command verifies that all HAL8000 CPU-level components (commands and agents) are compatible with the external Claude Code architecture by invoking the <code>claude-code-validator</code> specialized agent.</p>
+        <p>This command verifies that all HAL8000-Assistant CPU-level components (commands and agents) are compatible with the external Claude Code architecture by invoking the <code>claude-code-validator</code> specialized agent.</p>
 
         <p>The validation process executes in four steps:</p>
         <ol>
@@ -9268,13 +9268,13 @@ Documentation References:
 - Claude Code Tools: https://docs.claude.com/claude-code/tools
 - MCP Integration: https://docs.claude.com/claude-code/mcp
 
-Overall: HAL8000 is compatible with current Claude Code environment.
+Overall: HAL8000-Assistant is compatible with current Claude Code environment.
 Minor updates recommended for future-proofing.</code></pre>
 
         <p><strong>Use Cases:</strong></p>
         <ul>
           <li>After Anthropic releases Claude Code updates</li>
-          <li>Before major HAL8000 development sessions</li>
+          <li>Before major HAL8000-Assistant development sessions</li>
           <li>When commands/agents behave unexpectedly</li>
           <li>Periodic maintenance (quarterly recommended)</li>
         </ul>
@@ -9331,7 +9331,7 @@ Display results to user</code></pre>
 
         <p><strong>Related Commands:</strong></p>
         <ul>
-          <li><code>/HAL-system-check</code> - Validates internal HAL8000 structure and principles</li>
+          <li><code>/HAL-system-check</code> - Validates internal HAL8000-Assistant structure and principles</li>
           <li><code>/HAL-register-dump</code> - Shows current CPU state</li>
           <li><code>/HAL-session-end</code> - Saves state before RAM wipe</li>
         </ul>
@@ -9347,7 +9347,7 @@ Display results to user</code></pre>
     <!-- Command Development Guide -->
     <h3>Creating Custom Commands</h3>
     <p>
-      HAL8000's self-modifying code capability allows commands to create and modify other commands at runtime. This section explains how to develop custom commands that integrate seamlessly with the architecture.
+      HAL8000-Assistant's self-modifying code capability allows commands to create and modify other commands at runtime. This section explains how to develop custom commands that integrate seamlessly with the architecture.
     </p>
 
     <h4>Command File Structure</h4>
@@ -9371,7 +9371,7 @@ allowed-tools: Bash, Read, Write, Edit (optional - list of tools command can use
       <li><strong>Usage:</strong> Syntax examples and argument descriptions</li>
       <li><strong>Implementation:</strong> Step-by-step execution logic (what the CPU should do when the command is invoked)</li>
       <li><strong>Error Handling:</strong> Expected failure modes and recovery procedures</li>
-      <li><strong>Architecture Alignment:</strong> How the command embodies HAL8000 principles (Von Neumann, Unix, Assembly)</li>
+      <li><strong>Architecture Alignment:</strong> How the command embodies HAL8000-Assistant principles (Von Neumann, Unix, Assembly)</li>
       <li><strong>Related Components:</strong> Files, commands, agents that interact with this command</li>
     </ol>
 
@@ -9583,7 +9583,7 @@ allowed-tools: Read, Write, Bash
          data-dependencies="">
   
   <div class="meta-guidance" style="display:none;">
-    This section documents all HAL8000 sub-agents as architectural components extending effective RAM capacity.
+    This section documents all HAL8000-Assistant sub-agents as architectural components extending effective RAM capacity.
     Agents are virtual memory - isolated 200K contexts that process heavy tasks and return summaries.
     Maintenance: Update when new agents added to .claude/agents/, verify RAM savings metrics remain accurate.
     Each agent entry must include: purpose, tools, I/O specification, RAM savings, invocation examples.
@@ -9594,7 +9594,7 @@ allowed-tools: Read, Write, Bash
   <h3>16.1 Overview</h3>
   
   <p>
-    In the HAL8000 architecture, <strong>sub-agents are virtual memory</strong>. They extend the system's 
+    In the HAL8000-Assistant architecture, <strong>sub-agents are virtual memory</strong>. They extend the system's 
     effective RAM capacity by processing context-heavy operations in isolated 200,000-token contexts, 
     then returning only essential summaries to the main session.
   </p>
@@ -9840,12 +9840,12 @@ Task tool:
 
   <h4>16.3.3 general-purpose (Built-in Claude Code Agent)</h4>
 
-  <p><strong>Type:</strong> Built-in Claude Code agent type (not a HAL8000 file)</p>
+  <p><strong>Type:</strong> Built-in Claude Code agent type (not a HAL8000-Assistant file)</p>
   <p><strong>Location:</strong> Provided by Claude Code platform, not stored in <code>.claude/agents/</code></p>
 
   <div class="insight-box">
-    <strong>Note:</strong> Unlike HAL8000's custom agents, <code>general-purpose</code> is a built-in agent type
-    provided by the Claude Code platform. HAL8000 uses it as a base for custom behaviors (like documentation-writer)
+    <strong>Note:</strong> Unlike HAL8000-Assistant's custom agents, <code>general-purpose</code> is a built-in agent type
+    provided by the Claude Code platform. HAL8000-Assistant uses it as a base for custom behaviors (like documentation-writer)
     by providing specialized instructions in the Task tool prompt.
   </div>
 
@@ -9906,7 +9906,7 @@ Main RAM: Report only, not all source materials</code></pre>
     <tbody>
       <tr>
         <td><strong>Purpose</strong></td>
-        <td>Audit HAL8000 system integrity, validate structure, identify issues</td>
+        <td>Audit HAL8000-Assistant system integrity, validate structure, identify issues</td>
       </tr>
       <tr>
         <td><strong>Tools</strong></td>
@@ -9959,7 +9959,7 @@ Main RAM: Report only, not all checked files</code></pre>
     <tbody>
       <tr>
         <td><strong>Purpose</strong></td>
-        <td>Validate HAL8000 commands and agents against official Claude Code documentation</td>
+        <td>Validate HAL8000-Assistant commands and agents against official Claude Code documentation</td>
       </tr>
       <tr>
         <td><strong>Tools</strong></td>
@@ -10071,7 +10071,7 @@ Main RAM: Final doc only</code></pre>
 Or via /HAL-refman command for reference manual sections</code></pre>
 
   <div class="insight-box">
-    <strong>Documentation Quality Standards:</strong> The documentation-writer agent follows HAL8000's
+    <strong>Documentation Quality Standards:</strong> The documentation-writer agent follows HAL8000-Assistant's
     technical documentation principles: accuracy over engagement, structure over narrative, completeness
     over brevity. It supports multiple audience layers, creates visual placeholders (never generates actual
     images), and ensures cross-references and proper navigation structure.
@@ -10134,10 +10134,10 @@ RAM savings: Massive vs sequential loading and processing</code></pre>
 
   <div class="warning-box">
     <strong>⚠️ No Official Claude Code Specification Available</strong>
-    <p>As of 2025-10, Anthropic has not published official documentation for Claude Code custom agent file formats. The structure described here is the <strong>HAL8000 working pattern</strong> - a convention that successfully operates in production. This represents emergent best practices rather than official requirements.</p>
+    <p>As of 2025-10, Anthropic has not published official documentation for Claude Code custom agent file formats. The structure described here is the <strong>HAL8000-Assistant working pattern</strong> - a convention that successfully operates in production. This represents emergent best practices rather than official requirements.</p>
   </div>
 
-  <p><strong>HAL8000 Agent File Pattern:</strong></p>
+  <p><strong>HAL8000-Assistant Agent File Pattern:</strong></p>
   <p>Agents are markdown files stored in <code>.claude/agents/[agent-name].md</code> following this proven structure:</p>
 
   <h5>Basic Structure</h5>
@@ -10208,7 +10208,7 @@ The agent MUST NOT return:
 
 ---
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
 [How this agent fits into the system architecture]
 
@@ -10288,7 +10288,7 @@ The agent MUST NOT return:
         <td>✅ Recommended</td>
       </tr>
       <tr>
-        <td><strong>HAL8000 Integration</strong></td>
+        <td><strong>HAL8000-Assistant Integration</strong></td>
         <td>How agent fits system architecture</td>
         <td>✅ Recommended</td>
       </tr>
@@ -10308,7 +10308,7 @@ The agent MUST NOT return:
   <h5>File Format Notes</h5>
 
   <ul>
-    <li><strong>Pure Markdown:</strong> No YAML frontmatter required (HAL8000 pattern)</li>
+    <li><strong>Pure Markdown:</strong> No YAML frontmatter required (HAL8000-Assistant pattern)</li>
     <li><strong>Human-Readable:</strong> Files are documentation AND specification</li>
     <li><strong>Self-Contained:</strong> Complete instructions within single file</li>
     <li><strong>Naming Convention:</strong> Descriptive kebab-case names (e.g., <code>research-synthesizer.md</code>, <code>hal-context-finder.md</code>)</li>
@@ -10333,7 +10333,7 @@ The agent MUST NOT return:
   </ol>
 
   <div class="insight-box">
-    <strong>Reality Check:</strong> Since Claude Code lacks official documentation, HAL8000's agent structure
+    <strong>Reality Check:</strong> Since Claude Code lacks official documentation, HAL8000-Assistant's agent structure
     represents a working implementation validated through production use. The pattern emphasizes clarity,
     explicit boundaries, structured outputs, and architectural alignment. If official specifications emerge,
     this section will be updated to reflect Anthropic's guidance.
@@ -10558,7 +10558,7 @@ Step 4: Main session
 
   <div class="meta-guidance" style="display:none;">
     <!-- Meta-Guidance for AI Assistants -->
-    This section documents HAL8000's Agent Skills system - proactive, model-invoked capabilities.
+    This section documents HAL8000-Assistant's Agent Skills system - proactive, model-invoked capabilities.
     When updating:
     - Document all Skills with triggers, tools, and behaviors
     - Explain three-layer intelligence model (Skills → Commands → Agents)
@@ -10582,7 +10582,7 @@ Step 4: Main session
 
   <h3>Three-Layer Intelligence Model</h3>
 
-  <p>HAL8000's intelligence operates in three complementary layers:</p>
+  <p>HAL8000-Assistant's intelligence operates in three complementary layers:</p>
 
   <figure class="diagram-placeholder" data-diagram-id="three-layer-model">
     <div class="placeholder-box">
@@ -10684,7 +10684,7 @@ directory/component I should check?"</code></pre>
 
   <p><strong>Location:</strong> <code>.claude/skills/architecture-consultant/</code></p>
 
-  <p><strong>Purpose:</strong> Validate design decisions against HAL8000's architectural principles (von Neumann, Unix philosophy, Assembly concepts) and warn about violations.</p>
+  <p><strong>Purpose:</strong> Validate design decisions against HAL8000-Assistant's architectural principles (von Neumann, Unix philosophy, Assembly concepts) and warn about violations.</p>
 
   <p><strong>Triggers:</strong></p>
   <ul>
@@ -10719,7 +10719,7 @@ Issue: Proposed path has 5 levels of depth
 Principle: Unix Philosophy - 'Simple, not complex' (max 3 levels)
 
 Impact:
-- Violates HAL8000 structural standard
+- Violates HAL8000-Assistant structural standard
 - Makes navigation harder
 
 Recommended approach:
@@ -10828,7 +10828,7 @@ CPU (documentation-generator activates):
 
 Location: data/sessions/summaries/2025-10-20-1430-skills-integration.md
 Type: Session Documentation
-Summary: Documented integration of 4 new Skills into HAL8000 architecture.
+Summary: Documented integration of 4 new Skills into HAL8000-Assistant architecture.
 Size: ~1,200 words"</code></pre>
   </div>
 
@@ -10935,7 +10935,7 @@ Size: ~1,200 words"</code></pre>
 
   <h3>Skills and Architecture Principles</h3>
 
-  <p>Skills follow HAL8000's core architectural principles:</p>
+  <p>Skills follow HAL8000-Assistant's core architectural principles:</p>
 
   <h4>Von Neumann Architecture</h4>
   <ul>
@@ -11003,7 +11003,7 @@ allowed-tools:
 ## Examples
 [Concrete activation examples]
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 [How this fits into architecture]</code></pre>
 
     <h4>Auto-Discovery</h4>
@@ -11023,7 +11023,7 @@ allowed-tools:
   </div>
 
   <div class="insight-box">
-    <strong>Version history:</strong> Skills were added in HAL8000 v1.5.0 (2025-10-20). This is a new capability layer that complements the existing Commands and Agents architecture.
+    <strong>Version history:</strong> Skills were added in HAL8000-Assistant v1.5.0 (2025-10-20). This is a new capability layer that complements the existing Commands and Agents architecture.
   </div>
 
 </section>
@@ -11038,13 +11038,13 @@ allowed-tools:
   
   <div class="meta-guidance" style="display:none;">
     <!-- Meta-Guidance for AI Assistants -->
-    This section documents HAL8000's file system organization as its memory architecture.
+    This section documents HAL8000-Assistant's file system organization as its memory architecture.
     When updating:
     - Maintain complete directory hierarchy table with all paths
     - Keep naming conventions synchronized with actual system behavior
     - Update depth limit rules if internal structure changes
     - External libraries remain exempt from depth limits
-    - All example paths must be absolute from /mnt/d/~HAL8000/
+    - All example paths must be absolute from /mnt/d/~HAL8000-Assistant/
     - Verify access patterns match BIOS boot sequence
     Source of truth: CLAUDE.md (File System Structure, Memory Architecture sections)
   </div>
@@ -11054,7 +11054,7 @@ allowed-tools:
   <h3>17.1 Overview</h3>
   
   <p>
-    In HAL8000, the file system <strong>is</strong> the memory architecture. There is no separation between storage and memory—all persistent state, instructions, and data exist as files in a hierarchical directory structure. The CPU (Claude instance) loads files selectively into its volatile context window (RAM) as needed.
+    In HAL8000-Assistant, the file system <strong>is</strong> the memory architecture. There is no separation between storage and memory—all persistent state, instructions, and data exist as files in a hierarchical directory structure. The CPU (Claude instance) loads files selectively into its volatile context window (RAM) as needed.
   </p>
 
   <div class="concept-box">
@@ -11064,13 +11064,13 @@ allowed-tools:
   <h3>17.2 Directory Structure</h3>
 
   <p>
-    The HAL8000 file system follows a modified Unix hierarchy with strict organizational rules derived from Unix philosophy (simplicity, modularity) and von Neumann principles (unified memory space).
+    The HAL8000-Assistant file system follows a modified Unix hierarchy with strict organizational rules derived from Unix philosophy (simplicity, modularity) and von Neumann principles (unified memory space).
   </p>
 
   <div class="diagram-container">
     <img src="assets/diagrams/directory-structure.png" alt="Directory Structure" style="max-width: 100%; height: auto;">
     <p class="diagram-caption">
-      <strong>HAL8000 File System Hierarchy:</strong> Root directory with BIOS, system coordination (.claude/), and data storage
+      <strong>HAL8000-Assistant File System Hierarchy:</strong> Root directory with BIOS, system coordination (.claude/), and data storage
     </p>
   </div>
 
@@ -11086,17 +11086,17 @@ allowed-tools:
     </thead>
     <tbody>
       <tr>
-        <td><code>/mnt/d/~HAL8000/CLAUDE.md</code></td>
+        <td><code>/mnt/d/~HAL8000-Assistant/CLAUDE.md</code></td>
         <td>BIOS-ROM: Boot instructions, operating principles, architecture definition</td>
         <td>Loaded every boot (core file)</td>
       </tr>
       <tr>
-        <td><code>/mnt/d/~HAL8000/.env</code></td>
+        <td><code>/mnt/d/~HAL8000-Assistant/.env</code></td>
         <td>MCP server configuration (API keys)</td>
         <td>Read by MCP launcher</td>
       </tr>
       <tr>
-        <td><code>/mnt/d/~HAL8000/run-omnisearch.sh</code></td>
+        <td><code>/mnt/d/~HAL8000-Assistant/run-omnisearch.sh</code></td>
         <td>MCP server launch script</td>
         <td>Executed to start omnisearch</td>
       </tr>
@@ -11106,7 +11106,7 @@ allowed-tools:
   <h4>17.2.2 System Coordination Directory (.claude/)</h4>
 
   <p>
-    The <code>.claude/</code> directory contains all system-level coordination files. This directory is the "kernel space" of HAL8000—files here control system behavior, state, and instruction execution.
+    The <code>.claude/</code> directory contains all system-level coordination files. This directory is the "kernel space" of HAL8000-Assistant—files here control system behavior, state, and instruction execution.
   </p>
 
   <table>
@@ -11218,7 +11218,7 @@ allowed-tools:
   </p>
 
   <ul>
-    <li><strong>Prefix:</strong> <code>HAL-</code> (identifies as HAL8000 command)</li>
+    <li><strong>Prefix:</strong> <code>HAL-</code> (identifies as HAL8000-Assistant command)</li>
     <li><strong>Name:</strong> Lowercase with hyphens (e.g., <code>session-end</code>, <code>register-dump</code>)</li>
     <li><strong>Extension:</strong> <code>.md</code> (Markdown format for human readability)</li>
   </ul>
@@ -11285,7 +11285,7 @@ allowed-tools:
   <h3>17.4 Depth Limit Rules</h3>
 
   <p>
-    HAL8000 enforces a <strong>maximum 3-level depth</strong> for internal code and system organization. This constraint derives from Unix philosophy: simplicity over complexity.
+    HAL8000-Assistant enforces a <strong>maximum 3-level depth</strong> for internal code and system organization. This constraint derives from Unix philosophy: simplicity over complexity.
   </p>
 
   <h4>17.4.1 Rationale</h4>
@@ -11309,7 +11309,7 @@ allowed-tools:
     </thead>
     <tbody>
       <tr>
-        <td><strong>Internal Code</strong><br/>(HAL8000 system, commands, agents, internal libraries)</td>
+        <td><strong>Internal Code</strong><br/>(HAL8000-Assistant system, commands, agents, internal libraries)</td>
         <td>3 levels maximum</td>
         <td>We control structure; enforce simplicity</td>
       </tr>
@@ -11326,7 +11326,7 @@ allowed-tools:
   <div class="example">
     <strong>✓ Compliant (3 levels):</strong>
     <pre>
-/mnt/d/~HAL8000/              # Level 1: Root
+/mnt/d/~HAL8000-Assistant/              # Level 1: Root
 ├── .claude/                  # Level 2: Category
 │   └── commands/             # Level 3: Items
 │       └── HAL-*.md
@@ -11336,7 +11336,7 @@ allowed-tools:
   <div class="example">
     <strong>✗ Non-Compliant (4 levels):</strong>
     <pre>
-/mnt/d/~HAL8000/              # Level 1
+/mnt/d/~HAL8000-Assistant/              # Level 1
 ├── .claude/                  # Level 2
 │   └── commands/             # Level 3
 │       └── subsystem/        # Level 4 - TOO DEEP!
@@ -11350,7 +11350,7 @@ allowed-tools:
   <div class="example">
     <strong>✓ Allowed (external library):</strong>
     <pre>
-/mnt/d/~HAL8000/                    # Level 1
+/mnt/d/~HAL8000-Assistant/                    # Level 1
 ├── .claude/                        # Level 2
 │   └── libraries/                  # Level 3
 │       └── external/               # Level 4 (exempt)
@@ -11635,7 +11635,7 @@ allowed-tools:
   <h3>17.8 File System as Memory Architecture</h3>
 
   <p>
-    The file system isn't just storage—it's the complete memory architecture of HAL8000. Understanding this mapping is essential.
+    The file system isn't just storage—it's the complete memory architecture of HAL8000-Assistant. Understanding this mapping is essential.
   </p>
 
   <table>
@@ -11698,8 +11698,8 @@ allowed-tools:
          data-dependencies="">
   
   <div class="meta-guidance" style="display:none;">
-    This section documents HAL8000's integration with Model Context Protocol (MCP) servers.
-    MCP extends HAL8000's capabilities through external tool servers.
+    This section documents HAL8000-Assistant's integration with Model Context Protocol (MCP) servers.
+    MCP extends HAL8000-Assistant's capabilities through external tool servers.
     
     Maintenance notes:
     - Keep tool catalog synchronized with actual MCP server configurations
@@ -11717,17 +11717,17 @@ allowed-tools:
   <p>
     The Model Context Protocol (MCP) is an open protocol that enables AI assistants to 
     interact with external tools and data sources through a standardized interface. 
-    HAL8000 integrates with MCP to extend the CPU's capabilities beyond native Claude Code 
+    HAL8000-Assistant integrates with MCP to extend the CPU's capabilities beyond native Claude Code 
     tools, providing enhanced web search, file system operations, and IDE integration.
   </p>
 
   <p>
     MCP servers run as separate processes that expose tools through a JSON-RPC protocol. 
-    The HAL8000 CPU can invoke these tools as if they were native operations, enabling 
+    The HAL8000-Assistant CPU can invoke these tools as if they were native operations, enabling 
     modular extension of system capabilities without requiring changes to the core architecture.
   </p>
 
-  <h4>18.1.1 Why HAL8000 Uses MCP</h4>
+  <h4>18.1.1 Why HAL8000-Assistant Uses MCP</h4>
 
   <ul>
     <li><strong>Extended Capabilities:</strong> Access specialized tools (advanced web search, 
@@ -11752,7 +11752,7 @@ allowed-tools:
   <h4>18.2.1 Protocol Overview</h4>
 
   <p>
-    MCP uses JSON-RPC 2.0 for communication between the HAL8000 CPU and MCP servers. 
+    MCP uses JSON-RPC 2.0 for communication between the HAL8000-Assistant CPU and MCP servers. 
     Each server exposes a set of tools with defined schemas. The CPU invokes tools by 
     sending JSON-RPC requests and receives structured responses.
   </p>
@@ -12116,7 +12116,7 @@ RAM freed for other operations</code></pre>
   <h3>18.5 MCP vs Native Tools</h3>
 
   <p>
-    HAL8000 has both MCP-provided tools and native Claude Code tools. Understanding when 
+    HAL8000-Assistant has both MCP-provided tools and native Claude Code tools. Understanding when 
     to use each optimizes performance and RAM usage.
   </p>
 
@@ -12242,7 +12242,7 @@ RAM freed for other operations</code></pre>
   <h4>18.6.1 MCP Server Configuration Files</h4>
 
   <p>
-    MCP servers are configured in Claude Code's MCP settings. HAL8000 uses both stdio 
+    MCP servers are configured in Claude Code's MCP settings. HAL8000-Assistant uses both stdio 
     and SSE transport mechanisms depending on server requirements.
   </p>
 
@@ -12556,12 +12556,12 @@ exec omnisearch-server</code></pre>
                 <h2>20. External Tools</h2>
                 <div class="content">
                     <p>
-                        HAL8000 integrates with external tools to extend capabilities beyond the core architecture. Following Unix philosophy, the system prefers host-installed tools over containerized alternatives for simplicity and direct access. External tools provide specialized functions: AI agents for massive context tasks, containers for isolated environments, and MCP servers for protocol-based integrations.
+                        HAL8000-Assistant integrates with external tools to extend capabilities beyond the core architecture. Following Unix philosophy, the system prefers host-installed tools over containerized alternatives for simplicity and direct access. External tools provide specialized functions: AI agents for massive context tasks, containers for isolated environments, and MCP servers for protocol-based integrations.
                     </p>
 
                     <h3>External AI Agents</h3>
                     <p>
-                        HAL8000 leverages external AI agents when tasks exceed sub-agent capacity or require specialized capabilities.
+                        HAL8000-Assistant leverages external AI agents when tasks exceed sub-agent capacity or require specialized capabilities.
                     </p>
 
                     <h4>Gemini CLI Integration</h4>
@@ -12591,7 +12591,7 @@ cat large-dataset.txt | gemini "Summarize key insights"</code></pre>
 
                     <h3>Document Processing Tools</h3>
                     <p>
-                        HAL8000 integrates document conversion tools to ingest knowledge from various file formats (PDF, Office documents, images, audio) into the knowledge base.
+                        HAL8000-Assistant integrates document conversion tools to ingest knowledge from various file formats (PDF, Office documents, images, audio) into the knowledge base.
                     </p>
 
                     <h4>Docling CLI Integration</h4>
@@ -12635,7 +12635,7 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
 /HAL-knowledge-ingest "/path/to/scanned-image.jpg"</code></pre>
 
                     <div class="note">
-                        <strong>Zero RAM Impact:</strong> Docling runs in an external PowerShell process. Document conversion happens outside HAL8000's context window - only the converted Markdown output is loaded into RAM. A 50-page PDF might consume 500KB on disk but only 10-20K tokens once converted to Markdown.
+                        <strong>Zero RAM Impact:</strong> Docling runs in an external PowerShell process. Document conversion happens outside HAL8000-Assistant's context window - only the converted Markdown output is loaded into RAM. A 50-page PDF might consume 500KB on disk but only 10-20K tokens once converted to Markdown.
                     </div>
 
                     <p><strong>Supported Input Formats:</strong></p>
@@ -12696,7 +12696,7 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
 
                     <h3>Container Infrastructure</h3>
                     <p>
-                        HAL8000 has access to Docker for isolated execution environments, though host-installed tools are preferred per Unix simplicity.
+                        HAL8000-Assistant has access to Docker for isolated execution environments, though host-installed tools are preferred per Unix simplicity.
                     </p>
 
                     <h4>Docker Environment</h4>
@@ -12713,7 +12713,7 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
 
                     <h3>MCP Servers</h3>
                     <p>
-                        HAL8000 uses MCP (Model Context Protocol) servers to access specialized capabilities through a standardized protocol. MCP servers are selectively enabled to optimize RAM usage.
+                        HAL8000-Assistant uses MCP (Model Context Protocol) servers to access specialized capabilities through a standardized protocol. MCP servers are selectively enabled to optimize RAM usage.
                     </p>
 
                     <h4>MCP Infrastructure Status</h4>
@@ -12862,7 +12862,7 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
 
                     <h3>AI Image Generation Tool</h3>
                     <p>
-                        HAL8000 integrates AI-powered image generation through a Dockerized Stable Diffusion system. This tool enables on-demand creation of high-quality images using local GPU acceleration, maintaining zero RAM impact on HAL8000 sessions.
+                        HAL8000-Assistant integrates AI-powered image generation through a Dockerized Stable Diffusion system. This tool enables on-demand creation of high-quality images using local GPU acceleration, maintaining zero RAM impact on HAL8000-Assistant sessions.
                     </p>
 
                     <h4>Image Generation System Overview</h4>
@@ -12881,7 +12881,7 @@ powershell.exe -Command "docling recording.mp3 --pipeline asr --asr-model whispe
                         <li><strong>GPU-Accelerated:</strong> Local RTX 3090 for fast generation (3-8 seconds per image)</li>
                         <li><strong>Multiple Models:</strong> SDXL (best quality), SD1.5 (faster)</li>
                         <li><strong>Model Caching:</strong> Download once (~6.5GB), reuse forever</li>
-                        <li><strong>Zero RAM Impact:</strong> External execution, only file path returned to HAL8000</li>
+                        <li><strong>Zero RAM Impact:</strong> External execution, only file path returned to HAL8000-Assistant</li>
                         <li><strong>Cost-Effective:</strong> $0 per image after setup (vs. $0.04+ cloud services)</li>
                     </ul>
 
@@ -12907,9 +12907,9 @@ python3 .claude/tools/image-generation/HAL-generate-image.py \
   --output data/images/architecture.png
 
 
-                    <p><strong>HAL8000 Integration:</strong></p>
+                    <p><strong>HAL8000-Assistant Integration:</strong></p>
                     <p>
-                        When users request images, HAL8000 (Claude) automatically enhances prompts and invokes the tool. Users don't interact with the tool directly - they simply ask for images and Claude generates them.
+                        When users request images, HAL8000-Assistant (Claude) automatically enhances prompts and invokes the tool. Users don't interact with the tool directly - they simply ask for images and Claude generates them.
                     </p>
 
                     <pre><code>User: "Generate an image of a friendly robot"
@@ -12946,7 +12946,7 @@ python3 .claude/tools/image-generation/HAL-generate-image.py \
 # Hex color support
 python3 .claude/tools/image-generation/HAL-generate-image.py \
   --prompt "robot assistant" \
-  --text "HAL8000" \
+  --text "HAL8000-Assistant" \
   --text-position center \
   --text-size 120 \
   --text-color "#00FF00" \
@@ -13052,7 +13052,7 @@ python3 .claude/tools/image-generation/HAL-generate-image.py \
                     <p><strong>Docker-Based I/O Device:</strong></p>
                     <pre><code>User Request
     ↓
-HAL8000 (Claude/CPU) - enhances prompt
+HAL8000-Assistant (Claude/CPU) - enhances prompt
     ↓
 HAL-generate-image.py - driver script
     ↓
@@ -13062,10 +13062,10 @@ Container: Start → Load Model → Generate → Save → Exit
     ↓
 Image saved to data/images/
     ↓
-HAL8000 returns file path to user (~10 tokens RAM impact)</code></pre>
+HAL8000-Assistant returns file path to user (~10 tokens RAM impact)</code></pre>
 
                     <div class="note">
-                        <strong>Zero RAM Impact:</strong> Like the diagram-generation tool, image generation runs in an external Docker container. Only the output file path is loaded into HAL8000's RAM (~10 tokens), not the generation process or intermediate data. This enables unlimited image generation without RAM constraints.
+                        <strong>Zero RAM Impact:</strong> Like the diagram-generation tool, image generation runs in an external Docker container. Only the output file path is loaded into HAL8000-Assistant's RAM (~10 tokens), not the generation process or intermediate data. This enables unlimited image generation without RAM constraints.
                     </div>
 
                     <h4>Installation and Setup</h4>
@@ -13079,7 +13079,7 @@ HAL8000 returns file path to user (~10 tokens RAM impact)</code></pre>
 
                     <p><strong>Build Process:</strong></p>
                     <pre><code># Navigate to tool directory
-cd /mnt/d/~HAL8000/.claude/tools/image-generation
+cd /mnt/d/~HAL8000-Assistant/.claude/tools/image-generation
 
 # Build Docker image
 ./build-image.sh
@@ -13095,7 +13095,7 @@ python3 HAL-generate-image.py \
                         <li><code>README.md</code> - Complete user guide with examples</li>
                         <li><code>INSTALL.md</code> - Detailed installation and troubleshooting</li>
                         <li><code>QUICKSTART.txt</code> - Quick reference card</li>
-                        <li><code>CLAUDE.md</code> - HAL8000 integration guide</li>
+                        <li><code>CLAUDE.md</code> - HAL8000-Assistant integration guide</li>
                         <li><code>image-generation-tool.md</code> - System documentation</li>
                     </ul>
 
@@ -13185,7 +13185,7 @@ python3 HAL-generate-image.py \
                     </ul>
 
                     <div class="note">
-                        <strong>Architecture Note:</strong> External tools extend HAL8000's capabilities without violating core architectural constraints. Gemini provides virtual memory beyond 200K limits. Docling enables universal document ingestion. Image Generation creates AI visuals with GPU acceleration. Diagram Generation produces technical diagrams. MCP servers offer protocol-based integrations. Docker provides process isolation. All follow Unix philosophy: specialized tools composed via standard interfaces (bash, file I/O, PowerShell bridge, MCP protocol, Docker containers).
+                        <strong>Architecture Note:</strong> External tools extend HAL8000-Assistant's capabilities without violating core architectural constraints. Gemini provides virtual memory beyond 200K limits. Docling enables universal document ingestion. Image Generation creates AI visuals with GPU acceleration. Diagram Generation produces technical diagrams. MCP servers offer protocol-based integrations. Docker provides process isolation. All follow Unix philosophy: specialized tools composed via standard interfaces (bash, file I/O, PowerShell bridge, MCP protocol, Docker containers).
                     </div>
 
                     <h3>Cross-Reference</h3>
@@ -13218,7 +13218,7 @@ python3 HAL-generate-image.py \
     <h2>20. Creating Custom Commands</h2>
     <div class="content">
 
-        <p>HAL8000 commands are executable instructions stored as Markdown files that the CPU (Claude) fetches, decodes, and executes. Creating custom commands extends the system's capabilities while maintaining architectural integrity.</p>
+        <p>HAL8000-Assistant commands are executable instructions stored as Markdown files that the CPU (Claude) fetches, decodes, and executes. Creating custom commands extends the system's capabilities while maintaining architectural integrity.</p>
 
         <div class="callout callout-info">
             <strong>Command Philosophy:</strong> Commands follow the Unix principle of "do one thing well." Each command implements a single, well-defined operation that can be composed with other commands to create complex workflows.
@@ -13254,7 +13254,7 @@ python3 HAL-generate-image.py \
             <li><strong>Usage Section:</strong> Invocation syntax and parameters</li>
             <li><strong>Implementation Section:</strong> Step-by-step CPU instructions</li>
             <li><strong>Example Section:</strong> Concrete usage examples</li>
-            <li><strong>Architecture Notes:</strong> How command aligns with HAL8000 principles</li>
+            <li><strong>Architecture Notes:</strong> How command aligns with HAL8000-Assistant principles</li>
         </ol>
 
         <h4>Invocation Methods</h4>
@@ -13333,7 +13333,7 @@ Example of actual command output
 
 ## Architecture Alignment
 
-How this command implements HAL8000 principles:
+How this command implements HAL8000-Assistant principles:
 
 **Von Neumann:**
 - Principle alignment notes
@@ -13359,7 +13359,7 @@ How this command implements HAL8000 principles:
 <section id="section-20-4">
     <h3>20.4 Using Prompt Templates</h3>
 
-    <p>HAL8000 provides a comprehensive library of <strong>prompt templates</strong> that accelerate command creation through composable, reusable patterns. Rather than writing commands from scratch, you can start with a proven template and customize it for your specific needs.</p>
+    <p>HAL8000-Assistant provides a comprehensive library of <strong>prompt templates</strong> that accelerate command creation through composable, reusable patterns. Rather than writing commands from scratch, you can start with a proven template and customize it for your specific needs.</p>
 
     <h4>The Lego Block Principle</h4>
 
@@ -13380,7 +13380,7 @@ How this command implements HAL8000 principles:
 
     <h4>The 7 Levels Framework</h4>
 
-    <p>HAL8000's template system is inspired by <strong>IndyDevDan's "7 Levels of Agentic Prompt Formats"</strong> and adapted for HAL-Script. Each level represents increasing complexity:</p>
+    <p>HAL8000-Assistant's template system is inspired by <strong>IndyDevDan's "7 Levels of Agentic Prompt Formats"</strong> and adapted for HAL-Script. Each level represents increasing complexity:</p>
 
     <figure class="diagram" data-diagram-id="template-levels-pyramid">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
@@ -13690,7 +13690,7 @@ cp .claude/libraries/internal/templates/level-2-workflow.md \\
 <section id="section-20-5">
     <h3>20.5 YAML Frontmatter for Commands</h3>
 
-    <p><strong>YAML frontmatter</strong> is a Claude Code feature that enhances command discoverability and user experience. Added to commands in HAL8000 v1.2.0, frontmatter provides metadata that integrates with Claude Code's command palette and parameter system.</p>
+    <p><strong>YAML frontmatter</strong> is a Claude Code feature that enhances command discoverability and user experience. Added to commands in HAL8000-Assistant v1.2.0, frontmatter provides metadata that integrates with Claude Code's command palette and parameter system.</p>
 
     <h4>What is YAML Frontmatter?</h4>
 
@@ -14073,7 +14073,7 @@ model: haiku                                 # Speed-optimized
         <li>✅ Does tool set match agent's stated purpose?</li>
         <li>✅ Are security implications documented?</li>
     </ul>
-    <h4>Examples from HAL8000 System Agents</h4>
+    <h4>Examples from HAL8000-Assistant System Agents</h4>
     <p><strong>hal-context-finder:</strong> Minimal file system tools + Haiku model (speed-optimized)</p>
     <pre><code class="language-yaml">tools:
   - Read
@@ -14102,7 +14102,7 @@ model: sonnet
 model: sonnet
 </code></pre>
     <div class="callout callout-success">
-        <strong>Best Practice:</strong> Review existing HAL8000 agents in <code>.claude/agents/</code> as reference implementations. They demonstrate proven tool selection patterns.
+        <strong>Best Practice:</strong> Review existing HAL8000-Assistant agents in <code>.claude/agents/</code> as reference implementations. They demonstrate proven tool selection patterns.
     </div>
     <p><strong>References:</strong></p>
     <ul>
@@ -14377,7 +14377,7 @@ last_updated: "2025-10-10"
         </tbody>
     </table>
     <h4>Integration with Command Creation Tools</h4>
-    <p>The template library integrates with HAL8000's command creation automation:</p>
+    <p>The template library integrates with HAL8000-Assistant's command creation automation:</p>
     <figure class="diagram" data-diagram-id="template-automation-workflow">
         <img src="assets/diagrams/template-automation-workflow.png" alt="How template library enables automated command creation" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 10px; background: white;">
         <figcaption>How template library enables automated command creation</figcaption>
@@ -14446,7 +14446,7 @@ cp .claude/libraries/internal/templates/level-2-workflow.md \\
         <li><strong>Quality:</strong> Reduces errors through standardized structure</li>
     </ul>
     <div class="callout callout-success">
-        <strong>Integration Complete:</strong> As of HAL8000 v1.2.0, all templates include YAML frontmatter examples and are production-ready.
+        <strong>Integration Complete:</strong> As of HAL8000-Assistant v1.2.0, all templates include YAML frontmatter examples and are production-ready.
     </div>
     <p><strong>References:</strong></p>
     <ul>
@@ -14468,7 +14468,7 @@ cp .claude/libraries/internal/templates/level-2-workflow.md \\
     <h2>24. Contributing Patterns</h2>
     <div class="content">
 
-        <p>HAL8000 is a living system designed for continuous improvement through self-modifying code capabilities. This section guides effective contribution following von Neumann principles and Unix philosophy.</p>
+        <p>HAL8000-Assistant is a living system designed for continuous improvement through self-modifying code capabilities. This section guides effective contribution following von Neumann principles and Unix philosophy.</p>
 
         <h3>Philosophy of Contribution</h3>
         <ul>
@@ -14625,7 +14625,7 @@ Edit .claude/state.json
         </ul>
 
         <h3>The Living System</h3>
-        <p>HAL8000 evolves through contributions. Commands can create commands, agents can be generated, patterns evolve into frameworks. Your contribution extends the system's capabilities and enables new classes of operations.</p>
+        <p>HAL8000-Assistant evolves through contributions. Commands can create commands, agents can be generated, patterns evolve into frameworks. Your contribution extends the system's capabilities and enables new classes of operations.</p>
 
         <p class="cross-ref">See also: <a href="#operating-principles">Operating Principles</a>, <a href="#creating-commands">Creating Commands</a>, <a href="#building-agents">Building Agents</a>, <a href="#library-system">Library System</a></p>
 
@@ -14643,26 +14643,26 @@ Edit .claude/state.json
   <h2>Appendix A: Glossary</h2>
 
   <div class="glossary-intro">
-    <p>This glossary defines key terms and concepts used throughout the HAL8000 system. Terms are organized alphabetically within logical categories for easy reference.</p>
+    <p>This glossary defines key terms and concepts used throughout the HAL8000-Assistant system. Terms are organized alphabetically within logical categories for easy reference.</p>
   </div>
 
   <h3>Architecture Terms</h3>
   <dl class="glossary-list">
     <dt id="term-alu">ALU (Arithmetic Logic Unit)</dt>
     <dd>
-      <p>The reasoning and computation component of the CPU. In HAL8000, this represents Claude's ability to perform logical operations, calculations, and data transformations.</p>
+      <p>The reasoning and computation component of the CPU. In HAL8000-Assistant, this represents Claude's ability to perform logical operations, calculations, and data transformations.</p>
       <p class="see-also">See also: <a href="#term-cpu">CPU</a>, <a href="#term-control-unit">Control Unit</a></p>
     </dd>
 
     <dt id="term-append-only-ram">Append-Only RAM</dt>
     <dd>
-      <p>A fundamental constraint of HAL8000's memory model where the context window accumulates content without dynamic eviction within a session. Once content is loaded into RAM, it remains until the session boundary is reached.</p>
+      <p>A fundamental constraint of HAL8000-Assistant's memory model where the context window accumulates content without dynamic eviction within a session. Once content is loaded into RAM, it remains until the session boundary is reached.</p>
       <p class="see-also">See also: <a href="#term-ram">RAM</a>, <a href="#term-session-boundary">Session Boundary</a></p>
     </dd>
 
     <dt id="term-control-unit">Control Unit</dt>
     <dd>
-      <p>The orchestration and decision-making component of the CPU. In HAL8000, this represents Claude's ability to coordinate operations, manage workflow, and make strategic decisions about system operation.</p>
+      <p>The orchestration and decision-making component of the CPU. In HAL8000-Assistant, this represents Claude's ability to coordinate operations, manage workflow, and make strategic decisions about system operation.</p>
       <p class="see-also">See also: <a href="#term-cpu">CPU</a>, <a href="#term-alu">ALU</a></p>
     </dd>
 
@@ -14674,13 +14674,13 @@ Edit .claude/state.json
 
     <dt id="term-harvard-architecture">Harvard Architecture</dt>
     <dd>
-      <p>A computer architecture with physically separate storage and signal pathways for instructions and data. HAL8000 uses Harvard-like organization (separate .claude/ and data/ directories) while maintaining von Neumann capabilities.</p>
+      <p>A computer architecture with physically separate storage and signal pathways for instructions and data. HAL8000-Assistant uses Harvard-like organization (separate .claude/ and data/ directories) while maintaining von Neumann capabilities.</p>
       <p class="see-also">See also: <a href="#term-modified-von-neumann">Modified von Neumann Architecture</a></p>
     </dd>
 
     <dt id="term-modified-von-neumann">Modified von Neumann Architecture</dt>
     <dd>
-      <p>HAL8000's architectural model that combines Harvard-like organization (separate instruction/data spaces) with von Neumann capabilities (unified access, self-modifying code). This hybrid approach accommodates environmental constraints while preserving the stored-program concept.</p>
+      <p>HAL8000-Assistant's architectural model that combines Harvard-like organization (separate instruction/data spaces) with von Neumann capabilities (unified access, self-modifying code). This hybrid approach accommodates environmental constraints while preserving the stored-program concept.</p>
       <p class="see-also">See also: <a href="#term-stored-program">Stored-Program Concept</a>, <a href="#term-self-modifying-code">Self-Modifying Code</a></p>
     </dd>
 
@@ -14692,13 +14692,13 @@ Edit .claude/state.json
 
     <dt id="term-self-modifying-code">Self-Modifying Code</dt>
     <dd>
-      <p>A von Neumann capability where programs can create or modify other programs. In HAL8000, commands can write to .claude/commands/ to create new commands or modify existing ones, enabling dynamic system evolution.</p>
+      <p>A von Neumann capability where programs can create or modify other programs. In HAL8000-Assistant, commands can write to .claude/commands/ to create new commands or modify existing ones, enabling dynamic system evolution.</p>
       <p class="see-also">See also: <a href="#term-stored-program">Stored-Program Concept</a>, <a href="#term-command">Command</a></p>
     </dd>
 
     <dt id="term-stored-program">Stored-Program Concept</dt>
     <dd>
-      <p>The von Neumann principle where instructions and data reside in the same memory space and are accessed in the same way. In HAL8000, both instructions (commands) and data are stored as files with unified access through the file system.</p>
+      <p>The von Neumann principle where instructions and data reside in the same memory space and are accessed in the same way. In HAL8000-Assistant, both instructions (commands) and data are stored as files with unified access through the file system.</p>
       <p class="see-also">See also: <a href="#term-modified-von-neumann">Modified von Neumann Architecture</a></p>
     </dd>
 
@@ -14731,7 +14731,7 @@ Edit .claude/state.json
 
     <dt id="term-cpu">CPU (Central Processing Unit)</dt>
     <dd>
-      <p>The Claude instance itself, serving as the processing unit of HAL8000. Comprises the Control Unit (orchestration/decision-making), ALU (reasoning/computation), and Registers (immediate working context).</p>
+      <p>The Claude instance itself, serving as the processing unit of HAL8000-Assistant. Comprises the Control Unit (orchestration/decision-making), ALU (reasoning/computation), and Registers (immediate working context).</p>
       <p class="see-also">See also: <a href="#term-control-unit">Control Unit</a>, <a href="#term-alu">ALU</a>, <a href="#term-register">Register</a></p>
     </dd>
 
@@ -14743,7 +14743,7 @@ Edit .claude/state.json
 
     <dt id="term-library">Library</dt>
     <dd>
-      <p>A collection of reusable instructions, patterns, or workflows. Can be internal (developed within HAL8000) or external (imported from external sources). Libraries are indexed for efficient discovery and organized by category.</p>
+      <p>A collection of reusable instructions, patterns, or workflows. Can be internal (developed within HAL8000-Assistant) or external (imported from external sources). Libraries are indexed for efficient discovery and organized by category.</p>
       <p class="see-also">See also: <a href="#term-library-index">Library Index</a>, <a href="#term-package-manager">Package Manager</a></p>
     </dd>
 
@@ -14755,7 +14755,7 @@ Edit .claude/state.json
 
     <dt id="term-register">Register</dt>
     <dd>
-      <p>A component of immediate working context holding specific system state values. HAL8000 defines 21 registers across 5 categories: System State, Resource Management, Context Tracking, Execution Control, and Diagnostic registers.</p>
+      <p>A component of immediate working context holding specific system state values. HAL8000-Assistant defines 21 registers across 5 categories: System State, Resource Management, Context Tracking, Execution Control, and Diagnostic registers.</p>
       <p class="see-also">See also: <a href="#term-cpu">CPU</a>, <a href="register-architecture.html">Register Architecture Reference</a></p>
     </dd>
 
@@ -14818,7 +14818,7 @@ Edit .claude/state.json
 
     <dt id="term-session-boundary">Session Boundary</dt>
     <dd>
-      <p>The point at which one session ends and another begins. Serves as garbage collection—the only way to reclaim RAM in HAL8000's append-only memory model. All volatile data (RAM, sub-agent output) is lost unless persisted to files before crossing boundary.</p>
+      <p>The point at which one session ends and another begins. Serves as garbage collection—the only way to reclaim RAM in HAL8000-Assistant's append-only memory model. All volatile data (RAM, sub-agent output) is lost unless persisted to files before crossing boundary.</p>
       <p class="see-also">See also: <a href="#term-ram-wipe">RAM Wipe</a>, <a href="#term-session-continuity">Session Continuity</a></p>
     </dd>
 
@@ -14839,7 +14839,7 @@ Edit .claude/state.json
   <dl class="glossary-list">
     <dt id="term-composability">Composability</dt>
     <dd>
-      <p>The principle that components should be designed to work together. In HAL8000, commands, agents, and libraries can be composed into complex workflows through the universal interface of file I/O.</p>
+      <p>The principle that components should be designed to work together. In HAL8000-Assistant, commands, agents, and libraries can be composed into complex workflows through the universal interface of file I/O.</p>
       <p class="see-also">See also: <a href="#term-modularity">Modularity</a>, <a href="#term-universal-interface">Universal Interface</a></p>
     </dd>
 
@@ -14851,19 +14851,19 @@ Edit .claude/state.json
 
     <dt id="term-do-one-thing-well">Do One Thing Well</dt>
     <dd>
-      <p>The foundational Unix principle that each component should have a single, well-defined responsibility. Applied to HAL8000 files, commands, agents, and libraries—each does one thing and does it well.</p>
+      <p>The foundational Unix principle that each component should have a single, well-defined responsibility. Applied to HAL8000-Assistant files, commands, agents, and libraries—each does one thing and does it well.</p>
       <p class="see-also">See also: <a href="#term-modularity">Modularity</a>, <a href="#term-command">Command</a></p>
     </dd>
 
     <dt id="term-modularity">Modularity</dt>
     <dd>
-      <p>The practice of building systems from small, focused, composable pieces. HAL8000 achieves modularity through single-purpose commands, specialized agents, categorized libraries, and clear component boundaries.</p>
+      <p>The practice of building systems from small, focused, composable pieces. HAL8000-Assistant achieves modularity through single-purpose commands, specialized agents, categorized libraries, and clear component boundaries.</p>
       <p class="see-also">See also: <a href="#term-do-one-thing-well">Do One Thing Well</a>, <a href="#term-composability">Composability</a></p>
     </dd>
 
     <dt id="term-simplicity">Simplicity Principle</dt>
     <dd>
-      <p>The Unix tenet favoring simple structures over complex ones. In HAL8000: max 3-level directory depth, minimal abstractions, plain text files, direct access to components. Complexity is managed through composition, not intricate internal structure.</p>
+      <p>The Unix tenet favoring simple structures over complex ones. In HAL8000-Assistant: max 3-level directory depth, minimal abstractions, plain text files, direct access to components. Complexity is managed through composition, not intricate internal structure.</p>
       <p class="see-also">See also: <a href="#term-depth-limit">Depth Limit</a></p>
     </dd>
 
@@ -14902,7 +14902,7 @@ Edit .claude/state.json
 
     <dt id="term-working-directory">Working Directory</dt>
     <dd>
-      <p>The current directory context for file operations. In HAL8000, typically /mnt/d/~HAL8000/ (the system root). Commands and operations execute relative to this directory unless absolute paths are used.</p>
+      <p>The current directory context for file operations. In HAL8000-Assistant, typically /mnt/d/~HAL8000-Assistant/ (the system root). Commands and operations execute relative to this directory unless absolute paths are used.</p>
     </dd>
   </dl>
 
@@ -14916,7 +14916,7 @@ Edit .claude/state.json
 
     <dt id="term-mcp-server">MCP Server</dt>
     <dd>
-      <p>A Model Context Protocol server providing tools, resources, or prompts to Claude. HAL8000 configures MCP servers in .mcp.json. Examples: omnisearch (web search/extraction), filesystem (file operations), ide (VS Code integration).</p>
+      <p>A Model Context Protocol server providing tools, resources, or prompts to Claude. HAL8000-Assistant configures MCP servers in .mcp.json. Examples: omnisearch (web search/extraction), filesystem (file operations), ide (VS Code integration).</p>
       <p class="see-also">See also: <a href="#term-mcp-tool">MCP Tool</a>, <a href="#term-stdio-transport">stdio Transport</a></p>
     </dd>
 
@@ -14937,7 +14937,7 @@ Edit .claude/state.json
   <dl class="glossary-list">
     <dt id="term-instruction-set">Instruction Set</dt>
     <dd>
-      <p>The collection of available commands and operations. In HAL8000, the tools (Read, Write, Edit, Bash, etc.) ARE the instruction set—no abstraction layer exists between commands and tool invocations. This follows assembly language principles of direct hardware access.</p>
+      <p>The collection of available commands and operations. In HAL8000-Assistant, the tools (Read, Write, Edit, Bash, etc.) ARE the instruction set—no abstraction layer exists between commands and tool invocations. This follows assembly language principles of direct hardware access.</p>
       <p class="see-also">See also: <a href="#term-command">Command</a></p>
     </dd>
 
@@ -14975,7 +14975,7 @@ Edit .claude/state.json
   <h2>Appendix B: Troubleshooting</h2>
   
   <div class="troubleshooting-intro">
-    <p>This section provides solutions to common issues encountered when operating the HAL8000 system. Problems are organized by category with specific symptoms, causes, solutions, and prevention strategies.</p>
+    <p>This section provides solutions to common issues encountered when operating the HAL8000-Assistant system. Problems are organized by category with specific symptoms, causes, solutions, and prevention strategies.</p>
     <p><strong>General Troubleshooting Approach:</strong></p>
     <ul>
       <li>Check system status with <code>/HAL-system-check</code></li>
@@ -14991,9 +14991,9 @@ Edit .claude/state.json
     <div class="troubleshooting-item">
       <h4>Problem: BIOS Not Loading</h4>
       <div class="problem-details">
-        <p><strong>Symptoms:</strong> CPU does not acknowledge HAL8000 architecture on startup, no structured boot acknowledgment</p>
+        <p><strong>Symptoms:</strong> CPU does not acknowledge HAL8000-Assistant architecture on startup, no structured boot acknowledgment</p>
         <p><strong>Cause:</strong> <code>CLAUDE.md</code> file missing, corrupted, or not being read</p>
-        <p><strong>Solution:</strong> Verify file exists at /mnt/d/~HAL8000/CLAUDE.md, check permissions, restore from version control</p>
+        <p><strong>Solution:</strong> Verify file exists at /mnt/d/~HAL8000-Assistant/CLAUDE.md, check permissions, restore from version control</p>
         <p><strong>Prevention:</strong> Never delete CLAUDE.md, treat as read-only ROM, keep in version control</p>
       </div>
     </div>
@@ -15193,7 +15193,7 @@ Edit .claude/state.json
   <h2>Appendix D: Version History</h2>
   
   <div class="version-intro">
-    <p>HAL8000 evolution through development phases. For detailed change history, see <code>.claude/system.log</code>.</p>
+    <p>HAL8000-Assistant evolution through development phases. For detailed change history, see <code>.claude/system.log</code>.</p>
   </div>
 
   <div class="version-block">
@@ -15214,7 +15214,7 @@ Edit .claude/state.json
   <div class="version-block">
     <h3>v0.9.0 - Integration Phase (October 2025)</h3>
     <p>MCP stdio migration, Gemini CLI integration, Docker verification</p>
-    <p><strong>Lesson:</strong> External agents extend HAL8000 beyond 200K sub-agents. Host-installed tools preferred (Unix simplicity).</p>
+    <p><strong>Lesson:</strong> External agents extend HAL8000-Assistant beyond 200K sub-agents. Host-installed tools preferred (Unix simplicity).</p>
   </div>
 
   <div class="version-block">
@@ -15261,7 +15261,7 @@ Edit .claude/state.json
     <p><strong>Frontmatter:</strong> Title, Abstract, How to Use, Conventions</p>
     <p><strong>Part I - Introduction:</strong></p>
     <ul>
-      <li>1. What is HAL8000?</li>
+      <li>1. What is HAL8000-Assistant?</li>
       <li>2. Why Was It Built?</li>
       <li>3. Design Philosophy</li>
       <li>4. System Metaphor</li>

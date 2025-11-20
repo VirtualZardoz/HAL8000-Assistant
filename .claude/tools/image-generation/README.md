@@ -1,4 +1,4 @@
-# HAL8000 Image Generation Tool
+# HAL8000-Assistant Image Generation Tool
 
 AI-powered image generation using Dockerized Stable Diffusion with GPU acceleration.
 
@@ -12,14 +12,14 @@ This tool generates high-quality AI images via a Docker container running ComfyU
 - ✅ **Zero host pollution**: All dependencies in container
 - ✅ **Model caching**: Downloads once, reuses forever
 - ✅ **Multiple models**: SDXL (best quality), SD1.5 (faster)
-- ✅ **HAL8000 controlled**: I (Claude) generate images on your behalf
+- ✅ **HAL8000-Assistant controlled**: I (Claude) generate images on your behalf
 
 ## Architecture
 
 ```
 User Request
     ↓
-HAL8000 (Claude/CPU)
+HAL8000-Assistant (Claude/CPU)
     ↓
 HAL-generate-image.py
     ↓
@@ -27,9 +27,9 @@ docker run hal8000-image-gen:latest --prompt "..." --output image.png
     ↓
 Container: Start → Load Model → Generate → Save → Exit
     ↓
-Image saved to /mnt/d/~HAL8000/data/images/
+Image saved to /mnt/d/~HAL8000-Assistant/data/images/
     ↓
-HAL8000 presents result to user
+HAL8000-Assistant presents result to user
 ```
 
 ## Storage Layout
@@ -39,7 +39,7 @@ Host System:
 ├── C: drive (~3-5GB)
 │   └── Docker images (hal8000-image-gen:latest)
 │
-└── D: drive (/mnt/d/~HAL8000/)
+└── D: drive (/mnt/d/~HAL8000-Assistant/)
     ├── .docker-cache/models/     # Model weights (~6-33GB)
     │   ├── checkpoints/
     │   │   ├── sd_xl_base_1.0.safetensors (6.5GB)
@@ -73,7 +73,7 @@ Host System:
 ### Build
 
 ```bash
-cd /mnt/d/~HAL8000/.claude/tools/image-generation
+cd /mnt/d/~HAL8000-Assistant/.claude/tools/image-generation
 ./build-image.sh
 ```
 
@@ -161,7 +161,7 @@ python3 HAL-generate-image.py \
 # Text with different positions
 python3 HAL-generate-image.py \
   --prompt "robot assistant" \
-  --text "HAL8000" \
+  --text "HAL8000-Assistant" \
   --text-position center \
   --text-size 120 \
   --text-color "#00FF00" \
@@ -283,7 +283,7 @@ python3 HAL-generate-image.py \
 2. Retry (may be temporary HuggingFace issue)
 3. Manually download model:
    ```bash
-   cd /mnt/d/~HAL8000/.docker-cache/models/checkpoints/
+   cd /mnt/d/~HAL8000-Assistant/.docker-cache/models/checkpoints/
    wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
    ```
 
@@ -312,7 +312,7 @@ python3 HAL-generate-image.py \
 ### Clean Up Old Images
 ```bash
 # Remove generated images
-rm /mnt/d/~HAL8000/data/images/*.png
+rm /mnt/d/~HAL8000-Assistant/data/images/*.png
 
 # Keep model cache (recommended)
 # Models are large, re-downloading is slow
@@ -321,7 +321,7 @@ rm /mnt/d/~HAL8000/data/images/*.png
 ### Remove Models
 ```bash
 # Free up space (will re-download on next use)
-rm -rf /mnt/d/~HAL8000/.docker-cache/models/*
+rm -rf /mnt/d/~HAL8000-Assistant/.docker-cache/models/*
 ```
 
 ### Rebuild Container
@@ -337,34 +337,34 @@ docker rmi hal8000-image-gen:latest
 docker images | grep hal8000-image-gen
 
 # Model cache
-du -sh /mnt/d/~HAL8000/.docker-cache/models/
+du -sh /mnt/d/~HAL8000-Assistant/.docker-cache/models/
 
 # Generated images
-du -sh /mnt/d/~HAL8000/data/images/
+du -sh /mnt/d/~HAL8000-Assistant/data/images/
 
 # Total Docker usage
 docker system df
 ```
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
-HAL8000 (Claude) uses this tool to generate images on your behalf:
+HAL8000-Assistant (Claude) uses this tool to generate images on your behalf:
 
 ```
 User: "Generate an image of a futuristic CPU"
 
-HAL8000 executes:
+HAL8000-Assistant executes:
     python3 .claude/tools/image-generation/HAL-generate-image.py \
       --prompt "futuristic computer CPU with glowing circuits, cyberpunk style, detailed" \
       --model sdxl \
       --steps 25 \
       --output data/images/futuristic-cpu.png
 
-HAL8000 responds:
+HAL8000-Assistant responds:
     "Image generated: data/images/futuristic-cpu.png"
 ```
 
-You don't manage the container directly - HAL8000 handles it automatically.
+You don't manage the container directly - HAL8000-Assistant handles it automatically.
 
 ## Technical Details
 
@@ -409,14 +409,14 @@ You don't manage the container directly - HAL8000 handles it automatically.
 
 ## License
 
-Part of HAL8000 system. See main repository for license details.
+Part of HAL8000-Assistant system. See main repository for license details.
 
 ## Credits
 
 - **ComfyUI**: https://github.com/comfyanonymous/ComfyUI
 - **Stable Diffusion**: Stability AI
 - **SDXL**: Stability AI
-- **Architecture Pattern**: Based on HAL8000 diagram-generation tool
+- **Architecture Pattern**: Based on HAL8000-Assistant diagram-generation tool
 
 **Note on FLUX**: FLUX.1-dev was investigated but found incompatible with our setup (timeouts, low GPU utilization). See FLUX-STATUS.md for details. SDXL provides excellent quality as primary model.
 

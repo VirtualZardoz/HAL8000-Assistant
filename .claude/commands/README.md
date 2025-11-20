@@ -1,4 +1,4 @@
-# HAL8000 Commands Directory
+# HAL8000-Assistant Commands Directory
 
 **Location:** `.claude/commands/`
 **Purpose:** Executable HAL-Script programs for system operations and applications
@@ -7,7 +7,7 @@
 
 ## What Are Commands?
 
-Commands are **executable markdown files** containing instructions written in HAL-Script (natural language programming). They are the primary way to extend HAL8000's capabilities.
+Commands are **executable markdown files** containing instructions written in HAL-Script (natural language programming). They are the primary way to extend HAL8000-Assistant's capabilities.
 
 **Technical definition:** Commands are HAL-Script modules/programs
 
@@ -63,7 +63,7 @@ Commands are organized by purpose into subdirectories:
 **Purpose:** Documentation management and domain-specific applications
 
 **Commands:**
-- `HAL-refman` - HAL8000 Reference Manual lifecycle management
+- `HAL-refman` - HAL8000-Assistant Reference Manual lifecycle management
 
 **Characteristics:**
 - Application-level workflows
@@ -162,7 +162,7 @@ What the command produces
 
 ## HAL-Script Language
 
-Commands are written in **HAL-Script**, HAL8000's natural language programming language.
+Commands are written in **HAL-Script**, HAL8000-Assistant's natural language programming language.
 
 ### Basic Syntax
 
@@ -313,6 +313,6 @@ Table of all registers with current values
 
 ---
 
-**Commands are HAL8000's programming interface. Create commands to extend the system.**
+**Commands are HAL8000-Assistant's programming interface. Create commands to extend the system.**
 
 **Use templates** (`.claude/libraries/internal/templates/`) for faster, more consistent command creation.

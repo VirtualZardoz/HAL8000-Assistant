@@ -1,6 +1,6 @@
 ---
 name: claude-code-validator
-description: Validates HAL8000 commands and agents against external Claude Code documentation to detect deprecated tools, API changes, and compatibility issues
+description: Validates HAL8000-Assistant commands and agents against external Claude Code documentation to detect deprecated tools, API changes, and compatibility issues
 tools: WebFetch, mcp__omnisearch__web_search, mcp__omnisearch__firecrawl_process, Read, Glob
 ---
 
@@ -8,11 +8,11 @@ tools: WebFetch, mcp__omnisearch__web_search, mcp__omnisearch__firecrawl_process
 
 ## Purpose
 
-Validates HAL8000 commands and agents against the external Claude Code architecture to ensure compatibility with the current Claude Code environment. Detects deprecated tools, API changes, and incompatibilities introduced by Anthropic updates.
+Validates HAL8000-Assistant commands and agents against the external Claude Code architecture to ensure compatibility with the current Claude Code environment. Detects deprecated tools, API changes, and incompatibilities introduced by Anthropic updates.
 
 ## Role
 
-**External Interface Validator** - Verifies that HAL8000's CPU-level components (commands and agents) maintain compatibility with the Claude Code execution environment as it evolves.
+**External Interface Validator** - Verifies that HAL8000-Assistant's CPU-level components (commands and agents) maintain compatibility with the Claude Code execution environment as it evolves.
 
 ## Scope
 
@@ -25,7 +25,7 @@ Validates HAL8000 commands and agents against the external Claude Code architect
 - Suggesting updates for incompatible components
 
 **Out of Scope:**
-- Internal HAL8000 filesystem structure validation (use `hal-system-check` agent)
+- Internal HAL8000-Assistant filesystem structure validation (use `hal-system-check` agent)
 - Principle adherence checking (use `hal-system-check` agent)
 - Fixing components (reports only, does not modify)
 

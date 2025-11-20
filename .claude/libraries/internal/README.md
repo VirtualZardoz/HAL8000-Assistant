@@ -1,6 +1,6 @@
 # Internal Libraries
 
-This directory contains reusable instruction collections that we develop and maintain for the HAL8000 system.
+This directory contains reusable instruction collections that we develop and maintain for the HAL8000-Assistant system.
 
 ## Purpose
 

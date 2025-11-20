@@ -1,6 +1,6 @@
 ---
 name: HAL-system-check
-description: Perform comprehensive HAL8000 system integrity audit via system-maintenance agent
+description: Perform comprehensive HAL8000-Assistant system integrity audit via system-maintenance agent
 ---
 
 # HAL-system-check
@@ -14,7 +14,7 @@ description: Perform comprehensive HAL8000 system integrity audit via system-mai
 
 ## Purpose
 
-Launch `system-maintenance` sub-agent to perform comprehensive HAL8000 system integrity audit. Ensures architecture remains compliant with principles as system grows.
+Launch `system-maintenance` sub-agent to perform comprehensive HAL8000-Assistant system integrity audit. Ensures architecture remains compliant with principles as system grows.
 
 ## Usage
 

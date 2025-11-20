@@ -6,7 +6,7 @@
       "path": ".claude/libraries/internal/README.md",
       "source": "internal",
       "title": "Internal Libraries Directory",
-      "description": "Directory containing reusable instruction collections developed and maintained for the HAL8000 system.",
+      "description": "Directory containing reusable instruction collections developed and maintained for the HAL8000-Assistant system.",
       "keywords": [
         "development",
         "research",

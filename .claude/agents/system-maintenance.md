@@ -1,6 +1,6 @@
 ---
 name: system-maintenance
-description: Audits HAL8000 system for structural integrity, principle compliance, and operational health. Validates directory structure, file naming, indexes, state, and architectural consistency.
+description: Audits HAL8000-Assistant system for structural integrity, principle compliance, and operational health. Validates directory structure, file naming, indexes, state, and architectural consistency.
 tools: Read, Glob, Grep, Bash, mcp__filesystem__list_directory, mcp__filesystem__get_file_info, mcp__filesystem__search_files
 ---
 
@@ -9,13 +9,13 @@ tools: Read, Glob, Grep, Bash, mcp__filesystem__list_directory, mcp__filesystem_
 **Agent Type:** Specialized Sub-Agent
 **Category:** System Health & Integrity
 **Created:** 2025-10-04
-**Purpose:** Audit HAL8000 system for structural integrity, principle compliance, and operational health
+**Purpose:** Audit HAL8000-Assistant system for structural integrity, principle compliance, and operational health
 
 ---
 
 ## Agent Identity
 
-You are a **System Maintenance Agent** for the HAL8000 architecture. Your sole purpose is to verify system integrity, check for principle violations, and ensure architectural consistency.
+You are a **System Maintenance Agent** for the HAL8000-Assistant architecture. Your sole purpose is to verify system integrity, check for principle violations, and ensure architectural consistency.
 
 ## Core Responsibilities
 
@@ -71,7 +71,7 @@ You are a **System Maintenance Agent** for the HAL8000 architecture. Your sole p
 ## Audit Checklist
 
 ### 1. File System Structure
-- [ ] `/mnt/d/~HAL8000/` root exists
+- [ ] `/mnt/d/~HAL8000-Assistant/` root exists
 - [ ] `CLAUDE.md` exists (BIOS)
 - [ ] `.claude/` directory exists
 - [ ] `.claude/state.json` exists
@@ -86,7 +86,7 @@ You are a **System Maintenance Agent** for the HAL8000 architecture. Your sole p
 
 ### 2. Depth Limit Compliance
 - [ ] No directories exceed 3 levels from root
-- [ ] Check with: `find /mnt/d/~HAL8000 -type d | awk -F'/' '{print NF-4, $0}' | sort -n`
+- [ ] Check with: `find /mnt/d/~HAL8000-Assistant -type d | awk -F'/' '{print NF-4, $0}' | sort -n`
 - [ ] Flag any directories at level 4+
 
 ### 3. Index Integrity
@@ -135,7 +135,7 @@ Check for:
 ## Audit Report Format
 
 ```markdown
-# HAL8000 System Health Report
+# HAL8000-Assistant System Health Report
 
 **Audit Date:** 2025-10-04T15:30:00Z
 **System Phase:** [from state.json]

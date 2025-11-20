@@ -11,17 +11,17 @@
 
 ## Overview
 
-Google Gemini CLI is an **external agent** - an independent AI assistant controlled via bash commands. Unlike HAL8000 sub-agents (200K context), Gemini provides a **massive 1M token context window** for extremely heavy computational tasks.
+Google Gemini CLI is an **external agent** - an independent AI assistant controlled via bash commands. Unlike HAL8000-Assistant sub-agents (200K context), Gemini provides a **massive 1M token context window** for extremely heavy computational tasks.
 
 **Architectural Position:**
 ```
-HAL8000 (Claude, 200K context)
+HAL8000-Assistant (Claude, 200K context)
     ↓ command
 Gemini CLI (External Agent, 1M context)
     ↓ process massive workload
 Returns clean summary
     ↓ result
-HAL8000 (RAM += summary only, not full processing cost)
+HAL8000-Assistant (RAM += summary only, not full processing cost)
 ```
 
 ---
@@ -58,7 +58,7 @@ HAL8000 (RAM += summary only, not full processing cost)
 
 - Simple queries answerable with current RAM
 - Tasks within sub-agent capability (≤200K)
-- Operations requiring HAL8000-specific tools/architecture
+- Operations requiring HAL8000-Assistant-specific tools/architecture
 - Quick lookups or single-file operations
 
 ---
@@ -152,7 +152,7 @@ Main RAM saved: 795K tokens
 
 **❌ WRONG (Direct Processing):**
 ```
-Load 50 files (800K tokens) → Analyze in HAL8000 RAM
+Load 50 files (800K tokens) → Analyze in HAL8000-Assistant RAM
 Result: RAM = 800K + baseline
 ```
 
@@ -170,9 +170,9 @@ Result: RAM = 5K + baseline (saves 795K!)
 | Feature | Sub-Agents (Task tool) | Gemini CLI |
 |---------|----------------------|------------|
 | Context Window | 200K tokens | 1M tokens |
-| Control | Internal (HAL8000 spawns) | External (bash command) |
+| Control | Internal (HAL8000-Assistant spawns) | External (bash command) |
 | Isolation | Process-level | Independent agent |
-| Tools | HAL8000 tools (Read, Grep, etc.) | Gemini-specific tools |
+| Tools | HAL8000-Assistant tools (Read, Grep, etc.) | Gemini-specific tools |
 | Best For | Research, discovery, moderate tasks | Massive analysis, huge codebases |
 | Invocation | `Task` tool | `Bash` tool (`gemini` command) |
 
@@ -244,11 +244,11 @@ gemini --include-directories /path/to/dir1,/path/to/dir2
 
 ---
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
 ### Proactive Usage
 
-I (HAL8000 CPU) will **proactively suggest** Gemini CLI when:
+I (HAL8000-Assistant CPU) will **proactively suggest** Gemini CLI when:
 - User request implies >100K context needed
 - Task involves entire codebase analysis
 - Multi-file refactoring across many files
@@ -257,7 +257,7 @@ I (HAL8000 CPU) will **proactively suggest** Gemini CLI when:
 **Example Proactive Suggestion:**
 ```
 User: "Analyze the entire backend architecture and suggest improvements"
-HAL8000: "This task requires analyzing extensive files (~500K tokens).
+HAL8000-Assistant: "This task requires analyzing extensive files (~500K tokens).
 I'll delegate to Gemini CLI (1M context) for comprehensive analysis,
 then load the summary. Proceeding..."
 ```
@@ -276,7 +276,7 @@ Gemini CLI is discoverable via:
 
 **API Key:** Configured in Gemini CLI settings (host installation)
 **Config Location:** User's home directory (Gemini CLI manages)
-**No HAL8000 Setup Required:** Tool is pre-configured on host
+**No HAL8000-Assistant Setup Required:** Tool is pre-configured on host
 
 ---
 
@@ -310,16 +310,16 @@ Gemini CLI is discoverable via:
 
 ## Summary
 
-Gemini CLI is HAL8000's **heavy-lifting external agent**:
+Gemini CLI is HAL8000-Assistant's **heavy-lifting external agent**:
 - **1M token context** for massive tasks
-- **Independent processing** saves HAL8000 RAM
+- **Independent processing** saves HAL8000-Assistant RAM
 - **Command-line interface** via bash
 - **Proactively used** for tasks >100K tokens
 - **Returns summaries** not raw processing dumps
 
 **Delegation Pattern:**
 ```
-Heavy Task → Gemini CLI (1M context) → Clean Summary → HAL8000 RAM
+Heavy Task → Gemini CLI (1M context) → Clean Summary → HAL8000-Assistant RAM
 ```
 
-This extends HAL8000's total computational capacity beyond the 200K RAM limit while maintaining efficient resource usage.
+This extends HAL8000-Assistant's total computational capacity beyond the 200K RAM limit while maintaining efficient resource usage.

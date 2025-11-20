@@ -11,7 +11,7 @@
 
 ## Overview
 
-Docling is a powerful document processing tool that converts various document formats into clean, structured output. It's particularly valuable for ingesting external documents (PDFs, Office files, images) into the HAL8000 knowledge base.
+Docling is a powerful document processing tool that converts various document formats into clean, structured output. It's particularly valuable for ingesting external documents (PDFs, Office files, images) into the HAL8000-Assistant knowledge base.
 
 **Architectural Position:**
 ```
@@ -19,7 +19,7 @@ Document (PDF/DOCX/PPTX/Image/etc)
     ↓ PowerShell CLI
 Docling (OCR, table extraction, formatting)
     ↓ Markdown/JSON/HTML/Text output
-HAL8000 (ingests processed content)
+HAL8000-Assistant (ingests processed content)
 ```
 
 ---
@@ -41,7 +41,7 @@ HAL8000 (ingests processed content)
 - **Audio** - Audio files (with transcription)
 
 ### Output Formats
-- **Markdown** - Clean, structured markdown (default, recommended for HAL8000)
+- **Markdown** - Clean, structured markdown (default, recommended for HAL8000-Assistant)
 - **JSON** - Structured JSON with metadata
 - **HTML** - HTML output (with optional page splitting)
 - **Text** - Plain text extraction
@@ -256,7 +256,7 @@ powershell.exe -Command "docling input.pdf --debug-visualize-table-cells"
 
 ---
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
 ### Pattern 1: Direct Conversion for Ingestion
 
@@ -286,13 +286,13 @@ powershell.exe -Command "docling /path/to/document.pdf --output /tmp"
 **When working with WSL paths, convert to Windows paths:**
 ```bash
 # WSL path
-WSL_PATH="/mnt/d/~HAL8000/data/documents/input.pdf"
+WSL_PATH="/mnt/d/~HAL8000-Assistant/data/documents/input.pdf"
 
 # Convert to Windows path
 WIN_PATH=$(wslpath -w "$WSL_PATH")
 
 # Run docling with Windows path
-powershell.exe -Command "docling '$WIN_PATH' --output 'D:\~HAL8000\data\documents\output'"
+powershell.exe -Command "docling '$WIN_PATH' --output 'D:\~HAL8000-Assistant\data\documents\output'"
 ```
 
 ### Pattern 4: Bulk Conversion
@@ -302,8 +302,8 @@ powershell.exe -Command "docling '$WIN_PATH' --output 'D:\~HAL8000\data\document
 # Create conversion script
 cat > /tmp/convert-docs.sh <<'EOF'
 #!/bin/bash
-INPUT_DIR="/mnt/d/~HAL8000/data/documents/input"
-OUTPUT_DIR="/mnt/d/~HAL8000/data/documents/converted"
+INPUT_DIR="/mnt/d/~HAL8000-Assistant/data/documents/input"
+OUTPUT_DIR="/mnt/d/~HAL8000-Assistant/data/documents/converted"
 
 for file in "$INPUT_DIR"/*.pdf; do
   WIN_INPUT=$(wslpath -w "$file")
@@ -330,7 +330,7 @@ powershell.exe -Command "docling research-paper.pdf \
   --image-export-mode referenced \
   --output /tmp"
 
-# Ingest into HAL8000
+# Ingest into HAL8000-Assistant
 /HAL-knowledge-ingest "/tmp/research-paper.md" research
 ```
 
@@ -403,7 +403,7 @@ powershell.exe -Command "docling meeting-recording.mp3 \
 
 ### 1. Choose Appropriate Output Format
 
-**For HAL8000 ingestion:**
+**For HAL8000-Assistant ingestion:**
 - **Markdown** (default) - Recommended, clean, preserves structure
 - JSON - For structured data extraction and processing
 - Text - For simple text content without formatting
@@ -514,10 +514,10 @@ ERROR: Document processing timeout
 
 ## RAM Efficiency
 
-**Docling runs in PowerShell (outside HAL8000 context):**
-- ✅ **Zero RAM impact** on HAL8000 session
+**Docling runs in PowerShell (outside HAL8000-Assistant context):**
+- ✅ **Zero RAM impact** on HAL8000-Assistant session
 - ✅ Processing happens in separate process
-- ✅ Only converted output loaded into HAL8000 RAM
+- ✅ Only converted output loaded into HAL8000-Assistant RAM
 
 **Comparison:**
 
@@ -572,7 +572,7 @@ powershell.exe -Command "docling --show-external-plugins --allow-external-plugin
 
 ## Summary
 
-Docling CLI enables HAL8000 to process documents in any format:
+Docling CLI enables HAL8000-Assistant to process documents in any format:
 - **Universal converter** - PDF, DOCX, PPTX, images, audio → Markdown/JSON
 - **OCR support** - Extract text from scanned documents and images
 - **Advanced features** - Table extraction, formula enrichment, code highlighting
@@ -584,4 +584,4 @@ Docling CLI enables HAL8000 to process documents in any format:
 Document (any format) → Docling CLI (convert) → Markdown → HAL-knowledge-ingest → Knowledge Base
 ```
 
-This extends HAL8000's ability to ingest knowledge from any document source, making the entire world of PDFs, Office documents, and images accessible to the system.
+This extends HAL8000-Assistant's ability to ingest knowledge from any document source, making the entire world of PDFs, Office documents, and images accessible to the system.

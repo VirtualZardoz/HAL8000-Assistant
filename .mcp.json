@@ -16,7 +16,7 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/mnt/d/~HAL8000"
+        "/mnt/d/~HAL8000-Assistant"
       ]
     }
   }

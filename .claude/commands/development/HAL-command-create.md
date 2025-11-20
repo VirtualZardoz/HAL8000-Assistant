@@ -293,7 +293,7 @@ Use the standard Command Builder Report format specified in your agent file.
 
 **Framework Credit:**
 - Based on IndyDevDan's "7 Levels of Agentic Prompt Formats"
-- Adapted for HAL8000 architecture and HAL-Script programming language
+- Adapted for HAL8000-Assistant architecture and HAL-Script programming language
 - Enhanced with Lego Block composability principle
 
 ---
@@ -310,7 +310,7 @@ This command represents the culmination of the Prompt Template System:
 
 ### Recursive Self-Improvement
 
-This command enables HAL8000's self-modification capability:
+This command enables HAL8000-Assistant's self-modification capability:
 - System creates its own commands
 - Commands extend system capabilities
 - New capabilities enable more command creation

@@ -21,7 +21,7 @@
       "type": "tool",
       "category": "mcp-configuration",
       "topics": ["MCP", "server-requirements", "extended-IO", "configuration"],
-      "summary": "Lists MCP servers required and recommended for HAL8000 operation with dynamic control for RAM optimization.",
+      "summary": "Lists MCP servers required and recommended for HAL8000-Assistant operation with dynamic control for RAM optimization.",
       "size_estimate_tokens": 1531
     },
     ".claude/tools/mcp/control.py": {

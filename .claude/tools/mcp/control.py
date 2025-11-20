@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HAL8000 MCP Control - Dynamic MCP server management for RAM optimization
+HAL8000-Assistant MCP Control - Dynamic MCP server management for RAM optimization
 
 Manages selective loading of MCP servers via .claude/settings.local.json and .mcp.json
 """
@@ -231,7 +231,7 @@ def list_servers(servers, settings_path):
     enable_all = settings.get("enableAllProjectMcpServers", False)
 
     result = "═══════════════════════════════════════════════════════════\n"
-    result += "HAL8000 MCP Server Status\n"
+    result += "HAL8000-Assistant MCP Server Status\n"
     result += "═══════════════════════════════════════════════════════════\n\n"
 
     # Control mode

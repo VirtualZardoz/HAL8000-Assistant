@@ -1,15 +1,15 @@
-# HAL8000 Feature Selection Guide
+# HAL8000-Assistant Feature Selection Guide
 # Skills vs. Sub-Agents vs. Commands Decision Framework
 
 **Version:** 1.0
 **Created:** 2025-10-30
-**Based on:** Claude Code best practices and HAL8000 architecture validation
+**Based on:** Claude Code best practices and HAL8000-Assistant architecture validation
 
 ---
 
 ## Purpose
 
-This guide provides a systematic framework for deciding when to use **Skills**, **Sub-Agents**, or **Commands** when extending HAL8000 capabilities. Each feature type serves distinct architectural purposes, and choosing correctly impacts context efficiency, user experience, and system maintainability.
+This guide provides a systematic framework for deciding when to use **Skills**, **Sub-Agents**, or **Commands** when extending HAL8000-Assistant capabilities. Each feature type serves distinct architectural purposes, and choosing correctly impacts context efficiency, user experience, and system maintainability.
 
 **Reference:** This framework aligns with Claude Code community best practices as documented in `data/videos/i-finally-cracked-claude-agent-skills/knowledge-brief.md`.
 
@@ -17,7 +17,7 @@ This guide provides a systematic framework for deciding when to use **Skills**, 
 
 ## The Three-Layer Model
 
-HAL8000's extensibility is built on a three-layer pattern where each layer has specific characteristics:
+HAL8000-Assistant's extensibility is built on a three-layer pattern where each layer has specific characteristics:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -52,7 +52,7 @@ HAL8000's extensibility is built on a three-layer pattern where each layer has s
 Start here for rapid feature classification:
 
 ```
-┌─ Need to extend HAL8000 capabilities ─┐
+┌─ Need to extend HAL8000-Assistant capabilities ─┐
 │                                        │
 ├─ Q1: Who should trigger it?            │
 │  ├─ Agent automatically  → SKILL       │
@@ -123,7 +123,7 @@ Result: Main session RAM impact = summary size only (~2-5K tokens), not full pro
 - [ ] Want dedicated directory structure
 - [ ] Solution composes with other capabilities
 
-**HAL8000 Examples:**
+**HAL8000-Assistant Examples:**
 - **context-awareness**: Detects missing context signals → asks user before loading
 - **architecture-consultant**: Detects design decisions → validates against principles
 - **hal-script-assistant**: Detects command creation → guides template selection
@@ -146,7 +146,7 @@ Result: Main session RAM impact = summary size only (~2-5K tokens), not full pro
 - [ ] Part of user's workflow routine
 - [ ] Composes multiple operations
 
-**HAL8000 Examples:**
+**HAL8000-Assistant Examples:**
 - **/HAL-session-end**: User must confirm RAM wipe → saves state before reset
 - **/HAL-system-check**: User triggers audit → delegates to system-maintenance agent
 - **/HAL-index-update**: User decides when to sync → delegates indexing work
@@ -168,7 +168,7 @@ Result: Main session RAM impact = summary size only (~2-5K tokens), not full pro
 - [ ] Input >> Output (large processing → small summary)
 - [ ] Main session RAM in CAUTION/DANGER zone
 
-**HAL8000 Examples:**
+**HAL8000-Assistant Examples:**
 - **research-synthesizer**: Web research (150K processing) → 5K summary (60-85% RAM savings)
 - **hal-context-finder**: System navigation (80K context) → 3K summary (96% savings)
 - **system-maintenance**: System audit (100K checking) → 5K report (95% savings)
@@ -260,9 +260,9 @@ What are the context requirements?
 
 ---
 
-## HAL8000 Architecture Validation
+## HAL8000-Assistant Architecture Validation
 
-**HAL8000's current features have been validated against this framework:**
+**HAL8000-Assistant's current features have been validated against this framework:**
 
 ### Skills (All Correctly Classified ✅)
 | Skill | Trigger | Context Efficiency | Modularity | ✅ |
@@ -292,7 +292,7 @@ What are the context requirements?
 | command-builder | ✅ (200K isolated) | ✅ (template processing) | ✅ (by design) | ✅ |
 | claude-code-validator | ✅ (200K isolated) | ✅ (doc validation) | ✅ (by design) | ✅ |
 
-**Result: 100% of HAL8000 features are correctly classified according to Claude Code best practices!**
+**Result: 100% of HAL8000-Assistant features are correctly classified according to Claude Code best practices!**
 
 ---
 
@@ -321,7 +321,7 @@ What are the context requirements?
 ### Pitfall 5: "MCP Server Context Explosion"
 **Problem:** MCP servers "explode context window on bootup"
 **Solution:** Prefer Skills (progressive disclosure) or Sub-Agents (isolation) over MCP
-**Example:** HAL8000 uses minimal MCP (omnisearch, filesystem, IDE only)
+**Example:** HAL8000-Assistant uses minimal MCP (omnisearch, filesystem, IDE only)
 
 ---
 
@@ -364,7 +364,7 @@ Features compose in predictable ways:
 
 ## Extension Guidelines
 
-When creating new HAL8000 capabilities:
+When creating new HAL8000-Assistant capabilities:
 
 ### Step 1: Define the Capability
 ```
@@ -398,7 +398,7 @@ Q4: Efficiency?   → Progressive/Isolated
 
 ### Step 5: Document Decision
 ```
-- Add to this guide's HAL8000 validation table
+- Add to this guide's HAL8000-Assistant validation table
 - Update BIOS if architectural principle
 - Reference in CHANGELOG.md
 ```
@@ -408,7 +408,7 @@ Q4: Efficiency?   → Progressive/Isolated
 ## References
 
 ### Primary Sources
-- **HAL8000 BIOS**: `CLAUDE.md` - Operating Principles, Three-Layer Model
+- **HAL8000-Assistant BIOS**: `CLAUDE.md` - Operating Principles, Three-Layer Model
 - **Video Analysis**: `data/videos/i-finally-cracked-claude-agent-skills/knowledge-brief.md` - Industry best practices
 - **HAL-Script Guide**: `data/architecture/hal-script-language.md` - Command programming
 - **Command Organization**: `.claude/commands/README.md` - Command structure
@@ -431,7 +431,7 @@ Q4: Efficiency?   → Progressive/Isolated
 
 ```
 ╔════════════════════════════════════════════════════════╗
-║ HAL8000 FEATURE SELECTION QUICK REFERENCE              ║
+║ HAL8000-Assistant FEATURE SELECTION QUICK REFERENCE              ║
 ╠════════════════════════════════════════════════════════╣
 ║ SKILLS (Agent-Triggered)                               ║
 ║ ✓ Agent auto-triggers                                  ║
@@ -464,4 +464,4 @@ DECISION TREE:
 
 **End of Feature Selection Guide**
 
-*This guide validates HAL8000's architecture against Claude Code community best practices and provides a systematic framework for extending the system correctly.*
+*This guide validates HAL8000-Assistant's architecture against Claude Code community best practices and provides a systematic framework for extending the system correctly.*

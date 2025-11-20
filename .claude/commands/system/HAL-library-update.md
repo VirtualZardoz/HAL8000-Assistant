@@ -1,6 +1,6 @@
 ---
 name: HAL-library-update
-description: Update external libraries from source repositories (HAL8000 package manager)
+description: Update external libraries from source repositories (HAL8000-Assistant package manager)
 parameters:
   - name: library-name
     description: Specific library to update (optional, defaults to all registered libraries)
@@ -19,7 +19,7 @@ parameters:
 
 ## Purpose
 
-Updates external libraries from their source repositories. This is the HAL8000 **package manager** - it manages the lifecycle of external library collections by checking for updates, downloading new versions, and maintaining the library registry.
+Updates external libraries from their source repositories. This is the HAL8000-Assistant **package manager** - it manages the lifecycle of external library collections by checking for updates, downloading new versions, and maintaining the library registry.
 
 ## Usage
 
@@ -232,7 +232,7 @@ The update process involves:
 
 ## Package Manager Operations
 
-This command is the **update** operation of HAL8000's package manager. Future expansion:
+This command is the **update** operation of HAL8000-Assistant's package manager. Future expansion:
 
 ```bash
 /HAL-library-install [url] [name] [category]  # Install new external library

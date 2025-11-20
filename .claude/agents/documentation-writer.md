@@ -137,7 +137,7 @@ VISUALS: [List of diagrams/images needed as placeholders]
 }
 ```
 
-**For HAL8000 integration:** Return only the `content` field (complete HTML/Markdown)
+**For HAL8000-Assistant integration:** Return only the `content` field (complete HTML/Markdown)
 
 ---
 
@@ -243,7 +243,7 @@ Format: html
 Doc_Type: reference
 
 Guidelines:
-TARGET: Explain HAL8000 system architecture
+TARGET: Explain HAL8000-Assistant system architecture
 AUDIENCE: All three (executives, users, developers) - layered
 KEY_POINTS: Modified von Neumann, CPU=Claude, RAM=context, Storage=filesystem
 TONE: Technical but accessible, educational
@@ -257,7 +257,7 @@ VISUALS: [DIAGRAM: Architecture overview], [DIAGRAM: Data flow]
   <h2>System Architecture Overview</h2>
 
   <div class="overview">
-    <p>HAL8000 implements a modified von Neumann architecture...</p>
+    <p>HAL8000-Assistant implements a modified von Neumann architecture...</p>
   </div>
 
   <figure class="diagram-placeholder" data-diagram-id="arch-overview">
@@ -310,7 +310,7 @@ VISUALS: None
 ```
 
 ## Description
-Validates HAL8000 internal structure and principle compliance...
+Validates HAL8000-Assistant internal structure and principle compliance...
 
 ## Parameters
 None
@@ -387,7 +387,7 @@ Resolution: Defaulting to AUDIENCE priority (accessible language with formal str
 
 ---
 
-## Integration with HAL8000
+## Integration with HAL8000-Assistant
 
 ### Invoked by /HAL-refman command
 
@@ -484,7 +484,7 @@ VISUALS: [List of diagrams/images needed as placeholders]
 - Composable with other tools
 - Text-based, universal format
 
-**HAL8000 Architecture:**
+**HAL8000-Assistant Architecture:**
 - Sub-agent = virtual memory extension
 - Isolated context (no RAM pollution)
 - Returns clean output only

@@ -2,13 +2,13 @@
 
 **Version:** 1.0
 **Created:** 2025-10-14
-**Purpose:** Natural language programming for HAL8000 architecture
+**Purpose:** Natural language programming for HAL8000-Assistant architecture
 
 ---
 
 ## Overview
 
-**HAL-Script** is a natural language programming language for the HAL8000 system. It allows users to write executable instructions in human-readable English that are interpreted by the CPU (Claude instance) with semantic understanding.
+**HAL-Script** is a natural language programming language for the HAL8000-Assistant system. It allows users to write executable instructions in human-readable English that are interpreted by the CPU (Claude instance) with semantic understanding.
 
 **Paradigm:** Imperative Natural Language Programming
 
@@ -22,7 +22,7 @@
 
 Traditional computers have **dumb CPUs** that require precise, rigid syntax because they cannot reason about ambiguity.
 
-HAL8000 has a **smart CPU** (Claude) that can:
+HAL8000-Assistant has a **smart CPU** (Claude) that can:
 - Understand natural language instructions
 - Reason about intent and context
 - Handle ambiguity through clarification
@@ -292,7 +292,7 @@ HAL-Script uses **semantic typing** - the CPU infers types from context.
 - **Text/String:** `"Hello world"`, file paths, descriptions
 - **Number:** `42`, `3.14`, `80` (percentages)
 - **Boolean:** `true`, `false`, yes/no, success/failure
-- **File path:** `/mnt/d/~HAL8000/CLAUDE.md`
+- **File path:** `/mnt/d/~HAL8000-Assistant/CLAUDE.md`
 - **JSON:** Structured data objects
 - **List/Array:** Collections of items
 - **Register reference:** `RAM_ZONE`, `CONTEXT_MANIFEST`
@@ -571,12 +571,12 @@ Before loading large files:
 # System Status Display
 
 ## Purpose
-Show current HAL8000 system state to user
+Show current HAL8000-Assistant system state to user
 
 ## Implementation
 
 Read the current timestamp.
-Display: "HAL8000 Status Report - [timestamp]"
+Display: "HAL8000-Assistant Status Report - [timestamp]"
 
 Check RAM usage from system warnings.
 Display: "RAM: [percentage]% ([tokens used]/200K tokens)"
@@ -707,4 +707,4 @@ HAL-Script is not a traditional programming language - it's **instruction-orient
 
 **Version:** 1.0
 **Status:** Production
-**System:** HAL8000 v1.0.0
+**System:** HAL8000-Assistant v1.0.0

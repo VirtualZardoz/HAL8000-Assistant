@@ -202,7 +202,7 @@ This bug should inform HAL-Script language best practices:
 ---
 
 **Fix Date:** 2025-10-15
-**Fixed By:** HAL8000 CPU (Claude instance)
+**Fixed By:** HAL8000-Assistant CPU (Claude instance)
 **User Report:** Recurring "stale reference" messages on resume
 **Impact:** High (affected every session resume)
 **Resolution:** Command specification updated, verification added, state.json corrected

@@ -1,4 +1,4 @@
-# HAL8000 Reference Manual Refactoring Workflow
+# HAL8000-Assistant Reference Manual Refactoring Workflow
 
 **Version:** 1.0
 **Created:** 2025-10-10
@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This document defines the systematic workflow for refactoring the HAL8000 Reference Manual using Gemini CLI (1M context) orchestrated by Claude Code (CPU).
+This document defines the systematic workflow for refactoring the HAL8000-Assistant Reference Manual using Gemini CLI (1M context) orchestrated by Claude Code (CPU).
 
 ---
 
@@ -25,7 +25,7 @@ This document defines the systematic workflow for refactoring the HAL8000 Refere
 
 ### State File: `refactoring-state.json`
 
-Location: `/mnt/d/~HAL8000/data/reference-manual/refactoring-state.json`
+Location: `/mnt/d/~HAL8000-Assistant/data/reference-manual/refactoring-state.json`
 
 Structure:
 ```json
@@ -257,7 +257,7 @@ Each phase follows: **PREPARE → EXECUTE → VALIDATE → ITERATE (if needed) �
 **When CPU starts new session:**
 
 1. Check if working on refactoring (user context or explicit request)
-2. Read `/mnt/d/~HAL8000/data/reference-manual/refactoring-state.json`
+2. Read `/mnt/d/~HAL8000-Assistant/data/reference-manual/refactoring-state.json`
 3. Report current state:
    ```
    📋 Refactoring Status
