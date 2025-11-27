@@ -2,7 +2,7 @@
 
 **Purpose:** Configure bash command pre-approvals so `/HAL-session-end` executes without permission prompts.
 
-**Target Audience:** New HAL8000 instances or fresh deployments
+**Target Audience:** New HAL8000-Assistant instances or fresh deployments
 
 ---
 
@@ -27,7 +27,7 @@ Create a project-level settings file with pre-approved commands.
 
 ### Step 1: Create Settings File
 
-Create `/mnt/d/~HAL8000/.claude/settings.json` with this content:
+Create `/mnt/d/~HAL8000-Assistant-Assistant/.claude/settings.json` with this content:
 
 ```json
 {
@@ -46,9 +46,9 @@ Create `/mnt/d/~HAL8000/.claude/settings.json` with this content:
       "Bash(mv:*)",
       "Bash(mkdir:*)",
       "Bash(chmod:*)",
-      "Read(//mnt/d/~HAL8000/**)",
-      "Write(//mnt/d/~HAL8000/**)",
-      "Edit(//mnt/d/~HAL8000/**)"
+      "Read(//mnt/d/~HAL8000-Assistant-Assistant/**)",
+      "Write(//mnt/d/~HAL8000-Assistant-Assistant/**)",
+      "Edit(//mnt/d/~HAL8000-Assistant-Assistant/**)"
     ]
   }
 }
@@ -57,7 +57,7 @@ Create `/mnt/d/~HAL8000/.claude/settings.json` with this content:
 ### Step 2: Verify File Exists
 
 ```bash
-test -f "/mnt/d/~HAL8000/.claude/settings.json" && echo "✓ Settings file exists"
+test -f "/mnt/d/~HAL8000-Assistant-Assistant/.claude/settings.json" && echo "✓ Settings file exists"
 ```
 
 ### Step 3: No Restart Needed
@@ -77,7 +77,7 @@ Settings changes take effect immediately (Claude Code v1.0.90+). No restart requ
 - `find:*` - Recursive file discovery
 - `test:*` - File existence checks (`if [ -f ... ]`)
 
-**Common HAL8000 Operations:**
+**Common HAL8000-Assistant Operations:**
 - `cat:*` - File reading
 - `git:*` - Version control operations
 - `mv:*` - File moving/renaming
@@ -85,9 +85,9 @@ Settings changes take effect immediately (Claude Code v1.0.90+). No restart requ
 - `chmod:*` - Permission changes
 
 **File Operations:**
-- `Read(//mnt/d/~HAL8000/**)` - Read any file in HAL8000 tree
-- `Write(//mnt/d/~HAL8000/**)` - Write any file in HAL8000 tree
-- `Edit(//mnt/d/~HAL8000/**)` - Edit any file in HAL8000 tree
+- `Read(//mnt/d/~HAL8000-Assistant-Assistant/**)` - Read any file in HAL8000-Assistant tree
+- `Write(//mnt/d/~HAL8000-Assistant-Assistant/**)` - Write any file in HAL8000-Assistant tree
+- `Edit(//mnt/d/~HAL8000-Assistant-Assistant/**)` - Edit any file in HAL8000-Assistant tree
 
 ---
 
@@ -111,7 +111,7 @@ After creating the settings file, test with:
 
 ## Alternative: Global Settings
 
-If you want permissions for **all projects** (not just HAL8000), create/edit:
+If you want permissions for **all projects** (not just HAL8000-Assistant), create/edit:
 
 **File:** `/home/sardar/.claude/settings.json`
 
@@ -124,14 +124,14 @@ If you want permissions for **all projects** (not just HAL8000), create/edit:
 ## Architecture Notes
 
 **Why Project-Level:**
-- Isolated to HAL8000 only
+- Isolated to HAL8000-Assistant only
 - More secure (other projects require explicit approval)
 - Follows principle of least privilege
 
 **Why These Commands:**
 - Session-end is a critical system operation (Level 7 command)
 - Requires uninterrupted execution for state consistency
-- All commands are read-only or write to HAL8000 directory tree only
+- All commands are read-only or write to HAL8000-Assistant directory tree only
 - No network operations, no system modification outside project
 
 **Unix Philosophy Alignment:**
@@ -155,7 +155,7 @@ If you want permissions for **all projects** (not just HAL8000), create/edit:
 **Solution:**
 1. Verify JSON syntax: `cat .claude/settings.json | python3 -m json.tool`
 2. Check file permissions: `ls -la .claude/settings.json`
-3. Ensure file is in correct location: `/mnt/d/~HAL8000/.claude/settings.json`
+3. Ensure file is in correct location: `/mnt/d/~HAL8000-Assistant-Assistant/.claude/settings.json`
 
 **Problem:** Want to remove a pre-approval
 
@@ -177,4 +177,4 @@ If you want permissions for **all projects** (not just HAL8000), create/edit:
 **Version:** 1.0
 **Created:** 2025-10-26
 **Last Updated:** 2025-10-26
-**Validated By:** HAL8000 v1.6.1 instance (session 2025-10-26-0911)
+**Validated By:** HAL8000-Assistant v1.6.1 instance (session 2025-10-26-0911)

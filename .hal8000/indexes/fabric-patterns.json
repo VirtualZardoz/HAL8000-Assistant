@@ -1,0 +1,1136 @@
+{
+  "source": "fabric-patterns",
+  "count": 226,
+  "patterns": [
+    {
+      "name": "agility_story",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/agility_story"
+    },
+    {
+      "name": "ai",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/ai"
+    },
+    {
+      "name": "analyze_answers",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_answers"
+    },
+    {
+      "name": "analyze_bill",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_bill"
+    },
+    {
+      "name": "analyze_bill_short",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_bill_short"
+    },
+    {
+      "name": "analyze_candidates",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_candidates"
+    },
+    {
+      "name": "analyze_cfp_submission",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_cfp_submission"
+    },
+    {
+      "name": "analyze_claims",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_claims"
+    },
+    {
+      "name": "analyze_comments",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_comments"
+    },
+    {
+      "name": "analyze_debate",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_debate"
+    },
+    {
+      "name": "analyze_email_headers",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_email_headers"
+    },
+    {
+      "name": "analyze_incident",
+      "description": "Cybersecurity Hack Article Analysis: Efficient Data Extraction...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_incident"
+    },
+    {
+      "name": "analyze_interviewer_techniques",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_interviewer_techniques"
+    },
+    {
+      "name": "analyze_logs",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_logs"
+    },
+    {
+      "name": "analyze_malware",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_malware"
+    },
+    {
+      "name": "analyze_military_strategy",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_military_strategy"
+    },
+    {
+      "name": "analyze_mistakes",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_mistakes"
+    },
+    {
+      "name": "analyze_paper",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_paper"
+    },
+    {
+      "name": "analyze_paper_simple",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_paper_simple"
+    },
+    {
+      "name": "analyze_patent",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_patent"
+    },
+    {
+      "name": "analyze_personality",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_personality"
+    },
+    {
+      "name": "analyze_presentation",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_presentation"
+    },
+    {
+      "name": "analyze_product_feedback",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_product_feedback"
+    },
+    {
+      "name": "analyze_proposition",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_proposition"
+    },
+    {
+      "name": "analyze_prose",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_prose"
+    },
+    {
+      "name": "analyze_prose_json",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_prose_json"
+    },
+    {
+      "name": "analyze_prose_pinker",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_prose_pinker"
+    },
+    {
+      "name": "analyze_risk",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_risk"
+    },
+    {
+      "name": "analyze_sales_call",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_sales_call"
+    },
+    {
+      "name": "analyze_spiritual_text",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_spiritual_text"
+    },
+    {
+      "name": "analyze_tech_impact",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_tech_impact"
+    },
+    {
+      "name": "analyze_terraform_plan",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_terraform_plan"
+    },
+    {
+      "name": "analyze_threat_report",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_threat_report"
+    },
+    {
+      "name": "analyze_threat_report_cmds",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_threat_report_cmds"
+    },
+    {
+      "name": "analyze_threat_report_trends",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/analyze_threat_report_trends"
+    },
+    {
+      "name": "answer_interview_question",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/answer_interview_question"
+    },
+    {
+      "name": "apply_ul_tags",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/apply_ul_tags"
+    },
+    {
+      "name": "ask_secure_by_design_questions",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/ask_secure_by_design_questions"
+    },
+    {
+      "name": "ask_uncle_duke",
+      "description": "Uncle Duke...",
+      "path": ".hal8000/libraries/external/fabric-patterns/ask_uncle_duke"
+    },
+    {
+      "name": "capture_thinkers_work",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/capture_thinkers_work"
+    },
+    {
+      "name": "check_agreement",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/check_agreement"
+    },
+    {
+      "name": "clean_text",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/clean_text"
+    },
+    {
+      "name": "coding_master",
+      "description": "**Expert coder**...",
+      "path": ".hal8000/libraries/external/fabric-patterns/coding_master"
+    },
+    {
+      "name": "compare_and_contrast",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/compare_and_contrast"
+    },
+    {
+      "name": "convert_to_markdown",
+      "description": "<identity>...",
+      "path": ".hal8000/libraries/external/fabric-patterns/convert_to_markdown"
+    },
+    {
+      "name": "create_5_sentence_summary",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_5_sentence_summary"
+    },
+    {
+      "name": "create_academic_paper",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_academic_paper"
+    },
+    {
+      "name": "create_ai_jobs_analysis",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_ai_jobs_analysis"
+    },
+    {
+      "name": "create_aphorisms",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_aphorisms"
+    },
+    {
+      "name": "create_art_prompt",
+      "description": "IDENTITY AND GOALS...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_art_prompt"
+    },
+    {
+      "name": "create_better_frame",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_better_frame"
+    },
+    {
+      "name": "create_coding_feature",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_coding_feature"
+    },
+    {
+      "name": "create_coding_project",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_coding_project"
+    },
+    {
+      "name": "create_command",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_command"
+    },
+    {
+      "name": "create_cyber_summary",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_cyber_summary"
+    },
+    {
+      "name": "create_design_document",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_design_document"
+    },
+    {
+      "name": "create_diy",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_diy"
+    },
+    {
+      "name": "create_excalidraw_visualization",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_excalidraw_visualization"
+    },
+    {
+      "name": "create_flash_cards",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_flash_cards"
+    },
+    {
+      "name": "create_formal_email",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_formal_email"
+    },
+    {
+      "name": "create_git_diff_commit",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_git_diff_commit"
+    },
+    {
+      "name": "create_graph_from_input",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_graph_from_input"
+    },
+    {
+      "name": "create_hormozi_offer",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_hormozi_offer"
+    },
+    {
+      "name": "create_idea_compass",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_idea_compass"
+    },
+    {
+      "name": "create_investigation_visualization",
+      "description": "IDENTITY AND GOAL...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_investigation_visualization"
+    },
+    {
+      "name": "create_keynote",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_keynote"
+    },
+    {
+      "name": "create_loe_document",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_loe_document"
+    },
+    {
+      "name": "create_logo",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_logo"
+    },
+    {
+      "name": "create_markmap_visualization",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_markmap_visualization"
+    },
+    {
+      "name": "create_mermaid_visualization",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_mermaid_visualization"
+    },
+    {
+      "name": "create_mermaid_visualization_for_github",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_mermaid_visualization_for_github"
+    },
+    {
+      "name": "create_micro_summary",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_micro_summary"
+    },
+    {
+      "name": "create_mnemonic_phrases",
+      "description": "IDENTITY AND PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_mnemonic_phrases"
+    },
+    {
+      "name": "create_network_threat_landscape",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_network_threat_landscape"
+    },
+    {
+      "name": "create_newsletter_entry",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_newsletter_entry"
+    },
+    {
+      "name": "create_npc",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_npc"
+    },
+    {
+      "name": "create_pattern",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_pattern"
+    },
+    {
+      "name": "create_prd",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_prd"
+    },
+    {
+      "name": "create_prediction_block",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_prediction_block"
+    },
+    {
+      "name": "create_quiz",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_quiz"
+    },
+    {
+      "name": "create_reading_plan",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_reading_plan"
+    },
+    {
+      "name": "create_recursive_outline",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_recursive_outline"
+    },
+    {
+      "name": "create_report_finding",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_report_finding"
+    },
+    {
+      "name": "create_rpg_summary",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_rpg_summary"
+    },
+    {
+      "name": "create_security_update",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_security_update"
+    },
+    {
+      "name": "create_show_intro",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_show_intro"
+    },
+    {
+      "name": "create_sigma_rules",
+      "description": "IDENTITY and PURPOSE:...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_sigma_rules"
+    },
+    {
+      "name": "create_story_about_people_interaction",
+      "description": "Prompt...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_story_about_people_interaction"
+    },
+    {
+      "name": "create_story_about_person",
+      "description": "You are an expert creative writer specializing in character-driven narratives, and a keen observer o...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_story_about_person"
+    },
+    {
+      "name": "create_story_explanation",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_story_explanation"
+    },
+    {
+      "name": "create_stride_threat_model",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_stride_threat_model"
+    },
+    {
+      "name": "create_summary",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_summary"
+    },
+    {
+      "name": "create_tags",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_tags"
+    },
+    {
+      "name": "create_threat_scenarios",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_threat_scenarios"
+    },
+    {
+      "name": "create_ttrc_graph",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_ttrc_graph"
+    },
+    {
+      "name": "create_ttrc_narrative",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_ttrc_narrative"
+    },
+    {
+      "name": "create_upgrade_pack",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_upgrade_pack"
+    },
+    {
+      "name": "create_user_story",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_user_story"
+    },
+    {
+      "name": "create_video_chapters",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_video_chapters"
+    },
+    {
+      "name": "create_visualization",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/create_visualization"
+    },
+    {
+      "name": "dialog_with_socrates",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/dialog_with_socrates"
+    },
+    {
+      "name": "enrich_blog_post",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/enrich_blog_post"
+    },
+    {
+      "name": "explain_code",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/explain_code"
+    },
+    {
+      "name": "explain_docs",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/explain_docs"
+    },
+    {
+      "name": "explain_math",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/explain_math"
+    },
+    {
+      "name": "explain_project",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/explain_project"
+    },
+    {
+      "name": "explain_terms",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/explain_terms"
+    },
+    {
+      "name": "export_data_as_csv",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/export_data_as_csv"
+    },
+    {
+      "name": "extract_algorithm_update_recommendations",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_algorithm_update_recommendations"
+    },
+    {
+      "name": "extract_alpha",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_alpha"
+    },
+    {
+      "name": "extract_article_wisdom",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_article_wisdom"
+    },
+    {
+      "name": "extract_book_ideas",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_book_ideas"
+    },
+    {
+      "name": "extract_book_recommendations",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_book_recommendations"
+    },
+    {
+      "name": "extract_business_ideas",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_business_ideas"
+    },
+    {
+      "name": "extract_controversial_ideas",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_controversial_ideas"
+    },
+    {
+      "name": "extract_core_message",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_core_message"
+    },
+    {
+      "name": "extract_ctf_writeup",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_ctf_writeup"
+    },
+    {
+      "name": "extract_domains",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_domains"
+    },
+    {
+      "name": "extract_extraordinary_claims",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_extraordinary_claims"
+    },
+    {
+      "name": "extract_ideas",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_ideas"
+    },
+    {
+      "name": "extract_insights",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_insights"
+    },
+    {
+      "name": "extract_insights_dm",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_insights_dm"
+    },
+    {
+      "name": "extract_instructions",
+      "description": "Instructional Video Transcript Extraction...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_instructions"
+    },
+    {
+      "name": "extract_jokes",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_jokes"
+    },
+    {
+      "name": "extract_latest_video",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_latest_video"
+    },
+    {
+      "name": "extract_main_activities",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_main_activities"
+    },
+    {
+      "name": "extract_main_idea",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_main_idea"
+    },
+    {
+      "name": "extract_mcp_servers",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_mcp_servers"
+    },
+    {
+      "name": "extract_most_redeeming_thing",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_most_redeeming_thing"
+    },
+    {
+      "name": "extract_patterns",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_patterns"
+    },
+    {
+      "name": "extract_poc",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_poc"
+    },
+    {
+      "name": "extract_predictions",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_predictions"
+    },
+    {
+      "name": "extract_primary_problem",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_primary_problem"
+    },
+    {
+      "name": "extract_primary_solution",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_primary_solution"
+    },
+    {
+      "name": "extract_product_features",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_product_features"
+    },
+    {
+      "name": "extract_questions",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_questions"
+    },
+    {
+      "name": "extract_recipe",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_recipe"
+    },
+    {
+      "name": "extract_recommendations",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_recommendations"
+    },
+    {
+      "name": "extract_references",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_references"
+    },
+    {
+      "name": "extract_skills",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_skills"
+    },
+    {
+      "name": "extract_song_meaning",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_song_meaning"
+    },
+    {
+      "name": "extract_sponsors",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_sponsors"
+    },
+    {
+      "name": "extract_videoid",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_videoid"
+    },
+    {
+      "name": "extract_wisdom",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_wisdom"
+    },
+    {
+      "name": "extract_wisdom_agents",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_wisdom_agents"
+    },
+    {
+      "name": "extract_wisdom_dm",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_wisdom_dm"
+    },
+    {
+      "name": "extract_wisdom_nometa",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/extract_wisdom_nometa"
+    },
+    {
+      "name": "find_female_life_partner",
+      "description": "IDENTITY AND PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/find_female_life_partner"
+    },
+    {
+      "name": "find_hidden_message",
+      "description": "IDENTITY AND GOALS...",
+      "path": ".hal8000/libraries/external/fabric-patterns/find_hidden_message"
+    },
+    {
+      "name": "find_logical_fallacies",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/find_logical_fallacies"
+    },
+    {
+      "name": "generate_code_rules",
+      "description": "IDENTITY AND PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/generate_code_rules"
+    },
+    {
+      "name": "get_wow_per_minute",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/get_wow_per_minute"
+    },
+    {
+      "name": "get_youtube_rss",
+      "description": "IDENTITY AND GOALS...",
+      "path": ".hal8000/libraries/external/fabric-patterns/get_youtube_rss"
+    },
+    {
+      "name": "heal_person",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/heal_person"
+    },
+    {
+      "name": "humanize",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/humanize"
+    },
+    {
+      "name": "identify_dsrp_distinctions",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/identify_dsrp_distinctions"
+    },
+    {
+      "name": "identify_dsrp_perspectives",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/identify_dsrp_perspectives"
+    },
+    {
+      "name": "identify_dsrp_relationships",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/identify_dsrp_relationships"
+    },
+    {
+      "name": "identify_dsrp_systems",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/identify_dsrp_systems"
+    },
+    {
+      "name": "identify_job_stories",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/identify_job_stories"
+    },
+    {
+      "name": "improve_academic_writing",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/improve_academic_writing"
+    },
+    {
+      "name": "improve_prompt",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/improve_prompt"
+    },
+    {
+      "name": "improve_report_finding",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/improve_report_finding"
+    },
+    {
+      "name": "improve_writing",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/improve_writing"
+    },
+    {
+      "name": "judge_output",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/judge_output"
+    },
+    {
+      "name": "label_and_rate",
+      "description": "IDENTITY and GOAL:...",
+      "path": ".hal8000/libraries/external/fabric-patterns/label_and_rate"
+    },
+    {
+      "name": "md_callout",
+      "description": "IDENTITY and GOAL:...",
+      "path": ".hal8000/libraries/external/fabric-patterns/md_callout"
+    },
+    {
+      "name": "official_pattern_template",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/official_pattern_template"
+    },
+    {
+      "name": "prepare_7s_strategy",
+      "description": "Identity...",
+      "path": ".hal8000/libraries/external/fabric-patterns/prepare_7s_strategy"
+    },
+    {
+      "name": "provide_guidance",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/provide_guidance"
+    },
+    {
+      "name": "rate_ai_response",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/rate_ai_response"
+    },
+    {
+      "name": "rate_ai_result",
+      "description": "IDENTITY AND GOALS...",
+      "path": ".hal8000/libraries/external/fabric-patterns/rate_ai_result"
+    },
+    {
+      "name": "rate_content",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/rate_content"
+    },
+    {
+      "name": "rate_value",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/rate_value"
+    },
+    {
+      "name": "raw_query",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/raw_query"
+    },
+    {
+      "name": "recommend_artists",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/recommend_artists"
+    },
+    {
+      "name": "recommend_pipeline_upgrades",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/recommend_pipeline_upgrades"
+    },
+    {
+      "name": "recommend_talkpanel_topics",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/recommend_talkpanel_topics"
+    },
+    {
+      "name": "refine_design_document",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/refine_design_document"
+    },
+    {
+      "name": "review_code",
+      "description": "Code Review Task...",
+      "path": ".hal8000/libraries/external/fabric-patterns/review_code"
+    },
+    {
+      "name": "review_design",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/review_design"
+    },
+    {
+      "name": "sanitize_broken_html_to_markdown",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/sanitize_broken_html_to_markdown"
+    },
+    {
+      "name": "suggest_pattern",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/suggest_pattern"
+    },
+    {
+      "name": "summarize",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize"
+    },
+    {
+      "name": "summarize_board_meeting",
+      "description": "IDENTITY AND PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_board_meeting"
+    },
+    {
+      "name": "summarize_debate",
+      "description": "IDENTITY ...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_debate"
+    },
+    {
+      "name": "summarize_git_changes",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_git_changes"
+    },
+    {
+      "name": "summarize_git_diff",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_git_diff"
+    },
+    {
+      "name": "summarize_lecture",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_lecture"
+    },
+    {
+      "name": "summarize_legislation",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_legislation"
+    },
+    {
+      "name": "summarize_meeting",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_meeting"
+    },
+    {
+      "name": "summarize_micro",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_micro"
+    },
+    {
+      "name": "summarize_newsletter",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_newsletter"
+    },
+    {
+      "name": "summarize_paper",
+      "description": "You are an excellent academic paper reviewer. You conduct paper summarization on the full paper text...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_paper"
+    },
+    {
+      "name": "summarize_prompt",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_prompt"
+    },
+    {
+      "name": "summarize_pull-requests",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_pull-requests"
+    },
+    {
+      "name": "summarize_rpg_session",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/summarize_rpg_session"
+    },
+    {
+      "name": "t_analyze_challenge_handling",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_analyze_challenge_handling"
+    },
+    {
+      "name": "t_check_dunning_kruger",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_check_dunning_kruger"
+    },
+    {
+      "name": "t_check_metrics",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_check_metrics"
+    },
+    {
+      "name": "t_create_h3_career",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_create_h3_career"
+    },
+    {
+      "name": "t_create_opening_sentences",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_create_opening_sentences"
+    },
+    {
+      "name": "t_describe_life_outlook",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_describe_life_outlook"
+    },
+    {
+      "name": "t_extract_intro_sentences",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_extract_intro_sentences"
+    },
+    {
+      "name": "t_extract_panel_topics",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_extract_panel_topics"
+    },
+    {
+      "name": "t_find_blindspots",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_find_blindspots"
+    },
+    {
+      "name": "t_find_negative_thinking",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_find_negative_thinking"
+    },
+    {
+      "name": "t_find_neglected_goals",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_find_neglected_goals"
+    },
+    {
+      "name": "t_give_encouragement",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_give_encouragement"
+    },
+    {
+      "name": "t_red_team_thinking",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_red_team_thinking"
+    },
+    {
+      "name": "t_threat_model_plans",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_threat_model_plans"
+    },
+    {
+      "name": "t_visualize_mission_goals_projects",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_visualize_mission_goals_projects"
+    },
+    {
+      "name": "t_year_in_review",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/t_year_in_review"
+    },
+    {
+      "name": "to_flashcards",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/to_flashcards"
+    },
+    {
+      "name": "transcribe_minutes",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/transcribe_minutes"
+    },
+    {
+      "name": "translate",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/translate"
+    },
+    {
+      "name": "tweet",
+      "description": "Title: A Comprehensive Guide to Crafting Engaging Tweets with Emojis...",
+      "path": ".hal8000/libraries/external/fabric-patterns/tweet"
+    },
+    {
+      "name": "write_essay",
+      "description": "Identity and Purpose...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_essay"
+    },
+    {
+      "name": "write_essay_pg",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_essay_pg"
+    },
+    {
+      "name": "write_hackerone_report",
+      "description": "IDENTITY...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_hackerone_report"
+    },
+    {
+      "name": "write_latex",
+      "description": "You are an expert at outputting syntactically correct LaTeX for a new .tex document. Your goal is to...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_latex"
+    },
+    {
+      "name": "write_micro_essay",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_micro_essay"
+    },
+    {
+      "name": "write_nuclei_template_rule",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_nuclei_template_rule"
+    },
+    {
+      "name": "write_pull-request",
+      "description": "IDENTITY AND PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_pull-request"
+    },
+    {
+      "name": "write_semgrep_rule",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/write_semgrep_rule"
+    },
+    {
+      "name": "youtube_summary",
+      "description": "IDENTITY and PURPOSE...",
+      "path": ".hal8000/libraries/external/fabric-patterns/youtube_summary"
+    }
+  ]
+}

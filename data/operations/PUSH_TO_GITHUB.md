@@ -1,6 +1,6 @@
-# Push HAL8000 to GitHub - Final Steps
+# Push HAL8000-Assistant to GitHub - Final Steps
 
-Repository URL: **https://github.com/VirtualZardoz/HAL8000**
+Repository URL: **https://github.com/VirtualZardoz/HAL8000-Assistant**
 
 ## ✅ Preparation Complete
 
@@ -25,7 +25,7 @@ git config --global user.email "your.email@example.com"
 ### Step 2: Create Initial Commit
 
 ```bash
-git commit -m "Initial commit: HAL8000 v1.4.0
+git commit -m "Initial commit: HAL8000-Assistant v1.4.0
 
 Complete computer architecture system for Claude Code sessions.
 
@@ -57,7 +57,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>"
 
 ```bash
 # Add your GitHub repository as remote
-git remote add origin https://github.com/VirtualZardoz/HAL8000.git
+git remote add origin https://github.com/VirtualZardoz/HAL8000-Assistant.git
 ```
 
 ### Step 4: Push to GitHub
@@ -70,13 +70,13 @@ git push -u origin main
 ## 🎉 Success!
 
 After pushing, your repository will be live at:
-**https://github.com/VirtualZardoz/HAL8000**
+**https://github.com/VirtualZardoz/HAL8000-Assistant**
 
 ## 📋 Post-Push Checklist
 
 After successful push:
 
-- [ ] Visit https://github.com/VirtualZardoz/HAL8000 to verify
+- [ ] Visit https://github.com/VirtualZardoz/HAL8000-Assistant to verify
 - [ ] Check that all files uploaded correctly
 - [ ] Verify `.env` is NOT visible (should be excluded)
 - [ ] Star your own repository for easy access
@@ -121,12 +121,12 @@ git ls-files | grep -E "\.env$|settings.local.json" || echo "✅ No sensitive fi
 **Error:** `Permission denied (publickey)`
 **Solution:** Switch to HTTPS authentication
 ```bash
-git remote set-url origin https://github.com/VirtualZardoz/HAL8000.git
+git remote set-url origin https://github.com/VirtualZardoz/HAL8000-Assistant.git
 ```
 
 ### Repository already exists
 **Error:** `repository already exists on the server`
-**Solution:** The repository https://github.com/VirtualZardoz/HAL8000 already exists on GitHub. Just push:
+**Solution:** The repository https://github.com/VirtualZardoz/HAL8000-Assistant already exists on GitHub. Just push:
 ```bash
 git push -u origin main
 ```
@@ -148,7 +148,7 @@ git config --global user.email "your.email@example.com"
 
 # 2. Create commit (copy entire command including heredoc)
 git commit -m "$(cat <<'EOF'
-Initial commit: HAL8000 v1.4.0
+Initial commit: HAL8000-Assistant v1.4.0
 
 Complete computer architecture system for Claude Code sessions.
 
@@ -178,7 +178,7 @@ EOF
 )"
 
 # 3. Add remote
-git remote add origin https://github.com/VirtualZardoz/HAL8000.git
+git remote add origin https://github.com/VirtualZardoz/HAL8000-Assistant.git
 
 # 4. Push to GitHub
 git push -u origin main
@@ -186,4 +186,4 @@ git push -u origin main
 
 ---
 
-**Ready to launch HAL8000! 🚀**
+**Ready to launch HAL8000-Assistant! 🚀**

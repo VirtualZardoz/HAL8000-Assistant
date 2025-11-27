@@ -1,10 +1,10 @@
 # GitHub Setup Guide
 
-**Note:** This guide is for the original HAL8000 system setup. If you are **forking HAL8000 to create your own personalized system**, use the **Fork and Rebrand Protocol** instead:
+**Note:** This guide is for the original HAL8000-Assistant system setup. If you are **forking HAL8000-Assistant to create your own personalized system**, use the **Fork and Rebrand Protocol** instead:
 - See: `data/architecture/fork-and-rebrand-protocol.md`
 - The Fork and Rebrand Protocol covers cloning, renaming, and GitHub repository isolation
 
-This guide is for pushing the original HAL8000 repository to GitHub.
+This guide is for pushing the original HAL8000-Assistant repository to GitHub.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Now that git is configured, create the initial commit:
 
 ```bash
 git commit -m "$(cat <<'EOF'
-Initial commit: HAL8000 v1.4.0
+Initial commit: HAL8000-Assistant v1.4.0
 
 Complete computer architecture system for Claude Code sessions.
 
@@ -68,10 +68,10 @@ EOF
 
 ```bash
 # Create repository (choose public or private)
-gh repo create HAL8000 --public --source=. --remote=origin --push
+gh repo create HAL8000-Assistant --public --source=. --remote=origin --push
 
 # Or for private repository
-gh repo create HAL8000 --private --source=. --remote=origin --push
+gh repo create HAL8000-Assistant --private --source=. --remote=origin --push
 ```
 
 This command will:
@@ -83,7 +83,7 @@ This command will:
 
 1. Go to [GitHub](https://github.com) and log in
 2. Click the **+** icon in the top right → **New repository**
-3. Repository name: `HAL8000`
+3. Repository name: `HAL8000-Assistant`
 4. Description: "Computer architecture for Claude Code sessions - von Neumann principles, HAL-Script programming, session continuity"
 5. Choose **Public** or **Private**
 6. **DO NOT** initialize with README, .gitignore, or license (we already have them)
@@ -93,7 +93,7 @@ Then connect your local repository:
 
 ```bash
 # Add remote
-git remote add origin https://github.com/VirtualZardoz/HAL8000.git
+git remote add origin https://github.com/VirtualZardoz/HAL8000-Assistant.git
 
 # Push to GitHub
 git push -u origin main
@@ -109,15 +109,15 @@ git remote -v
 
 # Check what's on GitHub
 gh repo view --web
-# Or manually visit: https://github.com/VirtualZardoz/HAL8000
+# Or manually visit: https://github.com/VirtualZardoz/HAL8000-Assistant
 ```
 
 ## Step 5: Update README.md (Complete!)
 
 The README.md has been updated with your GitHub repository URL:
-- Repository: https://github.com/VirtualZardoz/HAL8000
-- Clone command: `git clone https://github.com/VirtualZardoz/HAL8000.git`
-- Issues link: https://github.com/VirtualZardoz/HAL8000/issues
+- Repository: https://github.com/VirtualZardoz/HAL8000-Assistant
+- Clone command: `git clone https://github.com/VirtualZardoz/HAL8000-Assistant.git`
+- Issues link: https://github.com/VirtualZardoz/HAL8000-Assistant/issues
 
 ## Security Checklist
 
@@ -270,7 +270,7 @@ Set up SSH keys or use HTTPS:
 
 ```bash
 # Switch to HTTPS
-git remote set-url origin https://github.com/VirtualZardoz/HAL8000.git
+git remote set-url origin https://github.com/VirtualZardoz/HAL8000-Assistant.git
 ```
 
 ### "Updates were rejected"
@@ -324,15 +324,15 @@ After pushing to GitHub:
 
 ## For Fork Users
 
-If you forked HAL8000 to create your own personalized system, follow the complete **Fork and Rebrand Protocol**:
+If you forked HAL8000-Assistant to create your own personalized system, follow the complete **Fork and Rebrand Protocol**:
 - **Location:** `data/architecture/fork-and-rebrand-protocol.md`
 - **What it covers:**
   - Cloning from GitHub (fork or direct clone)
   - Complete filesystem rebrand (all references updated)
-  - Git isolation (prevent commits to original HAL8000)
+  - Git isolation (prevent commits to original HAL8000-Assistant)
   - Git reconnection (connect to your new repository)
   - Verification and testing
-- **Why use it:** Ensures your customizations stay in your repository and don't accidentally get pushed to the original HAL8000 repo
+- **Why use it:** Ensures your customizations stay in your repository and don't accidentally get pushed to the original HAL8000-Assistant repo
 
 ## Resources
 
@@ -343,4 +343,4 @@ If you forked HAL8000 to create your own personalized system, follow the complet
 
 ---
 
-**You're ready to share HAL8000 with the world!** 🚀
+**You're ready to share HAL8000-Assistant with the world!** 🚀

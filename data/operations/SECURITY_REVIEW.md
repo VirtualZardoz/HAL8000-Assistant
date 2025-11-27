@@ -1,4 +1,4 @@
-# Security Review - HAL8000 GitHub Preparation
+# Security Review - HAL8000-Assistant GitHub Preparation
 
 ## ✅ Protected Files (Will NOT be committed)
 

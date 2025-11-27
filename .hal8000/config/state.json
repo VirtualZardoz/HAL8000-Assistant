@@ -1,0 +1,188 @@
+{
+  "universal_version": "2.0.0-Assistant",
+  "architecture_type": "Universal Boot (HAL8000-Assistant Kernel)",
+  "system_phase": "production-ready",
+  "last_updated": "2025-11-27T16:01:08Z",
+  "active_sessions": {
+    "claude": ".hal8000/sessions/2025-11-27-1601-universal-kernel-migration.md",
+    "gemini": null,
+    "opencode": null
+  },
+  "global_context": "Universal Kernel migration complete. Upgraded from v1.0.0 to v2.0.0-Assistant. Added HAL-use-fabric (226 patterns), HAL-validate-generate. Session saved.",
+  "next_action": "Test new boot sequence and new commands in fresh session.",
+  "registry": {
+    "commands_path": ".hal8000/commands",
+    "agents_path": ".hal8000/agents",
+    "skills_path": ".hal8000/skills",
+    "tools_path": ".hal8000/tools",
+    "libraries_path": ".hal8000/libraries",
+    "indexes_path": ".hal8000/indexes",
+    "sessions_path": ".hal8000/sessions"
+  },
+  "loaded_commands": [],
+  "assistant_metadata": {
+    "fork_info": {
+      "date": "2025-11-20T08:07:01Z",
+      "from": "HAL8000",
+      "to": "HAL8000-Assistant",
+      "type": "fork-and-rebrand",
+      "command": "HAL-fork-rebrand v1.0",
+      "historical_references_preserved": 269
+    },
+    "variables": {
+      "current_project": "universal-kernel-migration",
+      "agents_available": 6,
+      "commands_available": 17,
+      "skills_available": 6,
+      "total_content_files": 55,
+      "indexed_directories": 10,
+      "tools_available": 3,
+      "fabric_patterns_available": 226,
+      "plugins_installed": [
+        "document-skills",
+        "example-skills"
+      ],
+      "plugin_marketplace": "anthropic-agent-skills",
+      "bios_documented": true,
+      "architecture_documented": true,
+      "architecture_validated": true,
+      "video_learning_status": "operational",
+      "session_end_bug_status": "fixed",
+      "fork_rebrand_command": "created",
+      "counts_validated": "2025-11-27T15:22:00Z",
+      "fork_rebrand_status": "complete",
+      "verification_score": "8/8",
+      "opencode_research_status": "complete",
+      "hal8000_opencode_status": "v0.1.0-operational-with-api-keys",
+      "opencode_installation_status": "complete",
+      "opencode_api_keys_status": "configured-and-working",
+      "opencode_commands_ported": 1,
+      "deepseek_v3_research": "complete",
+      "gemini_cli_migration_status": "complete",
+      "gemini_cli_version": "0.17.1",
+      "hal8000_gemini_status": "operational",
+      "universal_kernel_migration": "complete"
+    },
+    "diagram_tool": {
+      "status": "production-ready",
+      "docker_image": "hal8000-assistant-mermaid:latest",
+      "script": ".hal8000/tools/diagram-generation/HAL-generate-diagram.py",
+      "output_dir": "data/diagrams/",
+      "supported_types": [
+        "process-flow",
+        "swimlane",
+        "bpmn",
+        "sipoc"
+      ],
+      "performance": "~0.7-0.8s per diagram",
+      "bios_documented": true
+    },
+    "image_generation_tool": {
+      "status": "production-complete",
+      "version": "1.6.1",
+      "backend": "ComfyUI + Stable Diffusion",
+      "text_overlay": "working (two methods: generation-time + post-processing)",
+      "models": {
+        "sdxl": {
+          "size_gb": 6.5,
+          "speed_seconds": "3-5",
+          "quality": "★★★★★",
+          "status": "tested-working"
+        },
+        "sd15": {
+          "size_gb": 4,
+          "speed_seconds": "1-2",
+          "quality": "★★★★",
+          "status": "tested-working"
+        }
+      },
+      "tools": {
+        "HAL-generate-image.py": "Full generation + optional text overlay",
+        "HAL-add-text.py": "Fast text-only overlay (1.4s, 20x faster)"
+      },
+      "docker_image": "hal8000-assistant-image-gen:latest",
+      "script": ".hal8000/tools/image-generation/HAL-generate-image.py",
+      "output_dir": "data/images/",
+      "model_cache": "/mnt/d/~HAL8000-Assistant/.docker-cache/models/",
+      "gpu": "RTX 3090 (24GB VRAM)",
+      "ram_impact": "zero",
+      "storage": "11GB (SDXL + SD1.5 + VAE)",
+      "flux_status": "investigated-removed-incompatible",
+      "bios_documented": true
+    },
+    "canvas_tool": {
+      "status": "tested",
+      "docker_image": "hal8000-assistant-canvas:latest",
+      "dependencies": "Pillow, reportlab",
+      "created_session": "2025-10-30",
+      "test_output": "data/images/hal8000-architecture-poster.pdf"
+    },
+    "video_learning_skill": {
+      "status": "operational",
+      "version": "1.0.0",
+      "source": "HAL7000",
+      "skill_location": ".hal8000/skills/video-learning/",
+      "command_location": ".hal8000/commands/system/HAL-learn-video.md",
+      "output_location": "data/videos/",
+      "dependencies": {
+        "yt-dlp": "2025.09.26 (Windows host via PowerShell)",
+        "ffmpeg": "2025-09-18 (Windows host via PowerShell)"
+      },
+      "first_test": {
+        "date": "2025-10-30",
+        "video": "I finally CRACKED Claude Agent Skills (Breakdown For Engineers)",
+        "duration": "27:13",
+        "frames_extracted": 17,
+        "processing_mode": "smart",
+        "output_size_kb": 62,
+        "validation": "100% correct HAL8000-Assistant architecture classification"
+      },
+      "paths_migrated": true,
+      "gitignore_updated": true,
+      "ready_to_use": true
+    },
+    "architecture_validation": {
+      "date": "2025-10-30",
+      "source": "data/videos/i-finally-cracked-claude-agent-skills/knowledge-brief.md",
+      "expert": "15-year engineer, Claude Code since Feb 2024",
+      "skills_validated": "5/5 correct (100%)",
+      "commands_validated": "12/12 correct (100%)",
+      "agents_validated": "6/6 correct (100%)",
+      "framework": "Trigger mechanism, context efficiency, persistence, modularity",
+      "terminology_aligned": true,
+      "progressive_disclosure_documented": true,
+      "feature_selection_guide_created": true
+    },
+    "opencode_project": {
+      "date": "2025-11-22T08:15:53Z",
+      "research_status": "complete",
+      "implementation_status": "v0.1.0-operational",
+      "location": "/mnt/d/~HAL8000-OpenCode/",
+      "agents": 6,
+      "commands_ported": 1,
+      "api_keys": "configured-working",
+      "models_available": 3,
+      "documentation": "comprehensive",
+      "compatibility": "85-90%",
+      "next_step": "poc-testing-and-agent-enhancement"
+    },
+    "gemini_project": {
+      "date": "2025-11-23T16:31:18Z",
+      "migration_status": "complete",
+      "location": "/mnt/d/~HAL8000-Gemini/",
+      "gemini_cli_version": "0.17.1",
+      "bios_file": "GEMINI.md",
+      "config_file": ".gemini.toml",
+      "state_file": ".gemini/state.json",
+      "agents": 6,
+      "commands": 13,
+      "skills": 5,
+      "tools": 3,
+      "files_modified": "50+",
+      "path_references_updated": "100+",
+      "api_authentication": "configured",
+      "compatibility": "100%",
+      "status": "operational"
+    }
+  }
+}

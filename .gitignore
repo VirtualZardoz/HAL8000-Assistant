@@ -78,6 +78,11 @@ data/diagrams/
 data/images/
 data/videos/
 
+# =============================================================================
+# User Projects (May Contain Client/Sensitive Data)
+# =============================================================================
+data/projects/
+
 # Docker model cache (large binary files)
 .docker-cache/
 
@@ -119,3 +124,6 @@ $RECYCLE.BIN/
 *.backup
 *.bak
 *.old
+
+# Migration backup (local safety net, not needed in repo)
+.backup-pre-universal/

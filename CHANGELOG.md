@@ -1,5 +1,35 @@
 # Changelog
 
+## [2.0.0-Assistant] - 2025-11-27
+
+### Changed
+- **Universal Kernel Architecture** - Migrated from `.claude/`-centric to `.hal8000/` Universal Kernel
+  - Core system now lives in `.hal8000/` directory
+  - `.claude/` contains symlinks to kernel for Claude Code compatibility
+  - Multi-platform support enabled (Gemini, OpenCode ready)
+  - CLAUDE.md is now a lightweight adapter BIOS (~115 lines vs 865)
+  - Full operating principles moved to `.hal8000/BIOS.md`
+
+### Added
+- **New Commands:**
+  - `HAL-use-fabric` - Apply 226 Fabric patterns (specialized AI personas) to files
+  - `HAL-validate-generate` - Generate comprehensive project validation commands
+  - `HAL-universal-version` - Display Universal Kernel version
+- **Fabric Patterns Integration** - 226 expert patterns indexed in `.hal8000/indexes/fabric-patterns.json`
+  - Categories: analysis, extraction, creation, security, summarization
+  - Zero context bloat (patterns loaded on-demand via sub-agent)
+- **Universal State Format** - New state.json structure with per-platform session tracking
+  - `active_sessions.claude`, `active_sessions.gemini`, `active_sessions.opencode`
+  - All existing metadata preserved in `assistant_metadata` section
+
+### Technical Details
+- Symbolic links created: commands, agents, skills, tools, libraries, indexes, sessions
+- State file migrated: `.claude/state.json` → `.hal8000/config/state.json`
+- Backup created: `.backup-pre-universal/`
+- Version: 1.0.0-HAL8000-Assistant → 2.0.0-Assistant
+
+---
+
 ## [1.0.0-HAL8000-Assistant] - 2025-01-20
 
 ### Changed
