@@ -8,8 +8,8 @@
     "gemini": null,
     "opencode": null
   },
-  "global_context": "Universal Kernel migration complete. Upgraded from v1.0.0 to v2.0.0-Assistant. Added HAL-use-fabric (226 patterns), HAL-validate-generate. Session saved.",
-  "next_action": "Test new boot sequence and new commands in fresh session.",
+  "global_context": "Universal Kernel v2.0.0-Assistant operational. Gemini CLI adapter added. Multi-platform ready (Claude, Gemini).",
+  "next_action": "Test Gemini CLI boot sequence. Consider OpenCode adapter next.",
   "registry": {
     "commands_path": ".hal8000/commands",
     "agents_path": ".hal8000/agents",
@@ -183,6 +183,27 @@
       "api_authentication": "configured",
       "compatibility": "100%",
       "status": "operational"
+    },
+    "platform_adapters": {
+      "claude": {
+        "status": "operational",
+        "adapter_file": "CLAUDE.md",
+        "config_dir": ".claude/",
+        "integration": "symlinks to .hal8000/"
+      },
+      "gemini": {
+        "status": "operational",
+        "adapter_file": "GEMINI.md",
+        "config_file": ".gemini.toml",
+        "config_dir": ".gemini/",
+        "integration": "symlinks to .hal8000/"
+      },
+      "opencode": {
+        "status": "planned",
+        "adapter_file": "OPENCODE.md",
+        "config_dir": ".opencode/",
+        "integration": "pending"
+      }
     }
   }
 }

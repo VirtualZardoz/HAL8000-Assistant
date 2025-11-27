@@ -1,0 +1,74 @@
+# .gemini.toml
+# HAL8000-Assistant Gemini CLI Configuration
+# Universal Kernel Architecture v2.0.0-Assistant
+
+# Model settings
+[model]
+name = "gemini-2.0-flash-exp"
+temperature = 0.7
+top_p = 0.95
+max_tokens = 8192
+
+# Approval settings
+[approval]
+mode = "auto_edit"  # default | auto_edit | yolo
+confirm_deletions = true
+confirm_system_commands = true
+
+# Session settings
+[session]
+auto_resume = false  # Let user decide via /HAL-session-end
+persist_location = ".hal8000/sessions"
+max_history = 100
+
+# Workspace settings
+[workspace]
+include_directories = [
+  "data/architecture",
+  "data/research",
+  ".hal8000/commands",
+  ".hal8000/agents",
+  ".hal8000/skills"
+]
+exclude_patterns = [
+  "node_modules",
+  "*.log",
+  ".git",
+  ".docker-cache",
+  "__pycache__",
+  "*.pyc",
+  ".DS_Store",
+  "temp",
+  ".backup-pre-universal"
+]
+max_file_size = 1048576  # 1MB
+
+# MCP server configurations (optional - uncomment to enable)
+# [[mcp_servers]]
+# name = "filesystem"
+# command = "npx"
+# args = ["-y", "@modelcontextprotocol/server-filesystem", "/mnt/d/~HAL8000-Assistant"]
+# env = {}
+
+# [[mcp_servers]]
+# name = "omnisearch"
+# command = "npx"
+# args = ["-y", "@modelcontextprotocol/server-omnisearch"]
+# env = {
+#   BRAVE_API_KEY = "${BRAVE_API_KEY}",
+#   FIRECRAWL_API_KEY = "${FIRECRAWL_API_KEY}"
+# }
+
+# HAL8000-Assistant specific settings
+[hal8000]
+version = "2.0.0-Assistant"
+architecture = "Universal Boot (HAL8000-Assistant Kernel)"
+bios_file = "GEMINI.md"
+universal_bios = ".hal8000/BIOS.md"
+state_file = ".hal8000/config/state.json"
+system_log = ".hal8000/system.log"
+
+# Extension settings
+[extensions]
+auto_update = false  # Manual control preferred
+registry = "https://registry.npmjs.org"
